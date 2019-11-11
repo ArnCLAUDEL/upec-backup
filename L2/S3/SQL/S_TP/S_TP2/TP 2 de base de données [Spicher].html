@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    TP 2 de base de données    [Spicher]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-02-25T11:17:19+0100">
+<meta name="keywords" content="l3info,bd,tp2,sqlite">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/exe/opensearch.php" title="Spicher">
+<link rel="start" href="http://www.lacl.fr/%7Easpicher/Wiki/">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php?mode=list&amp;ns=l3info:bd:tp2">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.lacl.fr/%7Easpicher/Wiki/_export/xhtml/l3info/bd/tp2/sqlite">
+<link rel="canonical" href="http://www.lacl.fr/%7Easpicher/Wiki/l3info/bd/tp2/sqlite">
+<link rel="stylesheet" media="all" type="text/css" href="TP%202%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/css.css">
+<link rel="stylesheet" media="screen" type="text/css" href="TP%202%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/css_003.css">
+<link rel="stylesheet" media="print" type="text/css" href="TP%202%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/css_002.css">
+<script type="text/javascript" charset="utf-8"><!--//--><![CDATA[//><!--
+var NS='l3info:bd:tp2';var SIG=' --- //[[antoine.spicher@u-pec.fr|L2 Informatique]] 2015/11/29 18:45//';var JSINFO = {"id":"l3info:bd:tp2:sqlite","namespace":"l3info:bd:tp2"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="TP%202%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/js.php"></script>
+
+  <link rel="shortcut icon" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/tpl/default/images/favicon.ico">
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="http://www.lacl.fr/%7Easpicher/Wiki/l3info/bd/tp2/sqlite?do=backlink" title="Liens vers cette page">TP 2 de base de données</a>]]
+      </div>
+      <div class="logo">
+        <a href="http://www.lacl.fr/%7Easpicher/Wiki/" name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]">Spicher</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                      </div>
+
+      <div class="bar-right" id="bar__topright">
+                &nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+        <div class="breadcrumbs">
+      <span class="bchead">Piste:</span> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp7" class="breadcrumbs" title="l2info:progc:tp7">TP 7</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp8" class="breadcrumbs" title="l2info:progc:tp8">TP 8</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp9" class="breadcrumbs" title="l2info:progc:tp9">TP 9/10</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp11" class="breadcrumbs" title="l2info:progc:tp11">TP 11</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progfct/start" class="breadcrumbs" title="l2info:progfct:start">Programmation fonctionnelle</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progimp2/start" class="breadcrumbs" title="l2info:progimp2:start">Programmation impérative 2</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/start" class="breadcrumbs" title="start">Accueil</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l3info/bd/start" class="breadcrumbs" title="l3info:bd:start">Base de données</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l3info/bd/tp1/sqlite" class="breadcrumbs" title="l3info:bd:tp1:sqlite">TP 1 de base de données</a> <span class="bcsep">»</span> <span class="curid"><a href="http://www.lacl.fr/%7Easpicher/Wiki/l3info/bd/tp2/sqlite" class="breadcrumbs" title="l3info:bd:tp2:sqlite">TP 2 de base de données</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div style="cursor: pointer;" class="tocheader toctoggle" id="toc__header"><span class="toc_close" style="cursor: pointer;" id="toc__toggle"><span>−</span></span>Table des matières</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#tp_2_de_base_de_donnees" class="toc">TP 2 de base de données</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#creation_de_la_base" class="toc">Création de la base</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#requetes_sql" class="toc">Requêtes SQL</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="#description_rapide_de_la_base" class="toc">Description rapide de la base</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#requetes_sql1" class="toc">Requêtes SQL</a></span></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><span class="li"><a href="#passage_a_l_echelle" class="toc">Passage à l'échelle</a></span></div></li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="tp_2_de_base_de_donnees" id="tp_2_de_base_de_donnees">TP 2 de base de données</a></h1>
+<div class="level1">
+
+<p>
+
+On vous rappelle que la procédure d'initialisation de la BD est donnée dans le <a href="http://www.lacl.fr/%7Easpicher/Wiki/l3info/bd/tp1/sqlite" class="wikilink1" title="l3info:bd:tp1:sqlite">TP 1</a>.
+</p>
+
+</div>
+
+<h2><a name="creation_de_la_base" id="creation_de_la_base">Création de la base</a></h2>
+<div class="level2">
+
+<p>
+
+Le code <em><acronym title="Structured Query Language">SQL</acronym></em> suivant permet la création des tables dans votre base de données et les remplit. Utiliser la commande :
+</p>
+<pre class="code bash">sqlite3 <span class="re5">-init</span> base.sql</pre>
+<dl class="code">
+<dt><a href="http://www.lacl.fr/%7Easpicher/Wiki/_export/code/l3info/bd/tp2/sqlite?codeblock=1" title="Télécharger un extrait" class="mediafile mf_sql">base.sql</a></dt>
+<dd><pre class="code sql"><span class="kw1">DROP</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> prereq;
+<span class="kw1">DROP</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> creneau;
+<span class="kw1">DROP</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> tuteur;
+<span class="kw1">DROP</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> choix_option;
+<span class="kw1">DROP</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> etudiant;
+<span class="kw1">DROP</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> resp_module;
+<span class="kw1">DROP</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> filiere;
+<span class="kw1">DROP</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> enseignant;
+<span class="kw1">DROP</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> cours;
+<span class="kw1">DROP</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> departement;
+<span class="kw1">DROP</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> salle_cours ;
+&nbsp;
+<span class="kw1">CREATE</span> <span class="kw1">TABLE</span> salle_cours
+<span class="br0">(</span>batiment varchar<span class="br0">(</span>15<span class="br0">)</span><span class="sy0">,</span>
+ no_salle varchar<span class="br0">(</span>7<span class="br0">)</span><span class="sy0">,</span>
+ capacite int<span class="sy0">,</span>
+ <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">(</span>batiment<span class="sy0">,</span> no_salle<span class="br0">)</span>
+<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">CREATE</span> <span class="kw1">TABLE</span> departement
+<span class="br0">(</span>nom_dept varchar<span class="br0">(</span>20<span class="br0">)</span><span class="sy0">,</span> 
+ batiment varchar<span class="br0">(</span>15<span class="br0">)</span><span class="sy0">,</span> 
+ budget	  numeric<span class="br0">(</span>12<span class="sy0">,</span>2<span class="br0">)</span> <span class="kw1">CHECK</span> <span class="br0">(</span>budget <span class="sy0">&gt;</span> 0<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">(</span>nom_dept<span class="br0">)</span>
+<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">CREATE</span> <span class="kw1">TABLE</span> cours
+<span class="br0">(</span>id_cours varchar<span class="br0">(</span>8<span class="br0">)</span><span class="sy0">,</span> 
+ intitule varchar<span class="br0">(</span>50<span class="br0">)</span><span class="sy0">,</span> 
+ nom_dept varchar<span class="br0">(</span>20<span class="br0">)</span><span class="sy0">,</span>
+ credits  int <span class="kw1">CHECK</span> <span class="br0">(</span>credits <span class="sy0">&gt;</span> 0<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">(</span>id_cours<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">FOREIGN</span> <span class="kw1">KEY</span> <span class="br0">(</span>nom_dept<span class="br0">)</span> <span class="kw1">REFERENCES</span> departement<span class="br0">(</span>nom_dept<span class="br0">)</span> <span class="kw1">ON</span> <span class="kw1">DELETE</span> <span class="kw1">SET</span> <span class="kw1">NULL</span>
+<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">CREATE</span> <span class="kw1">TABLE</span> enseignant
+<span class="br0">(</span>ID        varchar<span class="br0">(</span>5<span class="br0">)</span><span class="sy0">,</span> 
+ nom       varchar<span class="br0">(</span>20<span class="br0">)</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span> 
+ nom_dept  varchar<span class="br0">(</span>20<span class="br0">)</span><span class="sy0">,</span> 
+ salaire   numeric<span class="br0">(</span>8<span class="sy0">,</span>2<span class="br0">)</span> <span class="kw1">CHECK</span> <span class="br0">(</span>salaire <span class="sy0">&gt;</span> 29000<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">(</span>ID<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">FOREIGN</span> <span class="kw1">KEY</span> <span class="br0">(</span>nom_dept<span class="br0">)</span> <span class="kw1">REFERENCES</span> departement<span class="br0">(</span>nom_dept<span class="br0">)</span> <span class="kw1">ON</span> <span class="kw1">DELETE</span> <span class="kw1">SET</span> <span class="kw1">NULL</span>
+<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">CREATE</span> <span class="kw1">TABLE</span> filiere
+<span class="br0">(</span>id_cours   varchar<span class="br0">(</span>8<span class="br0">)</span><span class="sy0">,</span> 
+ id_filiere varchar<span class="br0">(</span>8<span class="br0">)</span><span class="sy0">,</span>
+ semestre   varchar<span class="br0">(</span>6<span class="br0">)</span> <span class="kw1">CHECK</span> <span class="br0">(</span>semestre <span class="kw1">IN</span> <span class="br0">(</span><span class="st0">'Fall'</span><span class="sy0">,</span> <span class="st0">'Winter'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'Summer'</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">,</span> 
+ annee      int <span class="kw1">CHECK</span> <span class="br0">(</span>annee <span class="sy0">&gt;</span> 1701 <span class="kw1">AND</span> annee <span class="sy0">&lt;</span> 2100<span class="br0">)</span><span class="sy0">,</span> 
+ batiment   varchar<span class="br0">(</span>15<span class="br0">)</span><span class="sy0">,</span>
+ no_salle   varchar<span class="br0">(</span>7<span class="br0">)</span><span class="sy0">,</span>
+ id_creneau varchar<span class="br0">(</span>4<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">(</span>id_cours<span class="sy0">,</span> id_filiere<span class="sy0">,</span> semestre<span class="sy0">,</span> annee<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">FOREIGN</span> <span class="kw1">KEY</span> <span class="br0">(</span>id_cours<span class="br0">)</span> <span class="kw1">REFERENCES</span> cours<span class="br0">(</span>id_cours<span class="br0">)</span> <span class="kw1">ON</span> <span class="kw1">DELETE</span> cascade<span class="sy0">,</span>
+ <span class="kw1">FOREIGN</span> <span class="kw1">KEY</span> <span class="br0">(</span>batiment<span class="sy0">,</span> no_salle<span class="br0">)</span> <span class="kw1">REFERENCES</span> salle_cours<span class="br0">(</span>batiment<span class="sy0">,</span> no_salle<span class="br0">)</span> <span class="kw1">ON</span> <span class="kw1">DELETE</span> <span class="kw1">SET</span> <span class="kw1">NULL</span>
+<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">CREATE</span> <span class="kw1">TABLE</span> resp_module
+<span class="br0">(</span>ID         varchar<span class="br0">(</span>5<span class="br0">)</span><span class="sy0">,</span> 
+ id_cours   varchar<span class="br0">(</span>8<span class="br0">)</span><span class="sy0">,</span>
+ id_filiere varchar<span class="br0">(</span>8<span class="br0">)</span><span class="sy0">,</span> 
+ semestre   varchar<span class="br0">(</span>6<span class="br0">)</span><span class="sy0">,</span>
+ annee      int<span class="sy0">,</span>
+ <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">(</span>ID<span class="sy0">,</span> id_cours<span class="sy0">,</span> id_filiere<span class="sy0">,</span> semestre<span class="sy0">,</span> annee<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">FOREIGN</span> <span class="kw1">KEY</span> <span class="br0">(</span>id_cours<span class="sy0">,</span>id_filiere<span class="sy0">,</span> semestre<span class="sy0">,</span> annee<span class="br0">)</span> <span class="kw1">REFERENCES</span> filiere<span class="br0">(</span>id_cours<span class="sy0">,</span> id_filiere<span class="sy0">,</span> semestre<span class="sy0">,</span> annee<span class="br0">)</span> <span class="kw1">ON</span> <span class="kw1">DELETE</span> cascade<span class="sy0">,</span>
+ <span class="kw1">FOREIGN</span> <span class="kw1">KEY</span> <span class="br0">(</span>ID<span class="br0">)</span> <span class="kw1">REFERENCES</span> enseignant<span class="br0">(</span>ID<span class="br0">)</span> <span class="kw1">ON</span> <span class="kw1">DELETE</span> cascade
+<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">CREATE</span> <span class="kw1">TABLE</span> etudiant
+<span class="br0">(</span>ID       varchar<span class="br0">(</span>5<span class="br0">)</span><span class="sy0">,</span> 
+ nom      varchar<span class="br0">(</span>20<span class="br0">)</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span> 
+ nom_dept varchar<span class="br0">(</span>20<span class="br0">)</span><span class="sy0">,</span> 
+ tot_cred int <span class="kw1">CHECK</span> <span class="br0">(</span>tot_cred <span class="sy0">&gt;=</span> 0<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">(</span>ID<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">FOREIGN</span> <span class="kw1">KEY</span> <span class="br0">(</span>nom_dept<span class="br0">)</span> <span class="kw1">REFERENCES</span> departement<span class="br0">(</span>nom_dept<span class="br0">)</span> <span class="kw1">ON</span> <span class="kw1">DELETE</span> <span class="kw1">SET</span> <span class="kw1">NULL</span>
+<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">CREATE</span> <span class="kw1">TABLE</span> choix_option
+<span class="br0">(</span>ID          varchar<span class="br0">(</span>5<span class="br0">)</span><span class="sy0">,</span> 
+ id_cours    varchar<span class="br0">(</span>8<span class="br0">)</span><span class="sy0">,</span>
+ id_filiere  varchar<span class="br0">(</span>8<span class="br0">)</span><span class="sy0">,</span> 
+ semestre    varchar<span class="br0">(</span>6<span class="br0">)</span><span class="sy0">,</span>
+ annee       int<span class="sy0">,</span>
+ note        varchar<span class="br0">(</span>2<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">(</span>ID<span class="sy0">,</span> id_cours<span class="sy0">,</span> id_filiere<span class="sy0">,</span> semestre<span class="sy0">,</span> annee<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">FOREIGN</span> <span class="kw1">KEY</span> <span class="br0">(</span>id_cours<span class="sy0">,</span>id_filiere<span class="sy0">,</span> semestre<span class="sy0">,</span> annee<span class="br0">)</span> <span class="kw1">REFERENCES</span> filiere<span class="br0">(</span>id_cours<span class="sy0">,</span>id_filiere<span class="sy0">,</span> semestre<span class="sy0">,</span> annee<span class="br0">)</span> <span class="kw1">ON</span> <span class="kw1">DELETE</span> cascade<span class="sy0">,</span>
+ <span class="kw1">FOREIGN</span> <span class="kw1">KEY</span> <span class="br0">(</span>ID<span class="br0">)</span> <span class="kw1">REFERENCES</span> etudiant<span class="br0">(</span>ID<span class="br0">)</span> <span class="kw1">ON</span> <span class="kw1">DELETE</span> cascade
+<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">CREATE</span> <span class="kw1">TABLE</span> tuteur
+<span class="br0">(</span>ID_etud varchar<span class="br0">(</span>5<span class="br0">)</span><span class="sy0">,</span>
+ ID_ens  varchar<span class="br0">(</span>5<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">(</span>ID_etud<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">FOREIGN</span> <span class="kw1">KEY</span> <span class="br0">(</span>ID_ens<span class="br0">)</span> <span class="kw1">REFERENCES</span> enseignant <span class="br0">(</span>ID<span class="br0">)</span> <span class="kw1">ON</span> <span class="kw1">DELETE</span> <span class="kw1">SET</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ <span class="kw1">FOREIGN</span> <span class="kw1">KEY</span> <span class="br0">(</span>ID_etud<span class="br0">)</span> <span class="kw1">REFERENCES</span> etudiant <span class="br0">(</span>ID<span class="br0">)</span> <span class="kw1">ON</span> <span class="kw1">DELETE</span> cascade
+<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">CREATE</span> <span class="kw1">TABLE</span> creneau
+<span class="br0">(</span>id_creneau	varchar<span class="br0">(</span>4<span class="br0">)</span><span class="sy0">,</span>
+ jour      varchar<span class="br0">(</span>1<span class="br0">)</span><span class="sy0">,</span>
+ hr_debut  int <span class="kw1">CHECK</span> <span class="br0">(</span>hr_debut <span class="sy0">&gt;=</span> 0 <span class="kw1">AND</span> hr_debut <span class="sy0">&lt;</span> 24<span class="br0">)</span><span class="sy0">,</span>
+ min_debut int <span class="kw1">CHECK</span> <span class="br0">(</span>min_debut <span class="sy0">&gt;=</span> 0 <span class="kw1">AND</span> min_debut <span class="sy0">&lt;</span> 60<span class="br0">)</span><span class="sy0">,</span>
+ hr_fin    int <span class="kw1">CHECK</span> <span class="br0">(</span>hr_fin <span class="sy0">&gt;=</span> 0 <span class="kw1">AND</span> hr_fin <span class="sy0">&lt;</span> 24<span class="br0">)</span><span class="sy0">,</span>
+ min_fin   int <span class="kw1">CHECK</span> <span class="br0">(</span>min_fin <span class="sy0">&gt;=</span> 0 <span class="kw1">AND</span> min_fin <span class="sy0">&lt;</span> 60<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">(</span>id_creneau<span class="sy0">,</span> jour<span class="sy0">,</span> hr_debut<span class="sy0">,</span> min_debut<span class="br0">)</span>
+<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">CREATE</span> <span class="kw1">TABLE</span> prereq
+<span class="br0">(</span>id_cours  varchar<span class="br0">(</span>8<span class="br0">)</span><span class="sy0">,</span> 
+ prereq_id varchar<span class="br0">(</span>8<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">(</span>id_cours<span class="sy0">,</span> prereq_id<span class="br0">)</span><span class="sy0">,</span>
+ <span class="kw1">FOREIGN</span> <span class="kw1">KEY</span> <span class="br0">(</span>id_cours<span class="br0">)</span> <span class="kw1">REFERENCES</span> cours<span class="br0">(</span>id_cours<span class="br0">)</span> <span class="kw1">ON</span> <span class="kw1">DELETE</span> cascade<span class="sy0">,</span>
+ <span class="kw1">FOREIGN</span> <span class="kw1">KEY</span> <span class="br0">(</span>prereq_id<span class="br0">)</span> <span class="kw1">REFERENCES</span> cours<span class="br0">(</span>id_cours<span class="br0">)</span>
+<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">DELETE</span> <span class="kw1">FROM</span> prereq;
+<span class="kw1">DELETE</span> <span class="kw1">FROM</span> creneau;
+<span class="kw1">DELETE</span> <span class="kw1">FROM</span> tuteur;
+<span class="kw1">DELETE</span> <span class="kw1">FROM</span> choix_option;
+<span class="kw1">DELETE</span> <span class="kw1">FROM</span> etudiant;
+<span class="kw1">DELETE</span> <span class="kw1">FROM</span> resp_module;
+<span class="kw1">DELETE</span> <span class="kw1">FROM</span> filiere;
+<span class="kw1">DELETE</span> <span class="kw1">FROM</span> enseignant;
+<span class="kw1">DELETE</span> <span class="kw1">FROM</span> cours;
+<span class="kw1">DELETE</span> <span class="kw1">FROM</span> departement;
+<span class="kw1">DELETE</span> <span class="kw1">FROM</span> salle_cours;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> salle_cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'Packard'</span><span class="sy0">,</span> <span class="st0">'101'</span><span class="sy0">,</span> <span class="st0">'500'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> salle_cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'Painter'</span><span class="sy0">,</span> <span class="st0">'514'</span><span class="sy0">,</span> <span class="st0">'10'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> salle_cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'Taylor'</span><span class="sy0">,</span> <span class="st0">'3128'</span><span class="sy0">,</span> <span class="st0">'70'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> salle_cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'Watson'</span><span class="sy0">,</span> <span class="st0">'100'</span><span class="sy0">,</span> <span class="st0">'30'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> salle_cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'Watson'</span><span class="sy0">,</span> <span class="st0">'120'</span><span class="sy0">,</span> <span class="st0">'50'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> departement <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'Biology'</span><span class="sy0">,</span> <span class="st0">'Watson'</span><span class="sy0">,</span> <span class="st0">'90000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> departement <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'Comp. Sci.'</span><span class="sy0">,</span> <span class="st0">'Taylor'</span><span class="sy0">,</span> <span class="st0">'100000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> departement <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'Elec. Eng.'</span><span class="sy0">,</span> <span class="st0">'Taylor'</span><span class="sy0">,</span> <span class="st0">'85000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> departement <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'Finance'</span><span class="sy0">,</span> <span class="st0">'Painter'</span><span class="sy0">,</span> <span class="st0">'120000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> departement <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'History'</span><span class="sy0">,</span> <span class="st0">'Painter'</span><span class="sy0">,</span> <span class="st0">'50000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> departement <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'Music'</span><span class="sy0">,</span> <span class="st0">'Packard'</span><span class="sy0">,</span> <span class="st0">'80000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> departement <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'Physics'</span><span class="sy0">,</span> <span class="st0">'Watson'</span><span class="sy0">,</span> <span class="st0">'70000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'BIO-101'</span><span class="sy0">,</span> <span class="st0">'Intro. to Biology'</span><span class="sy0">,</span> <span class="st0">'Biology'</span><span class="sy0">,</span> <span class="st0">'4'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'BIO-301'</span><span class="sy0">,</span> <span class="st0">'Genetics'</span><span class="sy0">,</span> <span class="st0">'Biology'</span><span class="sy0">,</span> <span class="st0">'4'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'BIO-399'</span><span class="sy0">,</span> <span class="st0">'Computational Biology'</span><span class="sy0">,</span> <span class="st0">'Biology'</span><span class="sy0">,</span> <span class="st0">'3'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-101'</span><span class="sy0">,</span> <span class="st0">'Intro. to Computer Science'</span><span class="sy0">,</span> <span class="st0">'Comp. Sci.'</span><span class="sy0">,</span> <span class="st0">'4'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-190'</span><span class="sy0">,</span> <span class="st0">'Game Design'</span><span class="sy0">,</span> <span class="st0">'Comp. Sci.'</span><span class="sy0">,</span> <span class="st0">'4'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-315'</span><span class="sy0">,</span> <span class="st0">'Robotics'</span><span class="sy0">,</span> <span class="st0">'Comp. Sci.'</span><span class="sy0">,</span> <span class="st0">'3'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-319'</span><span class="sy0">,</span> <span class="st0">'Image Processing'</span><span class="sy0">,</span> <span class="st0">'Comp. Sci.'</span><span class="sy0">,</span> <span class="st0">'3'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-347'</span><span class="sy0">,</span> <span class="st0">'Database System Concepts'</span><span class="sy0">,</span> <span class="st0">'Comp. Sci.'</span><span class="sy0">,</span> <span class="st0">'3'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'EE-181'</span><span class="sy0">,</span> <span class="st0">'Intro. to Digital Systems'</span><span class="sy0">,</span> <span class="st0">'Elec. Eng.'</span><span class="sy0">,</span> <span class="st0">'3'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'FIN-201'</span><span class="sy0">,</span> <span class="st0">'Investment Banking'</span><span class="sy0">,</span> <span class="st0">'Finance'</span><span class="sy0">,</span> <span class="st0">'3'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'HIS-351'</span><span class="sy0">,</span> <span class="st0">'World History'</span><span class="sy0">,</span> <span class="st0">'History'</span><span class="sy0">,</span> <span class="st0">'3'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'MU-199'</span><span class="sy0">,</span> <span class="st0">'Music Video Production'</span><span class="sy0">,</span> <span class="st0">'Music'</span><span class="sy0">,</span> <span class="st0">'3'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> cours <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'PHY-101'</span><span class="sy0">,</span> <span class="st0">'Physical Principles'</span><span class="sy0">,</span> <span class="st0">'Physics'</span><span class="sy0">,</span> <span class="st0">'4'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> enseignant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'10101'</span><span class="sy0">,</span> <span class="st0">'Srinivasan'</span><span class="sy0">,</span> <span class="st0">'Comp. Sci.'</span><span class="sy0">,</span> <span class="st0">'65000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> enseignant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'12121'</span><span class="sy0">,</span> <span class="st0">'Wu'</span><span class="sy0">,</span> <span class="st0">'Finance'</span><span class="sy0">,</span> <span class="st0">'90000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> enseignant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'15151'</span><span class="sy0">,</span> <span class="st0">'Mozart'</span><span class="sy0">,</span> <span class="st0">'Music'</span><span class="sy0">,</span> <span class="st0">'40000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> enseignant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'22222'</span><span class="sy0">,</span> <span class="st0">'Einstein'</span><span class="sy0">,</span> <span class="st0">'Physics'</span><span class="sy0">,</span> <span class="st0">'95000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> enseignant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'32343'</span><span class="sy0">,</span> <span class="st0">'El Said'</span><span class="sy0">,</span> <span class="st0">'History'</span><span class="sy0">,</span> <span class="st0">'60000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> enseignant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'33456'</span><span class="sy0">,</span> <span class="st0">'Gold'</span><span class="sy0">,</span> <span class="st0">'Physics'</span><span class="sy0">,</span> <span class="st0">'87000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> enseignant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'45565'</span><span class="sy0">,</span> <span class="st0">'Katz'</span><span class="sy0">,</span> <span class="st0">'Comp. Sci.'</span><span class="sy0">,</span> <span class="st0">'75000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> enseignant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'58583'</span><span class="sy0">,</span> <span class="st0">'Califieri'</span><span class="sy0">,</span> <span class="st0">'History'</span><span class="sy0">,</span> <span class="st0">'62000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> enseignant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'76543'</span><span class="sy0">,</span> <span class="st0">'Singh'</span><span class="sy0">,</span> <span class="st0">'Finance'</span><span class="sy0">,</span> <span class="st0">'80000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> enseignant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'76766'</span><span class="sy0">,</span> <span class="st0">'Crick'</span><span class="sy0">,</span> <span class="st0">'Biology'</span><span class="sy0">,</span> <span class="st0">'72000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> enseignant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'83821'</span><span class="sy0">,</span> <span class="st0">'Brandt'</span><span class="sy0">,</span> <span class="st0">'Comp. Sci.'</span><span class="sy0">,</span> <span class="st0">'92000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> enseignant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'98345'</span><span class="sy0">,</span> <span class="st0">'Kim'</span><span class="sy0">,</span> <span class="st0">'Elec. Eng.'</span><span class="sy0">,</span> <span class="st0">'80000'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> filiere <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'BIO-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Summer'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'Painter'</span><span class="sy0">,</span> <span class="st0">'514'</span><span class="sy0">,</span> <span class="st0">'B'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> filiere <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'BIO-301'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Summer'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="st0">'Painter'</span><span class="sy0">,</span> <span class="st0">'514'</span><span class="sy0">,</span> <span class="st0">'A'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> filiere <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Fall'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'Packard'</span><span class="sy0">,</span> <span class="st0">'101'</span><span class="sy0">,</span> <span class="st0">'H'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> filiere <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="st0">'Packard'</span><span class="sy0">,</span> <span class="st0">'101'</span><span class="sy0">,</span> <span class="st0">'F'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> filiere <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-190'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'Taylor'</span><span class="sy0">,</span> <span class="st0">'3128'</span><span class="sy0">,</span> <span class="st0">'E'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> filiere <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-190'</span><span class="sy0">,</span> <span class="st0">'2'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'Taylor'</span><span class="sy0">,</span> <span class="st0">'3128'</span><span class="sy0">,</span> <span class="st0">'A'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> filiere <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-315'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="st0">'Watson'</span><span class="sy0">,</span> <span class="st0">'120'</span><span class="sy0">,</span> <span class="st0">'D'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> filiere <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-319'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="st0">'Watson'</span><span class="sy0">,</span> <span class="st0">'100'</span><span class="sy0">,</span> <span class="st0">'B'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> filiere <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-319'</span><span class="sy0">,</span> <span class="st0">'2'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="st0">'Taylor'</span><span class="sy0">,</span> <span class="st0">'3128'</span><span class="sy0">,</span> <span class="st0">'C'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> filiere <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-347'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Fall'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'Taylor'</span><span class="sy0">,</span> <span class="st0">'3128'</span><span class="sy0">,</span> <span class="st0">'A'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> filiere <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'EE-181'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'Taylor'</span><span class="sy0">,</span> <span class="st0">'3128'</span><span class="sy0">,</span> <span class="st0">'C'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> filiere <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'FIN-201'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="st0">'Packard'</span><span class="sy0">,</span> <span class="st0">'101'</span><span class="sy0">,</span> <span class="st0">'B'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> filiere <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'HIS-351'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="st0">'Painter'</span><span class="sy0">,</span> <span class="st0">'514'</span><span class="sy0">,</span> <span class="st0">'C'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> filiere <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'MU-199'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="st0">'Packard'</span><span class="sy0">,</span> <span class="st0">'101'</span><span class="sy0">,</span> <span class="st0">'D'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> filiere <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'PHY-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Fall'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'Watson'</span><span class="sy0">,</span> <span class="st0">'100'</span><span class="sy0">,</span> <span class="st0">'A'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> resp_module <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'10101'</span><span class="sy0">,</span> <span class="st0">'CS-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Fall'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> resp_module <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'10101'</span><span class="sy0">,</span> <span class="st0">'CS-315'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> resp_module <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'10101'</span><span class="sy0">,</span> <span class="st0">'CS-347'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Fall'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> resp_module <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'12121'</span><span class="sy0">,</span> <span class="st0">'FIN-201'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> resp_module <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'15151'</span><span class="sy0">,</span> <span class="st0">'MU-199'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> resp_module <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'22222'</span><span class="sy0">,</span> <span class="st0">'PHY-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Fall'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> resp_module <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'32343'</span><span class="sy0">,</span> <span class="st0">'HIS-351'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> resp_module <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'45565'</span><span class="sy0">,</span> <span class="st0">'CS-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> resp_module <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'45565'</span><span class="sy0">,</span> <span class="st0">'CS-319'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> resp_module <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'76766'</span><span class="sy0">,</span> <span class="st0">'BIO-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Summer'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> resp_module <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'76766'</span><span class="sy0">,</span> <span class="st0">'BIO-301'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Summer'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> resp_module <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'83821'</span><span class="sy0">,</span> <span class="st0">'CS-190'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> resp_module <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'83821'</span><span class="sy0">,</span> <span class="st0">'CS-190'</span><span class="sy0">,</span> <span class="st0">'2'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> resp_module <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'83821'</span><span class="sy0">,</span> <span class="st0">'CS-319'</span><span class="sy0">,</span> <span class="st0">'2'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> resp_module <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'98345'</span><span class="sy0">,</span> <span class="st0">'EE-181'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> etudiant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'00128'</span><span class="sy0">,</span> <span class="st0">'Zhang'</span><span class="sy0">,</span> <span class="st0">'Comp. Sci.'</span><span class="sy0">,</span> <span class="st0">'102'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> etudiant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'12345'</span><span class="sy0">,</span> <span class="st0">'Shankar'</span><span class="sy0">,</span> <span class="st0">'Comp. Sci.'</span><span class="sy0">,</span> <span class="st0">'14'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> etudiant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'19991'</span><span class="sy0">,</span> <span class="st0">'Brandt'</span><span class="sy0">,</span> <span class="st0">'History'</span><span class="sy0">,</span> <span class="st0">'80'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> etudiant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'23121'</span><span class="sy0">,</span> <span class="st0">'Chavez'</span><span class="sy0">,</span> <span class="st0">'Finance'</span><span class="sy0">,</span> <span class="st0">'110'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> etudiant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'44553'</span><span class="sy0">,</span> <span class="st0">'Peltier'</span><span class="sy0">,</span> <span class="st0">'Physics'</span><span class="sy0">,</span> <span class="st0">'56'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> etudiant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'45678'</span><span class="sy0">,</span> <span class="st0">'Levy'</span><span class="sy0">,</span> <span class="st0">'Physics'</span><span class="sy0">,</span> <span class="st0">'46'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> etudiant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'54321'</span><span class="sy0">,</span> <span class="st0">'Williams'</span><span class="sy0">,</span> <span class="st0">'Comp. Sci.'</span><span class="sy0">,</span> <span class="st0">'54'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> etudiant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'55739'</span><span class="sy0">,</span> <span class="st0">'Sanchez'</span><span class="sy0">,</span> <span class="st0">'Music'</span><span class="sy0">,</span> <span class="st0">'38'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> etudiant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'70557'</span><span class="sy0">,</span> <span class="st0">'Snow'</span><span class="sy0">,</span> <span class="st0">'Physics'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> etudiant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'76543'</span><span class="sy0">,</span> <span class="st0">'Brown'</span><span class="sy0">,</span> <span class="st0">'Comp. Sci.'</span><span class="sy0">,</span> <span class="st0">'58'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> etudiant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'76653'</span><span class="sy0">,</span> <span class="st0">'Aoi'</span><span class="sy0">,</span> <span class="st0">'Elec. Eng.'</span><span class="sy0">,</span> <span class="st0">'60'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> etudiant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'98765'</span><span class="sy0">,</span> <span class="st0">'Bourikas'</span><span class="sy0">,</span> <span class="st0">'Elec. Eng.'</span><span class="sy0">,</span> <span class="st0">'98'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> etudiant <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'98988'</span><span class="sy0">,</span> <span class="st0">'Tanaka'</span><span class="sy0">,</span> <span class="st0">'Biology'</span><span class="sy0">,</span> <span class="st0">'120'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'00128'</span><span class="sy0">,</span> <span class="st0">'CS-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Fall'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'A'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'00128'</span><span class="sy0">,</span> <span class="st0">'CS-347'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Fall'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'A-'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'12345'</span><span class="sy0">,</span> <span class="st0">'CS-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Fall'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'C'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'12345'</span><span class="sy0">,</span> <span class="st0">'CS-190'</span><span class="sy0">,</span> <span class="st0">'2'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'A'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'12345'</span><span class="sy0">,</span> <span class="st0">'CS-315'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="st0">'A'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'12345'</span><span class="sy0">,</span> <span class="st0">'CS-347'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Fall'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'A'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'19991'</span><span class="sy0">,</span> <span class="st0">'HIS-351'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="st0">'B'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'23121'</span><span class="sy0">,</span> <span class="st0">'FIN-201'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="st0">'C+'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'44553'</span><span class="sy0">,</span> <span class="st0">'PHY-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Fall'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'B-'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'45678'</span><span class="sy0">,</span> <span class="st0">'CS-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Fall'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'F'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'45678'</span><span class="sy0">,</span> <span class="st0">'CS-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="st0">'B+'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'45678'</span><span class="sy0">,</span> <span class="st0">'CS-319'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="st0">'B'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'54321'</span><span class="sy0">,</span> <span class="st0">'CS-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Fall'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'A-'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'54321'</span><span class="sy0">,</span> <span class="st0">'CS-190'</span><span class="sy0">,</span> <span class="st0">'2'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'B+'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'55739'</span><span class="sy0">,</span> <span class="st0">'MU-199'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="st0">'A-'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'76543'</span><span class="sy0">,</span> <span class="st0">'CS-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Fall'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'A'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'76543'</span><span class="sy0">,</span> <span class="st0">'CS-319'</span><span class="sy0">,</span> <span class="st0">'2'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="st0">'A'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'76653'</span><span class="sy0">,</span> <span class="st0">'EE-181'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'C'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'98765'</span><span class="sy0">,</span> <span class="st0">'CS-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Fall'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'C-'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'98765'</span><span class="sy0">,</span> <span class="st0">'CS-315'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Spring'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="st0">'B'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'98988'</span><span class="sy0">,</span> <span class="st0">'BIO-101'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Summer'</span><span class="sy0">,</span> <span class="st0">'2009'</span><span class="sy0">,</span> <span class="st0">'A'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> choix_option <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'98988'</span><span class="sy0">,</span> <span class="st0">'BIO-301'</span><span class="sy0">,</span> <span class="st0">'1'</span><span class="sy0">,</span> <span class="st0">'Summer'</span><span class="sy0">,</span> <span class="st0">'2010'</span><span class="sy0">,</span> <span class="kw1">NULL</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> tuteur <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'00128'</span><span class="sy0">,</span> <span class="st0">'45565'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> tuteur <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'12345'</span><span class="sy0">,</span> <span class="st0">'10101'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> tuteur <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'23121'</span><span class="sy0">,</span> <span class="st0">'76543'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> tuteur <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'44553'</span><span class="sy0">,</span> <span class="st0">'22222'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> tuteur <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'45678'</span><span class="sy0">,</span> <span class="st0">'22222'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> tuteur <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'76543'</span><span class="sy0">,</span> <span class="st0">'45565'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> tuteur <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'76653'</span><span class="sy0">,</span> <span class="st0">'98345'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> tuteur <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'98765'</span><span class="sy0">,</span> <span class="st0">'98345'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> tuteur <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'98988'</span><span class="sy0">,</span> <span class="st0">'76766'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'A'</span><span class="sy0">,</span> <span class="st0">'M'</span><span class="sy0">,</span> <span class="st0">'8'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="sy0">,</span> <span class="st0">'8'</span><span class="sy0">,</span> <span class="st0">'50'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'A'</span><span class="sy0">,</span> <span class="st0">'W'</span><span class="sy0">,</span> <span class="st0">'8'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="sy0">,</span> <span class="st0">'8'</span><span class="sy0">,</span> <span class="st0">'50'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'A'</span><span class="sy0">,</span> <span class="st0">'F'</span><span class="sy0">,</span> <span class="st0">'8'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="sy0">,</span> <span class="st0">'8'</span><span class="sy0">,</span> <span class="st0">'50'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'B'</span><span class="sy0">,</span> <span class="st0">'M'</span><span class="sy0">,</span> <span class="st0">'9'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="sy0">,</span> <span class="st0">'9'</span><span class="sy0">,</span> <span class="st0">'50'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'B'</span><span class="sy0">,</span> <span class="st0">'W'</span><span class="sy0">,</span> <span class="st0">'9'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="sy0">,</span> <span class="st0">'9'</span><span class="sy0">,</span> <span class="st0">'50'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'B'</span><span class="sy0">,</span> <span class="st0">'F'</span><span class="sy0">,</span> <span class="st0">'9'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="sy0">,</span> <span class="st0">'9'</span><span class="sy0">,</span> <span class="st0">'50'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'C'</span><span class="sy0">,</span> <span class="st0">'M'</span><span class="sy0">,</span> <span class="st0">'11'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="sy0">,</span> <span class="st0">'11'</span><span class="sy0">,</span> <span class="st0">'50'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'C'</span><span class="sy0">,</span> <span class="st0">'W'</span><span class="sy0">,</span> <span class="st0">'11'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="sy0">,</span> <span class="st0">'11'</span><span class="sy0">,</span> <span class="st0">'50'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'C'</span><span class="sy0">,</span> <span class="st0">'F'</span><span class="sy0">,</span> <span class="st0">'11'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="sy0">,</span> <span class="st0">'11'</span><span class="sy0">,</span> <span class="st0">'50'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'D'</span><span class="sy0">,</span> <span class="st0">'M'</span><span class="sy0">,</span> <span class="st0">'13'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="sy0">,</span> <span class="st0">'13'</span><span class="sy0">,</span> <span class="st0">'50'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'D'</span><span class="sy0">,</span> <span class="st0">'W'</span><span class="sy0">,</span> <span class="st0">'13'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="sy0">,</span> <span class="st0">'13'</span><span class="sy0">,</span> <span class="st0">'50'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'D'</span><span class="sy0">,</span> <span class="st0">'F'</span><span class="sy0">,</span> <span class="st0">'13'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="sy0">,</span> <span class="st0">'13'</span><span class="sy0">,</span> <span class="st0">'50'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'E'</span><span class="sy0">,</span> <span class="st0">'T'</span><span class="sy0">,</span> <span class="st0">'10'</span><span class="sy0">,</span> <span class="st0">'30'</span><span class="sy0">,</span> <span class="st0">'11'</span><span class="sy0">,</span> <span class="st0">'45'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'E'</span><span class="sy0">,</span> <span class="st0">'R'</span><span class="sy0">,</span> <span class="st0">'10'</span><span class="sy0">,</span> <span class="st0">'30'</span><span class="sy0">,</span> <span class="st0">'11'</span><span class="sy0">,</span> <span class="st0">'45'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'F'</span><span class="sy0">,</span> <span class="st0">'T'</span><span class="sy0">,</span> <span class="st0">'14'</span><span class="sy0">,</span> <span class="st0">'30'</span><span class="sy0">,</span> <span class="st0">'15'</span><span class="sy0">,</span> <span class="st0">'45'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'F'</span><span class="sy0">,</span> <span class="st0">'R'</span><span class="sy0">,</span> <span class="st0">'14'</span><span class="sy0">,</span> <span class="st0">'30'</span><span class="sy0">,</span> <span class="st0">'15'</span><span class="sy0">,</span> <span class="st0">'45'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'G'</span><span class="sy0">,</span> <span class="st0">'M'</span><span class="sy0">,</span> <span class="st0">'16'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="sy0">,</span> <span class="st0">'16'</span><span class="sy0">,</span> <span class="st0">'50'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'G'</span><span class="sy0">,</span> <span class="st0">'W'</span><span class="sy0">,</span> <span class="st0">'16'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="sy0">,</span> <span class="st0">'16'</span><span class="sy0">,</span> <span class="st0">'50'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'G'</span><span class="sy0">,</span> <span class="st0">'F'</span><span class="sy0">,</span> <span class="st0">'16'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="sy0">,</span> <span class="st0">'16'</span><span class="sy0">,</span> <span class="st0">'50'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> creneau <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'H'</span><span class="sy0">,</span> <span class="st0">'W'</span><span class="sy0">,</span> <span class="st0">'10'</span><span class="sy0">,</span> <span class="st0">'0'</span><span class="sy0">,</span> <span class="st0">'12'</span><span class="sy0">,</span> <span class="st0">'30'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> prereq <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'BIO-301'</span><span class="sy0">,</span> <span class="st0">'BIO-101'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> prereq <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'BIO-399'</span><span class="sy0">,</span> <span class="st0">'BIO-101'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> prereq <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-190'</span><span class="sy0">,</span> <span class="st0">'CS-101'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> prereq <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-315'</span><span class="sy0">,</span> <span class="st0">'CS-101'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> prereq <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-319'</span><span class="sy0">,</span> <span class="st0">'CS-101'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> prereq <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'CS-347'</span><span class="sy0">,</span> <span class="st0">'CS-101'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> prereq <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'EE-181'</span><span class="sy0">,</span> <span class="st0">'PHY-101'</span><span class="br0">)</span>;
+&nbsp;
+<span class="sy0">.</span>backup db<span class="sy0">.</span>sqlite</pre>
+</dd></dl>
+
+</div>
+
+<h2><a name="requetes_sql" id="requetes_sql">Requêtes SQL</a></h2>
+<div class="level2">
+
+</div>
+
+<h3><a name="description_rapide_de_la_base" id="description_rapide_de_la_base">Description rapide de la base</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <em>departement(<em class="u">nom_dept</em>, batiment, budget)</em> : les départements d’une université (américaine)</div>
+</li>
+<li class="level1"><div class="li"> <em>cours(<em class="u">id_cours</em>, intitule, nom_dept, credits)</em> : les intitulés des cours, avec leur nombre d’ECTS et le département dont ils dépendent</div>
+</li>
+<li class="level1"><div class="li"> <em>enseignant(<em class="u">ID</em>, nom, nom_dept, salaire)</em> : les enseignants, avec leur no. d’identifiant</div>
+</li>
+<li class="level1"><div class="li"> <em>salle_cours(<em class="u">batiment</em>, <em class="u">no_salle</em>, capacite)</em> : la table contenant les salles de cours avec leur caractéristiques</div>
+</li>
+<li class="level1"><div class="li"> <em>filiere(<em class="u">id_cours</em>, <em class="u">id_filiere</em>, <em class="u">semestre</em>, <em class="u">annee</em>, batiment, no_salle, id_creneau)</em> : la liste des filières de l’université, avec tout leur emploi du temps codé dans les <em>id_creneau</em></div>
+</li>
+<li class="level1"><div class="li"> <em>resp_module(<em class="u">ID</em>, <em class="u">id_cours</em>, <em class="u">id_filiere</em>, <em class="u">semestre</em>, <em class="u">annee</em>)</em> : les responsables de modules, pour chaque année</div>
+</li>
+<li class="level1"><div class="li"> <em>etudiant(<em class="u">ID</em>, nom, nom_dept, tot_cred)</em> : la liste de tous les étudiants (passés et présents) de cette université</div>
+</li>
+<li class="level1"><div class="li"> <em>choix_option(<em class="u">ID</em>, <em class="u">id_cours</em>, <em class="u">id_filiere</em>, <em class="u">semestre</em>, <em class="u">annee</em>, note)</em> : les choix des modules que les étudiants ont fait pendant leur cursus</div>
+</li>
+<li class="level1"><div class="li"> <em>tuteur(<em class="u">ID_etud</em>, ID_ens)</em> : les tuteurs de chaque étudiant</div>
+</li>
+<li class="level1"><div class="li"> <em>creneau(<em class="u">id_creneau</em>, <em class="u">jour</em>, <em class="u">hr_debut</em>, <em class="u">min_debut</em>, hr_fin, min_fin)</em> : la table détaillant les créneaux horaires des cours</div>
+</li>
+<li class="level1"><div class="li"> <em>prereq(<em class="u">id_cours</em>, <em class="u">prereq_id</em>)</em> : les prérequis (dépendances entre les cours)</div>
+</li>
+</ul>
+
+</div>
+
+<h3><a name="requetes_sql1" id="requetes_sql1">Requêtes SQL</a></h3>
+<div class="level3">
+<ol>
+<li class="level1"><div class="li"> Trouver tous les enseignants du département “Biology”</div>
+</li>
+<li class="level1"><div class="li"> Trouver les noms des cours de 3 ECTS du département d’informatique (“Comp. Sci.”)</div>
+</li>
+<li class="level1"><div class="li"> Afficher les identifiants et intitulés des cours choisis de l'étudiant dont le <em>ID</em> est 12345</div>
+</li>
+<li class="level1"><div class="li"> Afficher le nombre total de crédits pour ce même étudiant, sans utiliser le champ <em>tot_cred</em> de la table <em>etudiant</em></div>
+</li>
+<li class="level1"><div class="li"> Afficher pour chaque étudiant le total de crédits sans utiliser le champ <em>tot_cred</em></div>
+</li>
+<li class="level1"><div class="li"> Afficher le nom des étudiants pour lesquels la valeur de <em>tot_cred</em> est correcte</div>
+</li>
+<li class="level1"><div class="li"> Trouver les noms des étudiants qui ont choisi un cours du département d’informatique (“Comp. Sci.”), sans doublon</div>
+</li>
+<li class="level1"><div class="li"> Trouver les noms des étudiants ayant suivi un cours qui n'est pas de leur département</div>
+</li>
+<li class="level1"><div class="li"> Donner pour chaque étudiant le nombre de cours qu'il a suivi hors de son département</div>
+</li>
+<li class="level1"><div class="li"> Donner la moyenne du nombre de cours pris hors département</div>
+</li>
+<li class="level1"><div class="li"> Trouver les ID des enseignants qui n’ont jamais été responsable de module</div>
+</li>
+<li class="level1"><div class="li"> Comme pour le point précédent, mais en affichant aussi les noms des enseignants</div>
+</li>
+<li class="level1"><div class="li"> Afficher pour chaque enseignant son 
+nom et le nombre de modules dont il est responsable (attention de bien 
+afficher 0 pour les enseignants n'ayant jamais été responsable)</div>
+</li>
+<li class="level1"><div class="li"> Trouver pour chaque filière le 
+nombre maximal et minimal d’étudiants inscrits au cours d'un semestre 
+(on ne se soucie pas des filières qui n’ont pas eu d’étudiants)</div>
+</li>
+<li class="level1"><div class="li"> Même question en affichant 0 pour les filières qui n'ont pas eu d'étudiants</div>
+</li>
+<li class="level1"><div class="li"> Trouver les cours dont l'identifiant commence par “CS-1”</div>
+</li>
+<li class="level1"><div class="li"> Donner le nom et le département de tous les enseignants qui ont été responsables des cours trouvés au point précédent</div>
+</li>
+<li class="level1"><div class="li"> Donner pour chaque salle de cours le nombre total d'heures de cours dispensées dans cette salle</div>
+</li>
+<li class="level1"><div class="li"> Donner pour chaque étudiant le nombre d'heures de cours suivi en 2009</div>
+</li>
+<li class="level1"><div class="li"> Donner pour chaque étudiant le cours pour lequel il a suivi le plus de nombre d'heures </div>
+</li>
+</ol>
+
+</div>
+
+<h2><a name="passage_a_l_echelle" id="passage_a_l_echelle">Passage à l'échelle</a></h2>
+<div class="level2">
+
+<p>
+
+Après avoir fait vos tests avec sur les quelques données précédentes, vous pouvez essayer de les appliquer sur la <a href="http://www.lacl.fr/%7Easpicher/Wiki/_media/l3info/bd/tp2/gde_base.sql" class="media mediafile mf_sql" title="l3info:bd:tp2:gde_base.sql">table suivante</a> bien plus conséquente pour observer les délais dus aux calculs.
+</p>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+        Connecté en tant que : L2 Informatique (l2info)      </div>
+      <div class="doc">
+        l3info/bd/tp2/sqlite.txt · Dernière modification: 2015/02/25 11:17 par aspicher      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+                              </div>
+      <div class="bar-right" id="bar__bottomright">
+                                        <form class="button btn_logout" method="get" action="/~aspicher/Wiki/l3info/bd/tp2/sqlite"><div class="no"><input name="do" value="logout" type="hidden"><input name="sectok" value="82424b0788480fc2ae883d95f50cf65a" type="hidden"><input value="Déconnexion" class="button" title="Déconnexion" type="submit"></div></form>                <a class="nolink" href="#dokuwiki__top"><input class="button" value="Haut de page" onclick="window.scrollTo(0, 0)" title="Haut de page" type="button"></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+  <div class="license">Sauf mention contraire, le contenu de ce wiki est placé sous la licence suivante:<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></div>
+</div>
+
+<div class="footerinc">
+
+  <a href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php" title="Recent changes RSS feed"><img src="TP%202%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/button-rss.png" alt="Recent changes RSS feed" height="15" width="80"></a>
+
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="CC Attribution-Noncommercial-Share Alike 3.0 Unported"><img src="TP%202%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/cc-by-nc-sa.png" alt="" height="15" width="80"></a>
+  
+  <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="TP%202%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/button-donate.gif" alt="Donate" height="15" width="80"></a>
+
+  <a href="http://www.php.net/" title="Powered by PHP"><img src="TP%202%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/button-php.gif" alt="Powered by PHP" height="15" width="80"></a>
+
+  <a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="TP%202%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/button-xhtml.png" alt="Valid XHTML 1.0" height="15" width="80"></a>
+
+  <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="TP%202%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/button-css.png" alt="Valid CSS" height="15" width="80"></a>
+
+  <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="TP%202%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/button-dw.png" alt="Driven by DokuWiki" height="15" width="80"></a>
+
+
+
+</div>
+
+<div class="no"><img src="TP%202%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/indexer.gif" alt="" height="1" width="1"></div>
+
+
+</body></html>

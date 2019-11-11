@@ -1,0 +1,410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    TP 4    [Spicher]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-10-01T20:59:41+0200">
+<meta name="keywords" content="l2info,progc,tp4">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/exe/opensearch.php" title="Spicher">
+<link rel="start" href="http://www.lacl.fr/%7Easpicher/Wiki/">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php?mode=list&amp;ns=l2info:progc">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.lacl.fr/%7Easpicher/Wiki/_export/xhtml/l2info/progc/tp4">
+<link rel="canonical" href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp4">
+<link rel="stylesheet" media="all" type="text/css" href="TP%204%20%5BSpicher%5D_files/css_002.css">
+<link rel="stylesheet" media="screen" type="text/css" href="TP%204%20%5BSpicher%5D_files/css.css">
+<link rel="stylesheet" media="print" type="text/css" href="TP%204%20%5BSpicher%5D_files/css_003.css">
+<script type="text/javascript" charset="utf-8"><!--//--><![CDATA[//><!--
+var NS='l2info:progc';var SIG=' --- //[[antoine.spicher@u-pec.fr|L2 Informatique]] 2015/11/29 18:35//';var JSINFO = {"id":"l2info:progc:tp4","namespace":"l2info:progc"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="TP%204%20%5BSpicher%5D_files/js.php"></script>
+
+  <link rel="shortcut icon" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/tpl/default/images/favicon.ico">
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp4?do=backlink" title="Liens vers cette page">TP 4</a>]]
+      </div>
+      <div class="logo">
+        <a href="http://www.lacl.fr/%7Easpicher/Wiki/" name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]">Spicher</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                      </div>
+
+      <div class="bar-right" id="bar__topright">
+                &nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+        <div class="breadcrumbs">
+      <span class="bchead">Piste:</span> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/start" class="breadcrumbs" title="start">Accueil</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/start" class="breadcrumbs" title="l2info:progc:start">Programmation en C (avancé)</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp1" class="breadcrumbs" title="l2info:progc:tp1">TP 1</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp2" class="breadcrumbs" title="l2info:progc:tp2">TP 2</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp3" class="breadcrumbs" title="l2info:progc:tp3">TP 3</a> <span class="bcsep">»</span> <span class="curid"><a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp4" class="breadcrumbs" title="l2info:progc:tp4">TP 4</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div style="cursor: pointer;" class="tocheader toctoggle" id="toc__header"><span class="toc_close" style="cursor: pointer;" id="toc__toggle"><span>−</span></span>Table des matières</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#tp_4" class="toc">TP 4</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#types_derives" class="toc">Types dérivés</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="#types_enumeres" class="toc">Types énumérés</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#types_produits" class="toc">Types produits</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#types_sommes" class="toc">Types sommes</a></span></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><span class="li"><a href="#composition_de_trains" class="toc">Composition de trains</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="#question_1" class="toc">Question 1</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#question_2" class="toc">Question 2</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#question_3" class="toc">Question 3</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#question_4" class="toc">Question 4</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#question_5" class="toc">Question 5</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#question_6" class="toc">Question 6</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#question_7" class="toc">Question 7</a></span></div></li></ul>
+</li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="tp_4" id="tp_4">TP 4</a></h1>
+<div class="level1">
+
+<p>
+
+Ce TP a pour objectif d'appréhender la construction de nouveaux types avec <code>enum</code>, <code>struct</code>, <code>union</code> et <code>typedef</code>.
+</p>
+
+
+
+</div>
+
+<h2><a name="types_derives" id="types_derives">Types dérivés</a></h2>
+<div class="level2">
+
+</div>
+
+<h3><a name="types_enumeres" id="types_enumeres">Types énumérés</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Définissez l'énumération <code>enum month_e</code> déclarant les mois de l'année comme nouvelles constantes de telle sorte qu'on puisse déclarer une variable <code>enum month_e m = January;</code></div>
+</li>
+<li class="level1"><div class="li"> Complétez votre définition pour obtenir le type <code>month_t</code> telle qu'on puisse déclarer une variable <code>month_t m = January;</code></div>
+</li>
+<li class="level1"><div class="li"> Affichez la taille occupée par les variables de type <code>month_t</code></div>
+</li>
+<li class="level1"><div class="li"> Affichez l'entier associé à chaque mois par le compilateur</div>
+</li>
+<li class="level1"><div class="li"> Modifiez votre définition pour que l'association soit classique : <code>January</code> → 1, <code>February</code> → 2, …</div>
+</li>
+<li class="level1"><div class="li"> Ajoutez à la définition de <code>enum month_e</code> les mois sur 3 lettres : <code>Jan</code>, <code>Feb</code>, … Attention, il faudra que le code suivant ne produise pas d'erreur :<pre class="code c">  month_t m1 <span class="sy0">=</span> March<span class="sy0">;</span>
+  month_t m2 <span class="sy0">=</span> Mar<span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>m1 <span class="sy0">!=</span> m2<span class="br0">)</span> <span class="br0">{</span>
+    fprintf<span class="br0">(</span>stderr<span class="sy0">,</span> <span class="st0">"Failure!!<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+    exit<span class="br0">(</span>EXIT_FAILURE<span class="br0">)</span><span class="sy0">;</span>
+  <span class="br0">}</span></pre>
+</div>
+</li>
+<li class="level1"><div class="li"> Définissez la fonction <code>void print_month(month_t m)</code> affichant le mois à l'écran ; on utilisera la structure de contrôle d'embranchement <code>switch … case …</code> ; observez le warning lorsque vous oubliez un cas</div>
+</li>
+</ul>
+
+</div>
+
+<h3><a name="types_produits" id="types_produits">Types produits</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Définissez la structure <code>struct date_s</code> regroupant un jour (champ <code>day</code> de type <code>unsigned char</code>), un mois (champ <code>month</code> de type <code>month_t</code>) et une année (champ <code>year</code> de type <code>short</code>)</div>
+</li>
+<li class="level1"><div class="li"> Complétez votre définition pour obtenir le type <code>date_t</code></div>
+</li>
+<li class="level1"><div class="li"> Affichez la taille occupée par les variables de type <code>date_t</code></div>
+<ul>
+<li class="level2"><div class="li"> Faites varier le type du champ <code>day</code> de <code>unsigned char</code> à <code>unsigned long long</code> pour observer l'effet sur la taille occupée par une valeur de type <code>date_t</code></div>
+</li>
+<li class="level2"><div class="li"> Faites varier l'ordre de déclaration des champs</div>
+</li>
+<li class="level2"><div class="li"> Faites valider vos remarques par le chargé de TP</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Définissez une fonction <code>date_t date(unsigned char d, month_t m, short y)</code> qui construit la date correspondante</div>
+</li>
+<li class="level1"><div class="li"> Définissez une fonction <code>void print_date(date_t d)</code> affichant une date au format <code>jj/mm/aaaa</code> ; ainsi <pre class="code c">  print_date<span class="br0">(</span>date<span class="br0">(</span>1<span class="sy0">,</span>Fev<span class="sy0">,</span>3456<span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>
+ doit afficher <code>01/02/3456</code>
+</p>
+</div>
+</li>
+</ul>
+
+</div>
+
+<h3><a name="types_sommes" id="types_sommes">Types sommes</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Définissez l'union <code>union timestamp_u</code> précisant un horodatage est fait soit en secondes écoulées depuis le 01/01/1970 (champ <code>sec</code> de type <code>long</code>), soit à l'aide d'une date (champ <code>date</code> de type <code>date_t</code>)</div>
+</li>
+<li class="level1"><div class="li"> Complétez votre définition pour obtenir le type <code>timestamp_t</code></div>
+</li>
+<li class="level1"><div class="li"> Affichez la taille occupée par les variables de type <code>timestamp_t</code> ; faites varier le type du champ <code>sec</code> de <code>char</code> à <code>long long</code>, puis de <code>float</code> à <code>long double</code> ; y a-t-il un effet sur la taille ? Pourquoi ? Faites valider vos remarques par le chargé de TP</div>
+</li>
+<li class="level1"><div class="li"> Définissez une fonction <code>timestamp_t ts_date(date_t d)</code> qui crée une valeur de type <code>timestamp_t</code> à partir d'une valeur de type <code>date_t</code></div>
+</li>
+<li class="level1"><div class="li"> Définissez une fonction <code>timestamp_t ts_sec(long s)</code> qui crée une valeur de type <code>timestamp_t</code> à partir d'un nombre de secondes</div>
+</li>
+<li class="level1"><div class="li"> Exécutez la boucle suivante pour différentes organisations des champs de <code>date_t</code> <pre class="code c">  <span class="kw4">int</span> i<span class="sy0">;</span>
+  <span class="kw1">for</span><span class="br0">(</span>i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> 8<span class="sy0">*</span><span class="br0">(</span><span class="kw4">sizeof</span><span class="br0">(</span><span class="kw4">long</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>
+    <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"%hhu"</span><span class="sy0">,</span> ts_sec<span class="br0">(</span>1 <span class="sy0">&lt;&lt;</span> i<span class="br0">)</span>.<span class="me1">date</span>.<span class="me1">day</span><span class="br0">)</span><span class="sy0">;</span> prl<span class="sy0">;</span>
+    print_month<span class="br0">(</span>ts_sec<span class="br0">(</span>1 <span class="sy0">&lt;&lt;</span> i<span class="br0">)</span>.<span class="me1">date</span>.<span class="me1">month</span><span class="br0">)</span><span class="sy0">;</span> prl<span class="sy0">;</span>
+    <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"%hd"</span><span class="sy0">,</span> ts_sec<span class="br0">(</span>1 <span class="sy0">&lt;&lt;</span> i<span class="br0">)</span>.<span class="me1">date</span>.<span class="me1">year</span><span class="br0">)</span><span class="sy0">;</span> prl<span class="sy0">;</span>
+  <span class="br0">}</span></pre>
+
+<p>
+Commentez les résultats obtenus et faites valider par le chargé de TP.
+</p>
+</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="composition_de_trains" id="composition_de_trains">Composition de trains</a></h2>
+<div class="level2">
+
+<p>
+
+Considérons une compagnie ferroviaire qui transporte aussi bien des 
+voyageurs que des marchandises. Elle a donc besoin de trois types de 
+matériel, appelés éléments :
+</p>
+<ol>
+<li class="level1"><div class="li"> des <strong>voitures</strong> pour les voyageurs, caractérisées par le nombre de passagers embarqués,</div>
+</li>
+<li class="level1"><div class="li"> des <strong>wagons</strong> pour les
+ marchandises, caractérisés par leur masse en tonnes (marchandise 
+comprise) et le prix en euros payé par le client qui expédie la 
+marchandise, et</div>
+</li>
+<li class="level1"><div class="li"> des <strong>locomotives</strong>.</div>
+</li>
+</ol>
+
+</div>
+
+<h3><a name="question_1" id="question_1">Question 1</a></h3>
+<div class="level3">
+
+<p>
+
+Définissez un type <code>element_t</code> pour représenter un élément de
+ train, qui puisse être soit une locomotive, soit un wagon, soit une 
+voiture incluant les caractéristiques précisées ci-dessus. Dans le 
+désordre, il faut trois <code>struct</code>, une <code>union</code> et un <code>enum</code> ; il est important pouvoir retrouver le type de matériel d'un <code>element_t</code>
+</p>
+
+</div>
+
+<h3><a name="question_2" id="question_2">Question 2</a></h3>
+<div class="level3">
+
+<p>
+
+Écrivez une fonction <code>void afficherElement(element_t e)</code> qui affiche à l’écran les caractéristiques d’un <code>element_t</code> :
+</p>
+<ul>
+<li class="level1"><div class="li"> pour une locomotive, simplement <code>“locomotive”</code></div>
+</li>
+<li class="level1"><div class="li"> pour un wagon, <code>“wagon de … tonnes valant … euros”</code></div>
+</li>
+<li class="level1"><div class="li"> pour une voiture, <code>“voiture de … passagers”</code></div>
+</li>
+</ul>
+
+</div>
+
+<h3><a name="question_3" id="question_3">Question 3</a></h3>
+<div class="level3">
+
+<p>
+
+Un train est constitué d'un nombre quelconque de voitures, de wagons et 
+de locomotives, dans n'importe quel ordre. Cependant, comme les gares de
+ la compagnie sont petites, un train comporte au maximum 10 éléments. 
+Mais il peut en comporter moins. Définir un type <code>train_t</code> caractérisé par ses éléments et le nombre effectif d’éléments.
+</p>
+
+<p>
+Définissez une fonction <code>void afficherTrain(train_t t)</code> qui affiche à l'écran le descriptif d'un train, c'est-à-dire son nombre d'éléments et les caractéristiques de chaque élément.
+</p>
+
+</div>
+
+<h3><a name="question_4" id="question_4">Question 4</a></h3>
+<div class="level3">
+
+<p>
+
+À la différence des wagons qui ont chacun leur propre masse, chaque 
+locomotive ou voiture pèse 100 tonnes (on néglige la masse des 
+passagers).
+</p>
+
+<p>
+Écrivez une fonction <code>int masseElement(element_t e)</code> qui renvoie la masse d'un élément en tonnes. Déduisez-en une fonction <code>int masseTrain(train_t t)</code> qui renvoie la masse d'un train.
+</p>
+
+</div>
+
+<h3><a name="question_5" id="question_5">Question 5</a></h3>
+<div class="level3">
+
+<p>
+
+Un train qui comporte <img src="TP%204%20%5BSpicher%5D_files/fetch_002.png" class="latex_inline" alt="$n$" title="Math"> locomotives peut rouler si sa masse totale (locomotives comprises) est inférieure à <img src="TP%204%20%5BSpicher%5D_files/fetch_005.png" class="latex_inline" alt="$500n$" title="Math"> tonnes.
+</p>
+
+<p>
+Écrivez une fonction <code>bool estValide(train_t t)</code> qui renvoie s'il y a suffisamment de locomotives dans le train.
+</p>
+
+</div>
+
+<h3><a name="question_6" id="question_6">Question 6</a></h3>
+<div class="level3">
+
+<p>
+
+Le revenu d'un train se calcule le jour du départ. En effet, alors que 
+les wagons marchandises sont réservés et payés longtemps à l'avance, les
+ passagers paient leur billet au dernier moment, le tarif n'étant connu 
+que le jour même du départ. Écrivez une fonction <code>int revenuElement(element_t e, int prixBillet)</code> qui calcule le revenu en euros d’un
+élément suivant les contraintes suivantes :
+</p>
+<ol>
+<li class="level1"><div class="li"> une locomotive coûte 10 000 euros à la compagnie (revenu négatif),</div>
+</li>
+<li class="level1"><div class="li"> le revenu d'un wagon est donné parmi ses caractéristiques,</div>
+</li>
+<li class="level1"><div class="li"> chaque passager d'une voiture paie <code>prixBillet</code> euros, mais la voiture elle-même coûte 2 000 euros à la compagnie (coût d’entretien, incompressible quel que soit le nombre de</div>
+</li>
+</ol>
+
+<p>
+passagers, de sorte qu'une voiture est déficitaire si elle n'est pas suffisamment remplie).
+</p>
+
+<p>
+Déduisez-en une fonction <code>int revenuTrain(train_t t, int prixBillet)</code> calculant le revenu d'un train entier.
+</p>
+
+</div>
+
+<h3><a name="question_7" id="question_7">Question 7</a></h3>
+<div class="level3">
+
+<p>
+
+Si on considère que :
+</p>
+<ol>
+<li class="level1"><div class="li"> la masse d'un wagon soit strictement inférieure à <img src="TP%204%20%5BSpicher%5D_files/fetch_003.png" class="latex_inline" alt="$2^8$" title="Math"> tonnes avec un revenu positif strictement inférieur à <img src="TP%204%20%5BSpicher%5D_files/fetch.png" class="latex_inline" alt="$2^22$" title="Math"> euros, que</div>
+</li>
+<li class="level1"><div class="li"> une voiture admette strictement moins de <img src="TP%204%20%5BSpicher%5D_files/fetch_004.png" class="latex_inline" alt="$2^30$" title="Math"> passagers</div>
+</li>
+</ol>
+
+<p>
+alors un élément de train peut être codé sur un entier de 32 bits. 
+</p>
+
+<p>
+Trouvez un codage et écrivez une fonction <code>unsigned int coderElement(element_t e)</code> qui code un élément sous
+la forme d'un entier, puis écrivez la fonction <code>void afficherElementCode(unsigned int elementCode)</code> sur le modèle de <code>afficherElement</code> mais en prenant en paramètre un élément codé sous la forme d’un entier.
+</p>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+        Connecté en tant que : L2 Informatique (l2info)      </div>
+      <div class="doc">
+        l2info/progc/tp4.txt · Dernière modification: 2015/10/01 20:59 par aspicher      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+                              </div>
+      <div class="bar-right" id="bar__bottomright">
+                                        <form class="button btn_logout" method="get" action="/~aspicher/Wiki/l2info/progc/tp4"><div class="no"><input name="do" value="logout" type="hidden"><input name="sectok" value="82424b0788480fc2ae883d95f50cf65a" type="hidden"><input value="Déconnexion" class="button" title="Déconnexion" type="submit"></div></form>                <a class="nolink" href="#dokuwiki__top"><input class="button" value="Haut de page" onclick="window.scrollTo(0, 0)" title="Haut de page" type="button"></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+  <div class="license">Sauf mention contraire, le contenu de ce wiki est placé sous la licence suivante:<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></div>
+</div>
+
+<div class="footerinc">
+
+  <a href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php" title="Recent changes RSS feed"><img src="TP%204%20%5BSpicher%5D_files/button-rss.png" alt="Recent changes RSS feed" height="15" width="80"></a>
+
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="CC Attribution-Noncommercial-Share Alike 3.0 Unported"><img src="TP%204%20%5BSpicher%5D_files/cc-by-nc-sa.png" alt="" height="15" width="80"></a>
+  
+  <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="TP%204%20%5BSpicher%5D_files/button-donate.gif" alt="Donate" height="15" width="80"></a>
+
+  <a href="http://www.php.net/" title="Powered by PHP"><img src="TP%204%20%5BSpicher%5D_files/button-php.gif" alt="Powered by PHP" height="15" width="80"></a>
+
+  <a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="TP%204%20%5BSpicher%5D_files/button-xhtml.png" alt="Valid XHTML 1.0" height="15" width="80"></a>
+
+  <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="TP%204%20%5BSpicher%5D_files/button-css.png" alt="Valid CSS" height="15" width="80"></a>
+
+  <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="TP%204%20%5BSpicher%5D_files/button-dw.png" alt="Driven by DokuWiki" height="15" width="80"></a>
+
+
+
+</div>
+
+<div class="no"><img src="TP%204%20%5BSpicher%5D_files/indexer.gif" alt="" height="1" width="1"></div>
+
+
+</body></html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" ></code>
+		<title>test</title>
+		<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
+	
+	<body>
+	
+		<h1> Bienvenue dans le TP1 !</h1>
+		<p><img src="chrome.png" class="flottant">Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.</p>
+		<p class="StopFlottant">Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.
+			Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.Ceci est un pavé.</p>
+
+		<figure>
+			<img src="chrome.png" alt="Affichage de Chrome">
+			<figcaption>Logo chrome </figcaption>
+			<img src="chrome.png" alt="Affichage de Chrome">
+		</figure>
+
+		<!-- Affichage de l'image seule dans un nouvel onglet
+		<a href="firefox.png"><img src="firefox.png" alt="Chrome" title="Chrome"></a>
+		-->
+
+	</body>
+</hmtl>

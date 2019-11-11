@@ -1,0 +1,20 @@
+extern printf
+
+segment.data
+
+prompt db "ça marche !",10,0
+
+segment.bss
+
+segment.text
+	global asm_main
+asm_main:
+	push rbp
+	
+	mov rdi,prompt
+	mov rax,0
+	call printf
+	
+	pop rbp
+	mov rax,0
+	ret

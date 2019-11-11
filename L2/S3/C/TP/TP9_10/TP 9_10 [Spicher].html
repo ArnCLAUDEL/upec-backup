@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    TP 9/10    [Spicher]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;">
+<meta name="robots" content="noindex,nofollow">
+<meta name="date" content="2015-11-25T11:04:57+0100">
+<meta name="keywords" content="l2info,progc,tp9">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/exe/opensearch.php" title="Spicher">
+<link rel="start" href="http://www.lacl.fr/%7Easpicher/Wiki/">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php?mode=list&amp;ns=l2info:progc">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.lacl.fr/%7Easpicher/Wiki/_export/xhtml/l2info/progc/tp9">
+<link rel="canonical" href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp9">
+<link rel="stylesheet" media="all" type="text/css" href="TP%209_10%20%5BSpicher%5D_files/css_002.css">
+<link rel="stylesheet" media="screen" type="text/css" href="TP%209_10%20%5BSpicher%5D_files/css.css">
+<link rel="stylesheet" media="print" type="text/css" href="TP%209_10%20%5BSpicher%5D_files/css_003.css">
+<script type="text/javascript" charset="utf-8"><!--//--><![CDATA[//><!--
+var NS='l2info:progc';var SIG=' --- //[[antoine.spicher@u-pec.fr|L2 Informatique]] 2015/11/29 18:36//';var JSINFO = {"id":"l2info:progc:tp9","namespace":"l2info:progc"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="TP%209_10%20%5BSpicher%5D_files/js.php"></script>
+
+  <link rel="shortcut icon" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/tpl/default/images/favicon.ico">
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp9?do=backlink" title="Liens vers cette page">TP 9/10</a>]]
+      </div>
+      <div class="logo">
+        <a href="http://www.lacl.fr/%7Easpicher/Wiki/" name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]">Spicher</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                      </div>
+
+      <div class="bar-right" id="bar__topright">
+                &nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+        <div class="breadcrumbs">
+      <span class="bchead">Piste:</span> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/start" class="breadcrumbs" title="l2info:progc:start">Programmation en C (avancé)</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp1" class="breadcrumbs" title="l2info:progc:tp1">TP 1</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp2" class="breadcrumbs" title="l2info:progc:tp2">TP 2</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp3" class="breadcrumbs" title="l2info:progc:tp3">TP 3</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp4" class="breadcrumbs" title="l2info:progc:tp4">TP 4</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp5note" class="breadcrumbs" title="l2info:progc:tp5note">TP 5</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp6" class="breadcrumbs" title="l2info:progc:tp6">TP 6</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp7" class="breadcrumbs" title="l2info:progc:tp7">TP 7</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp8" class="breadcrumbs" title="l2info:progc:tp8">TP 8</a> <span class="bcsep">»</span> <span class="curid"><a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp9" class="breadcrumbs" title="l2info:progc:tp9">TP 9/10</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div style="cursor: pointer;" class="tocheader toctoggle" id="toc__header"><span class="toc_close" style="cursor: pointer;" id="toc__toggle"><span>−</span></span>Table des matières</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#tp_910" class="toc">TP 9/10</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#modes_d_ouverture_des_fichiers" class="toc">Modes d’ouverture des fichiers</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#sortie_standard_erreur" class="toc">Sortie standard erreur</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#copie_de_fichiers" class="toc">Copie de fichiers</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#recoder_les_fonctions_d_entreesortie_standard" class="toc">Recoder les fonctions d'entrée/sortie standard</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#premiers_pas_en_cryptographie" class="toc">Premiers pas en cryptographie</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="#chiffres_de_cesar_et_de_vigenere" class="toc">Chiffres de César et de Vigenère</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#piste_au_message" class="toc">Piste au message</a></span></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><span class="li"><a href="#fichiers_et_chaines_de_caracteres" class="toc">Fichiers et chaînes de caractères</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#annuaire" class="toc">Annuaire</a></span></div></li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="tp_910" id="tp_910">TP 9/10</a></h1>
+<div class="level1">
+
+<p>
+
+Ce TP a pour objectif la maîtrise des fonctions d'entrée/sortie de <code>stdio.h</code>.
+</p>
+
+</div>
+
+<h2><a name="modes_d_ouverture_des_fichiers" id="modes_d_ouverture_des_fichiers">Modes d’ouverture des fichiers</a></h2>
+<div class="level2">
+
+<p>
+
+Ecrire un progamme dans lequel on ouvre le même fichier dans les 
+différents modes d'ouverture vus en cours. Attention à fermer le fichier
+ avant de l'ouvrir à nouveau dans un mode différent.
+</p>
+
+<p>
+Pour chaque mode d'ouverture, essayer de lire et d'écrire 4 octets (fonctions <code>fread</code> et <code>fwrite</code>), changer les droits d'accès avec <code>chmod</code> en ligne de commande, et préciser :
+</p>
+<ul>
+<li class="level1"><div class="li"> Quand peut-on lire et quand ne peut-on pas lire ?</div>
+</li>
+<li class="level1"><div class="li"> Lorsqu'on ne peut pas lire, préciser le comportement du programme (erreurs d'exécution, valeur de retour de la lecture, etc.) ?</div>
+</li>
+<li class="level1"><div class="li"> Quand peut-on écrire et quand ne peut-on pas écrire ?</div>
+</li>
+<li class="level1"><div class="li"> Lorsque l'écriture est possible, préciser où elle se fait ?</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="sortie_standard_erreur" id="sortie_standard_erreur">Sortie standard erreur</a></h2>
+<div class="level2">
+
+<p>
+
+L'affichage des erreurs est généralement effectué dans le descripteur de fichier <code>stderr</code>. On vous demande de coder les fonctions :
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>void* mymalloc(size_t sz)</code> qui fait un appel à la fonction classique <code>malloc</code> puis teste si l'allocation a échoué auquel cas la fonction affichera un message d'erreur sur <code>stderr</code> puis interompera le programme, sinon retournera l'adresse de la mémoire allouée </div>
+</li>
+<li class="level1"><div class="li"> <code>FILE* myfopen(const char* fname, const char* mode)</code> qui fait un appel à la fonction classique <code>fopen</code> puis teste si l'ouverture a échoué auquel cas la fonction affichera un message d'erreur sur <code>stderr</code> puis interompera le programme, sinon retournera le descripteur de fichier </div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="copie_de_fichiers" id="copie_de_fichiers">Copie de fichiers</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Définir la fonction de prototype <code>bool display(const char* fname)</code> qui affiche à l'écran le contenu du fichier de nom <code>fname</code> ; on utilisera la fonction <code>fgets</code></div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction de prototype <code>bool copy(const char* fname1, const char* fname2)</code> qui copie dans le fichier de nom <code>fname2</code> le contenu du fichier de nom <code>fname1</code></div>
+</li>
+<li class="level1"><div class="li"> Expliquer les problèmes pouvant survenir lorsque la fonction <code>copy</code> est appelée avec deux fois le même nom de fichier ; corriger le cas échéant la fonction <code>copy</code> puis définir la fonction de prototype <code>bool duplicate(const char* fname)</code> qui ajoute à la suite du fichier de nom <code>fname</code> son propre contenu ; on utilisera la fonction <code>ftell</code> pour connaître la taille du fichier d'origine</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="recoder_les_fonctions_d_entreesortie_standard" id="recoder_les_fonctions_d_entreesortie_standard">Recoder les fonctions d'entrée/sortie standard</a></h2>
+<div class="level2">
+
+<p>
+
+Les fonctions <code>fread</code> et <code>fwrite</code> peuvent être utilisées pour reprogrammer la plupart des fonctions de <code>stdio.h</code>.
+</p>
+
+<p>
+Reprogrammer les fonctions suivantes en respectant leurs prototypes et comportements classiques :
+</p>
+<ul>
+<li class="level1"><div class="li"> <code><a href="http://man7.org/linux/man-pages/man3/fgetc.3.html" class="urlextern" title="http://man7.org/linux/man-pages/man3/fgetc.3.html" rel="nofollow">fgetc</a></code>, <code><a href="http://man7.org/linux/man-pages/man3/getchar.3.html" class="urlextern" title="http://man7.org/linux/man-pages/man3/getchar.3.html" rel="nofollow">getchar</a></code> : lecture d'un caractère</div>
+</li>
+<li class="level1"><div class="li"> <code><a href="http://man7.org/linux/man-pages/man3/fputc.3.html" class="urlextern" title="http://man7.org/linux/man-pages/man3/fputc.3.html" rel="nofollow">fputc</a></code>, <code><a href="http://man7.org/linux/man-pages/man3/putchar.3.html" class="urlextern" title="http://man7.org/linux/man-pages/man3/putchar.3.html" rel="nofollow">putchar</a></code> : écriture d'un caractère</div>
+</li>
+<li class="level1"><div class="li"> <code><a href="http://man7.org/linux/man-pages/man3/fgets.3.html" class="urlextern" title="http://man7.org/linux/man-pages/man3/fgets.3.html" rel="nofollow">fgets</a></code> : lecture d'une chaîne de caractères</div>
+</li>
+<li class="level1"><div class="li"> <code><a href="http://man7.org/linux/man-pages/man3/fputs.3.html" class="urlextern" title="http://man7.org/linux/man-pages/man3/fputs.3.html" rel="nofollow">fputs</a></code>, <code><a href="http://man7.org/linux/man-pages/man3/puts.3.html" class="urlextern" title="http://man7.org/linux/man-pages/man3/puts.3.html" rel="nofollow">puts</a></code> : écriture d'une chaîne de caractères</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="premiers_pas_en_cryptographie" id="premiers_pas_en_cryptographie">Premiers pas en cryptographie</a></h2>
+<div class="level2">
+
+<p>
+
+La cryptographie est une discipline dont le but est de développer des techniques et des outils pour protéger des données.
+</p>
+
+</div>
+
+<h3><a name="chiffres_de_cesar_et_de_vigenere" id="chiffres_de_cesar_et_de_vigenere">Chiffres de César et de Vigenère</a></h3>
+<div class="level3">
+
+<p>
+
+Il s'agit de l'une des plus anciennes et plus connues techniques de 
+chiffrement qui consiste simplement à décaler les lettres d'un message 
+d'une constante. Le détail peut être trouvé sur <a href="https://fr.wikipedia.org/wiki/Chiffrement_par_d%C3%A9calage" class="urlextern" title="https://fr.wikipedia.org/wiki/Chiffrement_par_d%C3%A9calage" rel="nofollow">Wikipédia</a>.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Définir la fonction <code>bool cesar(const char* fn_encrypted, const char* fn_original, unsigned char key)</code> qui à partir d'un fichier de nom <code>fn_original</code> contenant un message original produit un fichier de nom <code>fn_encrypted</code> contenant le message chiffré en utilisant <code>key</code>
+ comme clé de décalage ; nous travaillerons modulo 256 (et non 26 sur 
+l'alphabet classique) sur les caractères. La fonction retourne <code>false</code> en cas d'échec, <code>true</code> sinon.</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>bool uncesar(const char* fn_encrypted, const char* fn_original, unsigned char key)</code> qui effectue l'opération inverse.</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>bool vigenere(const char* fn_encrypted, const char* fn_original, const char* key)</code> qui effectue le <a href="https://fr.wikipedia.org/wiki/Chiffre_de_Vigen%C3%A8re" class="urlextern" title="https://fr.wikipedia.org/wiki/Chiffre_de_Vigen%C3%A8re" rel="nofollow">chiffre de Vigenère</a></div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>bool unvigenere(const char* fn_encrypted, const char* fn_original, const char* key)</code> qui effectue l'opération inverse.</div>
+</li>
+</ul>
+
+</div>
+
+<h3><a name="piste_au_message" id="piste_au_message">Piste au message</a></h3>
+<div class="level3">
+
+<p>
+
+L'idée de cette seconde technique consiste à noyer un message dans un 
+fichier. Le message peut être récupéré en suivant une suite de décalages
+ dans un fichier, les décalages étant directement inclus dans celui-ci.
+</p>
+
+<p>
+L'algorithme est le suivant, en commençant par le premier caractère du fichier :
+</p>
+<ol>
+<li class="level1"><div class="li"> lire le caractère courant</div>
+</li>
+<li class="level1"><div class="li"> en cas de fin de fichier, la lecture est terminée, sinon passer au point suivant</div>
+</li>
+<li class="level1"><div class="li"> suivant le valeur du caractère lu :</div>
+<ul>
+<li class="level2"><div class="li"> <code>1</code> : les 4 octets suivants encodent un entier représentant la position du prochain caractère à lire à partir du début du fichier</div>
+</li>
+<li class="level2"><div class="li"> <code>2</code> : les 4 octets suivants encodent un entier représentant la position du prochain caractère à lire à partir de la fin du fichier</div>
+</li>
+<li class="level2"><div class="li"> <code>3</code> : les 4 octets 
+suivants encodent un entier représentant la position du prochain 
+caractère à lire à partir de la position courante</div>
+</li>
+<li class="level2"><div class="li"> sinon, il s'agit d'un caractère du message</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> retourner à l'étape 1</div>
+</li>
+</ol>
+
+<p>
+
+Ecrire la fonction <code>void reveal(const char* fname)</code> qui 
+affiche à l'écran le message codé dans un fichier avec la méthode donnée
+ ci-dessus. Vous pourrez tester votre fonction pour découvrir un message
+ secret dissimulé dans <a href="http://www.lacl.fr/%7Easpicher/Wiki/_media/l2info/progc/message_secret" class="media mediafile mf_" title="l2info:progc:message_secret">ce fichier</a>.
+</p>
+
+</div>
+
+<h2><a name="fichiers_et_chaines_de_caracteres" id="fichiers_et_chaines_de_caracteres">Fichiers et chaînes de caractères</a></h2>
+<div class="level2">
+
+<p>
+
+On souhaite créer un programme qui permet de créer et interroger une 
+base de données qui décrit les livres d'une bibliothèque et leurs 
+auteurs. Un livre est décrit par sa cote (un identifiant unique), son 
+titre, son année de publication (un entier positif) et ses auteurs. On 
+décide de stocker ces informations dans deux fichiers :
+</p>
+<ol>
+<li class="level1"><div class="li"> le fichier <code>livres.txt</code> qui contient une suite de triplets <img src="TP%209_10%20%5BSpicher%5D_files/fetch.png" class="latex_inline" alt="$(c,t,a)$" title="Math"> (chaque élément sur une ligne) indiquant que le livre de cote <img src="TP%209_10%20%5BSpicher%5D_files/fetch_012.png" class="latex_inline" alt="$c$" title="Math"> a pour titre <img src="TP%209_10%20%5BSpicher%5D_files/fetch_006.png" class="latex_inline" alt="$t$" title="Math"> et a été publié l'année <img src="TP%209_10%20%5BSpicher%5D_files/fetch_005.png" class="latex_inline" alt="$a$" title="Math"> ; A chaque livre de la bibliothèque, il correspondra un et un seul triplet dans ce fichier</div>
+</li>
+<li class="level1"><div class="li">  le fichier <code>auteurs.txt</code> qui contient une suite de couples <img src="TP%209_10%20%5BSpicher%5D_files/fetch_003.png" class="latex_inline" alt="$(n,c)$" title="Math"> (chaque élément sur une ligne) indiquant que l'auteur de nom <img src="TP%209_10%20%5BSpicher%5D_files/fetch_004.png" class="latex_inline" alt="$n$" title="Math"> fait partie des auteurs du livre de cote <img src="TP%209_10%20%5BSpicher%5D_files/fetch_012.png" class="latex_inline" alt="$c$" title="Math">. A chaque livre de la bibliothèque de cote <img src="TP%209_10%20%5BSpicher%5D_files/fetch_012.png" class="latex_inline" alt="$c$" title="Math"> écrit par <img src="TP%209_10%20%5BSpicher%5D_files/fetch_011.png" class="latex_inline" alt="$k$" title="Math"> (<img src="TP%209_10%20%5BSpicher%5D_files/fetch_007.png" class="latex_inline" alt="$k \ge 1$" title="Math">) auteurs de noms <img src="TP%209_10%20%5BSpicher%5D_files/fetch_010.png" class="latex_inline" alt="$n_1$" title="Math">, …, <img src="TP%209_10%20%5BSpicher%5D_files/fetch_002.png" class="latex_inline" alt="$n_k$" title="Math">, il correspondra <img src="TP%209_10%20%5BSpicher%5D_files/fetch_011.png" class="latex_inline" alt="$k$" title="Math"> couples dans le fichier <img src="TP%209_10%20%5BSpicher%5D_files/fetch_008.png" class="latex_inline" alt="$(n_1,c)$" title="Math">, …, <img src="TP%209_10%20%5BSpicher%5D_files/fetch_009.png" class="latex_inline" alt="$(n_k,c)$" title="Math">.</div>
+</li>
+</ol>
+
+<p>
+
+Supposons par exemple que la bibliothèque contienne les deux livres :
+</p>
+<ol>
+<li class="level1"><div class="li"> <em>Initiation à l'informatique</em> de cote <code>L1</code>, écrit par Pierre Legrand et publié en 1995 ;</div>
+</li>
+<li class="level1"><div class="li"> <em>Le langage C mais c'est très simple</em> de cote <code>L2</code>, écrit par Anne Dupont et Pierre Legrand, et publié en 2004.</div>
+</li>
+</ol>
+
+<p>
+Le fichier <code>livres.txt</code> aura le contenu suivant :
+
+</p>
+<pre class="code livre.txt">L1
+Initiation a l'informatique
+1995
+L2
+Le langage C, mais c'est tres simple
+2004</pre>
+
+<p>
+
+et le fichier <code>auteurs.txt</code> aura le contenu suivant :
+
+</p>
+<pre class="code auteurs.txt">Pierre Legrand
+L1
+Claire Dupont
+L2
+Pierre Legrand
+L2</pre>
+
+<p>
+Les descripteurs des fichiers <code>livres.txt</code> et <code>auteurs.txt</code> seront affectés aux variables globales <code>fd_livres</code> et <code>fd_auteurs</code> et devront être initialisés dans le <code>main</code>. Les constantes <code>LCOTE</code>, <code>LTITRE</code>, <code>LANNEE</code> et <code>LNOM</code>
+ auront pour valeurs respectives le nombre maximum de caractères 
+authorisé pour une cote de livre, un titre de livre, une année et un nom
+ d'auteur (il faut compter le nombre caractères de fin de chaîne).
+
+</p>
+<pre class="code c"><span class="co2">#define LCOTE   5</span>
+<span class="co2">#define LTITRE  257</span>
+<span class="co2">#define LANNEE  5</span>
+<span class="co2">#define LNOM    257</span>
+&nbsp;
+<span class="kw4">char</span> fn_livres<span class="br0">[</span><span class="br0">]</span> <span class="sy0">=</span> <span class="st0">"livres.txt"</span><span class="sy0">;</span>
+<span class="kw4">char</span> fn_auteurs<span class="br0">[</span><span class="br0">]</span> <span class="sy0">=</span> <span class="st0">"auteurs.txt"</span><span class="sy0">;</span>
+&nbsp;
+FILE<span class="sy0">*</span> fd_livres <span class="sy0">=</span> NULL<span class="sy0">;</span>
+FILE<span class="sy0">*</span> fd_auteurs <span class="sy0">=</span> NULL<span class="sy0">;</span></pre>
+<ul>
+<li class="level1"><div class="li"> Définir une fonction <code>void ecrire_livre(const char* cote, const char* titre, int annee)</code> qui écrit à la fin du fichier <code>fd_livres</code> un triplet <code>(cote,titre,annee)</code>. Il faudra vérifier au préalable que les chaînes de caractères <code>cote</code> et <code>titre</code> ne dépassent les longueurs maximales fixées (<code>LCOTE</code> et <code>LTITRE</code>). Si une erreur est détectée, un message d'erreur sera affiché sur <code>stderr</code> et l'exécution du programme sera interrompue.</div>
+</li>
+<li class="level1"><div class="li"> Définir une fonction <code>void ecrire_auteur(const char *nom, const char *cote)</code> qui écrit à la fin du fichier <code>fd_auteurs</code> un couple <code>(nom,cote)</code>. Il faudra vérifier au préalable que les chaînes de caractères <code>nom</code> et <code>cote</code> ne dépassent les longueurs maximales fixées (<code>LNOM</code> et <code>LCOTE</code>). Si une erreur est détectée, un message d'erreur sera affiché sur <code>stderr</code> et l'exécution du programme sera interrompue.</div>
+</li>
+<li class="level1"><div class="li"> Définir une fonction <code>bool lire_livre(char* *cote, char* *titre, int *annee)</code> qui lit dans le fichier <code>fd_livres</code> le triplet suivant et affecte les valeurs correspondantes aux variables <code>*cote</code>, <code>*titre</code> et <code>*annee</code> lorsque c'est possible. Les chaînes de caractères devront être allouées de la bonne taille. La fonction retourne <code>false</code> si la fin du fichier a été atteinte prématurément ou si une erreur s'est produite, <code>true</code> sinon. </div>
+</li>
+<li class="level1"><div class="li"> Définir une fonction <code>bool lire_auteur(char* *nom, char* *cote)</code> qui lit dans le fichier <code>fd_auteurs</code> le couple suivant et affecte les valeurs correspondantes aux variables <code>*nom</code> et <code>*cote</code> lorsque c'est possible. Les chaînes de caractères devront être allouées de la bonne taille. La fonction retourne <code>false</code> si la fin du fichier a été atteinte prématurément ou si une erreur s’est produite, <code>true</code> sinon.</div>
+</li>
+<li class="level1"><div class="li"> Définir une fonction <code>int livres_publies_apres(int annee)</code> qui affiche par ligne les titres des livres publiés après l'année <code>annee</code> et retourne le nombre de titres trouvés. Sur l'exemple précédent, l'appel <code>livres_publies_apres(2000)</code> aura pour effet d'afficher : <pre class="code">Le langage C, mais c'est tres simple</pre>
+</div>
+</li>
+<li class="level1"><div class="li"> Définir une fonction <code>int auteurs_du_livre(const char* titre)</code> qui affiche par ligne les noms des auteurs du livre dont le titre est <code>titre</code> et retourne le nombre d'auteurs trouvés. Sur l'exemple précédent, l'appel <code>auteurs_du_livre(“Le langage C, mais c'est très simple”)</code> aura pour effet d'afficher :<pre class="code">Claire Dupont
+Pierre Legrand</pre>
+</div>
+</li>
+<li class="level1"><div class="li"> Définir une fonction <code>int auteurs_des_livres_publiés_après(int annee)</code> qui affiche par ligne les noms des auteurs des livres publiés après l'annéee <code>annee</code> et retourne le nombre d'auteurs trouvés. </div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="annuaire" id="annuaire">Annuaire</a></h2>
+<div class="level2">
+
+<p>
+
+On souhaite représenter le contenu d'un annuaire de personnels 
+permettant d'associer son bureau à chaque employé d'une entreprise.
+</p>
+<ul>
+<li class="level1"><div class="li"> Définir le type <code>office</code> 
+permettant de représenter un bureau ; un bureau est caractérisé par un 
+numéro, peut accueillir un nombre fixé de personnes, et possède un 
+numéro de poste (4 chiffres) partagé par l'ensemble des personnes 
+partageant le bureau ; le personnel accueilli dans le bureau sera 
+également représenté</div>
+</li>
+<li class="level1"><div class="li"> Définir le type <code>staff</code> 
+permettant de représenter le personnel ; une personne est caractérisée 
+par son prénom, son nom et le bureau où elle est accueillie</div>
+</li>
+<li class="level1"><div class="li"> Définir le type <code>company</code>
+ permettant de représenter l'annuaire de l'entreprise par un tableau de 
+taille arbitraire de bureaux et par une liste chaînée de personnels (on 
+pourra modifier le type <code>staff</code> en conséquence)</div>
+</li>
+<li class="level1"><div class="li"> Définir le constructeur <code>new_office</code>
+ créant un nouvau bureau à partir d'un numéro, de sa capacité d'accueil 
+et d'un poste ; on supposera à la création que le bureau n’accueille 
+personne</div>
+</li>
+<li class="level1"><div class="li"> Définir le constructeur <code>new_company</code> qui crée à partir d'un tableau de bureaux une nouvelle compagnie possédant une liste du personnel</div>
+</li>
+<li class="level1"><div class="li"> Définir le constructeur <code>add_staff</code>
+ ajoutant à la liste du personnel d'une compagnie un nouvau membre du 
+personnel à partir de son prénom et de son nom de famille ; 
+initialement, il n'est assigné à aucun bureau</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction de destruction <code>delete_company</code></div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>assign</code>
+ permettant d'affecter un membre du personnel à un bureau ; on prendra 
+soin de vérifier que le bureau peut accueillir une nouvelle personne</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>unassign</code>
+ permettant de retirer un membre du personnel d'un bureau ; la fonction 
+sera sans effet si la personne n'est pas affectée au bureau</div>
+</li>
+<li class="level1"><div class="li"> Utiliser <code>assign</code> et <code>unassign</code> pour définir la fonction <code>move</code> permettant de déplacer un membre du personnel dans un bureau</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>print</code> affichant la liste du personnel d'une entreprise avec pour chaque personne son bureau et son poste</div>
+</li>
+<li class="level1"><div class="li"> Définir le fonction <code>print_reverse</code> affichant l'annuaire inversé de l'entreprise, c'est-à-dire pour chaque bureau (numéro et poste) le personnel accueilli</div>
+</li>
+<li class="level1"><div class="li"> Définir les fonctions d'entrées/sorties <code>save_company</code> et <code>load_company</code> en utilisant la technique de sérialisation vue en cours</div>
+</li>
+</ul>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+        Connecté en tant que : L2 Informatique (l2info)      </div>
+      <div class="doc">
+        l2info/progc/tp9.txt · Dernière modification: 2015/11/25 11:04 par aspicher      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+                              </div>
+      <div class="bar-right" id="bar__bottomright">
+                                        <form class="button btn_logout" method="get" action="/~aspicher/Wiki/l2info/progc/tp9"><div class="no"><input name="do" value="logout" type="hidden"><input name="sectok" value="82424b0788480fc2ae883d95f50cf65a" type="hidden"><input value="Déconnexion" class="button" title="Déconnexion" type="submit"></div></form>                <a class="nolink" href="#dokuwiki__top"><input class="button" value="Haut de page" onclick="window.scrollTo(0, 0)" title="Haut de page" type="button"></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+  <div class="license">Sauf mention contraire, le contenu de ce wiki est placé sous la licence suivante:<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></div>
+</div>
+
+<div class="footerinc">
+
+  <a href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php" title="Recent changes RSS feed"><img src="TP%209_10%20%5BSpicher%5D_files/button-rss.png" alt="Recent changes RSS feed" height="15" width="80"></a>
+
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="CC Attribution-Noncommercial-Share Alike 3.0 Unported"><img src="TP%209_10%20%5BSpicher%5D_files/cc-by-nc-sa.png" alt="" height="15" width="80"></a>
+  
+  <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="TP%209_10%20%5BSpicher%5D_files/button-donate.gif" alt="Donate" height="15" width="80"></a>
+
+  <a href="http://www.php.net/" title="Powered by PHP"><img src="TP%209_10%20%5BSpicher%5D_files/button-php.gif" alt="Powered by PHP" height="15" width="80"></a>
+
+  <a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="TP%209_10%20%5BSpicher%5D_files/button-xhtml.png" alt="Valid XHTML 1.0" height="15" width="80"></a>
+
+  <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="TP%209_10%20%5BSpicher%5D_files/button-css.png" alt="Valid CSS" height="15" width="80"></a>
+
+  <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="TP%209_10%20%5BSpicher%5D_files/button-dw.png" alt="Driven by DokuWiki" height="15" width="80"></a>
+
+
+
+</div>
+
+<div class="no"><img src="TP%209_10%20%5BSpicher%5D_files/indexer.gif" alt="" height="1" width="1"></div>
+
+
+</body></html>

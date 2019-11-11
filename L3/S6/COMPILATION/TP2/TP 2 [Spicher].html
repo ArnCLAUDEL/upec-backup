@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr"
+ lang="fr" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    TP 2    [Spicher]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="date" content="2017-02-09T12:24:15+0100" />
+<meta name="keywords" content="l3info,compil,tp2,start" />
+<link rel="search" type="application/opensearchdescription+xml" href="/~aspicher/Wiki/lib/exe/opensearch.php" title="Spicher" />
+<link rel="start" href="/~aspicher/Wiki/" />
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/~aspicher/Wiki/feed.php" />
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="/~aspicher/Wiki/feed.php?mode=list&amp;ns=l3info:compil:tp2" />
+<link rel="alternate" type="text/html" title="Plain HTML" href="/~aspicher/Wiki/_export/xhtml/l3info/compil/tp2/start" />
+<link rel="canonical" href="http://www.lacl.fr/~aspicher/Wiki/l3info/compil/tp2/start" />
+<link rel="stylesheet" media="all" type="text/css" href="/~aspicher/Wiki/lib/exe/css.php?s=all&amp;t=default&amp;tseed=1481110921" />
+<link rel="stylesheet" media="screen" type="text/css" href="/~aspicher/Wiki/lib/exe/css.php?t=default&amp;tseed=1481110921" />
+<link rel="stylesheet" media="print" type="text/css" href="/~aspicher/Wiki/lib/exe/css.php?s=print&amp;t=default&amp;tseed=1481110921" />
+<script type="text/javascript" charset="utf-8" ><!--//--><![CDATA[//><!--
+var NS='l3info:compil:tp2';var SIG=' --- //[[antoine.spicher@u-pec.fr|L3 Informatique]] 2017/02/09 13:14//';var JSINFO = {"id":"l3info:compil:tp2:start","namespace":"l3info:compil:tp2"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="/~aspicher/Wiki/lib/exe/js.php?tseed=1481110921" ></script>
+
+  <link rel="shortcut icon" href="/~aspicher/Wiki/lib/tpl/default/images/favicon.ico" />
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="/~aspicher/Wiki/l3info/compil/tp2/start?do=backlink"  title="Liens vers cette page">TP 2</a>]]
+      </div>
+      <div class="logo">
+        <a href="/~aspicher/Wiki/"  name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]">Spicher</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                      </div>
+
+      <div class="bar-right" id="bar__topright">
+                &nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+        <div class="breadcrumbs">
+      <span class="bchead">Piste:</span> <span class="bcsep">&raquo;</span> <a href="/~aspicher/Wiki/start"  class="breadcrumbs" title="start">Accueil</a> <span class="bcsep">&raquo;</span> <a href="/~aspicher/Wiki/l3info/compil/start"  class="breadcrumbs" title="l3info:compil:start">Compilation</a> <span class="bcsep">&raquo;</span> <span class="curid"><a href="/~aspicher/Wiki/l3info/compil/tp2/start"  class="breadcrumbs" title="l3info:compil:tp2:start">TP 2</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div class="tocheader toctoggle" id="toc__header">Table des matières</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#tp_2" class="toc">TP 2</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#point_de_depart" class="toc">Point de départ</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="#makefile_et_organisation_du_code" class="toc">Makefile et organisation du code</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#syntaxe_abstraite" class="toc">Syntaxe abstraite</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#analyseur_syntaxique" class="toc">Analyseur syntaxique</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#analyseur_lexical" class="toc">Analyseur lexical</a></span></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><span class="li"><a href="#finalisation_du_tp_1" class="toc">Finalisation du TP 1</a></span></div></li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="tp_2" id="tp_2">TP 2</a></h1>
+<div class="level1">
+
+</div>
+
+<h2><a name="point_de_depart" id="point_de_depart">Point de départ</a></h2>
+<div class="level2">
+
+<p>
+
+L&#039;objectif du TP est de construire un projet complet permettant d&#039;analyser lexicalement et syntaxiquement un fichier d&#039;entrée et pour finalement l&#039;évaluer. Afin de réaliser cet objectif un squelette de projet vous est proposé.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="/~aspicher/Wiki/_media/l3info/compil/tp2/tp2.zip" class="media mediafile mf_zip" title="l3info:compil:tp2:tp2.zip">tp2.zip</a></div>
+</li>
+</ul>
+
+<p>
+Après avoir téléchargé et décompressé ce fichier vous obtenez les fichiers suivants constituant le projet :
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="/~aspicher/Wiki/_media/l3info/compil/tp2/makefile" class="media mediafile mf_" title="l3info:compil:tp2:makefile">makefile</a> : un fichier de spécification pour l&#039;outil <code>make</code></div>
+</li>
+<li class="level1"><div class="li"> <a href="/~aspicher/Wiki/_media/l3info/compil/tp2/ast.ml" class="media mediafile mf_ml" title="l3info:compil:tp2:ast.ml">ast.ml</a> : le fichier <em>source</em> du module <code>Ast</code> s&#039;intéressant à la syntaxe</div>
+</li>
+<li class="level1"><div class="li"> <a href="/~aspicher/Wiki/_media/l3info/compil/tp2/ast.mli" class="media mediafile mf_mli" title="l3info:compil:tp2:ast.mli">ast.mli</a> : le fichier <em>interface</em> (correspondant au <em>header</em> en C) du module <code>Ast</code></div>
+</li>
+<li class="level1"><div class="li"> <a href="/~aspicher/Wiki/_media/l3info/compil/tp2/parser.mly" class="media mediafile mf_mly" title="l3info:compil:tp2:parser.mly">parser.mly</a> : le fichier de spécification de l&#039;analyseur syntaxique</div>
+</li>
+<li class="level1"><div class="li"> <a href="/~aspicher/Wiki/_media/l3info/compil/tp2/lexer.mll" class="media mediafile mf_mll" title="l3info:compil:tp2:lexer.mll">lexer.mll</a> : le fichier de spécification de l&#039;analyseur lexical </div>
+</li>
+<li class="level1"><div class="li"> <a href="/~aspicher/Wiki/_media/l3info/compil/tp2/main.ml" class="media mediafile mf_ml" title="l3info:compil:tp2:main.ml">main.ml</a> : le fichier <em>source</em> contenant le code du programme principal</div>
+</li>
+</ul>
+
+</div>
+
+<h3><a name="makefile_et_organisation_du_code" id="makefile_et_organisation_du_code">Makefile et organisation du code</a></h3>
+<div class="level3">
+
+<p>
+
+Le fichier <a href="/~aspicher/Wiki/_media/l3info/compil/tp2/makefile" class="media mediafile mf_" title="l3info:compil:tp2:makefile">makefile</a> est constitué de deux parties :
+</p>
+<ol>
+<li class="level1"><div class="li"> Une partie customisable permettant de spécifier le nom de l&#039;exécutable et la liste des fichiers constituant le projet ; dans notre cas :<pre class="code make"><span class="co1"># Nom du fichier exécutable généré</span>
+EXEC<span class="sy0">=</span>tp2
+&nbsp;
+<span class="co1"># Liste des sources du projet, données dans l'ordre</span>
+SOURCES<span class="sy0">=</span> \
+	ast<span class="sy0">.</span>mli     \
+	ast<span class="sy0">.</span>ml      \
+	parser<span class="sy0">.</span>mly  \
+	lexer<span class="sy0">.</span>mll   \
+	main<span class="sy0">.</span>ml</pre>
+</div>
+</li>
+<li class="level1"><div class="li"> Une partie générique à ne pas éditer permettant de spécifier les règles de compilation</div>
+</li>
+</ol>
+
+<p>
+
+La compilation du projet simplement à l&#039;aide de la commande <code>make</code> :
+
+</p>
+<pre class="code bash">$ <span class="kw2">make</span>
+ocamlyacc <span class="re5">-v</span> parser.mly
+ocamllex <span class="re5">-o</span> lexer.ml lexer.mll
+11 states, 270 transitions, table <span class="kw2">size</span> 1146 bytes
+ocamldep  ast.mli ast.ml parser.ml lexer.ml main.ml <span class="sy0">&gt;</span> depend
+ocamlc <span class="re5">-o</span> ast.cmi <span class="re5">-c</span> ast.mli
+ocamlc <span class="re5">-o</span> ast.cmo <span class="re5">-c</span> ast.ml
+ocamlc <span class="re5">-o</span> parser.cmo <span class="re5">-c</span> parser.ml
+ocamlc <span class="re5">-o</span> lexer.cmo <span class="re5">-c</span> lexer.ml
+ocamlc <span class="re5">-o</span> main.cmo <span class="re5">-c</span> main.ml
+ocamlc <span class="re5">-o</span> tp2 ast.cmo parser.cmo lexer.cmo main.cmo</pre>
+
+<p>
+Pour supprimer l&#039;ensemble des fichiers générés, on utilisera la commande <code>make clean</code> :
+
+</p>
+<pre class="code bash">$ <span class="kw2">make</span> clean
+<span class="kw2">rm</span> <span class="re5">-rf</span> tp2 parser.ml parser.mli parser.output lexer.ml ast.cmi ast.cmo parser.cmo lexer.cmo main.cmo ast.cmi ast.cmi parser.cmi lexer.cmi main.cmi depend</pre>
+
+<p>
+La compilation du projet produit un fichier exécutable nommé dans notre cas <code>tp2</code> (variable <code>EXEC</code> dans <a href="/~aspicher/Wiki/_media/l3info/compil/tp2/makefile" class="media mediafile mf_" title="l3info:compil:tp2:makefile">makefile</a>), qu&#039;il convient de lancer comme tout autre programme :
+
+</p>
+<pre class="code bash">$ .<span class="sy0">/</span>tp2 
+1 <span class="sy0">;;</span>
+1 =<span class="sy0">&gt;</span> 1
+1 + 2 <span class="sy0">;;</span>
+<span class="br0">&#40;</span>1<span class="br0">&#41;</span> + <span class="br0">&#40;</span>2<span class="br0">&#41;</span> =<span class="sy0">&gt;</span> 3
+1 + 2 + 3 <span class="sy0">;;</span>
+<span class="br0">&#40;</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="br0">&#41;</span> + <span class="br0">&#40;</span><span class="nu0">2</span><span class="br0">&#41;</span><span class="br0">&#41;</span> + <span class="br0">&#40;</span><span class="nu0">3</span><span class="br0">&#41;</span> =<span class="sy0">&gt;</span> <span class="nu0">6</span>
+Bye</pre>
+
+<p>
+
+Notre programme se présente comme une boucle interactive attendant en entrée standard une suite d&#039;expressions arithmétiques terminées par un double point-virgule <code>;;</code>. Chaque expression est analysée et évaluée. Le programme affiche l&#039;arbre de syntaxe reconnu puis la valeur évaluée.
+Pour quitter le programme, il suffit d&#039;indiquer la <em>fin de fichier</em> sur l&#039;entrée standard, par un <code>Ctrl+D</code> par exemple. Le code correspondant se trouve dans <a href="/~aspicher/Wiki/_media/l3info/compil/tp2/main.ml" class="media mediafile mf_ml" title="l3info:compil:tp2:main.ml">main.ml</a>.
+</p>
+
+</div>
+
+<h3><a name="syntaxe_abstraite" id="syntaxe_abstraite">Syntaxe abstraite</a></h3>
+<div class="level3">
+
+<p>
+
+Les fichiers <a href="/~aspicher/Wiki/_media/l3info/compil/tp2/ast.ml" class="media mediafile mf_ml" title="l3info:compil:tp2:ast.ml">ast.ml</a> et <a href="/~aspicher/Wiki/_media/l3info/compil/tp2/ast.mli" class="media mediafile mf_mli" title="l3info:compil:tp2:ast.mli">ast.mli</a> contiennent la description de la syntaxe abstraite (<strong>A</strong>bstract <strong>S</strong>yntax <strong>T</strong>ree) et de son évaluation.
+</p>
+
+<p>
+En OCaml, chaque fichier <code>.ml</code> (accompagné de son <code>.mli</code>) le cas échéant correspond à la spécification d&#039;un module. Le nom du module est le nom du fichier sans l&#039;extension <code>.ml</code> en commençant toujours par une majuscule. Dans notre cas, le module s&#039;appelle <code>Ast</code>.
+</p>
+
+<p>
+Le fichier <code>.mli</code> (correspondant OCaml du fichier <code>.h</code> en C) décrit l&#039;<em>interface</em> du module à travers sa signature qui regroupe l&#039;ensemble des types (nom du type et sa spécification si l&#039;on souhaite la faire connaître hors du module) et valeurs déclarés (identifiant associé et type) qui seront autorisés d&#039;utilisation dans d&#039;autres modules. Dans notre cas : 
+</p>
+<pre class="code ocaml"><span class="coMULTI">(* Syntaxe abstraite *)</span>
+<span class="kw1">type</span> expr
+&nbsp;
+<span class="coMULTI">(* Constructeurs d'expression *)</span>
+<span class="kw1">val</span> cst<span class="sy0">:</span> int <span class="sy0">-&gt;</span> expr
+<span class="kw1">val</span> add<span class="sy0">:</span> expr <span class="sy0">-&gt;</span> expr <span class="sy0">-&gt;</span> expr
+<span class="kw1">val</span> neg<span class="sy0">:</span> expr <span class="sy0">-&gt;</span> expr
+&nbsp;
+<span class="coMULTI">(* Conversion en chaîne de caractères pour affichage *)</span>
+<span class="kw1">val</span> string_of_expr<span class="sy0">:</span> expr <span class="sy0">-&gt;</span> string
+&nbsp;
+<span class="coMULTI">(* Evaluateur *)</span>
+<span class="kw1">val</span> eval<span class="sy0">:</span> expr <span class="sy0">-&gt;</span> int</pre>
+
+<p>
+
+Tout ajout de définition dans un fichier <code>.ml</code> devra donc être suivi d&#039;une modification de son <code>.mli</code> <strong>uniquement si l&#039;on souhaite faire connaître la nouvelle déclaration à l&#039;extérieur du module</strong>. La présence d&#039;un <code>.mli</code> n&#039;est pas obligatoire ; en cas d&#039;absence, OCaml en considère un par défaut dans lequel rien n&#039;est caché.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Ajouter le constructeur correspondant à la multiplication au module <code>Ast</code> qui correspondra à l&#039;ajout dans le <code>.mli</code> de la déclaration <pre class="code ocaml"><span class="kw1">val</span> mul<span class="sy0">:</span> expr <span class="sy0">-&gt;</span> expr <span class="sy0">-&gt;</span> expr</pre>
+</div>
+</li>
+</ul>
+
+</div>
+
+<h3><a name="analyseur_syntaxique" id="analyseur_syntaxique">Analyseur syntaxique</a></h3>
+<div class="level3">
+
+<p>
+
+Le fichier <a href="/~aspicher/Wiki/_media/l3info/compil/tp2/parser.mly" class="media mediafile mf_mly" title="l3info:compil:tp2:parser.mly">parser.mly</a> contient la spécification de l&#039;analyseur syntaxique qui nous intéresse. Le fichier suit l&#039;organisation présentée <a href="https://caml.inria.fr/pub/docs/manual-ocaml/lexyacc.html#sec308" class="urlextern" title="https://caml.inria.fr/pub/docs/manual-ocaml/lexyacc.html#sec308"  rel="nofollow">ici</a> et <strong>durant le dernier cours</strong>. Nous ne reviendrons pas sur ses éléments ici.
+</p>
+
+<p>
+La grammaire spécifiée dans le fichier correspond à la suivante :
+
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img67e31ddc3260e404f58b2cde87bd83bb.png" class="latex_displayed" alt="$$
+\begin{array}{lclr}
+S &amp; \rightarrow &amp; \texttt{\underline{;;}}\;S\quad|\quad E\;\texttt{\underline{;;}} \\[5pt]
+
+E &amp; \rightarrow &amp; \texttt{\underline{int}}       &amp; \textnormal{(constante entière)}\\
+  &amp; |           &amp; E\;\texttt{\underline +}\;E    &amp; \textnormal{(addition)}
+\end{array}
+$$" title="Equation" />
+</p>
+
+où les terminaux sont présentés soulignés et les non-terminaux en majuscule.
+</p>
+
+<p>
+A partir de ce fichier, l&#039;outil <code>ocamlyacc</code> génère un fichier <code>.ml</code> par la commande suivante (automatiquement gérée par le <code>Makefile</code>) : 
+</p>
+<pre class="code bash">$ ocamlyacc <span class="re5">-v</span> parser.mly</pre>
+
+<p>
+
+L&#039;outil génère également un fichier <code>.output</code> contenant la description de l&#039;automate LALR(1) (ensemble des états avec leurs parties génératrices et les actions associés).
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Ajouter la règle <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/imgfb79f1613cb13486fca842fec80c668e.png" class="latex_inline" alt="$E\;\rightarrow\;\texttt{\underline (}\;E\;\texttt{\underline )}$" title="Math" /> à la grammaire avec l&#039;action sémantique associée</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="precedences" id="precedences">Précédences</a></h4>
+<div class="level4">
+
+<p>
+
+Souvent, la grammaire spécifiée n&#039;est pas LALR(1). C&#039;est le cas de la nôtre. En effet, on peut observer l&#039;état suivant dans <code>parser.output</code> :
+
+</p>
+<pre class="code">
+state 10
+        expr : expr . PLUS expr  (4)
+        expr : expr PLUS expr .  (4)
+
+        .  reduce 4
+</pre>
+
+<p>
+
+c&#039;est-à-dire avec comme partie génératrice :
+
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img736be364d6a4e17e2c897d90c98062d6.png" class="latex_displayed" alt="$$
+\begin{array}{lclr}
+E &amp; \rightarrow &amp; E\;\bullet\;\texttt{\underline +}\;E   \\
+E &amp; \rightarrow &amp; E\;\texttt{\underline +}\;E\;\bullet   
+\end{array}
+$$" title="Equation" />
+</p>
+
+indiquant clairement un conflit <em>shift/reduce</em> qui n&#039;est pas résolvable avec les <em>follows locaux</em> (exercice : vérifier que la grammaire n&#039;est pas LALR(1)).
+</p>
+
+<p>
+Le conflit n&#039;est pas indiqué par <code>ocamlyacc</code> car une <em>précédence</em> est spécifiée dans le fichier <code>.mly</code> :
+
+</p>
+<pre class="code">
+%left PLUS
+</pre>
+
+<p>
+
+qui spécifie que le token <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img502fa89b25f6fc3c364ebd9a86294397.png" class="latex_inline" alt="$\texttt{\underline +}$" title="Math" /> est associatif à gauche.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Observer l&#039;effet de l&#039;associativité à gauche du l&#039;addition sur l&#039;arbre de syntaxe abstraite de l&#039;expression <code>1 + 2 + 3 ;;</code></div>
+</li>
+<li class="level1"><div class="li"> Modifier <code>%left</code> en <code>%right</code> et observer la modification de l&#039;associativité associée à <code>1 + 2 + 3 ;;</code></div>
+</li>
+<li class="level1"><div class="li"> Remettre finalement <code>%left</code>, l&#039;associativité attendue</div>
+</li>
+<li class="level1"><div class="li"> Décommenter la règle <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/imgadbf228dce50188355e50fe2a692fb79.png" class="latex_inline" alt="$E\;\rightarrow\;E\;\texttt{\underline *}\;E$" title="Math" /> de la grammaire et observer l&#039;apparition des conflits</div>
+</li>
+<li class="level1"><div class="li"> Corriger les conflits en spécifiant que la multiplication est également associative à gauche et de priorité plus élevée que l&#039;addition</div>
+</li>
+<li class="level1"><div class="li"> Décommenter la règle <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img5f22d4e28ea1c06e6d23a0fa7b1f6382.png" class="latex_inline" alt="$E\;\rightarrow\;E\;\texttt{\underline -}\;E$" title="Math" /> de la grammaire (on notera l&#039;utilisation d&#039;un sucre syntaxique dans l&#039;action sémantique) et observer l&#039;apparition des conflits</div>
+</li>
+<li class="level1"><div class="li"> Corriger les conflits en spécifiant que la soustraction est également associative à gauche et de même priorité que l&#039;addition</div>
+</li>
+<li class="level1"><div class="li"> Ajouter la règle <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img1f7582d09d54dad17e58f28ebb131f2b.png" class="latex_inline" alt="$E\;\rightarrow\;\texttt{\underline -}\;E$" title="Math" /> à la grammaire (avec l&#039;action sémantique associée) et observer l&#039;absence de conflit</div>
+</li>
+<li class="level1"><div class="li"> Observer l&#039;arbre associé à l&#039;expression <code>-1 * 2</code> ; convient-elle ? Modifier la précédence du <em>moins</em> unaire sur la multiplication ; nous rajouterons pour cela une précédence non-associative <code>UMINUS</code> ne correspondant à aucun token et préciserons sur la production correspondant à la négation la précédence à utiliser par <code>%prec UMINUS</code> ; observer l&#039;arbre obtenu sur <code>-1 * 2 ;;</code></div>
+</li>
+</ul>
+
+</div>
+
+<h3><a name="analyseur_lexical" id="analyseur_lexical">Analyseur lexical</a></h3>
+<div class="level3">
+
+<p>
+
+Le fichier <a href="/~aspicher/Wiki/_media/l3info/compil/tp2/lexer.mll" class="media mediafile mf_mll" title="l3info:compil:tp2:lexer.mll">lexer.mll</a> contient la spécification de l&#039;analyseur lexical qui nous intéresse. Le fichier suit l&#039;organisation présentée <a href="https://caml.inria.fr/pub/docs/manual-ocaml/lexyacc.html#sec298" class="urlextern" title="https://caml.inria.fr/pub/docs/manual-ocaml/lexyacc.html#sec298"  rel="nofollow">ici</a> et <strong>durant le dernier cours</strong>. Nous ne reviendrons pas sur ses éléments ici.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Ajouter les éléments lexicaux, syntaxiques et sémantiques pour la division euclidienne et son reste</div>
+</li>
+<li class="level1"><div class="li"> Ajouter les commentaires tels que nous l&#039;avons vu en cours (d&#039;abord sans gestion de l&#039;imbrication, puis avec gestion de l&#039;imbrication)</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="finalisation_du_tp_1" id="finalisation_du_tp_1">Finalisation du TP 1</a></h2>
+<div class="level2">
+
+<p>
+
+L&#039;objectif est d&#039;étendre le programme précédent jusqu&#039;à obtenir l&#039;entièreté des fonctionnalités présentes dans le <a href="/~aspicher/Wiki/l3info/compil/tp1/start" class="wikilink1" title="l3info:compil:tp1:start">TP 1</a>.
+</p>
+<ul>
+<li class="level1"><div class="li"> Remplacer la syntaxe abstraite par celle du <a href="/~aspicher/Wiki/l3info/compil/tp1/start" class="wikilink1" title="l3info:compil:tp1:start">TP 1</a></div>
+</li>
+<li class="level1"><div class="li"> Ajouter les éléments syntaxiques et lexicaux correspondant aux nouvelles constructions</div>
+</li>
+<li class="level1"><div class="li"> Ajouter les chaînes de caractères et l&#039;opérateur de concaténation de chaînes à votre mini-langage</div>
+</li>
+</ul>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+        Connecté en tant que : L3 Informatique (l3info)      </div>
+      <div class="doc">
+        l3info/compil/tp2/start.txt &middot; Dernière modification: 2017/02/09 12:24 par aspicher      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+                              </div>
+      <div class="bar-right" id="bar__bottomright">
+                                        <form class="button btn_logout" method="get" action="/~aspicher/Wiki/l3info/compil/tp2/start"><div class="no"><input type="hidden" name="do" value="logout" /><input type="hidden" name="sectok" value="da5c700652722611f85939eefa5079e3" /><input type="submit" value="Déconnexion" class="button" title="Déconnexion" /></div></form>                <a class="nolink" href="#dokuwiki__top"><input type="button" class="button" value="Haut de page" onclick="window.scrollTo(0, 0)" title="Haut de page" /></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+  <div class="license">Sauf mention contraire, le contenu de ce wiki est placé sous la licence suivante:<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></div>
+</div>
+
+<div class="footerinc">
+
+  <a  href="/~aspicher/Wiki/feed.php" title="Recent changes RSS feed"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" /></a>
+
+        <a  href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="CC Attribution-Noncommercial-Share Alike 3.0 Unported"><img src="/~aspicher/Wiki/lib/images/license/button/cc-by-nc-sa.png" width="80" height="15" alt="" /></a>
+  
+  <a  href="http://www.dokuwiki.org/donate" title="Donate"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-donate.gif" alt="Donate" width="80" height="15" /></a>
+
+  <a  href="http://www.php.net" title="Powered by PHP"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+
+  <a  href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" /></a>
+
+  <a  href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+
+  <a  href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+
+
+
+</div>
+
+<div class="no"><img src="/~aspicher/Wiki/lib/exe/indexer.php?id=l3info%3Acompil%3Atp2%3Astart&amp;1486642467" width="1" height="1" alt=""  /></div>
+</body>
+</html>

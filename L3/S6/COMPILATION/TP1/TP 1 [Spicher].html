@@ -1,0 +1,714 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr"
+ lang="fr" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    TP 1    [Spicher]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="date" content="2017-02-07T13:48:21+0100" />
+<meta name="keywords" content="l3info,compil,tp1,start" />
+<link rel="search" type="application/opensearchdescription+xml" href="/~aspicher/Wiki/lib/exe/opensearch.php" title="Spicher" />
+<link rel="start" href="/~aspicher/Wiki/" />
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/~aspicher/Wiki/feed.php" />
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="/~aspicher/Wiki/feed.php?mode=list&amp;ns=l3info:compil:tp1" />
+<link rel="alternate" type="text/html" title="Plain HTML" href="/~aspicher/Wiki/_export/xhtml/l3info/compil/tp1/start" />
+<link rel="canonical" href="http://www.lacl.fr/~aspicher/Wiki/l3info/compil/tp1/start" />
+<link rel="stylesheet" media="all" type="text/css" href="/~aspicher/Wiki/lib/exe/css.php?s=all&amp;t=default&amp;tseed=1481110921" />
+<link rel="stylesheet" media="screen" type="text/css" href="/~aspicher/Wiki/lib/exe/css.php?t=default&amp;tseed=1481110921" />
+<link rel="stylesheet" media="print" type="text/css" href="/~aspicher/Wiki/lib/exe/css.php?s=print&amp;t=default&amp;tseed=1481110921" />
+<script type="text/javascript" charset="utf-8" ><!--//--><![CDATA[//><!--
+var NS='l3info:compil:tp1';var SIG=' --- //[[antoine.spicher@u-pec.fr|L3 Informatique]] 2017/02/07 20:39//';var JSINFO = {"id":"l3info:compil:tp1:start","namespace":"l3info:compil:tp1"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="/~aspicher/Wiki/lib/exe/js.php?tseed=1481110921" ></script>
+
+  <link rel="shortcut icon" href="/~aspicher/Wiki/lib/tpl/default/images/favicon.ico" />
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="/~aspicher/Wiki/l3info/compil/tp1/start?do=backlink"  title="Liens vers cette page">TP 1</a>]]
+      </div>
+      <div class="logo">
+        <a href="/~aspicher/Wiki/"  name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]">Spicher</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                      </div>
+
+      <div class="bar-right" id="bar__topright">
+                &nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+        <div class="breadcrumbs">
+      <span class="bchead">Piste:</span> <span class="bcsep">&raquo;</span> <a href="/~aspicher/Wiki/start"  class="breadcrumbs" title="start">Accueil</a> <span class="bcsep">&raquo;</span> <a href="/~aspicher/Wiki/l3info/compil/start"  class="breadcrumbs" title="l3info:compil:start">Compilation</a> <span class="bcsep">&raquo;</span> <span class="curid"><a href="/~aspicher/Wiki/l3info/compil/tp1/start"  class="breadcrumbs" title="l3info:compil:tp1:start">TP 1</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div class="tocheader toctoggle" id="toc__header">Table des matières</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#tp_1" class="toc">TP 1</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#expressions_arithmetiques" class="toc">Expressions arithmétiques</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#expressions_booleennes" class="toc">Expressions booléennes</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#identifiants_et_environnements" class="toc">Identifiants et environnements</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#les_valeurs_flottantes" class="toc">Les valeurs flottantes</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#les_conditionnelles" class="toc">Les conditionnelles</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#lambda_applications_et_local_binding" class="toc">Lambda, applications et local binding</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#n-uplets" class="toc">N-uplets</a></span></div></li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="tp_1" id="tp_1">TP 1</a></h1>
+<div class="level1">
+
+</div>
+
+<h2><a name="expressions_arithmetiques" id="expressions_arithmetiques">Expressions arithmétiques</a></h2>
+<div class="level2">
+
+<p>
+
+On considère la syntaxe abstraite des expressions arithmétiques suivantes :
+</p>
+
+<p>
+
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/imgee369e425c90ff97d94d2d09baa51b14.png" class="latex_displayed" alt="$$
+\begin{array}{lclr}
+e &amp; ::= &amp; \texttt{n}          &amp; \textnormal{(constante entière)}\\
+  &amp;  |  &amp; e\;\texttt{+}\;e    &amp; \textnormal{(addition)}\\
+  &amp;  |  &amp; e\;\texttt{-}\;e    &amp; \textnormal{(soustraction)}\\
+  &amp;  |  &amp; \texttt{-}\;e       &amp; \textnormal{(négation)}\\
+  &amp;  |  &amp; e\;\texttt{*}\;e    &amp; \textnormal{(multiplication)}\\
+  &amp;  |  &amp; e\;\texttt{/}\;e    &amp; \textnormal{(division)}\\
+  &amp;  |  &amp; e\;\texttt{\%}\;e   &amp; \textnormal{(reste)}\\
+\end{array}
+$$" title="Equation" />
+</p>
+
+</p>
+
+<p>
+Les règles d&#039;inférences définissant la sémantique de cette syntaxe abstraite sont les suivantes (on remarquera en particulier la différence entre l&#039;opérateur utilisé en partie gauche et en partie droite des règles ; par exemple le <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/imgf1ed4608c86403c1d089b3446a303838.png" class="latex_inline" alt="$\texttt{+}$" title="Math" /> syntaxique devient un <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/imgdf33724455416439909c33a7db76b2bc.png" class="latex_inline" alt="$+$" title="Math" /> sémantique) :
+</p>
+
+<p>
+
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/imge332221715317c414b7d5d7e245b9285.png" class="latex_displayed" alt="$$
+\begin{array}{c}
+
+\\ \hline
+\texttt{n} \stackrel{e}\rightarrow n
+\end{array}%
+\qquad
+\begin{array}{c}
+e \stackrel{e}\rightarrow v
+\\ \hline
+\texttt{-}\;e \stackrel{e}\rightarrow -v
+\end{array}%
+\qquad
+\begin{array}{cc}
+e_1 \stackrel{e}\rightarrow v_1 &amp; e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{e_1\;\texttt{+}\;e_2 \stackrel{e}\rightarrow v_1 + v_2}
+\end{array}%
+\qquad
+\begin{array}{cc}
+e_1 \stackrel{e}\rightarrow v_1 &amp; e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{e_1\;\texttt{-}\;e_2 \stackrel{e}\rightarrow v_1 - v_2}
+\end{array}
+$$" title="Equation" />
+</p>
+ 
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img9d3c29861da281abc80899ed62c270b5.png" class="latex_displayed" alt="$$
+\begin{array}{cc}
+e_1 \stackrel{e}\rightarrow v_1 &amp; e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{e_1\;\texttt{*}\;e_2 \stackrel{e}\rightarrow v_1 \times v_2}
+\end{array}%
+\qquad
+\begin{array}{cc}
+e_1 \stackrel{e}\rightarrow v_1 &amp; e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{e_1\;\texttt{/}\;e_2 \stackrel{e}\rightarrow v_1 / v_2}
+\end{array}%
+\qquad
+\begin{array}{cc}
+e_1 \stackrel{e}\rightarrow v_1 &amp; e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{e_1\;\texttt{\%}\;e_2 \stackrel{e}\rightarrow v_1\;\mathrm{mod}\;v_2}
+\end{array}
+$$" title="Equation" />
+</p>
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Définir le type de données algébrique <code>expr</code> représentant les arbres de syntaxe abstraite (AST) des expressions arithmétiques</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>pp_expr: expr → string</code> convertissant un AST en chaîne de caractères</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>eval_expr: expr → int</code> calculant l&#039;évaluation d&#039;un AST en respectant les règles d&#039;inférence</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="expressions_booleennes" id="expressions_booleennes">Expressions booléennes</a></h2>
+<div class="level2">
+
+<p>
+
+On considère la syntaxe abstraite des expressions booléennes suivantes :
+</p>
+
+<p>
+
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img6cf0318386e486f508f75113881454f8.png" class="latex_displayed" alt="$$
+\begin{array}{lclr}
+c &amp; ::= &amp; \texttt{false}           &amp; \textnormal{(faux)}\\
+  &amp;  |  &amp; \texttt{true}           &amp; \textnormal{(vrai)}\\
+  &amp;  |  &amp; e\;\texttt{=}\;e          &amp; \textnormal{(égalité)}\\
+  &amp;  |  &amp; e\;\texttt{&lt;&gt;}\;e         &amp; \textnormal{(différence)}\\
+  &amp;  |  &amp; e\;\texttt{&lt;}\;e          &amp; \textnormal{(inférieur strict)}\\
+  &amp;  |  &amp; e\;\texttt{&lt;=}\;e        &amp; \textnormal{(inférieur large)}\\
+  &amp;  |  &amp; \texttt{not}\;c         &amp; \textnormal{(négation)}\\
+  &amp;  |  &amp; c\;\texttt{and}\;c     &amp; \textnormal{(conjonction)}\\
+  &amp;  |  &amp; c\;\texttt{or}\;c       &amp; \textnormal{(disjonction)}\\
+\end{array}
+$$" title="Equation" />
+</p>
+
+</p>
+
+<p>
+avec la sémantique associée :
+</p>
+
+<p>
+
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img5862577c28a049c2d12e6428816b6675.png" class="latex_displayed" alt="$$
+\begin{array}{c}
+
+\\ \hline
+\texttt{false} \stackrel{c}\rightarrow \bot
+\end{array}%
+\qquad
+\begin{array}{c}
+
+\\ \hline
+\texttt{true} \stackrel{c}\rightarrow \top
+\end{array}
+$$" title="Equation" />
+</p>
+ 
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/imgf9198fa7887ebaaef176d05e1edcada9.png" class="latex_displayed" alt="$$
+\begin{array}{cc}
+e_1 \stackrel{e}\rightarrow v_1 &amp; e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{e_1\;\texttt{=}\;e_2 \stackrel{c}\rightarrow v_1 = v_2}
+\end{array}%
+\qquad
+\begin{array}{cc}
+e_1 \stackrel{e}\rightarrow v_1 &amp; e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{e_1\;\texttt{&lt;&gt;}\;e_2 \stackrel{c}\rightarrow v_1 \neq v_2}
+\end{array}%
+\qquad
+\begin{array}{cc}
+e_1 \stackrel{e}\rightarrow v_1 &amp; e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{e_1\;\texttt{&lt;}\;e_2 \stackrel{c}\rightarrow v_1 &lt; v_2}
+\end{array}%
+\qquad
+\begin{array}{cc}
+e_1 \stackrel{e}\rightarrow v_1 &amp; e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{e_1\;\texttt{&lt;=}\;e_2 \stackrel{c}\rightarrow v_1 \le v_2}
+\end{array}
+$$" title="Equation" />
+</p>
+ 
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img3ac9d52450a86861f78d76048921f43b.png" class="latex_displayed" alt="$$
+\begin{array}{c}
+c \stackrel{c}\rightarrow b
+\\ \hline
+\texttt{not}\;c \stackrel{c}\rightarrow \neg b
+\end{array}%
+\qquad
+\begin{array}{cc}
+c_1 \stackrel{c}\rightarrow b_1 &amp; c_2 \stackrel{c}\rightarrow b_2
+\\ \hline
+\multicolumn{2}{c}{c_1\;\texttt{and}\;c_2 \stackrel{c}\rightarrow b_1 \wedge b_2}
+\end{array}%
+\qquad
+\begin{array}{cc}
+c_1 \stackrel{c}\rightarrow b_1 &amp; c_2 \stackrel{c}\rightarrow b_2
+\\ \hline
+\multicolumn{2}{c}{c_1\;\texttt{or}\;c_2 \stackrel{c}\rightarrow b_1 \vee b_2}
+\end{array}%
+$$" title="Equation" />
+</p>
+
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Définir le type de données algébrique <code>cond</code> représentant les AST des expressions booléennes</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>pp_cond: cond → string</code> convertissant un AST en chaîne de caractères</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>eval_cond: cond → bool</code> calculant l&#039;évaluation d&#039;un AST</div>
+</li>
+<li class="level1"><div class="li"> [Optionnel] Modifier la sémantique et l&#039;évaluateur pour les opérateurs logiques binaires soient paresseux</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="identifiants_et_environnements" id="identifiants_et_environnements">Identifiants et environnements</a></h2>
+<div class="level2">
+
+<p>
+
+On considère qu&#039;un environnement est soit vide, soit constitué d&#039;un couple <code>&lt;identifiant, valeur&gt;</code> en tête d&#039;un sous-environnement.
+</p>
+<ul>
+<li class="level1"><div class="li"> Définir le type <code>&#039;a env</code> des environnements à valeur de type <code>&#039;a</code></div>
+</li>
+<li class="level1"><div class="li"> Définir l&#039;environnement vide <code>empty_env : &#039;a env</code></div>
+</li>
+<li class="level1"><div class="li"> Définir l&#039;ajout d&#039;une entrée dans un environnement <code>add_env : string → &#039;a → &#039;a env → &#039;a env</code></div>
+</li>
+<li class="level1"><div class="li"> Définir la recherche d&#039;une valeur <code>find_env : string → &#039;a env → &#039;a option</code></div>
+</li>
+<li class="level1"><div class="li"> Modifier les types <code>expr</code> et <code>cond</code> pour qu&#039;ils prennent en compte les identifiants 
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img0f9cec638c27de99d3c1cd6f8f61e44f.png" class="latex_displayed" alt="$$
+\begin{array}{lclr}
+e &amp; ::= &amp; \dots\\
+  &amp;  |  &amp; \texttt{x}  &amp; \textnormal{(variable entière)}\\
+  &amp;  |  &amp; \dots\\
+c &amp; ::= &amp; \dots\\
+  &amp;  |  &amp; \texttt{x}  &amp; \textnormal{(variable booléenne)}\\
+  &amp;  |  &amp; \dots\\
+\end{array}
+$$" title="Equation" />
+</p>
+ représentés par des chaînes de caractères</div>
+</li>
+<li class="level1"><div class="li"> [optionnel] Définir les fonctions <code>fv_expr : expr → string list</code> et <code>fv_cond : cond → string list</code> retournant les variables libres des AST (attention on souhaite qu&#039;il n&#039;y ait pas de doublon)</div>
+</li>
+<li class="level1"><div class="li"> Ajouter le cas manquant aux fonctions d&#039;affichage </div>
+</li>
+<li class="level1"><div class="li"> Modifier les fonctions <code>eval_expr : int env → expr → int</code> et <code>eval_cond : bool env → cond → bool</code> pour prendre en compte les identifiants durant l&#039;évaluation en respectant la sémantique suivante 
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/imge233f4558ac4946f136fed7db36a512f.png" class="latex_displayed" alt="$$
+\begin{array}{c}
+
+\\ \hline
+\Gamma \vdash \texttt{n} \stackrel{e}\rightarrow n
+\end{array}%
+\qquad
+\begin{array}{c}
+
+\\ \hline
+\texttt{x}:v, \Gamma \vdash \texttt{x} \stackrel{e}\rightarrow v
+\end{array}
+$$" title="Equation" />
+</p>
+ 
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img01ad176dc8c761c646cd57643d3f5060.png" class="latex_displayed" alt="$$
+\begin{array}{c}
+\Gamma \vdash e \stackrel{e}\rightarrow v
+\\ \hline
+\Gamma \vdash \texttt{-}\;e \stackrel{e}\rightarrow -v
+\end{array}%
+\qquad
+\begin{array}{cc}
+\Gamma \vdash e_1 \stackrel{e}\rightarrow v_1 &amp; \Gamma \vdash e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{\Gamma \vdash e_1\;\texttt{+}\;e_2 \stackrel{e}\rightarrow v_1 + v_2}
+\end{array}%
+\qquad
+\begin{array}{cc}
+\Gamma \vdash e_1 \stackrel{e}\rightarrow v_1 &amp; \Gamma \vdash e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{\Gamma \vdash e_1\;\texttt{-}\;e_2 \stackrel{e}\rightarrow v_1 - v_2}
+\end{array}
+$$" title="Equation" />
+</p>
+ 
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img1431e5c48e1e0e7efdad6a825ae89b65.png" class="latex_displayed" alt="$$
+\begin{array}{cc}
+\Gamma \vdash e_1 \stackrel{e}\rightarrow v_1 &amp; \Gamma \vdash e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{\Gamma \vdash e_1\;\texttt{*}\;e_2 \stackrel{e}\rightarrow v_1 \times v_2}
+\end{array}%
+\qquad
+\begin{array}{cc}
+\Gamma \vdash e_1 \stackrel{e}\rightarrow v_1 &amp; \Gamma \vdash e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{\Gamma \vdash e_1\;\texttt{/}\;e_2 \stackrel{e}\rightarrow v_1 / v_2}
+\end{array}%
+\qquad
+\begin{array}{cc}
+\Gamma \vdash e_1 \stackrel{e}\rightarrow v_1 &amp; \Gamma \vdash e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{\Gamma \vdash e_1\;\texttt{\%}\;e_2 \stackrel{e}\rightarrow v_1\;\mathrm{mod}\;v_2}
+\end{array}
+$$" title="Equation" />
+</p>
+ 
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/imgb32157c8fd98b9d7de6e19e613f2ccd8.png" class="latex_displayed" alt="$$
+\begin{array}{c}
+
+\\ \hline
+\Gamma \vdash \texttt{false} \stackrel{c}\rightarrow \bot
+\end{array}%
+\qquad
+\begin{array}{c}
+
+\\ \hline
+\Gamma \vdash \texttt{true} \stackrel{c}\rightarrow \top
+\end{array}%
+\qquad
+\begin{array}{c}
+
+\\ \hline
+\texttt{x}:b, \Gamma \vdash \texttt{x} \stackrel{c}\rightarrow b
+\end{array}
+$$" title="Equation" />
+</p>
+ 
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img2fee0c2b428fe49c9ccc3ccbbd4356ea.png" class="latex_displayed" alt="$$
+\begin{array}{cc}
+\Gamma \vdash e_1 \stackrel{e}\rightarrow v_1 &amp; \Gamma \vdash e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{\Gamma \vdash e_1\;\texttt{=}\;e_2 \stackrel{c}\rightarrow v_1 = v_2}
+\end{array}%
+\qquad
+\begin{array}{cc}
+\Gamma \vdash e_1 \stackrel{e}\rightarrow v_1 &amp; \Gamma \vdash e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{\Gamma \vdash e_1\;\texttt{&lt;&gt;}\;e_2 \stackrel{c}\rightarrow v_1 \neq v_2}
+\end{array}
+$$" title="Equation" />
+</p>
+ 
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img151780ddbe16381b7f465e07b99c833c.png" class="latex_displayed" alt="$$
+\begin{array}{cc}
+\Gamma \vdash e_1 \stackrel{e}\rightarrow v_1 &amp; \Gamma \vdash e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{\Gamma \vdash e_1\;\texttt{&lt;}\;e_2 \stackrel{c}\rightarrow v_1 &lt; v_2}
+\end{array}%
+\qquad
+\begin{array}{cc}
+\Gamma \vdash e_1 \stackrel{e}\rightarrow v_1 &amp; \Gamma \vdash e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{\Gamma \vdash e_1\;\texttt{&lt;=}\;e_2 \stackrel{c}\rightarrow v_1 \le v_2}
+\end{array}
+$$" title="Equation" />
+</p>
+ 
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/imgf669aa2babde60d7af2994ed8d2e8a23.png" class="latex_displayed" alt="$$
+\begin{array}{c}
+\Gamma \vdash c \stackrel{c}\rightarrow b
+\\ \hline
+\Gamma \vdash \texttt{not}\;c \stackrel{c}\rightarrow \neg b
+\end{array}%
+\qquad
+\begin{array}{cc}
+\Gamma \vdash c_1 \stackrel{c}\rightarrow b_1 &amp; \Gamma \vdash c_2 \stackrel{c}\rightarrow b_2
+\\ \hline
+\multicolumn{2}{c}{\Gamma \vdash c_1\;\texttt{and}\;c_2 \stackrel{c}\rightarrow b_1 \wedge b_2}
+\end{array}%
+\qquad
+\begin{array}{cc}
+\Gamma \vdash c_1 \stackrel{c}\rightarrow b_1 &amp; \Gamma \vdash c_2 \stackrel{c}\rightarrow b_2
+\\ \hline
+\multicolumn{2}{c}{\Gamma \vdash c_1\;\texttt{or}\;c_2 \stackrel{c}\rightarrow b_1 \vee b_2}
+\end{array}%
+$$" title="Equation" />
+</p>
+</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="les_valeurs_flottantes" id="les_valeurs_flottantes">Les valeurs flottantes</a></h2>
+<div class="level2">
+
+<p>
+
+On souhaite maintenant que les expressions arithmétiques nous permettent de manipuler à la fois des valeurs entières et des valeurs flottantes. Il est pour cela nécessaire de modifier les éléments demandés précédemment pour tenir compte de cette extension. Les règles d&#039;inférence de la sémantique ne sont pas modifiées en profondeur ; seuls les opérateurs arithmétiques et relationnelles utilisées en partie droite des flèches d&#039;évaluation ont un sens différent qu&#039;il va falloir préciser.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Définir un type <code>constant</code> permettant de représenter toutes les constantes du langage (entiers et flottants)</div>
+</li>
+<li class="level1"><div class="li"> Définir les fonctions arithmétiques permettant de manipuler les constantes. Pour les opérateurs binaires, on supposera que lorsque les types des opérandes ne coïncident pas, une conversion des entiers vers les valeurs flottants sera effectuée :</div>
+<ul>
+<li class="level2"><div class="li"> <code>neg : constant → constant</code></div>
+</li>
+<li class="level2"><div class="li"> <code>add : constant → constant → constant</code></div>
+</li>
+<li class="level2"><div class="li"> <code>sub : constant → constant → constant</code></div>
+</li>
+<li class="level2"><div class="li"> <code>mul : constant → constant → constant</code></div>
+</li>
+<li class="level2"><div class="li"> <code>div : constant → constant → constant</code></div>
+</li>
+<li class="level2"><div class="li"> <code>modulo : constant → constant → constant</code></div>
+</li>
+<li class="level2"><div class="li"> <code>lt : constant → constant → bool</code></div>
+</li>
+<li class="level2"><div class="li"> <code>le : constant → constant → bool</code></div>
+</li>
+<li class="level2"><div class="li"> <code>eq : constant → constant → bool</code></div>
+</li>
+<li class="level2"><div class="li"> <code>neq : constant → constant → bool</code></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Modifier la définition du type <code>expr</code> pour prendre en compte les nouvelles constantes</div>
+</li>
+<li class="level1"><div class="li"> Modifier les fonctions d&#039;affichage et les évaluateurs en conséquence ; l&#039;évaluateur d&#039;expression change de type :</div>
+<ul>
+<li class="level2"><div class="li"> <code>eval_expr: constant env → expr → constant</code></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> [optionnel] Si ce n&#039;est déjà fait, redéfinir les fonctions arithmétiques <code>neg</code>, <code>add</code>, etc. en factorisant votre code au maximum</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="les_conditionnelles" id="les_conditionnelles">Les conditionnelles</a></h2>
+<div class="level2">
+
+<p>
+
+On souhaite rajouter les expressions conditionnelles à la syntaxe abstraite :
+</p>
+
+<p>
+
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img21c81275a98ddc47d9d62b641a206352.png" class="latex_displayed" alt="$$
+\begin{array}{lclr}
+e &amp; ::= &amp; \dots\\
+  &amp;  |  &amp; \texttt{if}\ c\ \texttt{then}\ e\ \texttt{else}\ e    &amp; \textnormal{(conditionnelle)}\\
+\end{array}
+$$" title="Equation" />
+</p>
+
+avec les deux règles de sémantiques correspondantes :
+
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/imgf2d79d07f99485039baa5c29bcf5d705.png" class="latex_displayed" alt="$$
+\begin{array}{cc}
+\Gamma \vdash c \stackrel{c}\rightarrow \top &amp; \Gamma \vdash e_1 \stackrel{e}\rightarrow v_1
+\\ \hline
+\multicolumn{2}{c}{\Gamma \vdash \texttt{if}\ c\ \texttt{then}\ e_1\ \texttt{else}\ e_2\  \stackrel{e}\rightarrow v_1}
+\end{array}%
+\qquad
+\begin{array}{cc}
+\Gamma \vdash c \stackrel{c}\rightarrow \bot &amp; \Gamma \vdash e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{\Gamma \vdash \texttt{if}\ c\ \texttt{then}\ e_1\ \texttt{else}\ e_2\  \stackrel{e}\rightarrow v_2}
+\end{array}%
+$$" title="Equation" />
+</p>
+
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Modifier le type <code>expr</code> pour prendre en compte les conditionnelles (attention, <code>expr</code> et <code>cond</code> deviennent mutuellement récursifs)</div>
+</li>
+<li class="level1"><div class="li"> Modifier la fonction d&#039;affichage et l&#039;évaluateur en conséquence. On remarquera que le même environnement est utilisé pour l&#039;évaluation des expressions et des conditions ; il est donc nécessaire de créer un nouveau type somme permettant de parler à la fois des valeurs issues de l&#039;évaluation des expressions et des booléens issus de l&#039;évaluation des conditions</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="lambda_applications_et_local_binding" id="lambda_applications_et_local_binding">Lambda, applications et local binding</a></h2>
+<div class="level2">
+
+<p>
+
+On souhaite rajouter l&#039;ordre supérieure et les définitions locales :
+</p>
+
+<p>
+
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img16ac5e0065bd7913427286ed15a5ca67.png" class="latex_displayed" alt="$$
+\begin{array}{lclr}
+e &amp; ::= &amp; \dots\\
+  &amp;  |  &amp; \texttt{fun}\ \texttt{x}\ \texttt{-&gt;}\ e                   &amp; \textnormal{(abstraction)}\\
+  &amp;  |  &amp; e\ e                                                       &amp; \textnormal{(application)}\\
+  &amp;  |  &amp; \texttt{let}\ \texttt{x}\ \texttt{=}\ e\ \texttt{in}\ e    &amp; \textnormal{(définition)}\\
+\end{array}
+$$" title="Equation" />
+</p>
+
+avec les règles de sémantiques correspondantes :
+
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img33e973ca0b679c57a533cfdd0aa6e39e.png" class="latex_displayed" alt="$$
+\begin{array}{cc}
+
+\\ \hline
+\multicolumn{2}{c}{\Gamma \vdash \texttt{fun}\ \texttt{x}\ \texttt{-&gt;}\ e \stackrel{e}\rightarrow \langle \lambda\texttt{x}.e, \Gamma\rangle}
+\end{array}%
+\qquad
+\begin{array}{ccc}
+\Gamma \vdash e_1 \stackrel{e}\rightarrow \langle \lambda\texttt{x}.e', \Gamma'\rangle &amp;
+\Gamma \vdash e_2 \stackrel{e}\rightarrow a &amp;
+\texttt{x}:a, \Gamma' \vdash e' \stackrel{e}\rightarrow v
+\\ \hline
+\multicolumn{3}{c}{\Gamma \vdash e_1\ e_2 \stackrel{e}\rightarrow v}
+\end{array}%
+\qquad
+\begin{array}{cc}
+\Gamma \vdash e_1 \stackrel{e}\rightarrow v_1 &amp;
+\texttt{x}:v_1, \Gamma \vdash e_2 \stackrel{e}\rightarrow v_2
+\\ \hline
+\multicolumn{2}{c}{\Gamma \vdash \texttt{let}\ \texttt{x}\ \texttt{=}\ e_1\ \texttt{in}\ e_2 \stackrel{e}\rightarrow v_2}
+\end{array}
+$$" title="Equation" />
+</p>
+
+</p>
+
+<p>
+L&#039;élément principal de cet extension de la sémantique est la <em>clôture</em> <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img07c12ca3efdb8f54cc31d0af03b7ea85.png" class="latex_inline" alt="$\langle \lambda\texttt{x}.e, \Gamma\rangle$" title="Math" />. En effet une fonction s&#039;évaluera au moment de son appel (cf. les prémisses de la règle de l&#039;application). Cette évaluation demandera de restaurer l&#039;environnement existant au moment de la création de l&#039;abstraction. Un clôture contient donc ces deux informations : la fonction (<em>i.e.</em>, un nom d&#039;argument et une expression constituant son corps) et l&#039;environnement au moment de sa définition.
+</p>
+
+<p>
+L&#039;ensemble des valeurs d&#039;évaluation s&#039;étend également car on trouve maintenant en partie droite des flèches d&#039;évaluation des clôtures, en plus des constantes.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Définir le type <code>value</code> permettant de spécifier les parties droites de flèche (une valeur est soit une constante, soit une clôture)</div>
+</li>
+<li class="level1"><div class="li"> Modifier le type <code>expr</code> pour prendre en compte les 3 nouveaux éléments de syntaxe</div>
+</li>
+<li class="level1"><div class="li"> Modifier la fonction d&#039;affichage et l&#039;évaluateur en conséquence ; l&#039;évaluateur change de type :</div>
+<ul>
+<li class="level2"><div class="li"> <code>eval_expr: value env → expr → value</code></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="n-uplets" id="n-uplets">N-uplets</a></h2>
+<div class="level2">
+
+<p>
+
+A vous de jouer…
+</p>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+        Connecté en tant que : L3 Informatique (l3info)      </div>
+      <div class="doc">
+        l3info/compil/tp1/start.txt &middot; Dernière modification: 2017/02/07 13:48 par aspicher      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+                              </div>
+      <div class="bar-right" id="bar__bottomright">
+                                        <form class="button btn_logout" method="get" action="/~aspicher/Wiki/l3info/compil/tp1/start"><div class="no"><input type="hidden" name="do" value="logout" /><input type="hidden" name="sectok" value="87e6353e222093376548e85d0fc7a3d0" /><input type="submit" value="Déconnexion" class="button" title="Déconnexion" /></div></form>                <a class="nolink" href="#dokuwiki__top"><input type="button" class="button" value="Haut de page" onclick="window.scrollTo(0, 0)" title="Haut de page" /></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+  <div class="license">Sauf mention contraire, le contenu de ce wiki est placé sous la licence suivante:<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></div>
+</div>
+
+<div class="footerinc">
+
+  <a  href="/~aspicher/Wiki/feed.php" title="Recent changes RSS feed"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" /></a>
+
+        <a  href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="CC Attribution-Noncommercial-Share Alike 3.0 Unported"><img src="/~aspicher/Wiki/lib/images/license/button/cc-by-nc-sa.png" width="80" height="15" alt="" /></a>
+  
+  <a  href="http://www.dokuwiki.org/donate" title="Donate"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-donate.gif" alt="Donate" width="80" height="15" /></a>
+
+  <a  href="http://www.php.net" title="Powered by PHP"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+
+  <a  href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" /></a>
+
+  <a  href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+
+  <a  href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+
+
+
+</div>
+
+<div class="no"><img src="/~aspicher/Wiki/lib/exe/indexer.php?id=l3info%3Acompil%3Atp1%3Astart&amp;1486496356" width="1" height="1" alt=""  /></div>
+</body>
+</html>

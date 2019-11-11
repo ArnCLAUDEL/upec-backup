@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    TP 3    [Spicher]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-09-24T14:04:19+0200">
+<meta name="keywords" content="l2info,progc,tp3">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/exe/opensearch.php" title="Spicher">
+<link rel="start" href="http://www.lacl.fr/%7Easpicher/Wiki/">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php?mode=list&amp;ns=l2info:progc">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.lacl.fr/%7Easpicher/Wiki/_export/xhtml/l2info/progc/tp3">
+<link rel="canonical" href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp3">
+<link rel="stylesheet" media="all" type="text/css" href="TP%203%20%5BSpicher%5D_files/css.css">
+<link rel="stylesheet" media="screen" type="text/css" href="TP%203%20%5BSpicher%5D_files/css_003.css">
+<link rel="stylesheet" media="print" type="text/css" href="TP%203%20%5BSpicher%5D_files/css_002.css">
+<script type="text/javascript" charset="utf-8"><!--//--><![CDATA[//><!--
+var NS='l2info:progc';var SIG=' --- //[[antoine.spicher@u-pec.fr|L2 Informatique]] 2015/11/29 18:35//';var JSINFO = {"id":"l2info:progc:tp3","namespace":"l2info:progc"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="TP%203%20%5BSpicher%5D_files/js.php"></script>
+
+  <link rel="shortcut icon" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/tpl/default/images/favicon.ico">
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp3?do=backlink" title="Liens vers cette page">TP 3</a>]]
+      </div>
+      <div class="logo">
+        <a href="http://www.lacl.fr/%7Easpicher/Wiki/" name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]">Spicher</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                      </div>
+
+      <div class="bar-right" id="bar__topright">
+                &nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+        <div class="breadcrumbs">
+      <span class="bchead">Piste:</span> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/start" class="breadcrumbs" title="start">Accueil</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/start" class="breadcrumbs" title="l2info:progc:start">Programmation en C (avancé)</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp1" class="breadcrumbs" title="l2info:progc:tp1">TP 1</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp2" class="breadcrumbs" title="l2info:progc:tp2">TP 2</a> <span class="bcsep">»</span> <span class="curid"><a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp3" class="breadcrumbs" title="l2info:progc:tp3">TP 3</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div style="cursor: pointer;" class="tocheader toctoggle" id="toc__header"><span class="toc_close" style="cursor: pointer;" id="toc__toggle"><span>−</span></span>Table des matières</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#tp_3" class="toc">TP 3</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#affichage_tailles_et_limitations_des_differentes_representations_flottantes" class="toc">Affichage, tailles et limitations des différentes représentations flottantes</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#une_bibliotheque_pour_le_calcul_polynomial_en_c" class="toc">Une bibliothèque pour le calcul polynômial en C</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="#representation_des_polynomes" class="toc">Représentation des polynômes</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#representation_compressee" class="toc">Représentation compressée</a></span></div></li></ul>
+</li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="tp_3" id="tp_3">TP 3</a></h1>
+<div class="level1">
+
+<p>
+
+Ce TP a pour objectif d'appréhender la manipulation des valeurs numériques flottantes en C et leurs limites.
+</p>
+
+
+
+</div>
+
+<h2><a name="affichage_tailles_et_limitations_des_differentes_representations_flottantes" id="affichage_tailles_et_limitations_des_differentes_representations_flottantes">Affichage, tailles et limitations des différentes représentations flottantes</a></h2>
+<div class="level2">
+
+<p>
+
+La fonction <code>printf</code> propose différents formats d'affichage 
+des flottants. Par exemple, %f permet l'affichage d'un flottant sous sa 
+forme décimale classique.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Affichez les flottants du tableau suivant : <pre class="code c"><span class="kw4">double</span> flottants<span class="br0">[</span>12<span class="br0">]</span> <span class="sy0">=</span> <span class="br0">{</span> 0.0<span class="sy0">,</span>
+			 <span class="sy0">-</span>0.0<span class="sy0">,</span>
+			 123456123456123456<span class="sy0">,</span>
+			 1234561234561234561234<span class="sy0">,</span>
+			 1234561234561234561234.0<span class="sy0">,</span>
+			 0.123456123456123456123456<span class="sy0">,</span>
+			 0.000123456123456123456123456<span class="sy0">,</span>
+			 0.000000123456123456123456123456<span class="sy0">,</span>
+			 0.0000000000000123456123456123456123456<span class="sy0">,</span>
+			 1.23456123456123456123456e<span class="sy0">-</span>14<span class="sy0">,</span>
+			 1.23456123456123456123456e<span class="sy0">-</span>128<span class="sy0">,</span>
+			 1.23456123456123456123456e<span class="sy0">-</span>324 <span class="br0">}</span><span class="sy0">;</span></pre>
+
+<p>
+ en utilisant les formats <code>%f</code>, <code>%.10f</code>, <code>%e</code>, <code>%E</code>, <code>%g</code> et <code>%G</code> (faites varier le nombre dans <code>%.10f</code>
+ pour voir les effets) et commentez pour chaque cas le warning le cas 
+échéant et le résultat affiché. Faites valider vos commentaires par le 
+chargé de TP. 
+</p>
+</div>
+</li>
+<li class="level1"><div class="li"> Compilez, exécutez et comprenez le code suivant : <pre class="code c"><span class="co2">#include &lt;stdlib.h&gt;</span>
+<span class="co2">#include &lt;stdio.h&gt;</span>
+<span class="co2">#include &lt;float.h&gt;</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Size of float: %lu<span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span><span class="kw4">float</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Min/Max value of a float: %.5g/%.5g<span class="es1">\n</span>"</span><span class="sy0">,</span> FLT_MIN<span class="sy0">,</span> FLT_MAX<span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Precision of a float: %u digits<span class="es1">\n</span><span class="es1">\n</span>"</span><span class="sy0">,</span> FLT_DIG<span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Size of double: %lu<span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span><span class="kw4">double</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Min/Max value of a double: %.5g/%.5g<span class="es1">\n</span>"</span><span class="sy0">,</span> DBL_MIN<span class="sy0">,</span> DBL_MAX<span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Precision of a double: %u digits<span class="es1">\n</span><span class="es1">\n</span>"</span><span class="sy0">,</span> DBL_DIG<span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Size of long double: %lu<span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span><span class="kw4">long</span> <span class="kw4">double</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Min/Max value of a long double: %.5Lg/%.5Lg<span class="es1">\n</span>"</span><span class="sy0">,</span> LDBL_MIN<span class="sy0">,</span>LDBL_MAX<span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Precision of a long double: %u digits<span class="es1">\n</span>"</span><span class="sy0">,</span> LDBL_DIG<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+</div>
+</li>
+<li class="level1"><div class="li"> Compilez, exécutez et commentez le code suivant :<pre class="code c">  <span class="kw4">double</span> f<span class="sy0">;</span>
+  <span class="kw1">for</span> <span class="br0">(</span>f <span class="sy0">=</span> <span class="nu16">1.0</span><span class="sy0">;</span> f <span class="sy0">!=</span> <span class="nu16">0.0</span><span class="sy0">;</span> f <span class="sy0">-=</span> 0.1<span class="br0">)</span> <span class="br0">{</span>
+    <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"%g<span class="es1">\n</span>"</span><span class="sy0">,</span> f<span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>f <span class="sy0">&lt;</span> 0.0<span class="br0">)</span> exit<span class="br0">(</span>EXIT_FAILURE<span class="br0">)</span><span class="sy0">;</span>
+  <span class="br0">}</span></pre>
+
+<p>
+ Qu'en déduiser-vous ?
+</p>
+</div>
+</li>
+<li class="level1"><div class="li"> Ecrivez un programme qui pour chaque entier positif compris entre <img src="TP%203%20%5BSpicher%5D_files/fetch_021.png" class="latex_inline" alt="$16777200$" title="Math"> et <img src="TP%203%20%5BSpicher%5D_files/fetch_013.png" class="latex_inline" alt="$16777250$" title="Math">, le convertit en valeur flottante de type <code>float</code> par un <em>cast</em> (par exemple <code>(float)i</code> convertit l'entier stocké dans la variable entière <code>i</code> en flottant) et affiche à l'écran la valeur flottante. Qu'en déduisez-vous ? Combien de valeur un <code>float</code> peut-il contenir ? A quoi correspond la constante entière <code>FLT_MANT_DIG</code> définie dans <code>float.h</code> ? Faites valider vos réponses par le chargé de TP.</div>
+</li>
+<li class="level1"><div class="li"> Déterminez la même borne pour le type <code>double</code>.</div>
+</li>
+<li class="level1"><div class="li"> Faites un programme qui affiche à l'écran les valeurs des expressions flottantes <code>1./0.</code>, <code>-1./0.</code> et <code>sqrt(-1.)</code> (la fonction <code>sqrt</code> est définie dans <code>math.h</code> ; la compilation nécessite l'ajout de l'option <code>-lm</code>). Que représentent ces valeurs ? Les constantes correspondant à ces valeurs sont <code>INFINITY</code> et <code>NAN</code> définie dans <code>math.h</code>. Les fonctions <code>isfinite</code> et <code>isnan</code>, également définies dans <code>math.h</code>, permettent de vérifier l'égalité avec ces constantes. Tapez dans le terminal la commande <pre class="code bash"><span class="kw2">man</span> isfinite</pre>
+
+<p>
+ pour plus de détails sur ces fonctions. Complétez enfin votre programme pour afficher la valeur des expressions :
+</p>
+</div>
+<ul>
+<li class="level2"><div class="li"> <code>INFINITY + 3</code></div>
+</li>
+<li class="level2"><div class="li"> <code>INFINITY - 100</code></div>
+</li>
+<li class="level2"><div class="li"> <code>INFINITY + INFINITY</code></div>
+</li>
+<li class="level2"><div class="li"> <code>INFINITY - INFINITY</code></div>
+</li>
+<li class="level2"><div class="li"> <code>0 * INFINITY</code></div>
+</li>
+<li class="level2"><div class="li"> <code>-0 * INFINITY</code></div>
+</li>
+<li class="level2"><div class="li"> <code>1 * INFINITY</code></div>
+</li>
+<li class="level2"><div class="li"> <code>-300 * INFINITY</code></div>
+</li>
+<li class="level2"><div class="li"> <code>NAN + 100</code></div>
+</li>
+<li class="level2"><div class="li"> <code>1 * NAN</code></div>
+</li>
+<li class="level2"><div class="li"> <code>0 * NAN</code></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="une_bibliotheque_pour_le_calcul_polynomial_en_c" id="une_bibliotheque_pour_le_calcul_polynomial_en_c">Une bibliothèque pour le calcul polynômial en C</a></h2>
+<div class="level2">
+
+<p>
+
+On définit un <em>polynôme</em> comme une fonction d'une variable de la forme :
+</p>
+
+<p>
+
+</p><p>
+<img src="TP%203%20%5BSpicher%5D_files/fetch_020.png" class="latex_displayed" alt="$$ P[X] = a_0 + a_1 X + a_2 X^2 + \dots = \sum_{i=0}^{n} a_i X^i $$" title="Equation">
+</p>
+
+<p></p>
+
+<p>
+L'entier <img src="TP%203%20%5BSpicher%5D_files/fetch_009.png" class="latex_inline" alt="$\deg(P)=n$" title="Math">, c'est-à-dire l'indice du dernier coefficient non-nul, est appelé le <em>degré</em> du polynôme <img src="TP%203%20%5BSpicher%5D_files/fetch_024.png" class="latex_inline" alt="$P$" title="Math">.
+</p>
+
+</div>
+
+<h3><a name="representation_des_polynomes" id="representation_des_polynomes">Représentation des polynômes</a></h3>
+<div class="level3">
+
+<p>
+
+Un polynôme peut être représenté en machine de façon univoque comme le tableau de ses coefficients <img src="TP%203%20%5BSpicher%5D_files/fetch_004.png" class="latex_inline" alt="$[a_0,\dots,a_n]$" title="Math">. On propose de définir un nouveau type de données pour représenter les polynômes d'un degré inférieur à une borne <code>DEGRE_MAX</code> fixé :
+
+</p>
+<pre class="code c"><span class="co2">#define DEGRE_MAX 500</span>
+&nbsp;
+<span class="kw4">typedef</span> <span class="kw4">struct</span> <span class="br0">{</span>
+  <span class="kw4">float</span>          a<span class="br0">[</span>DEGRE_MAX <span class="sy0">+</span> 1<span class="br0">]</span><span class="sy0">;</span>
+  <span class="kw4">unsigned</span> <span class="kw4">int</span>   degree<span class="sy0">;</span>
+<span class="br0">}</span> polynomial<span class="sy0">;</span></pre>
+
+<p>
+Ainsi, une valeur de type <code>polynomial</code> (qui signifie polynôme en anglais) est représentée par une structure contenant deux champs, le premier <code>a</code> contient les coefficients du polynôme et le second <code>degree</code>, le degré du polynôme. Pour qu'un polynôme soit correct, la valeur de <img src="TP%203%20%5BSpicher%5D_files/fetch_022.png" class="latex_inline" alt="$a[degree]$" title="Math"> doit nécessairement être différente de <img src="TP%203%20%5BSpicher%5D_files/fetch_007.png" class="latex_inline" alt="$0$" title="Math">, à l'exception du polynôme nul <img src="TP%203%20%5BSpicher%5D_files/fetch_003.png" class="latex_inline" alt="$P[X]=0$" title="Math"> ; <code>a[i]</code> aura pour valeur <img src="TP%203%20%5BSpicher%5D_files/fetch_006.png" class="latex_inline" alt="$a_i$" title="Math"> pour <code>i ⇐ degree</code> ; les valeurs <code>a[i]</code> pour <code>i &gt; degree</code> n'auront pas d'importance (il n'est donc pas nécessaire d'initialiser ces cases du tableau).
+</p>
+
+</div>
+
+<h4><a name="questions" id="questions">Questions</a></h4>
+<div class="level4">
+<ol>
+<li class="level1"><div class="li"> Affichez la taille d'une valeur de type <code>polynomial</code> ; justifiez la valeur retrounée</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>polynomial zero_polynomial()</code> qui retourne le polynôme nul <img src="TP%203%20%5BSpicher%5D_files/fetch_018.png" class="latex_inline" alt="$P[X] = 0$" title="Math"></div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>polynomial set_polynomial(polynomial P, int k, float ak)</code> qui retourne un nouveau polynôme identique à <code>P</code> excepté pour le <code>k</code>ième coefficient dont la nouvelle valeur est donnée par <code>ak</code> (attention au degree lorsque <code>k</code> correspond au degré de <code>P</code> et que <code>ak</code> est nul)</div>
+</li>
+<li class="level1"><div class="li"> Définir une fonction <code>bool check_polynomial(polynomial P)</code> vérifiant qu'un polynôme est bien défini (<em>i.e.</em>, pour un polynôme à degré <strong>strictement</strong> positif, le coefficient du degré est non-nul)</div>
+</li>
+<li class="level1"><div class="li"> Définir une fonction <code>void print_polynomial(polynomial P)</code> permettant l'affichage d'un polynôme</div>
+</li>
+<li class="level1"><div class="li"> (Optionnel) Définir une fonction <code>void pprint_polynomial(polynomial P)</code> permettant l'affichage classique d'un polynôme ; par exemple, <img src="TP%203%20%5BSpicher%5D_files/fetch_008.png" class="latex_inline" alt="$X + 3X^2 + 2X^5$" title="Math"> doit être affiché : <pre class="code">X + 3.00 X^2 + 2.00 X^5
+</pre>
+
+<p>
+ et non 
+</p>
+<pre class="code">0.00 X^0 + 1.00 X^1 + 3.00 X^2 + 0.00 X^3 + 0.00 X^4 + 2.00 X^5
+</pre>
+</div>
+</li>
+<li class="level1"><div class="li"> Définir une fonction <code>polynomial sum_polynomial(polynomial P1, polynomial P2)</code> construisant un nouveau polynôme <img src="TP%203%20%5BSpicher%5D_files/fetch_025.png" class="latex_inline" alt="$R=\sum c_i X^i$" title="Math"> à partir de deux polynômes <img src="TP%203%20%5BSpicher%5D_files/fetch_016.png" class="latex_inline" alt="$P_1=\sum a_i X^i$" title="Math"> et <img src="TP%203%20%5BSpicher%5D_files/fetch_002.png" class="latex_inline" alt="$P_2=\sum b_i X^i$" title="Math"> tel que 
+<p>
+<img src="TP%203%20%5BSpicher%5D_files/fetch_014.png" class="latex_displayed" alt="$$c_i = a_i + b_i$$" title="Equation">
+</p>
+ (attention au degré du résultat)</div>
+</li>
+<li class="level1"><div class="li"> Définir une fonction <code>polynomial mult_polynomial(float k, polynomial P)</code> construisant un nouveau polynôme <img src="TP%203%20%5BSpicher%5D_files/fetch.png" class="latex_inline" alt="$R=\sum b_i X^i$" title="Math"> à partir d'un polynômes <img src="TP%203%20%5BSpicher%5D_files/fetch_023.png" class="latex_inline" alt="$P=\sum a_i X^i$" title="Math"> et d'un réel <img src="TP%203%20%5BSpicher%5D_files/fetch_005.png" class="latex_inline" alt="$k$" title="Math"> tel que 
+<p>
+<img src="TP%203%20%5BSpicher%5D_files/fetch_026.png" class="latex_displayed" alt="$$b_i = k a_i$$" title="Equation">
+</p>
+ (attention au degré du résultat)</div>
+</li>
+<li class="level1"><div class="li"> Définir une fonction <code>polynomial prod_polynomial(polynomial P1, polynomial P2)</code> construisant un nouveau polynôme <img src="TP%203%20%5BSpicher%5D_files/fetch_025.png" class="latex_inline" alt="$R=\sum c_i X^i$" title="Math"> à partir de deux polynômes <img src="TP%203%20%5BSpicher%5D_files/fetch_016.png" class="latex_inline" alt="$P_1=\sum a_i X^i$" title="Math"> et <img src="TP%203%20%5BSpicher%5D_files/fetch_002.png" class="latex_inline" alt="$P_2=\sum b_i X^i$" title="Math"> tel que 
+<p>
+<img src="TP%203%20%5BSpicher%5D_files/fetch_015.png" class="latex_displayed" alt="$$c_i = \sum_{k=0}^{i} a_k b_{i-k}$$" title="Equation">
+</p>
+ (attention au dépassement de capacité du degré)</div>
+</li>
+<li class="level1"><div class="li"> (Optionnel) Définir une fonction <code>polynomial div_polynomial(polynomial P1, polynomial P2)</code> calculant le quotient par la division euclidienne de 2 polynômes et une fonction <code>polynomial mod_polynomial(polynomial P1, polynomial P2)</code>
+ calculant le reste par la division euclidienne de 2 polynômes 
+(Rappelez-vous vos cours sur la division euclidienne de polynômes de L1 -
+ voir aussi sur <a href="https://fr.wikipedia.org/wiki/Division_d%27un_polyn%C3%B4me" class="urlextern" title="https://fr.wikipedia.org/wiki/Division_d'un_polyn%C3%B4me" rel="nofollow">Wikipédia</a>)</div>
+</li>
+<li class="level1"><div class="li"> Définir une fonction <code>float eval_polynomial(polynomial P, float x0)</code> permettant l'évaluation d'un polynôme pour une valeur donnée</div>
+</li>
+<li class="level1"><div class="li"> (Optionnel) Définir une fonction <code>float eval_horner_polynomial(polynomial P, float x0)</code>
+ permettant l'évaluation optimisée d'un polynôme pour une valeur donnée 
+en utilisant l'algorithme de Horner basé sur la factorisation suivante 
+<p>
+<img src="TP%203%20%5BSpicher%5D_files/fetch_012.png" class="latex_displayed" alt="$$
+P[x_0] = a_0 x_0 + \dots + a_n x_0^n = ((\dots((a_n x_0 + a_{n-1} ) x_0 + a_{n-2}) x_0 + \dots)x_0+a_1)x_0+a_0
+$$" title="Equation">
+</p>
+</div>
+</li>
+<li class="level1"><div class="li"> Répondre aux questions optionnelles</div>
+</li>
+</ol>
+
+</div>
+
+<h4><a name="exemple_de_programme_principal_pour_les_tests" id="exemple_de_programme_principal_pour_les_tests">Exemple de programme principal pour les tests</a></h4>
+<div class="level4">
+
+<p>
+
+Voici une fonction <code>main</code> pour tester vos fonctions :
+
+</p>
+<pre class="code c"><span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+&nbsp;
+  <span class="kw4">int</span> i<span class="sy0">;</span>
+  polynomial P<span class="sy0">,</span> Q<span class="sy0">,</span> PplQ<span class="sy0">,</span> kP<span class="sy0">,</span> PprQ<span class="sy0">,</span> QdP<span class="sy0">,</span> QmP<span class="sy0">;</span>
+&nbsp;
+  P <span class="sy0">=</span> zero_polynomial<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+  P <span class="sy0">=</span> set_polynomial<span class="br0">(</span>P<span class="sy0">,</span>9<span class="sy0">,</span>1<span class="br0">)</span><span class="sy0">;</span>
+  Q <span class="sy0">=</span> set_polynomial<span class="br0">(</span>P<span class="sy0">,</span>2<span class="sy0">,</span>3<span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"polynomial P: "</span><span class="br0">)</span><span class="sy0">;</span> print_polynomial<span class="br0">(</span>P<span class="br0">)</span><span class="sy0">;</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"polynomial Q: "</span><span class="br0">)</span><span class="sy0">;</span> print_polynomial<span class="br0">(</span>Q<span class="br0">)</span><span class="sy0">;</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+  P <span class="sy0">=</span> set_polynomial<span class="br0">(</span>P<span class="sy0">,</span>9<span class="sy0">,</span>0<span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"polynomial P: "</span><span class="br0">)</span><span class="sy0">;</span> print_polynomial<span class="br0">(</span>P<span class="br0">)</span><span class="sy0">;</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"polynomial Q: "</span><span class="br0">)</span><span class="sy0">;</span> print_polynomial<span class="br0">(</span>Q<span class="br0">)</span><span class="sy0">;</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"<span class="es1">\n</span><span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  P <span class="sy0">=</span> zero_polynomial<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">for</span><span class="br0">(</span>i<span class="sy0">=</span><span class="nu0">0</span><span class="sy0">;</span>i<span class="sy0">&lt;=</span><span class="nu0">3</span><span class="sy0">;</span>i<span class="sy0">++</span><span class="br0">)</span> P <span class="sy0">=</span> set_polynomial<span class="br0">(</span>P<span class="sy0">,</span>i<span class="sy0">,</span>i<span class="br0">)</span><span class="sy0">;</span>
+  Q <span class="sy0">=</span> zero_polynomial<span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">for</span><span class="br0">(</span>i<span class="sy0">=</span><span class="nu0">9</span><span class="sy0">;</span>i<span class="sy0">&gt;=</span><span class="nu0">6</span><span class="sy0">;</span>i<span class="sy0">--</span><span class="br0">)</span> Q <span class="sy0">=</span> set_polynomial<span class="br0">(</span>Q<span class="sy0">,</span>i<span class="sy0">,</span>9<span class="sy0">-</span>i<span class="sy0">+</span>1<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  PplQ <span class="sy0">=</span> sum_polynomial<span class="br0">(</span>P<span class="sy0">,</span>Q<span class="br0">)</span><span class="sy0">;</span>
+  kP   <span class="sy0">=</span> mult_polynomial<span class="br0">(</span>2<span class="sy0">,</span>P<span class="br0">)</span><span class="sy0">;</span>
+  PprQ <span class="sy0">=</span> prod_polynomial<span class="br0">(</span>P<span class="sy0">,</span>Q<span class="br0">)</span><span class="sy0">;</span>
+  QdP  <span class="sy0">=</span> div_polynomial<span class="br0">(</span>Q<span class="sy0">,</span>P<span class="br0">)</span><span class="sy0">;</span>
+  QmP  <span class="sy0">=</span> mod_polynomial<span class="br0">(</span>Q<span class="sy0">,</span>P<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"polynomial P: "</span><span class="br0">)</span><span class="sy0">;</span> print_polynomial<span class="br0">(</span>P<span class="br0">)</span><span class="sy0">;</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"polynomial Q: "</span><span class="br0">)</span><span class="sy0">;</span> print_polynomial<span class="br0">(</span>Q<span class="br0">)</span><span class="sy0">;</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"<span class="es1">\n</span><span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"polynomial P+Q: "</span><span class="br0">)</span><span class="sy0">;</span>  print_polynomial<span class="br0">(</span>PplQ<span class="br0">)</span><span class="sy0">;</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"polynomial 2*P: "</span><span class="br0">)</span><span class="sy0">;</span>  print_polynomial<span class="br0">(</span>kP<span class="br0">)</span><span class="sy0">;</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"polynomial P*Q: "</span><span class="br0">)</span><span class="sy0">;</span>  print_polynomial<span class="br0">(</span>PprQ<span class="br0">)</span><span class="sy0">;</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"polynomial Q/P: "</span><span class="br0">)</span><span class="sy0">;</span>  print_polynomial<span class="br0">(</span>QdP<span class="br0">)</span><span class="sy0">;</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"polynomial Q%%P: "</span><span class="br0">)</span><span class="sy0">;</span> print_polynomial<span class="br0">(</span>QmP<span class="br0">)</span><span class="sy0">;</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"<span class="es1">\n</span><span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"P[2]     = %f<span class="es1">\n</span>"</span><span class="sy0">,</span>    eval_polynomial<span class="br0">(</span>P<span class="sy0">,</span>2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Q[2]     = %f<span class="es1">\n</span>"</span><span class="sy0">,</span>    eval_polynomial<span class="br0">(</span>Q<span class="sy0">,</span>2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"(P+Q)[2] = %f<span class="es1">\n</span>"</span><span class="sy0">,</span>    eval_polynomial<span class="br0">(</span>PplQ<span class="sy0">,</span>2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"(2P)[2]  = %f<span class="es1">\n</span>"</span><span class="sy0">,</span>    eval_polynomial<span class="br0">(</span>kP<span class="sy0">,</span>2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"(P*Q)[2] = %f<span class="es1">\n</span>"</span><span class="sy0">,</span>    eval_polynomial<span class="br0">(</span>PprQ<span class="sy0">,</span>2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"(Q/P)[2] = %f<span class="es1">\n</span>"</span><span class="sy0">,</span>    eval_polynomial<span class="br0">(</span>QdP<span class="sy0">,</span>2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"(Q%%P)[2] = %f<span class="es1">\n</span><span class="es1">\n</span>"</span><span class="sy0">,</span> eval_polynomial<span class="br0">(</span>QmP<span class="sy0">,</span>2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"P[2]     = %f<span class="es1">\n</span>"</span><span class="sy0">,</span>  eval_horner_polynomial<span class="br0">(</span>P<span class="sy0">,</span>2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Q[2]     = %f<span class="es1">\n</span>"</span><span class="sy0">,</span>  eval_horner_polynomial<span class="br0">(</span>Q<span class="sy0">,</span>2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"(P+Q)[2] = %f<span class="es1">\n</span>"</span><span class="sy0">,</span>  eval_horner_polynomial<span class="br0">(</span>PplQ<span class="sy0">,</span>2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"(2P)[2]  = %f<span class="es1">\n</span>"</span><span class="sy0">,</span>  eval_horner_polynomial<span class="br0">(</span>kP<span class="sy0">,</span>2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"(P*Q)[2] = %f<span class="es1">\n</span>"</span><span class="sy0">,</span>  eval_horner_polynomial<span class="br0">(</span>PprQ<span class="sy0">,</span>2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"(Q/P)[2] = %f<span class="es1">\n</span>"</span><span class="sy0">,</span>  eval_horner_polynomial<span class="br0">(</span>QdP<span class="sy0">,</span>2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"(Q%%P)[2] = %f<span class="es1">\n</span>"</span><span class="sy0">,</span> eval_horner_polynomial<span class="br0">(</span>QmP<span class="sy0">,</span>2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+<p>
+Votre sortie devrait ressembler à ceci :
+</p>
+<pre class="code">polynomial P: 1.000000 X^9
+polynomial Q: 3.000000 X^2 + 1.000000 X^9
+polynomial P: 0
+polynomial Q: 3.000000 X^2 + 1.000000 X^9
+
+polynomial P: 1.000000 X + 2.000000 X^2 + 3.000000 X^3
+polynomial Q: 4.000000 X^6 + 3.000000 X^7 + 2.000000 X^8 + 1.000000 X^9
+
+polynomial P+Q: 1.000000 X + 2.000000 X^2 + 3.000000 X^3 + 4.000000 X^6 + 3.000000 X^7 + 2.000000 X^8 + 1.000000 X^9
+polynomial 2*P: 2.000000 X + 4.000000 X^2 + 6.000000 X^3 + 4.000000 X^6 + 3.000000 X^7 + 2.000000 X^8 + 1.000000 X^9
+polynomial P*Q: 4.000000 X^7 + 11.000000 X^8 + 20.000000 X^9 + 14.000000 X^10 + 8.000000 X^11 + -1.401516 X^12
+polynomial Q/P: 0.095107 + 0.219479 X + -0.724280 X^2 + 0.790123 X^3 + 0.592593 X^4 + 0.444444 X^5 + 0.333333 X^6
+polynomial Q%P: -0.095107 X + -0.409694 X^2
+
+P[2]     = 34.000000
+Q[2]     = 1664.000000
+(P+Q)[2] = 1698.000000
+(2P)[2]  = 1732.000000
+(P*Q)[2] = 38547.390625
+(Q/P)[2] = 48.994972
+(Q%P)[2] = -1.828990
+
+P[2]     = 34.000000
+Q[2]     = 1664.000000
+(P+Q)[2] = 1698.000000
+(2P)[2]  = 1732.000000
+(P*Q)[2] = 38547.390625
+(Q/P)[2] = 48.994972
+(Q%P)[2] = -1.828990
+</pre>
+
+</div>
+
+<h3><a name="representation_compressee" id="representation_compressee">Représentation compressée</a></h3>
+<div class="level3">
+
+<p>
+
+Certains polynômes présentent très peu de coefficients non-nuls. La 
+précédente représentation imposant le codage de tous les coefficients 
+conduit à définir des tableaux dont la majorité des éléments est nulle ;
+ ce sont des tableaux <em>creux</em>. On se propose d'améliorer la 
+représentation précédente en ne considérant que les coefficients 
+non-nuls. On utilise pour le cela deux tableaux ; un tableau de 
+coefficients non-nuls <img src="TP%203%20%5BSpicher%5D_files/fetch_019.png" class="latex_inline" alt="$C=[a_0,a_1,\dots,a_N]$" title="Math"> et le tableau de leurs puissances correspondantes <img src="TP%203%20%5BSpicher%5D_files/fetch_011.png" class="latex_inline" alt="$I=[i_0,i_1,\dots,i_N]$" title="Math">. La donnée de ces deux tableaux représentent le polynôme 
+</p><p>
+<img src="TP%203%20%5BSpicher%5D_files/fetch_017.png" class="latex_displayed" alt="$$P_{IC}[X]=\sum_{k=0}^N a_k X^{i_k}$$" title="Equation">
+</p>
+ avec <img src="TP%203%20%5BSpicher%5D_files/fetch_010.png" class="latex_inline" alt="$\deg(P_{IC})=\max(I)$" title="Math">.
+<p></p>
+
+<p>
+Lorsque cette représentation est triée par ordre croissant des 
+puissances, les opérations précédentes peuvent être implantées de façon 
+optimisée.
+</p>
+
+</div>
+
+<h4><a name="questions1" id="questions1">Questions</a></h4>
+<div class="level4">
+<ol>
+<li class="level1"><div class="li"> Proposez une (voire deux) solution 
+simple permettant de réutiliser au maximum le code défini pour la 
+version non-compressée ; précisez où les calculs ne seront pas optimisés</div>
+</li>
+<li class="level1"><div class="li"> Répondez à toutes les questions de la section précédente en optimisant au mieux vos calculs</div>
+</li>
+</ol>
+
+
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+        Connecté en tant que : L2 Informatique (l2info)      </div>
+      <div class="doc">
+        l2info/progc/tp3.txt · Dernière modification: 2015/09/24 14:04 par aspicher      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+                              </div>
+      <div class="bar-right" id="bar__bottomright">
+                                        <form class="button btn_logout" method="get" action="/~aspicher/Wiki/l2info/progc/tp3"><div class="no"><input name="do" value="logout" type="hidden"><input name="sectok" value="82424b0788480fc2ae883d95f50cf65a" type="hidden"><input value="Déconnexion" class="button" title="Déconnexion" type="submit"></div></form>                <a class="nolink" href="#dokuwiki__top"><input class="button" value="Haut de page" onclick="window.scrollTo(0, 0)" title="Haut de page" type="button"></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+  <div class="license">Sauf mention contraire, le contenu de ce wiki est placé sous la licence suivante:<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></div>
+</div>
+
+<div class="footerinc">
+
+  <a href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php" title="Recent changes RSS feed"><img src="TP%203%20%5BSpicher%5D_files/button-rss.png" alt="Recent changes RSS feed" height="15" width="80"></a>
+
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="CC Attribution-Noncommercial-Share Alike 3.0 Unported"><img src="TP%203%20%5BSpicher%5D_files/cc-by-nc-sa.png" alt="" height="15" width="80"></a>
+  
+  <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="TP%203%20%5BSpicher%5D_files/button-donate.gif" alt="Donate" height="15" width="80"></a>
+
+  <a href="http://www.php.net/" title="Powered by PHP"><img src="TP%203%20%5BSpicher%5D_files/button-php.gif" alt="Powered by PHP" height="15" width="80"></a>
+
+  <a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="TP%203%20%5BSpicher%5D_files/button-xhtml.png" alt="Valid XHTML 1.0" height="15" width="80"></a>
+
+  <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="TP%203%20%5BSpicher%5D_files/button-css.png" alt="Valid CSS" height="15" width="80"></a>
+
+  <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="TP%203%20%5BSpicher%5D_files/button-dw.png" alt="Driven by DokuWiki" height="15" width="80"></a>
+
+
+
+</div>
+
+<div class="no"><img src="TP%203%20%5BSpicher%5D_files/indexer.gif" alt="" height="1" width="1"></div>
+
+
+</body></html>

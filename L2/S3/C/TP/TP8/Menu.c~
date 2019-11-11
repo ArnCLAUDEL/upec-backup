@@ -1,0 +1,206 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
+#define p 10
+
+typedef struct action {
+  char* nom;
+  void (*fonction) ();
+} action_s;
+
+typedef union item_nu {
+  struct menu* fils;
+  action_s action;
+} item_u;
+
+typedef struct item_ns {
+  enum { A, V, M } type;
+  item_u carac;
+} item_s;
+
+
+typedef struct menu {
+  struct menu* parent;
+  char* nom; 
+  item_s item[9];
+  int item_in;
+} menu_s;
+
+
+menu_s* createMenu(const char* text) {
+  menu_s* m = malloc(sizeof(menu_s));
+  m->parent = NULL;
+  m->nom = malloc((strlen(text) + 1) * sizeof(char));
+  strcpy(m->nom,text);
+  int i;
+  for(i = 0; i < 9; i++) {
+    m->item[i].type = 'V'; 
+  }
+  m->item_in = 0; 
+  return m;
+};
+
+void addMenuAction(menu_s* m, const char* text, void(*f)()) {
+    if(m->item_in == 9) {
+      fprintf(stderr, "Dans la fonction addMenuAction : Nombre d'item maximal atteint.\n");
+      return;
+    }
+    m->item[m->item_in].type = 'A';
+    char* dest = malloc(sizeof(text));
+    strcpy(dest, text);
+    m->item[m->item_in].carac.action.nom = dest;
+    m->item[m->item_in].carac.action.fonction = f;
+    m->item_in++;
+};
+
+
+void addSubMenu(menu_s* m, menu_s* sm) {
+ 
+    m->item[m->item_in].carac.fils = sm;
+    sm->parent = m;
+	m->item[m->item_in].type = 'M';
+      m->item_in++;
+};
+
+void deleteMenu(menu_s* m) {
+	int i;
+	if(m->item_in > 0) {
+		for(i = 0; i < 9; i++) {
+			if(m->item[i].type == 'M') deleteMenu(m->item[i].carac.fils);
+		}
+	}
+	free(m);
+};
+
+
+void launchMenu(menu_s* m) {
+	printf("\n%s\n\n",m->nom);
+	int i;
+	for(i = 0; i < 9; i++) {
+		if(m->item[i].type == 'M' ) printf("   %d : %s >\n",i + 1,m->item[i].carac.fils->nom);
+		if(m->item[i].type == 'A' )printf("   %d : %s\n",i + 1,m->item[i].carac.action.nom);
+	}
+	int c;
+	printf("Entrer votre choix : ");
+	scanf("%d",&c);
+	switch (c) {
+		case 1: if(m->item[0].type == 'A') { 
+				m->item[0].carac.action.fonction();
+			} else if(m->item[0].type == 'M') {
+				launchMenu(m->item[0].carac.fils);
+			}else {
+				printf("Choix incorrect. Retour au menu principal, veuillez rééssayer.\n");
+			}
+			break;
+			
+		case 2: if(m->item[1].type == 'A') { 
+				m->item[1].carac.action.fonction();
+			} else if(m->item[1].type == 'M') {
+				launchMenu(m->item[1].carac.fils);
+			}else {
+				printf("Choix incorrect. Retour au menu principal, veuillez rééssayer.\n");
+			}
+			break;
+				
+		case 3: if(m->item[2].type == 'A') { 
+				m->item[2].carac.action.fonction();
+			} else if(m->item[2].type == 'M') {
+				launchMenu(m->item[2].carac.fils);
+			}else {
+				printf("Choix incorrect. Retour au menu principal, veuillez rééssayer.\n");
+			}
+			break;
+				
+		case 4: if(m->item[3].type == 'A') { 
+				m->item[3].carac.action.fonction();
+			} else if(m->item[3].type == 'M') {
+				launchMenu(m->item[3].carac.fils);
+			}else {
+				printf("Choix incorrect. Retour au menu principal, veuillez rééssayer.\n");
+			} break;
+				
+		case 5: if(m->item[4].type == 'A') { 
+				m->item[4].carac.action.fonction();
+			} else if(m->item[4].type == 'M') {
+				launchMenu(m->item[4].carac.fils);
+			}else {
+				printf("Choix incorrect. Retour au menu principal, veuillez rééssayer.\n");
+			}
+			break;
+				
+		case 6: if(m->item[5].type == 'A') { 
+				m->item[5].carac.action.fonction();
+			} else if(m->item[5].type == 'M') {
+				launchMenu(m->item[5].carac.fils);
+			}else {
+				printf("Choix incorrect. Retour au menu principal, veuillez rééssayer.\n");
+			}
+			break;
+				
+		case 7: if(m->item[6].type == 'A') { 
+				m->item[6].carac.action.fonction();
+			} else if(m->item[6].type == 'M') {
+				launchMenu(m->item[6].carac.fils);
+			}else {
+				printf("Choix incorrect. Retour au menu principal, veuillez rééssayer.\n");
+			}
+			break;
+				
+		case 8: if(m->item[7].type == 'A') { 
+				m->item[7].carac.action.fonction();
+			} else if(m->item[7].type == 'M') {
+				launchMenu(m->item[7].carac.fils);
+			}else {
+				printf("Choix incorrect. Retour au menu principal, veuillez rééssayer.\n");
+			}
+			break;
+				
+		case 9: if(m->item[8].type == 'A') { 
+				m->item[8].carac.action.fonction();
+			} else if(m->item[8].type == 'M') {
+				launchMenu(m->item[8].carac.fils);
+			}else {
+				printf("Choix incorrect. Retour au menu principal, veuillez rééssayer.\n");
+			}
+			break;
+		default: printf("Choix incorrect, veuillez rééssayer.\n");
+		}
+};
+
+void f1() {
+  printf("Functionality 1 is called\n");
+}
+ 
+void f2() {
+  printf("Functionality 2 is called\n");
+}
+ 
+bool cont = true;
+ 
+void quit() {
+  cont = false;
+}
+ 
+int main() {
+  menu_s* m;
+  menu_s* sm;
+ 
+  m = createMenu("Main menu");
+ 
+  addMenuAction(m,"Apply functionnality 1",f1);
+  addMenuAction(m,"Apply functionnality 2",f2);
+ 
+  sm = createMenu("First submenu");
+  addMenuAction(sm,"Apply functionnality 2",f2);
+  addSubMenu(m,sm);
+ 
+  sm = createMenu("Second submenu");
+  addMenuAction(sm,"Apply functionnality 1",f1);
+  addSubMenu(m,sm);
+ 
+  addMenuAction(m,"Quit",quit);
+  while(cont) launchMenu(m);
+  deleteMenu(m);
+  return EXIT_SUCCESS;
+}

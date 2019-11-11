@@ -1,0 +1,547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr"
+ lang="fr" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    TP 0    [Spicher]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;" />
+<meta name="robots" content="index,follow" />
+<meta name="date" content="2017-02-03T09:20:17+0100" />
+<meta name="keywords" content="l3info,compil,tp0,start" />
+<link rel="search" type="application/opensearchdescription+xml" href="/~aspicher/Wiki/lib/exe/opensearch.php" title="Spicher" />
+<link rel="start" href="/~aspicher/Wiki/" />
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/~aspicher/Wiki/feed.php" />
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="/~aspicher/Wiki/feed.php?mode=list&amp;ns=l3info:compil:tp0" />
+<link rel="alternate" type="text/html" title="Plain HTML" href="/~aspicher/Wiki/_export/xhtml/l3info/compil/tp0/start" />
+<link rel="canonical" href="http://www.lacl.fr/~aspicher/Wiki/l3info/compil/tp0/start" />
+<link rel="stylesheet" media="all" type="text/css" href="/~aspicher/Wiki/lib/exe/css.php?s=all&amp;t=default&amp;tseed=1481110921" />
+<link rel="stylesheet" media="screen" type="text/css" href="/~aspicher/Wiki/lib/exe/css.php?t=default&amp;tseed=1481110921" />
+<link rel="stylesheet" media="print" type="text/css" href="/~aspicher/Wiki/lib/exe/css.php?s=print&amp;t=default&amp;tseed=1481110921" />
+<script type="text/javascript" charset="utf-8" ><!--//--><![CDATA[//><!--
+var NS='l3info:compil:tp0';var SIG=' --- //[[antoine.spicher@u-pec.fr|L3 Informatique]] 2017/02/09 13:14//';var JSINFO = {"id":"l3info:compil:tp0:start","namespace":"l3info:compil:tp0"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="/~aspicher/Wiki/lib/exe/js.php?tseed=1481110921" ></script>
+
+  <link rel="shortcut icon" href="/~aspicher/Wiki/lib/tpl/default/images/favicon.ico" />
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="/~aspicher/Wiki/l3info/compil/tp0/start?do=backlink"  title="Liens vers cette page">TP 0</a>]]
+      </div>
+      <div class="logo">
+        <a href="/~aspicher/Wiki/"  name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]">Spicher</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                      </div>
+
+      <div class="bar-right" id="bar__topright">
+                &nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+        <div class="breadcrumbs">
+      <span class="bchead">Piste:</span> <span class="bcsep">&raquo;</span> <a href="/~aspicher/Wiki/start"  class="breadcrumbs" title="start">Accueil</a> <span class="bcsep">&raquo;</span> <a href="/~aspicher/Wiki/l3info/compil/start"  class="breadcrumbs" title="l3info:compil:start">Compilation</a> <span class="bcsep">&raquo;</span> <a href="/~aspicher/Wiki/l3info/compil/tp2/start"  class="breadcrumbs" title="l3info:compil:tp2:start">TP 2</a> <span class="bcsep">&raquo;</span> <a href="/~aspicher/Wiki/l3info/compil/tp1/start"  class="breadcrumbs" title="l3info:compil:tp1:start">TP 1</a> <span class="bcsep">&raquo;</span> <span class="curid"><a href="/~aspicher/Wiki/l3info/compil/tp0/start"  class="breadcrumbs" title="l3info:compil:tp0:start">TP 0</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div class="tocheader toctoggle" id="toc__header">Table des matières</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#tp_0" class="toc">TP 0</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#evaluation_d_un_programme" class="toc">Evaluation d&#039;un programme</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#types_et_operateurs_de_base" class="toc">Types et opérateurs de base</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="#les_entiers_int" class="toc">Les entiers : int</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#les_flottants_float" class="toc">Les flottants : float</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#les_booleens_bool" class="toc">Les booléens : bool</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#les_caracteres_char" class="toc">Les caractères : char</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#les_chaines_de_caracteres_string" class="toc">Les chaînes de caractères : string</a></span></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><span class="li"><a href="#type_de_donnees_algebrique" class="toc">Type de données algébrique</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#pattern-matching" class="toc">Pattern-matching</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#les_listes" class="toc">Les listes</a></span></div></li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="tp_0" id="tp_0">TP 0</a></h1>
+<div class="level1">
+
+<p>
+
+L&#039;objectif de ce TP est de rassembler un certain nombre d&#039;éléments sur la programmation OCaml.
+</p>
+
+</div>
+
+<h2><a name="evaluation_d_un_programme" id="evaluation_d_un_programme">Evaluation d&#039;un programme</a></h2>
+<div class="level2">
+
+<p>
+
+OCaml dispose de plusieurs outils permettant de travailler, avec notamment :
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>ocaml</code> : un interpréteur</div>
+</li>
+<li class="level1"><div class="li"> <code>ocamlc</code> : un compilateur</div>
+</li>
+<li class="level1"><div class="li"> <code>ocamllex</code> : un générateur d&#039;analyseur lexical</div>
+</li>
+<li class="level1"><div class="li"> <code>ocamlyacc</code> : un générateur d&#039;analyseur syntaxique</div>
+</li>
+</ul>
+
+<p>
+Nous commencerons par utiliser l&#039;interprète <code>ocaml</code>. Les autres outils seront considérés dans les prochains TPs.
+</p>
+
+<p>
+L&#039;interprète <code>ocaml</code> est une boucle interactive attendant une suite de déclarations. Pour faciliter votre travail, on vous conseille d&#039;éditer votre programme dans un fichier, disons <code>prog.ml</code> :
+
+</p>
+<dl class="code">
+<dt><a href="/~aspicher/Wiki/_export/code/l3info/compil/tp0/start?codeblock=0" title="Télécharger un extrait" class="mediafile mf_ml">prog.ml</a></dt>
+<dd><pre class="code ocaml"><span class="kw1">let</span> x <span class="sy0">=</span> 2
+&nbsp;
+<span class="kw1">let</span> y <span class="sy0">=</span> 3
+&nbsp;
+<span class="kw1">let</span> f a b <span class="sy0">=</span> a <span class="sy0">*</span> a <span class="sy0">+</span> b <span class="sy0">*</span> b
+&nbsp;
+<span class="kw1">let</span> _ <span class="sy0">=</span> f x y</pre>
+</dd></dl>
+
+<p>
+
+et de lancer son évaluation en ligne de commande de la façon suivante (après vous êtes placé dans le bon répertoire…) :
+
+</p>
+<pre class="code bash"><span class="kw3">echo</span> <span class="st_h">'#use &quot;prog.ml&quot; ;;'</span> <span class="sy0">|</span> ocaml</pre>
+
+<p>
+
+donnant comme résultat :
+
+</p>
+<pre class="code">
+cayley:~ aspicher$ echo &#039;#use &quot;prog.ml&quot; ;;&#039; | ocaml
+        OCaml version 4.04.0
+
+# val x : int = 2
+val y : int = 3
+val f : int -&gt; int -&gt; int = &lt;fun&gt;
+- : int = 13
+#
+cayley:~ aspicher$
+</pre>
+
+<p>
+
+L&#039;interprète retourne pour chaque déclaration un affichage précisant :
+</p>
+<ul>
+<li class="level1"><div class="li"> l&#039;identifiant défini lorsqu&#039;il y en a un</div>
+</li>
+<li class="level1"><div class="li"> le type de l&#039;expression, inféré automatiquement par OCaml</div>
+</li>
+<li class="level1"><div class="li"> la valeur issue de l&#039;évaluation de l&#039;expression</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="types_et_operateurs_de_base" id="types_et_operateurs_de_base">Types et opérateurs de base</a></h2>
+<div class="level2">
+
+<p>
+
+OCaml est un langage fortement typé qui vous permet de manipuler différents types de valeurs. Chaque valeur vient alors avec son jeu d&#039;opérateurs et fonctions prédéfinis.
+</p>
+
+</div>
+
+<h3><a name="les_entiers_int" id="les_entiers_int">Les entiers : int</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> type : <code>int</code></div>
+</li>
+<li class="level1"><div class="li"> constantes : <code>0</code>, <code>-1</code>, <code>1</code>, <code>2</code>, etc.</div>
+</li>
+<li class="level1"><div class="li"> opérateurs :</div>
+<ul>
+<li class="level2"><div class="li"> addition : <code>1 + 2</code></div>
+</li>
+<li class="level2"><div class="li"> soustraction : <code>1 - 2</code></div>
+</li>
+<li class="level2"><div class="li"> multiplication : <code>1 * 2</code></div>
+</li>
+<li class="level2"><div class="li"> division : <code>1 / 2</code></div>
+</li>
+<li class="level2"><div class="li"> modulo : <code>1 mod 2</code></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h3><a name="les_flottants_float" id="les_flottants_float">Les flottants : float</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> type : <code>float</code></div>
+</li>
+<li class="level1"><div class="li"> constantes : <code>0.0</code>, <code>-1.</code>, <code>1.0</code>, <code>2.123</code>, etc.</div>
+</li>
+<li class="level1"><div class="li"> opérateurs :</div>
+<ul>
+<li class="level2"><div class="li"> addition : <code>1. +. 2.</code></div>
+</li>
+<li class="level2"><div class="li"> soustraction : <code>1. -. 2.</code></div>
+</li>
+<li class="level2"><div class="li"> multiplication : <code>1. *. 2.</code></div>
+</li>
+<li class="level2"><div class="li"> division : <code>1. /. 2.</code></div>
+</li>
+<li class="level2"><div class="li"> racine carrée : <code>sqrt 3.0</code></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> conversion :</div>
+<ul>
+<li class="level2"><div class="li"> vers les entiers : <code>int_of_float: float → int</code></div>
+</li>
+<li class="level2"><div class="li"> depuis les entiers : <code>int_of_float: float → int</code></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h3><a name="les_booleens_bool" id="les_booleens_bool">Les booléens : bool</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> type : <code>bool</code></div>
+</li>
+<li class="level1"><div class="li"> constantes : <code>true</code>, <code>false</code></div>
+</li>
+<li class="level1"><div class="li"> opérateurs :</div>
+<ul>
+<li class="level2"><div class="li"> conjonction : <code>true &amp;&amp; false</code></div>
+</li>
+<li class="level2"><div class="li"> disjonction : <code>false || false</code></div>
+</li>
+<li class="level2"><div class="li"> négation : <code>not true</code></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h3><a name="les_caracteres_char" id="les_caracteres_char">Les caractères : char</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> type : <code>char</code></div>
+</li>
+<li class="level1"><div class="li"> constantes : <code>&#039;a</code>&#039;, <code>&#039;b</code>&#039;, …, <code>&#039;1</code>&#039;, <code>&#039;2</code>&#039;, …, <code>&#039;!</code>&#039;, …</div>
+</li>
+</ul>
+
+</div>
+
+<h3><a name="les_chaines_de_caracteres_string" id="les_chaines_de_caracteres_string">Les chaînes de caractères : string</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> type : <code>string</code></div>
+</li>
+<li class="level1"><div class="li"> constantes : <code>””</code>, <code>“helloworld”</code>, …</div>
+</li>
+<li class="level1"><div class="li"> opérateurs :</div>
+<ul>
+<li class="level2"><div class="li"> concaténation : <code>“hello” ^ “world”</code></div>
+</li>
+<li class="level2"><div class="li"> accès au ième caractère : <code>(“helloworld”).(4)</code></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> conversions : génération de chaînes en utilisant <code>sprintf</code></div>
+<ul>
+<li class="level2"><div class="li"> Pour des entiers : <code>Printf.sprintf ”%i” 123</code></div>
+</li>
+<li class="level2"><div class="li"> Pour des flottants : <code>Printf.sprintf ”%f” 3.1415</code></div>
+</li>
+<li class="level2"><div class="li"> Pour des booléens : <code>Printf.sprintf ”%b” true</code></div>
+</li>
+<li class="level2"><div class="li"> Pour des caractères : <code>Printf.sprintf ”%c” &#039;g</code>&#039;</div>
+</li>
+<li class="level2"><div class="li"> Pour des chaînes : <code>Printf.sprintf ”%s” “toto”</code></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="type_de_donnees_algebrique" id="type_de_donnees_algebrique">Type de données algébrique</a></h2>
+<div class="level2">
+
+<p>
+
+OCaml permet de manipuler aisément les structures arborescentes. Celles-ci sont spécifiées par une somme de produit de types comme suit :
+
+</p>
+<pre class="code ocaml"><span class="kw1">type</span> t <span class="sy0">=</span>
+  <span class="sy0">|</span> A <span class="kw1">of</span> a1 <span class="sy0">*</span> a2 <span class="sy0">*</span> a3
+  <span class="sy0">|</span> B <span class="kw1">of</span> b1
+  <span class="sy0">|</span> C
+  <span class="sy0">|</span> D <span class="kw1">of</span> d1 <span class="sy0">*</span> d2</pre>
+
+<p>
+
+qui se lit : <em> Un élément de type t est </em>
+</p>
+<ul>
+<li class="level1"><div class="li"> <em>soit un A, composé de trois éléments de types a1, a2, a3 respectivement</em></div>
+</li>
+<li class="level1"><div class="li"> <em>soit un B, paramétré par une valeur de type b1</em></div>
+</li>
+<li class="level1"><div class="li"> <em>soit un C</em></div>
+</li>
+<li class="level1"><div class="li"> <em>soit un D, composé de deux éléments de types d1 et d2 respectivement</em></div>
+</li>
+</ul>
+
+<p>
+où <code>a1</code>, <code>a2</code>, … n&#039;importe quels types OCaml. Les identifiants <code>A</code>, <code>B</code>, <code>C</code> et <code>D</code> sont appelés constructeurs.
+</p>
+
+<p>
+Ce type de structure est particulièrement adapté pour représenter des structures inductives (comme des arbres de syntaxe par exemple…). Voici un exemple d&#039;utilisation pour implémenter un type permettant la représentation d&#039;expressions régulières :
+
+</p>
+<pre class="code ocaml"><span class="kw1">type</span> <span class="kw1">regexp</span> <span class="sy0">=</span>
+  <span class="sy0">|</span> Vide
+  <span class="sy0">|</span> Epsilon
+  <span class="sy0">|</span> Lettre <span class="kw1">of</span> char
+  <span class="sy0">|</span> Plus <span class="kw1">of</span> <span class="kw1">regexp</span> <span class="sy0">*</span> <span class="kw1">regexp</span>
+  <span class="sy0">|</span> Concat <span class="kw1">of</span> <span class="kw1">regexp</span> <span class="sy0">*</span> <span class="kw1">regexp</span>
+  <span class="sy0">|</span> Etoile <span class="kw1">of</span> <span class="kw1">regexp</span></pre>
+
+<p>
+
+Une expression régulière est soit vide, soit epsilon, soit un élément de l&#039;alphabet, soit une union de deux expressions régulières, etc.
+Une valeur de type <code>regexp</code> est facilement définissable en utilisant les constructeurs :
+
+</p>
+<pre class="code ocaml"><span class="kw1">let</span> r_ex <span class="sy0">=</span>
+  Concat <span class="br0">&#40;</span>
+    Etoile <span class="br0">&#40;</span>Plus <span class="br0">&#40;</span>Lettre <span class="sy0">'</span>a<span class="sy0">'</span>, Lettre <span class="sy0">'</span>b<span class="sy0">'</span><span class="br0">&#41;</span><span class="br0">&#41;</span>,
+    Concat <span class="br0">&#40;</span>
+      Concat <span class="br0">&#40;</span>Lettre <span class="sy0">'</span>a<span class="sy0">'</span>, Lettre <span class="sy0">'</span>b<span class="sy0">'</span><span class="br0">&#41;</span>, 
+      Etoile <span class="br0">&#40;</span>Plus <span class="br0">&#40;</span>Lettre <span class="sy0">'</span>a<span class="sy0">'</span>, Lettre <span class="sy0">'</span>b<span class="sy0">'</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+    <span class="br0">&#41;</span>
+  <span class="br0">&#41;</span></pre>
+
+<p>
+
+qui représente l&#039;expression <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img0106c597f50cfe485d35157779a4ab40.png" class="latex_inline" alt="$(a+b)^*ab(a+b)^*$" title="Math" />.
+</p>
+
+</div>
+
+<h2><a name="pattern-matching" id="pattern-matching">Pattern-matching</a></h2>
+<div class="level2">
+
+<p>
+
+Si les constructeurs des types de données algébriques permettent de créer des nouvelles valeurs, il est nécessaire de les déconstruire pour les utiliser. Le <em>pattern-matching</em> est une structure de contrôle réalisant cette déconstruction. Il est notamment utiliser pour définir des fonctions par cas sur les types de données algébriques. Voici deux exemples de telles fonctions :
+
+</p>
+<pre class="code ocaml"><span class="kw1">let</span> <span class="kw1">rec</span> pp r <span class="sy0">=</span> <span class="kw1">match</span> r <span class="kw1">with</span>
+  <span class="sy0">|</span> Vide <span class="sy0">-&gt;</span> <span class="st0">&quot;0&quot;</span>
+  <span class="sy0">|</span> Epsilon <span class="sy0">-&gt;</span> <span class="st0">&quot;eps&quot;</span>
+  <span class="sy0">|</span> Lettre c <span class="sy0">-&gt;</span> <a href="http://caml.inria.fr/pub/docs/manual-ocaml/libref/Printf.html"><span class="kw2">Printf</span></a><span class="sy0">.</span><span class="me1">sprintf</span> <span class="st0">&quot;%c&quot;</span> c
+  <span class="sy0">|</span> Plus <span class="br0">&#40;</span>r1, r2<span class="br0">&#41;</span> <span class="sy0">-&gt;</span> <a href="http://caml.inria.fr/pub/docs/manual-ocaml/libref/Printf.html"><span class="kw2">Printf</span></a><span class="sy0">.</span><span class="me1">sprintf</span> <span class="st0">&quot;(%s) + (%s)&quot;</span> <span class="br0">&#40;</span>pp r1<span class="br0">&#41;</span> <span class="br0">&#40;</span>pp r2<span class="br0">&#41;</span>
+  <span class="sy0">|</span> Concat <span class="br0">&#40;</span>r1, r2<span class="br0">&#41;</span> <span class="sy0">-&gt;</span> <a href="http://caml.inria.fr/pub/docs/manual-ocaml/libref/Printf.html"><span class="kw2">Printf</span></a><span class="sy0">.</span><span class="me1">sprintf</span> <span class="st0">&quot;(%s)(%s)&quot;</span> <span class="br0">&#40;</span>pp r1<span class="br0">&#41;</span> <span class="br0">&#40;</span>pp r2<span class="br0">&#41;</span>
+  <span class="sy0">|</span> Etoile r <span class="sy0">-&gt;</span> <a href="http://caml.inria.fr/pub/docs/manual-ocaml/libref/Printf.html"><span class="kw2">Printf</span></a><span class="sy0">.</span><span class="me1">sprintf</span> <span class="st0">&quot;(%s)*&quot;</span> <span class="br0">&#40;</span>pp r<span class="br0">&#41;</span>
+&nbsp;
+<span class="kw1">let</span> <span class="kw1">rec</span> nullable r <span class="sy0">=</span> <span class="kw1">match</span> r <span class="kw1">with</span>
+  <span class="sy0">|</span> Vide <span class="sy0">-&gt;</span> <span class="kw1">false</span>
+  <span class="sy0">|</span> Epsilon <span class="sy0">-&gt;</span> <span class="kw1">true</span>
+  <span class="sy0">|</span> Lettre _ <span class="sy0">-&gt;</span> <span class="kw1">false</span>
+  <span class="sy0">|</span> Plus <span class="br0">&#40;</span>r1, r2<span class="br0">&#41;</span> <span class="sy0">-&gt;</span> nullable r1 <span class="sy0">||</span> nullable r2
+  <span class="sy0">|</span> Concat <span class="br0">&#40;</span>r1, r2<span class="br0">&#41;</span> <span class="sy0">-&gt;</span> nullable r1 <span class="sy0">&amp;&amp;</span> nullable r2
+  <span class="sy0">|</span> Etoile _ <span class="sy0">-&gt;</span> <span class="kw1">true</span></pre>
+
+<p>
+
+Vous reconnaîtrez facilement la spécification d&#039;un pretty-printer pour le premier cas <code>pp</code>, et du prédicat spécifiant l&#039;acceptation d&#039;<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img7ccca27b5ccc533a2dd72dc6fa28ed84.png" class="latex_inline" alt="$\epsilon$" title="Math" /> par une expression régulière.
+</p>
+
+</div>
+
+<h4><a name="exercice" id="exercice">Exercice</a></h4>
+<div class="level4">
+
+<p>
+
+Définissez la fonction <code>deriv: char → regexp → regexp</code> réalisant la dérivée d&#039;une expression régulière dont voici la définition mathématique :
+
+<p>
+<img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/imgb18ddcbd85e53b75c0180f15f03463ff.png" class="latex_displayed" alt="$$
+\begin{array}{lcll}
+\partial_a \emptyset &amp;:=&amp; \emptyset\\
+\partial_a \varepsilon &amp;:=&amp; \emptyset\\
+\partial_a a &amp;:=&amp; \varepsilon\\
+\partial_a b &amp;:=&amp; \emptyset &amp; \textnormal{avec}\ a \neq b\\
+\partial_a (r_1 + r_2) &amp;:=&amp; \partial_a r_1 + \partial_a r_2\\
+\partial_a (r_1 r_2) &amp;:=&amp; (\partial_a r_1) r_2 + \partial_a r_2 &amp; \textnormal{si}\ \varepsilon \in L(r_1)\\
+\partial_a (r_1 r_2) &amp;:=&amp; (\partial_a r_1) r_2 &amp;  \textnormal{si}\ \varepsilon \notin L(r_1)\\
+\partial_a (r^*) &amp;:=&amp; (\partial_a r) r^*\\
+\end{array}
+$$" title="Equation" />
+</p>
+
+</p>
+
+</div>
+
+<h2><a name="les_listes" id="les_listes">Les listes</a></h2>
+<div class="level2">
+
+<p>
+
+Les listes sont un cas particuliers de type de données algébrique. En effet, une liste est 
+</p>
+<ul>
+<li class="level1"><div class="li"> soit vide : <code>[]</code></div>
+</li>
+<li class="level1"><div class="li"> soit composé d&#039;une tête <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img2ad9d098b937e46f9f58968551adac57.png" class="latex_inline" alt="$h$" title="Math" /> et d&#039;une queue <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img4f4f4e395762a3af4575de74c019ebb5.png" class="latex_inline" alt="$t$" title="Math" /> : <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img2ad9d098b937e46f9f58968551adac57.png" class="latex_inline" alt="$h$" title="Math" /> <code>::</code> <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img4f4f4e395762a3af4575de74c019ebb5.png" class="latex_inline" alt="$t$" title="Math" /> </div>
+</li>
+</ul>
+
+<p>
+Dans ce cas, les constructeurs ne sont pas donnés par des identifiants mais par les symboles <code>[]</code> et <code>::</code> (notation infixe)
+</p>
+
+<p>
+Ainsi, la liste des 4 premiers entiers est construite par :
+
+</p>
+<pre class="code ocaml"><span class="nu0">1</span> <span class="sy0">::</span> <span class="br0">&#40;</span><span class="nu0">2</span> <span class="sy0">::</span> <span class="br0">&#40;</span><span class="nu0">3</span> <span class="sy0">::</span> <span class="br0">&#40;</span><span class="nu0">4</span> <span class="sy0">::</span> <span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span></pre>
+
+<p>
+
+La notation <code>[ … ]</code> propose un sucre syntaxique et l&#039;on pourra décrire la même liste directement par :
+
+</p>
+<pre class="code ocaml"><span class="br0">&#91;</span> 1 <span class="sy0">;</span> 2 <span class="sy0">;</span> 3 <span class="sy0">;</span> <span class="nu0">4</span> <span class="br0">&#93;</span></pre>
+
+<p>
+En considérant par exemple qu&#039;un mot est une liste de caractères (type <code>char list</code> en OCaml), la reconnaissance d&#039;un mot est alors facilement définissable par induction sur les listes :
+
+</p>
+<pre class="code ocaml"><span class="kw1">let</span> <span class="kw1">rec</span> recon r w <span class="sy0">=</span>
+  <span class="kw1">match</span> w <span class="kw1">with</span>
+  <span class="sy0">|</span> <span class="br0">&#91;</span> <span class="br0">&#93;</span> <span class="sy0">-&gt;</span> nullable r
+  <span class="sy0">|</span> a <span class="sy0">::</span> w<span class="sy0">'</span> <span class="sy0">-&gt;</span> recon <span class="br0">&#40;</span>deriv a r<span class="br0">&#41;</span> w<span class="sy0">'</span></pre>
+
+<p>
+
+La reconnaissance des mots <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img9ae7733dac2b7b4470696ed36239b676.png" class="latex_inline" alt="$\varepsilon$" title="Math" />, <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img7f8f502b4ae8e7ca96db96e9a52e2ed4.png" class="latex_inline" alt="$ab$" title="Math" />, <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/imgbdf40f6eee8d4b94e88895a75541eaba.png" class="latex_inline" alt="$aaabbb$" title="Math" /> et <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img5b49a96dcc5d75f7b6f2b8d630aea44d.png" class="latex_inline" alt="$bbaa$" title="Math" /> par l&#039;expression régulière <img src="/~aspicher/Wiki/lib/exe/fetch.php?media=wiki:latex:/img0106c597f50cfe485d35157779a4ab40.png" class="latex_inline" alt="$(a+b)^*ab(a+b)^*$" title="Math" /> est donnée par :
+
+</p>
+<pre class="code ocaml"><span class="kw1">let</span> _ <span class="sy0">=</span> recon r_ex <span class="br0">&#91;</span><span class="br0">&#93;</span>
+&nbsp;
+<span class="kw1">let</span> _ <span class="sy0">=</span> recon r_ex <span class="br0">&#91;</span> <span class="sy0">'</span>a<span class="sy0">'</span> <span class="sy0">;</span> <span class="sy0">'</span>b<span class="sy0">'</span> <span class="br0">&#93;</span>
+&nbsp;
+<span class="kw1">let</span> _ <span class="sy0">=</span> recon r_ex <span class="br0">&#91;</span> <span class="sy0">'</span>a<span class="sy0">'</span> <span class="sy0">;</span> <span class="sy0">'</span>a<span class="sy0">'</span> <span class="sy0">;</span> <span class="sy0">'</span>a<span class="sy0">'</span> <span class="sy0">;</span> <span class="sy0">'</span>b<span class="sy0">'</span> <span class="sy0">;</span> <span class="sy0">'</span>b<span class="sy0">'</span> <span class="sy0">;</span> <span class="sy0">'</span>b<span class="sy0">'</span> <span class="br0">&#93;</span>
+&nbsp;
+<span class="kw1">let</span> _ <span class="sy0">=</span> recon r_ex <span class="br0">&#91;</span> <span class="sy0">'</span>b<span class="sy0">'</span> <span class="sy0">;</span> <span class="sy0">'</span>b<span class="sy0">'</span> <span class="sy0">;</span> <span class="sy0">'</span>a<span class="sy0">'</span> <span class="sy0">;</span> <span class="sy0">'</span>a<span class="sy0">'</span> <span class="br0">&#93;</span></pre>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+        Connecté en tant que : L3 Informatique (l3info)      </div>
+      <div class="doc">
+        l3info/compil/tp0/start.txt &middot; Dernière modification: 2017/02/03 09:20 par aspicher      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+                              </div>
+      <div class="bar-right" id="bar__bottomright">
+                                        <form class="button btn_logout" method="get" action="/~aspicher/Wiki/l3info/compil/tp0/start"><div class="no"><input type="hidden" name="do" value="logout" /><input type="hidden" name="sectok" value="da5c700652722611f85939eefa5079e3" /><input type="submit" value="Déconnexion" class="button" title="Déconnexion" /></div></form>                <a class="nolink" href="#dokuwiki__top"><input type="button" class="button" value="Haut de page" onclick="window.scrollTo(0, 0)" title="Haut de page" /></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+  <div class="license">Sauf mention contraire, le contenu de ce wiki est placé sous la licence suivante:<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></div>
+</div>
+
+<div class="footerinc">
+
+  <a  href="/~aspicher/Wiki/feed.php" title="Recent changes RSS feed"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" /></a>
+
+        <a  href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="CC Attribution-Noncommercial-Share Alike 3.0 Unported"><img src="/~aspicher/Wiki/lib/images/license/button/cc-by-nc-sa.png" width="80" height="15" alt="" /></a>
+  
+  <a  href="http://www.dokuwiki.org/donate" title="Donate"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-donate.gif" alt="Donate" width="80" height="15" /></a>
+
+  <a  href="http://www.php.net" title="Powered by PHP"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+
+  <a  href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" /></a>
+
+  <a  href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+
+  <a  href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="/~aspicher/Wiki/lib/tpl/default/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+
+
+
+</div>
+
+<div class="no"><img src="/~aspicher/Wiki/lib/exe/indexer.php?id=l3info%3Acompil%3Atp0%3Astart&amp;1486642487" width="1" height="1" alt=""  /></div>
+</body>
+</html>

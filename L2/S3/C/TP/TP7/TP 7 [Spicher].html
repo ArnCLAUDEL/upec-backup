@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    TP 7    [Spicher]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-10-22T20:42:18+0200">
+<meta name="keywords" content="l2info,progc,tp7">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/exe/opensearch.php" title="Spicher">
+<link rel="start" href="http://www.lacl.fr/%7Easpicher/Wiki/">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php?mode=list&amp;ns=l2info:progc">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.lacl.fr/%7Easpicher/Wiki/_export/xhtml/l2info/progc/tp7">
+<link rel="canonical" href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp7">
+<link rel="stylesheet" media="all" type="text/css" href="TP%207%20%5BSpicher%5D_files/css_002.css">
+<link rel="stylesheet" media="screen" type="text/css" href="TP%207%20%5BSpicher%5D_files/css.css">
+<link rel="stylesheet" media="print" type="text/css" href="TP%207%20%5BSpicher%5D_files/css_003.css">
+<script type="text/javascript" charset="utf-8"><!--//--><![CDATA[//><!--
+var NS='l2info:progc';var SIG=' --- //[[antoine.spicher@u-pec.fr|L2 Informatique]] 2015/11/29 18:36//';var JSINFO = {"id":"l2info:progc:tp7","namespace":"l2info:progc"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="TP%207%20%5BSpicher%5D_files/js.php"></script>
+
+  <link rel="shortcut icon" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/tpl/default/images/favicon.ico">
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp7?do=backlink" title="Liens vers cette page">TP 7</a>]]
+      </div>
+      <div class="logo">
+        <a href="http://www.lacl.fr/%7Easpicher/Wiki/" name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]">Spicher</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                      </div>
+
+      <div class="bar-right" id="bar__topright">
+                &nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+        <div class="breadcrumbs">
+      <span class="bchead">Piste:</span> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/start" class="breadcrumbs" title="start">Accueil</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/start" class="breadcrumbs" title="l2info:progc:start">Programmation en C (avancé)</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp1" class="breadcrumbs" title="l2info:progc:tp1">TP 1</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp2" class="breadcrumbs" title="l2info:progc:tp2">TP 2</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp3" class="breadcrumbs" title="l2info:progc:tp3">TP 3</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp4" class="breadcrumbs" title="l2info:progc:tp4">TP 4</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp5note" class="breadcrumbs" title="l2info:progc:tp5note">TP 5</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp6" class="breadcrumbs" title="l2info:progc:tp6">TP 6</a> <span class="bcsep">»</span> <span class="curid"><a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp7" class="breadcrumbs" title="l2info:progc:tp7">TP 7</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div style="cursor: pointer;" class="tocheader toctoggle" id="toc__header"><span class="toc_close" style="cursor: pointer;" id="toc__toggle"><span>−</span></span>Table des matières</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#tp_7" class="toc">TP 7</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#adresse_des_variables_locales" class="toc">Adresse des variables locales</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#allocation_desallocation_et_erreur_de_segmentation" class="toc">Allocation, désallocation et erreur de segmentation</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#manipulation_de_chaines_de_caracteres" class="toc">Manipulation de chaînes de caractères</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#bibliotheque_de_manipulation_de_tableaux" class="toc">Bibliothèque de manipulation de tableaux</a></span></div></li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="tp_7" id="tp_7">TP 7</a></h1>
+<div class="level1">
+
+</div>
+
+<h2><a name="adresse_des_variables_locales" id="adresse_des_variables_locales">Adresse des variables locales</a></h2>
+<div class="level2">
+
+<p>
+
+On considère le programme suivant :
+</p>
+<pre class="code C"><span class="kw4">int</span><span class="sy0">*</span> f<span class="br0">(</span><span class="kw4">int</span> n<span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw4">int</span> j<span class="sy0">;</span>
+  <span class="kw4">int</span><span class="sy0">*</span> q<span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"  0 - In f: %p, %d<span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="sy0">&amp;</span>n<span class="sy0">,</span> n<span class="br0">)</span><span class="sy0">;</span>
+  q <span class="sy0">=</span> <span class="sy0">&amp;</span>j<span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"  1 - In f: %p, %d<span class="es1">\n</span>"</span><span class="sy0">,</span> q<span class="sy0">,</span> <span class="sy0">*</span>q<span class="br0">)</span><span class="sy0">;</span>
+  j <span class="sy0">=</span> n<span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"  2 - In f: %p, %d<span class="es1">\n</span>"</span><span class="sy0">,</span> q<span class="sy0">,</span> <span class="sy0">*</span>q<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">return</span> q<span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span><span class="sy0">*</span> g<span class="br0">(</span><span class="kw4">int</span> n<span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw4">int</span> k<span class="sy0">;</span>
+  <span class="kw4">int</span><span class="sy0">*</span> r<span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"  0 - In g: %p, %d<span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="sy0">&amp;</span>n<span class="sy0">,</span> n<span class="br0">)</span><span class="sy0">;</span>
+  r <span class="sy0">=</span> <span class="sy0">&amp;</span>k<span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"  1 - In g: %p, %d<span class="es1">\n</span>"</span><span class="sy0">,</span> r<span class="sy0">,</span> <span class="sy0">*</span>r<span class="br0">)</span><span class="sy0">;</span>
+  k <span class="sy0">=</span> n<span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"  2 - In g: %p, %d<span class="es1">\n</span>"</span><span class="sy0">,</span> r<span class="sy0">,</span> <span class="sy0">*</span>r<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">return</span> NULL<span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+  <span class="kw4">int</span><span class="sy0">*</span> p <span class="sy0">=</span> <span class="sy0">&amp;</span>i<span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Before f: %p, %d<span class="es1">\n</span>"</span><span class="sy0">,</span> p<span class="sy0">,</span> <span class="sy0">*</span>p<span class="br0">)</span><span class="sy0">;</span>
+  p <span class="sy0">=</span> f<span class="br0">(</span>1234<span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"After f: %p, %d<span class="es1">\n</span>"</span><span class="sy0">,</span> p<span class="sy0">,</span> <span class="sy0">*</span>p<span class="br0">)</span><span class="sy0">;</span>
+  g<span class="br0">(</span>4321<span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"After g: %p, %d<span class="es1">\n</span>"</span><span class="sy0">,</span> p<span class="sy0">,</span> <span class="sy0">*</span>p<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+<ul>
+<li class="level1"><div class="li"> Compilez et exécutez le programme ; 
+expliquez le comportement du programme ; qu'en déduisez-vous à propos 
+des noms des variables locales et de leurs adresses en mémoire ? Faites 
+valider vos remarques par le chargé de TP.</div>
+</li>
+<li class="level1"><div class="li"> Modifiez le retour de la fonction <code>f</code> par <code>return &amp;j;</code> ; y a-t-il une différence de  comportement à la compilation ? à l'exécution ?</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="allocation_desallocation_et_erreur_de_segmentation" id="allocation_desallocation_et_erreur_de_segmentation">Allocation, désallocation et erreur de segmentation</a></h2>
+<div class="level2">
+
+<p>
+
+Le code suivant entraîne à coup sûr une erreur de segmentation :
+</p>
+<pre class="code C"><span class="co2">#include &lt;stdlib.h&gt;</span>
+<span class="co2">#include &lt;stdio.h&gt;</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw4">int</span> <span class="sy0">*</span>p <span class="sy0">=</span> NULL<span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Contenu de *p : %d<span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="sy0">*</span>p<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+<p>
+L'erreur précise en fait un <em>défaut de segment</em>, le segment étant une unité de découpage de la mémoire vive par le système d'exploitation (cf <a href="https://fr.wikipedia.org/wiki/Segmentation_%28informatique%29" class="urlextern" title="https://fr.wikipedia.org/wiki/Segmentation_%28informatique%29" rel="nofollow">Wikipedia</a>). Le pointeur <code>NULL</code> représente une adresse où rien ne peut être stocké. Aussi, lors du déréférencement <code>*NULL</code> (dans le code <code>*p</code> avec <code>p</code> contenant <code>NULL</code>), il n'est pas possible de construire la variable associée à cette adresse, rien ne s'y trouvant.
+</p>
+
+<p>
+L'erreur de segmentation est symptomatique d'un accès à une partie de la
+ mémoire qui n'a pas était préparée par le système. (D'ailleurs, jamais 
+aucun segment incluant l'adresse <code>NULL</code> ne sera préparé par 
+le système pour être utilisé). Cependant, l'absence d'erreur de 
+segmentation ne signifie pas que les accès faits par le programme 
+tombent tous dans une partie allouée.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Dans une fonction principale vide, déclarez un pointeur d'entier <code>p</code> ; allouez à l'aide de la fonction <code>malloc</code> une zone mémoire pouvant stocker 100 entiers et placez le retour dans <code>p</code> ; affichez le contenu de <code>p</code> (à l'aide du <em>qualifier</em> <code>%p</code>) ; enfin, dans une boucle infinie, parcourez d'entier en entier la zone mémoire pointée par <code>p</code> et au-delà, et affichez pour chaque entier son adresse et sa valeur ; observez quand l'erreur de segmentation se produit.</div>
+</li>
+</ul>
+
+<p>
+
+Dans l'affichage précédent, la zone mémoire n'étant pas initialisée par <code>malloc</code> (mais simplement rendue disponible pour utilisation), il est possible que certaines entrées du tableau ne soient pas <code>0</code>. En fait, les valeurs initiales dépendent simplement de l'état de la mémoire qui vous a été allouée par <code>malloc</code> ; il est bien souvent nécessaire d'initialiser le contenu alloué après un appel à <code>malloc</code>.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Dans une fonction principale vide, déclarez un pointeur d'entier <code>p1</code> initialisé par l'allocation d'un tableau de 100 entiers ; affichez le contenu du tableau.</div>
+</li>
+<li class="level1"><div class="li"> Initialisez le contenu de la zone pointée par <code>p1</code> en affectant <img src="TP%207%20%5BSpicher%5D_files/fetch.png" class="latex_inline" alt="$i$" title="Math"> à <code>p1[</code><img src="TP%207%20%5BSpicher%5D_files/fetch.png" class="latex_inline" alt="$i$" title="Math"><code>]</code>, puis affichez le contenu du tableau.</div>
+</li>
+<li class="level1"><div class="li"> Affichez le contenu de <code>p1</code> (<em>i.e.</em>, l'adresse de la zone allouée), puis libérez la zone mémoire précédemment allouée par un appel à <code>free</code> ; réaffichez enfin le contenu de <code>p1</code></div>
+</li>
+<li class="level1"><div class="li"> Tentez d'afficher le tableau pointé par <code>p1</code> ; que se passe-t-il ? Expliquez le comportement observé et faites valider par le chargé de TP</div>
+</li>
+<li class="level1"><div class="li"> Déclarez un nouveau pointeur d'entier <code>p2</code> initialisé par l'allocation d'une nouveau tableau de 100 entiers ; comparez les adresses stockées dans <code>p1</code> et <code>p2</code>,
+ et affichez le contenu du nouveau tableau (l'objectif est d'observer 
+l'éventuel chevauchement de la nouvelle zone allouée et de l'ancienne, 
+ce qui sera le cas lorsque <code>p1-p2</code> sera en valeur absolue inférieur à 100 ; si ce n'est pas le cas, faites varier la taille des tableaux).</div>
+</li>
+<li class="level1"><div class="li"> Tentez d'appeler <code>free</code> sur l'adresse <code>p2 + 1</code> ; qu'observe-t-on ? Pourquoi ?</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="manipulation_de_chaines_de_caracteres" id="manipulation_de_chaines_de_caracteres">Manipulation de chaînes de caractères</a></h2>
+<div class="level2">
+
+<p>
+
+Reprogrammez les fonctions suivantes de <code>string.h</code> :
+</p>
+<ul>
+<li class="level1"><div class="li"> <code><a href="http://man7.org/linux/man-pages/man3/strlen.3.html" class="urlextern" title="http://man7.org/linux/man-pages/man3/strlen.3.html" rel="nofollow">strlen</a></code> : taille d'une chaine de caractères</div>
+</li>
+<li class="level1"><div class="li"> <code><a href="http://man7.org/linux/man-pages/man3/strncpy.3.html" class="urlextern" title="http://man7.org/linux/man-pages/man3/strncpy.3.html" rel="nofollow">strcpy</a></code> : copie de chaînes de caractères</div>
+</li>
+<li class="level1"><div class="li"> <code><a href="http://man7.org/linux/man-pages/man3/strcmp.3.html" class="urlextern" title="http://man7.org/linux/man-pages/man3/strcmp.3.html" rel="nofollow">strncmp</a></code> : comparaison de chaînes de caractères sur au plus <img src="TP%207%20%5BSpicher%5D_files/fetch_002.png" class="latex_inline" alt="$n$" title="Math"> caractères</div>
+</li>
+<li class="level1"><div class="li"> <code><a href="http://man7.org/linux/man-pages/man3/strchr.3.html" class="urlextern" title="http://man7.org/linux/man-pages/man3/strchr.3.html" rel="nofollow">strrchr</a></code> : recherche de la dernière occurrence d'un caractère dans une chaîne</div>
+</li>
+</ul>
+
+<p>
+Les prototypes de vos fonctions devront respecter les prototypes standards (utilisez dans le terminal la commande <code>man &lt;nom de la fonction&gt;</code> pour accéder à la documentation). Évidemment l'utilisation des versions classiques déclarées dans <code>string.h</code> est interdite…
+</p>
+
+</div>
+
+<h2><a name="bibliotheque_de_manipulation_de_tableaux" id="bibliotheque_de_manipulation_de_tableaux">Bibliothèque de manipulation de tableaux</a></h2>
+<div class="level2">
+
+<p>
+
+Les tableaux étant manipulés en C à travers l'adresse de leur premier 
+élément, leur taille doit être retrouvée d'une autre façon. Il existe 
+deux façons classiques pour transmettre la taille :
+</p>
+<ol>
+<li class="level1"><div class="li"> <em>directement</em> : toutes les 
+fonctions de manipulation auront un paramètre supplémentaire pour passer
+ la taille du tableau avec le tableau ; par exemple une fonction de tri 
+de tableau d'entiers aurait pour prototype <code>void sort(int* tab, size_t len)</code></div>
+</li>
+<li class="level1"><div class="li"> <em>indirectement</em> : le tableau possède une case supplémentaire contenant un élément représentant la fin du tableau ; c'est la cas du caractère <code>\0</code> terminant les chaînes de caractères</div>
+</li>
+</ol>
+
+<p>
+
+Les deux méthodes ont leurs désavantages : la première surcharge 
+l'écriture des fonctions avec un paramètre supplémentaire, la seconde 
+demande l'utilisation d'un élément spécial dont l'usage sera strictement
+ réservé à désigner la fin du tableau.
+</p>
+
+<p>
+On propose ici une troisième méthode consistant à mettre en préambule du
+ tableau la taille d'un élément et le nombre d'éléments contenus. Par 
+exemple, pour un tableau de 5 caractères (donc 5 éléments de 1 chacun), 
+l'occupation mémoire est de la forme suivante :
+</p>
+
+<p>
+
+</p><p>
+<img src="TP%207%20%5BSpicher%5D_files/fetch_007.png" class="latex_displayed" alt="$$
+\begin{array}{|c|c|c|c|c|c|c|}
+\hline
+\qquad\verb+1+\qquad &amp; \qquad\verb+5+\qquad &amp; \verb+'a'+ &amp; \verb+'b'+ &amp; \verb+'c'+ &amp; \verb+'d'+ &amp; \verb+'e'+ \\
+\hline
+\end{array}
+$$" title="Equation">
+</p>
+
+<p></p>
+
+<p>
+Pour allouer un tel tableau pour <img src="TP%207%20%5BSpicher%5D_files/fetch_005.png" class="latex_inline" alt="$N$" title="Math"> éléments chacun de taille <img src="TP%207%20%5BSpicher%5D_files/fetch_003.png" class="latex_inline" alt="$t$" title="Math"> octets, il faut donc allouer une zone mémoire de taille <img src="TP%207%20%5BSpicher%5D_files/fetch_004.png" class="latex_inline" alt="$N \time t + 2$" title="Math"><code>sizeof(size_t)</code>. Pour que l'utilisation de ces tableaux soient transparentes pour l'utilisateur, on ne retournera pas l'adresse renvoyée par <code>malloc</code>, mais celle du premier élément (l'adresse du caractère <code>'a' </code>dans notre exemple). Nous appellerons dans la suite <em>tableau dimensionné</em> ce type de tableau.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Définissez la fonction <code>void* array_alloc(size_t len, size_t sz)</code> allouant un <em>tableau dimensionné</em> de longueur <code>len</code> (c'est-à-dire contenant <code>len</code> éléments) d'élément de taille <code>sz</code> octets en utilisant la représentation ci-dessus ; votre fonction retournera <code>NULL</code> si l'une des deux tailles est nulle ou si l'allocation échoue</div>
+</li>
+<li class="level1"><div class="li"> Définissez la fonction <code>void array_free(void* a)</code> libérant l'espace occupé par un <em>tableau dimensionné</em> <code>a</code> ; la fonction ne fera sans effet sur <code>NULL</code></div>
+</li>
+<li class="level1"><div class="li"> Définissez la fonction <code>size_t array_element_size(void* a)</code> retournant la taille des éléments d'un <em>tableau dimensionné</em> <code>a</code></div>
+</li>
+<li class="level1"><div class="li"> Définissez la fonction <code>size_t array_length(void* a)</code> retournant la longueur d'un <em>tableau dimensionné</em> <code>a</code></div>
+</li>
+<li class="level1"><div class="li"> Définissez la fonction <code>void* array_make(size_t len, size_t sz, const void* p)</code> allouant un <em>tableau dimensionné</em> avec les mêmes spécifications que <code>array_alloc</code> mais en initialisant chaque élément avec la valeur pointée par <code>p</code>, c'est-à-dire en copiant (fonction <code><a href="http://man7.org/linux/man-pages/man3/memcpy.3.html" class="urlextern" title="http://man7.org/linux/man-pages/man3/memcpy.3.html" rel="nofollow">memncpy</a></code>) les <code>sz</code> octets situés à l'adresse <code>p</code> dans chaque case du tableau</div>
+</li>
+</ul>
+
+<p>
+
+Le programme suivant peut servir de test :
+</p>
+<pre class="code C"><span class="co2">#define prl {printf("\n");}</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw4">double</span><span class="sy0">*</span> a1<span class="sy0">;</span>
+  <span class="kw4">int</span><span class="sy0">*</span> a2<span class="sy0">;</span>
+  <span class="kw4">int</span> i<span class="sy0">;</span>
+&nbsp;
+  <span class="co1">// Un tableau de 100 valeurs flottantes</span>
+  a1 <span class="sy0">=</span> <span class="br0">(</span><span class="kw4">double</span><span class="sy0">*</span><span class="br0">)</span>array_alloc<span class="br0">(</span>100<span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span><span class="kw4">double</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"element size: %lu<span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="br0">(</span><span class="kw4">unsigned</span> <span class="kw4">long</span><span class="br0">)</span>array_element_size<span class="br0">(</span>a1<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"array length: %lu<span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="br0">(</span><span class="kw4">unsigned</span> <span class="kw4">long</span><span class="br0">)</span>array_length<span class="br0">(</span>a1<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <span class="co1">// Un tableau de 1000 valeurs entières initialisées à 123</span>
+  <span class="kw4">int</span> x <span class="sy0">=</span> <span class="nu0">123</span><span class="sy0">;</span>
+  a2 <span class="sy0">=</span> <span class="br0">(</span><span class="kw4">int</span><span class="sy0">*</span><span class="br0">)</span>array_make<span class="br0">(</span>1000<span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span><span class="kw4">int</span><span class="br0">)</span><span class="sy0">,</span> <span class="sy0">&amp;</span>x<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">for</span><span class="br0">(</span>i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> <span class="nu0">10</span><span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span>
+    <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"%d "</span><span class="sy0">,</span> a2<span class="br0">[</span>i<span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span>   <span class="co1">// Affichage des 10 premières valeurs</span>
+  prl<span class="sy0">;</span>
+&nbsp;
+  array_free<span class="br0">(</span>a1<span class="br0">)</span><span class="sy0">;</span>
+  array_free<span class="br0">(</span>a2<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+<p>
+Les représentations comme les <em>tableaux dimensionnés</em> sont 
+propices à l'automatisation des traitements. Voici quatre exemples de 
+calcul générique que l'on pourrait souhaiter faire sur des tableaux :
+</p>
+<ul>
+<li class="level1"><div class="li"> <em>init</em> : créer un tableau en initialisant chaque en fonction de l'indice de la case (<em>e.g.</em>, le tableau des carrés contenant <img src="TP%207%20%5BSpicher%5D_files/fetch_006.png" class="latex_inline" alt="$i^2$" title="Math"> à la position <img src="TP%207%20%5BSpicher%5D_files/fetch.png" class="latex_inline" alt="$i$" title="Math">)</div>
+</li>
+<li class="level1"><div class="li"> <em>iter</em> : itérer un processus sur chaque élément du tableau (<em>e.g.</em>, afficher chaque élément du tableau)</div>
+</li>
+<li class="level1"><div class="li"> <em>map</em> : créer un nouveau tableau à partir d'un tableau existant (<em>e.g.</em>, passer d'un tableau de flottants au tableau de leur valeurs entières inférieures)</div>
+</li>
+<li class="level1"><div class="li"> <em>fold</em> : combiner l'ensemble des éléments d'un tableau en une seule (<em>e.g.</em>, faire la somme des éléments d'un tableau d'entiers)</div>
+</li>
+</ul>
+
+<p>
+Chacun de ces calculs correspond à un schéma générique paramétré par une fonction. 
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Définissez la fonction <code>void* array_init(size_t len, size_t sz, void (*f)(int i, void* ei))</code> allouant un <em>tableau dimensionné</em> avec les mêmes spécifications que <code>array_alloc</code> puis qui applique la fonction <code>f</code> passée en paramètre sur chaque élément <code>ei</code> du tableau en position <code>i</code></div>
+</li>
+<li class="level1"><div class="li"> Définissez la fonction <code>void array_iter(void (*f)(const void* ei), const void* a)</code> appliquant la fonction <code>f</code> sur chaque élément d'un <em>tableau dimensionné</em> <code>a</code> </div>
+</li>
+<li class="level1"><div class="li"> Définissez la fonction <code>void* array_map(void (*f)(const void* ei, void* fi), size_t sz, const void* a)</code> allouant un nouveau <em>tableau dimensionné</em> de la même longueur que le <em>tableau dimensionné</em> <code>a</code> et donc le <code>i</code>ème élément <code>fi</code> est obtenu à partir du <code>i</code>ème élément <code>ei</code> de <code>a</code> en appliquant <code>f</code></div>
+</li>
+<li class="level1"><div class="li"> Définissez la fonction <code>void array_fold(void (*f)(void* acc, const void* ei), void* acc, const void* a)</code> combinant les éléments <code>ei</code> de <code>a</code> en appliquant la fonction <code>f</code> sur un accumulateur <code>acc</code></div>
+</li>
+</ul>
+
+<p>
+
+Le programme suivant peut servir de test :
+</p>
+<pre class="code C"><span class="co2">#include &lt;math.h&gt;</span>
+<span class="co2">#include &lt;stdlib.h&gt;</span>
+<span class="co2">#include &lt;stdio.h&gt;</span>
+&nbsp;
+<span class="co2">#define prl {printf("\n");}</span>
+&nbsp;
+<span class="kw4">void</span> set_exp<span class="br0">(</span>i<span class="sy0">,</span> <span class="kw4">double</span> <span class="sy0">*</span>ei<span class="br0">)</span> <span class="br0">{</span>
+  <span class="sy0">*</span>ei <span class="sy0">=</span> exp<span class="br0">(</span><span class="br0">(</span><span class="kw4">double</span><span class="br0">)</span>i<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> print_double<span class="br0">(</span><span class="kw4">const</span> <span class="kw4">double</span> <span class="sy0">*</span>ei<span class="br0">)</span> <span class="br0">{</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"%f "</span><span class="sy0">,</span> <span class="sy0">*</span>ei<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> set_flr<span class="br0">(</span><span class="kw4">const</span> <span class="kw4">double</span> <span class="sy0">*</span>ei<span class="sy0">,</span> <span class="kw4">int</span> <span class="sy0">*</span>fi<span class="br0">)</span> <span class="br0">{</span>
+  <span class="sy0">*</span>fi <span class="sy0">=</span> <span class="br0">(</span><span class="kw4">int</span><span class="br0">)</span>floor<span class="br0">(</span><span class="sy0">*</span>ei<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> sum<span class="br0">(</span><span class="kw4">int</span> <span class="sy0">*</span>acc<span class="sy0">,</span> <span class="kw4">const</span> <span class="kw4">int</span> <span class="sy0">*</span>ei<span class="br0">)</span> <span class="br0">{</span>
+  <span class="sy0">*</span>acc <span class="sy0">+=</span> <span class="sy0">*</span>ei<span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+&nbsp;
+  <span class="kw4">double</span><span class="sy0">*</span> a1 <span class="sy0">=</span> <span class="br0">(</span><span class="kw4">double</span><span class="sy0">*</span><span class="br0">)</span> array_init<span class="br0">(</span>10<span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span><span class="kw4">double</span><span class="br0">)</span><span class="sy0">,</span> set_exp<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  array_iter<span class="br0">(</span>print_double<span class="sy0">,</span> a1<span class="br0">)</span><span class="sy0">;</span> prl<span class="sy0">;</span>
+&nbsp;
+  <span class="kw4">int</span><span class="sy0">*</span> a2 <span class="sy0">=</span> <span class="br0">(</span><span class="kw4">int</span><span class="sy0">*</span><span class="br0">)</span> array_map<span class="br0">(</span>set_flr<span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span><span class="kw4">int</span><span class="br0">)</span><span class="sy0">,</span> a1<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <span class="kw4">int</span> x <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+  array_fold<span class="br0">(</span>sum<span class="sy0">,</span> <span class="sy0">&amp;</span>x<span class="sy0">,</span> a2<span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"%d<span class="es1">\n</span>"</span><span class="sy0">,</span> x<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+&nbsp;
+<span class="br0">}</span></pre>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+        Connecté en tant que : L2 Informatique (l2info)      </div>
+      <div class="doc">
+        l2info/progc/tp7.txt · Dernière modification: 2015/10/22 20:42 par aspicher      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+                              </div>
+      <div class="bar-right" id="bar__bottomright">
+                                        <form class="button btn_logout" method="get" action="/~aspicher/Wiki/l2info/progc/tp7"><div class="no"><input name="do" value="logout" type="hidden"><input name="sectok" value="82424b0788480fc2ae883d95f50cf65a" type="hidden"><input value="Déconnexion" class="button" title="Déconnexion" type="submit"></div></form>                <a class="nolink" href="#dokuwiki__top"><input class="button" value="Haut de page" onclick="window.scrollTo(0, 0)" title="Haut de page" type="button"></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+  <div class="license">Sauf mention contraire, le contenu de ce wiki est placé sous la licence suivante:<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></div>
+</div>
+
+<div class="footerinc">
+
+  <a href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php" title="Recent changes RSS feed"><img src="TP%207%20%5BSpicher%5D_files/button-rss.png" alt="Recent changes RSS feed" height="15" width="80"></a>
+
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="CC Attribution-Noncommercial-Share Alike 3.0 Unported"><img src="TP%207%20%5BSpicher%5D_files/cc-by-nc-sa.png" alt="" height="15" width="80"></a>
+  
+  <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="TP%207%20%5BSpicher%5D_files/button-donate.gif" alt="Donate" height="15" width="80"></a>
+
+  <a href="http://www.php.net/" title="Powered by PHP"><img src="TP%207%20%5BSpicher%5D_files/button-php.gif" alt="Powered by PHP" height="15" width="80"></a>
+
+  <a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="TP%207%20%5BSpicher%5D_files/button-xhtml.png" alt="Valid XHTML 1.0" height="15" width="80"></a>
+
+  <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="TP%207%20%5BSpicher%5D_files/button-css.png" alt="Valid CSS" height="15" width="80"></a>
+
+  <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="TP%207%20%5BSpicher%5D_files/button-dw.png" alt="Driven by DokuWiki" height="15" width="80"></a>
+
+
+
+</div>
+
+<div class="no"><img src="TP%207%20%5BSpicher%5D_files/indexer.gif" alt="" height="1" width="1"></div>
+
+
+</body></html>

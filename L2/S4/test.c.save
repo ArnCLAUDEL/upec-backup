@@ -1,0 +1,16 @@
+#include <unistd.h>
+#include  <stdlib.h>
+#include <stdio.h>
+#include <dirent.h>
+
+int main (int argc, char** argv) {
+
+	DIR* testdir = opendir("/SE");
+	struct dirent* 
+testdirstruct;
+	
+	testdirstruct = readdir(testdir);
+
+	printf("%d\n",testdirstruct.d_ino);
+	return 0;
+}

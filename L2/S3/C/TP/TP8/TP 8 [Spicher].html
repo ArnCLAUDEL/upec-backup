@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    TP 8    [Spicher]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-11-04T22:29:22+0100">
+<meta name="keywords" content="l2info,progc,tp8">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/exe/opensearch.php" title="Spicher">
+<link rel="start" href="http://www.lacl.fr/%7Easpicher/Wiki/">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php?mode=list&amp;ns=l2info:progc">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.lacl.fr/%7Easpicher/Wiki/_export/xhtml/l2info/progc/tp8">
+<link rel="canonical" href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp8">
+<link rel="stylesheet" media="all" type="text/css" href="TP%208%20%5BSpicher%5D_files/css.css">
+<link rel="stylesheet" media="screen" type="text/css" href="TP%208%20%5BSpicher%5D_files/css_003.css">
+<link rel="stylesheet" media="print" type="text/css" href="TP%208%20%5BSpicher%5D_files/css_002.css">
+<script type="text/javascript" charset="utf-8"><!--//--><![CDATA[//><!--
+var NS='l2info:progc';var SIG=' --- //[[antoine.spicher@u-pec.fr|L2 Informatique]] 2015/11/29 18:36//';var JSINFO = {"id":"l2info:progc:tp8","namespace":"l2info:progc"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="TP%208%20%5BSpicher%5D_files/js.php"></script>
+
+  <link rel="shortcut icon" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/tpl/default/images/favicon.ico">
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp8?do=backlink" title="Liens vers cette page">TP 8</a>]]
+      </div>
+      <div class="logo">
+        <a href="http://www.lacl.fr/%7Easpicher/Wiki/" name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]">Spicher</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                      </div>
+
+      <div class="bar-right" id="bar__topright">
+                &nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+        <div class="breadcrumbs">
+      <span class="bchead">Piste:</span> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/start" class="breadcrumbs" title="start">Accueil</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/start" class="breadcrumbs" title="l2info:progc:start">Programmation en C (avancé)</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp1" class="breadcrumbs" title="l2info:progc:tp1">TP 1</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp2" class="breadcrumbs" title="l2info:progc:tp2">TP 2</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp3" class="breadcrumbs" title="l2info:progc:tp3">TP 3</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp4" class="breadcrumbs" title="l2info:progc:tp4">TP 4</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp5note" class="breadcrumbs" title="l2info:progc:tp5note">TP 5</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp6" class="breadcrumbs" title="l2info:progc:tp6">TP 6</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp7" class="breadcrumbs" title="l2info:progc:tp7">TP 7</a> <span class="bcsep">»</span> <span class="curid"><a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp8" class="breadcrumbs" title="l2info:progc:tp8">TP 8</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div style="cursor: pointer;" class="tocheader toctoggle" id="toc__header"><span class="toc_close" style="cursor: pointer;" id="toc__toggle"><span>−</span></span>Table des matières</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#tp_8" class="toc">TP 8</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#menu_textuel" class="toc">Menu textuel</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#structure_de_donnees_pour_representer_un_menu" class="toc">Structure de données pour représenter un menu</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#specification_detaillee" class="toc">Spécification détaillée</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#exemple_de_fonction_pour_tester_votre_module" class="toc">Exemple de fonction pour tester votre module</a></span></div></li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="tp_8" id="tp_8">TP 8</a></h1>
+<div class="level1">
+
+<p>
+
+L'objectif de ce TP est de réaliser une bibliothèque de manipulation de menus en mode texte.
+</p>
+
+</div>
+
+<h2><a name="menu_textuel" id="menu_textuel">Menu textuel</a></h2>
+<div class="level2">
+
+<p>
+
+Un <em>menu</em> correspond à une interface utilisateur autorisant 
+celui-ci à lancer certaines fonctionnalités d'un logiciel. Le menu 
+permet de classer les fonctionnalités de façon hiérarchique en utilisant
+ des sous-menus. Vous avez l'habitude de manipuler des menus dans les 
+applications graphiques, comme par exemple un menu type :
+</p>
+<ul>
+<li class="level1"><div class="li"> File</div>
+<ul>
+<li class="level2"><div class="li"> New</div>
+</li>
+<li class="level2"><div class="li"> Open</div>
+</li>
+<li class="level2"><div class="li"> Close</div>
+</li>
+<li class="level2"><div class="li"> Save</div>
+</li>
+<li class="level2"><div class="li"> Exit</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Edition</div>
+<ul>
+<li class="level2"><div class="li"> Undo</div>
+</li>
+<li class="level2"><div class="li"> Redo</div>
+</li>
+<li class="level2"><div class="li"> Copy</div>
+</li>
+<li class="level2"><div class="li"> Paste</div>
+</li>
+<li class="level2"><div class="li"> Search/replace</div>
+</li>
+<li class="level2"><div class="li"> Preferences</div>
+<ul>
+<li class="level3"><div class="li"> Zoom</div>
+</li>
+<li class="level3"><div class="li"> Unzoom</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+Ce type de menu peut également être utilisé dans une application en mode
+ texte (ligne de commande). Le menu précédent pourra par exemple avoir 
+cette forme :
+
+</p>
+<pre class="code">Main Menu:
+
+  1 - File
+  
+  2 - Edit
+  
+Choice? 
+</pre>
+
+<p>
+
+Si l'utilisateur tape la touche <code>2</code> par exemple, le sous-menu <code>Edit</code> apparaîtra :
+
+</p>
+<pre class="code">Edit:
+
+  1 - Undo
+
+  2 - Redo
+
+  3 - Copy
+
+  4 - Paste
+
+  5 - Search/replace
+  
+  6 - Preferences
+  
+Choice? 
+</pre>
+
+<p>
+
+Si par exemple l'utilisateur appuie sur <code>3</code>, la fonctionnalité <code>Copy</code> sera alors appelée.
+</p>
+
+</div>
+
+<h2><a name="structure_de_donnees_pour_representer_un_menu" id="structure_de_donnees_pour_representer_un_menu">Structure de données pour représenter un menu</a></h2>
+<div class="level2">
+
+<p>
+
+Un menu est composé de trois éléments :
+</p>
+<ul>
+<li class="level1"><div class="li"> un pointeur vers son menu parent (le menu le plus au top n'a pas de parent ; on pourra utiliser le pointeur <code>NULL</code>)</div>
+</li>
+<li class="level1"><div class="li"> un petit descriptif, <em>i.e.</em>, une chaîne de caractères (comme par exemple <code>“Main Menu”</code> dans le menu précédent)</div>
+</li>
+<li class="level1"><div class="li"> un ensemble d'au maximum 9 <em>items</em></div>
+</li>
+</ul>
+
+<p>
+
+Il existe deux types d'item différents :
+</p>
+<ul>
+<li class="level1"><div class="li"> les <em>sous-menus</em>, comme par exemple <code>Preferences</code> pour le menu <code>Edit</code> précédent</div>
+</li>
+<li class="level1"><div class="li"> les <em>actions</em>, comme par exemple l'action <code>Copy</code> dans le sous-menu <code>Edit</code> précédent</div>
+</li>
+</ul>
+
+<p>
+
+Une action est représentée par
+</p>
+<ul>
+<li class="level1"><div class="li"> un petit descriptif, <em>i.e.</em>, une chaîne de caractères comme par exemple <code>“Copy”</code> dans le menu <code>Edit</code></div>
+</li>
+<li class="level1"><div class="li"> un pointeur vers une fonction qui effectuera la fonctionnalité attendue</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="specification_detaillee" id="specification_detaillee">Spécification détaillée</a></h2>
+<div class="level2">
+
+<p>
+
+Voici la spécification des types et fonctions à programmer :
+</p>
+<ul>
+<li class="level1"><div class="li"> un type <code>menu</code> représentant un menu tel que décrit dans la section précédente (d'autres types annexes comme <code>item</code>, <code>action</code>, etc. pourront être définis)</div>
+</li>
+<li class="level1"><div class="li"> la fonction <code>menu* createMenu(const char* text)</code> créant un nouveau menu sans parent dont le descriptif est donné par le paramètre <code>text</code> ; la chaîne de caractère doit être copiée (cf. <code>strcpy</code>) avant d'être stockée dans la structure de données ; initialement, aucun item n'est associé au menu créé</div>
+</li>
+<li class="level1"><div class="li"> la fonction <code>void addMenuAction(menu* m, const char* text, void(*f)())</code> ajoute au menu <code>m</code> un item de type action dont le descriptif est donné par le paramètre <code>text</code> (chaîne de caractère devant être copiée avant la construction de l'item) et dont la fonctionnalité est donnée par le paramètre <code>f</code></div>
+</li>
+<li class="level1"><div class="li"> la fonction <code>void addSubMenu(menu* m, menu* sm)</code> ajoute au menu <code>m</code> le sous-menu <code>sm</code> ; la fonction doit vérifier que <code>sm</code> n'a pas de parent (son père est <code>NULL</code>) et mettre à jour ce champ en conséquence</div>
+</li>
+<li class="level1"><div class="li"> la fonction <code>void deleteMenu(menu* m)</code> libère la mémoire occupée par le menu <code>m</code> (et tous ses sous-menus, ses sous-sous-menus, etc.) ; cette fonction ne fonctionne que sur les menus n'ayant pas de parent</div>
+</li>
+<li class="level1"><div class="li"> la fonction <code>void launchMenu(menu* m)</code> lance le menu <code>m</code> ; cela consiste à</div>
+<ul>
+<li class="level2"><div class="li"> afficher le descriptif du menu</div>
+</li>
+<li class="level2"><div class="li"> afficher les différents choix/items du menu précédés d'un numéro</div>
+<ul>
+<li class="level3"><div class="li"> pour les actions, afficher leur descriptif</div>
+</li>
+<li class="level3"><div class="li"> pour les sous-menus, afficher leur descriptif</div>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> attendre que l'utilisateur appuie sur un caractère</div>
+<ul>
+<li class="level3"><div class="li"> si le caractère est compris entre <code>1</code> et <code>9</code>, selon le type de l'item correspondant :</div>
+<ul>
+<li class="level4"><div class="li"> pour une action : lancer la fonction associée</div>
+</li>
+<li class="level4"><div class="li"> pour un sous-menu : rappeler la fonction <code>launchMenu</code> sur le sous-menu</div>
+</li>
+<li class="level4"><div class="li"> si aucun item n'est associé, redemander un choix à l'utilisateur</div>
+</li>
+</ul>
+</li>
+<li class="level3"><div class="li"> si le caractère est <code>p</code> (comme “precedent”), appeler la fonction <code>launchMenu</code> sur le menu parent (s'il n'est pas <code>NULL</code>)</div>
+</li>
+<li class="level3"><div class="li"> sinon redemander un choix à l'utilisateur</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="exemple_de_fonction_pour_tester_votre_module" id="exemple_de_fonction_pour_tester_votre_module">Exemple de fonction pour tester votre module</a></h2>
+<div class="level2">
+
+<p>
+
+Voici une fonction <code>main</code> pour vos tests :
+</p>
+<pre class="code c"><span class="kw4">void</span> f1<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Functionality 1 is called<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> f2<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Functionality 2 is called<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+bool cont <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw4">void</span> quit<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  cont <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  menu<span class="sy0">*</span> m<span class="sy0">;</span>
+  menu<span class="sy0">*</span> sm<span class="sy0">;</span>
+&nbsp;
+  m <span class="sy0">=</span> createMenu<span class="br0">(</span><span class="st0">"Main menu"</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  addMenuAction<span class="br0">(</span>m<span class="sy0">,</span><span class="st0">"Apply functionnality 1"</span><span class="sy0">,</span>f1<span class="br0">)</span><span class="sy0">;</span>
+  addMenuAction<span class="br0">(</span>m<span class="sy0">,</span><span class="st0">"Apply functionnality 2"</span><span class="sy0">,</span>f2<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  sm <span class="sy0">=</span> createMenu<span class="br0">(</span><span class="st0">"First submenu"</span><span class="br0">)</span><span class="sy0">;</span>
+  addMenuAction<span class="br0">(</span>sm<span class="sy0">,</span><span class="st0">"Apply functionnality 2"</span><span class="sy0">,</span>f2<span class="br0">)</span><span class="sy0">;</span>
+  addSubMenu<span class="br0">(</span>m<span class="sy0">,</span>sm<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  sm <span class="sy0">=</span> createMenu<span class="br0">(</span><span class="st0">"Second submenu"</span><span class="br0">)</span><span class="sy0">;</span>
+  addMenuAction<span class="br0">(</span>sm<span class="sy0">,</span><span class="st0">"Apply functionnality 1"</span><span class="sy0">,</span>f1<span class="br0">)</span><span class="sy0">;</span>
+  addSubMenu<span class="br0">(</span>m<span class="sy0">,</span>sm<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  addMenuAction<span class="br0">(</span>m<span class="sy0">,</span><span class="st0">"Quit"</span><span class="sy0">,</span>quit<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <span class="kw1">while</span><span class="br0">(</span>cont<span class="br0">)</span> launchMenu<span class="br0">(</span>m<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  deleteMenu<span class="br0">(</span>m<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+<p>
+Votre sortie devrait ressembler à ceci :
+</p>
+<pre class="code">Main menu
+
+ 1 - Apply functionnality 1
+
+ 2 - Apply functionnality 2
+
+ 3 - First submenu
+
+ 4 - Second submenu
+
+ 5 - Quit
+
+Choice? 
+</pre>
+
+<p>
+
+En appuyant sur <code>1</code> vous obtenez :
+
+</p>
+<pre class="code">Functionality 1 is called
+
+Main menu
+
+ 1 - Apply functionnality 1
+
+ 2 - Apply functionnality 2
+
+ 3 - First submenu
+
+ 4 - Second submenu
+
+ 5 - Quit
+
+Choice? 
+</pre>
+
+<p>
+
+En appuyant sur <code>3</code> vous obtenez :
+
+</p>
+<pre class="code">First submenu
+
+ 1 - Apply functionnality 2
+
+Choice? 
+</pre>
+
+<p>
+
+En appuyant sur <code>1</code> vous obtenez :
+
+</p>
+<pre class="code">Functionality 2 is called
+
+Main menu
+
+ 1 - Apply functionnality 1
+
+ 2 - Apply functionnality 2
+
+ 3 - First submenu
+
+ 4 - Second submenu
+
+ 5 - Quit
+
+Choice? 
+</pre>
+
+<p>
+
+En appuyant sur <code>5</code>, le programme termine.
+</p>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+        Connecté en tant que : L2 Informatique (l2info)      </div>
+      <div class="doc">
+        l2info/progc/tp8.txt · Dernière modification: 2015/11/04 22:29 par aspicher      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+                              </div>
+      <div class="bar-right" id="bar__bottomright">
+                                        <form class="button btn_logout" method="get" action="/~aspicher/Wiki/l2info/progc/tp8"><div class="no"><input name="do" value="logout" type="hidden"><input name="sectok" value="82424b0788480fc2ae883d95f50cf65a" type="hidden"><input value="Déconnexion" class="button" title="Déconnexion" type="submit"></div></form>                <a class="nolink" href="#dokuwiki__top"><input class="button" value="Haut de page" onclick="window.scrollTo(0, 0)" title="Haut de page" type="button"></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+  <div class="license">Sauf mention contraire, le contenu de ce wiki est placé sous la licence suivante:<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></div>
+</div>
+
+<div class="footerinc">
+
+  <a href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php" title="Recent changes RSS feed"><img src="TP%208%20%5BSpicher%5D_files/button-rss.png" alt="Recent changes RSS feed" height="15" width="80"></a>
+
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="CC Attribution-Noncommercial-Share Alike 3.0 Unported"><img src="TP%208%20%5BSpicher%5D_files/cc-by-nc-sa.png" alt="" height="15" width="80"></a>
+  
+  <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="TP%208%20%5BSpicher%5D_files/button-donate.gif" alt="Donate" height="15" width="80"></a>
+
+  <a href="http://www.php.net/" title="Powered by PHP"><img src="TP%208%20%5BSpicher%5D_files/button-php.gif" alt="Powered by PHP" height="15" width="80"></a>
+
+  <a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="TP%208%20%5BSpicher%5D_files/button-xhtml.png" alt="Valid XHTML 1.0" height="15" width="80"></a>
+
+  <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="TP%208%20%5BSpicher%5D_files/button-css.png" alt="Valid CSS" height="15" width="80"></a>
+
+  <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="TP%208%20%5BSpicher%5D_files/button-dw.png" alt="Driven by DokuWiki" height="15" width="80"></a>
+
+
+
+</div>
+
+<div class="no"><img src="TP%208%20%5BSpicher%5D_files/indexer.gif" alt="" height="1" width="1"></div>
+
+
+</body></html>

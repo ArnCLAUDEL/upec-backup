@@ -1,0 +1,500 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    TP 5    [Spicher]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-10-08T23:44:53+0200">
+<meta name="keywords" content="l2info,progc,tp5note">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/exe/opensearch.php" title="Spicher">
+<link rel="start" href="http://www.lacl.fr/%7Easpicher/Wiki/">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php?mode=list&amp;ns=l2info:progc">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.lacl.fr/%7Easpicher/Wiki/_export/xhtml/l2info/progc/tp5note">
+<link rel="canonical" href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp5note">
+<link rel="stylesheet" media="all" type="text/css" href="TP%205%20%5BSpicher%5D_files/css.css">
+<link rel="stylesheet" media="screen" type="text/css" href="TP%205%20%5BSpicher%5D_files/css_003.css">
+<link rel="stylesheet" media="print" type="text/css" href="TP%205%20%5BSpicher%5D_files/css_002.css">
+<script type="text/javascript" charset="utf-8"><!--//--><![CDATA[//><!--
+var NS='l2info:progc';var SIG=' --- //[[antoine.spicher@u-pec.fr|L2 Informatique]] 2015/11/29 18:35//';var JSINFO = {"id":"l2info:progc:tp5note","namespace":"l2info:progc"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="TP%205%20%5BSpicher%5D_files/js.php"></script>
+
+  <link rel="shortcut icon" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/tpl/default/images/favicon.ico">
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp5note?do=backlink" title="Liens vers cette page">TP 5</a>]]
+      </div>
+      <div class="logo">
+        <a href="http://www.lacl.fr/%7Easpicher/Wiki/" name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]">Spicher</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                      </div>
+
+      <div class="bar-right" id="bar__topright">
+                &nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+        <div class="breadcrumbs">
+      <span class="bchead">Piste:</span> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/start" class="breadcrumbs" title="start">Accueil</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/start" class="breadcrumbs" title="l2info:progc:start">Programmation en C (avancé)</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp1" class="breadcrumbs" title="l2info:progc:tp1">TP 1</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp2" class="breadcrumbs" title="l2info:progc:tp2">TP 2</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp3" class="breadcrumbs" title="l2info:progc:tp3">TP 3</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp4" class="breadcrumbs" title="l2info:progc:tp4">TP 4</a> <span class="bcsep">»</span> <span class="curid"><a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp5note" class="breadcrumbs" title="l2info:progc:tp5note">TP 5</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div style="cursor: pointer;" class="tocheader toctoggle" id="toc__header"><span class="toc_close" style="cursor: pointer;" id="toc__toggle"><span>−</span></span>Table des matières</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#tp_5" class="toc">TP 5</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#presentation_du_probleme" class="toc">Présentation du problème</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#coordonnees_et_transformations" class="toc">Coordonnées et transformations</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#figures" class="toc">Figures</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#images" class="toc">Images</a></span></div></li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="tp_5" id="tp_5">TP 5</a></h1>
+<div class="level1">
+
+<p>
+
+Ce TP est noté. Le rendu se fait sous EPREL. Si vous n'avez pas de compte EPREL, envoyez votre travail à l'adresse <a href="mailto:antoine.spicher@u-pec.fr" class="mail JSnocheck" title="antoine.spicher@u-pec.fr">antoine.spicher@u-pec.fr</a>.
+</p>
+
+<p>
+Vous devez rédiger un programme dans un fichier appelé <code>ascii_art.c</code>. Ce programme doit compiler avec l'option <code>-Wall</code> sans <em>warning</em> et sans erreur, et s'exécuter en respectant les consignes imposées par l'énoncé. Le programme doit être rédigé correctement, <em>i.e.</em>,
+ il doit être bien indenté en respectant les noms de types et de 
+fonctions de l'énoncé. Les réponses à certaines questions seront 
+directement données dans votre programme sous la forme de commentaires 
+(il s'agit essentiellement de commenter la taille des types que vous 
+devrez définir).
+</p>
+
+</div>
+
+<h2><a name="presentation_du_probleme" id="presentation_du_probleme">Présentation du problème</a></h2>
+<div class="level2">
+
+<p>
+
+L'objectif du TP est de réaliser une petite bibliothèque C pour créer et afficher des images vectorielles en <acronym title="American Standard Code for Information Interchange">ASCII</acronym> art. Une <a href="https://fr.wikipedia.org/wiki/Image_vectorielle" class="urlextern" title="https://fr.wikipedia.org/wiki/Image_vectorielle" rel="nofollow">image vectorielle</a>,
+ en opposition à une image en bitmap définie sous la forme d'une matrice
+ de pixels, décrit une image comme un assemblage d'objets géométriques. 
+L'<a href="https://fr.wikipedia.org/wiki/Art_ASCII" class="urlextern" title="https://fr.wikipedia.org/wiki/Art_ASCII" rel="nofollow">ASCII art</a>
+ est une technique d'affichage d'image en mode texte, les pixels de 
+couleur étant remplacés par des caractères dont la densité de luminosité
+ permet l'obtention de dégradé (<a href="https://www.google.fr/search?q=ascii+art&amp;biw=1440&amp;bih=794&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=0CAYQ_AUoAWoVChMIuprMj8qzyAIVylcaCh3TXw8W" class="urlextern" title="https://www.google.fr/search?q=ascii+art&amp;biw=1440&amp;bih=794&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=0CAYQ_AUoAWoVChMIuprMj8qzyAIVylcaCh3TXw8W" rel="nofollow">par exemple ...</a>).
+</p>
+
+<p>
+Nous allons nous restreindre à des figures géométriques très simples, à savoir :
+</p>
+<ul>
+<li class="level1"><div class="li"> les cercles,</div>
+</li>
+<li class="level1"><div class="li"> les rectangles, et</div>
+</li>
+<li class="level1"><div class="li"> les lignes.</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="coordonnees_et_transformations" id="coordonnees_et_transformations">Coordonnées et transformations</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Définir le type <code>coord_t</code> permettant de représenter coordonnées en 2D de la forme <img src="TP%205%20%5BSpicher%5D_files/fetch_014.png" class="latex_inline" alt="$(x,y)$" title="Math"> ; on utilisera le type <code>double</code> pour représenter chaque coordonnée.</div>
+</li>
+<li class="level1"><div class="li"> Déterminer la taille prise en mémoire par les objets de type <code>coord_t</code> ; justifier directement dans votre programme la valeur retournée dans un commentaire précédent la définition du type.</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>void print_coord(coord_t c)</code> qui permet d'afficher des coordonnées sous la forme <img src="TP%205%20%5BSpicher%5D_files/fetch_014.png" class="latex_inline" alt="$(x,y)$" title="Math">.</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>coord_t coordinate(double x, double y)</code> construisant un objet de type <code>coord_t</code> à partir de deux coordonnées <code>x</code> et <code>y</code>.</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>coord_t inv_translate_point(coord_t p, coord_t v)</code> qui retourne le translaté inverse <img src="TP%205%20%5BSpicher%5D_files/fetch_012.png" class="latex_inline" alt="$(p'_x,p'_y)$" title="Math"> du point <code>p</code> <img src="TP%205%20%5BSpicher%5D_files/fetch_009.png" class="latex_inline" alt="$=(p_x,p_y)$" title="Math"> par le vecteur <code>v</code> <img src="TP%205%20%5BSpicher%5D_files/fetch_005.png" class="latex_inline" alt="$=(v_x,v_y)$" title="Math"> défini par :
+<p>
+<img src="TP%205%20%5BSpicher%5D_files/fetch_006.png" class="latex_displayed" alt="$$
+\left(\begin{array}{c} p'_x \\ p'_y \end{array}\right) = \left(\begin{array}{c} p_x-v_x \\ p_y-v_y \end{array}\right)
+$$" title="Equation">
+</p>
+</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>coord_t inv_rotate_point(coord_t p, double t)</code> qui retourne le transformé inverse <img src="TP%205%20%5BSpicher%5D_files/fetch_012.png" class="latex_inline" alt="$(p'_x,p'_y)$" title="Math"> du point <code>p</code> <img src="TP%205%20%5BSpicher%5D_files/fetch_009.png" class="latex_inline" alt="$=(p_x,p_y)$" title="Math"> par la rotation d'angle <code>t</code> <img src="TP%205%20%5BSpicher%5D_files/fetch_008.png" class="latex_inline" alt="$=\theta$" title="Math"> défini par :
+<p>
+<img src="TP%205%20%5BSpicher%5D_files/fetch_017.png" class="latex_displayed" alt="$$
+\left(\begin{array}{c} p'_x \\ p'_y \end{array}\right) = \left(\begin{array}{c} p_x \cos(-\theta) - p_y \sin(-\theta) \\ p_x \sin(-\theta) + p_y \cos(-\theta) \end{array}\right)
+$$" title="Equation">
+</p>
+</div>
+</li>
+</ul>
+
+<p>
+
+Voilà un programme principal permettant de tester vos fonctions :
+
+</p>
+<pre class="code c"><span class="co2">#define prl { printf("\n"); }</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  coord_t pt <span class="sy0">=</span> coordinate<span class="br0">(</span>10<span class="sy0">,</span>20<span class="br0">)</span><span class="sy0">;</span>
+  print_coord<span class="br0">(</span>pt<span class="br0">)</span><span class="sy0">;</span> prl<span class="sy0">;</span>
+  print_coord<span class="br0">(</span>inv_translate_point<span class="br0">(</span>pt<span class="sy0">,</span>pt<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span> prl<span class="sy0">;</span>
+  print_coord<span class="br0">(</span>inv_rotate_point<span class="br0">(</span>pt<span class="sy0">,</span>M_PI_2<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span> prl<span class="sy0">;</span>
+  print_coord<span class="br0">(</span>inv_rotate_point<span class="br0">(</span>pt<span class="sy0">,-</span>M_PI_4<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span> prl<span class="sy0">;</span>
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+<p>
+
+et la sortie attendue :
+
+</p>
+<pre class="code">(10.000000,20.000000)
+(0.000000,0.000000)
+(20.000000,-10.000000)
+(-7.071068,21.213203)
+</pre>
+
+</div>
+
+<h2><a name="figures" id="figures">Figures</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Définir l'énumération <code>figure_e</code> permettant de représenter les trois types de figure considérés.</div>
+</li>
+<li class="level1"><div class="li"> Définir la structure <code>circle_s</code> représentant un cercle avec une unique information, son rayon au carré.</div>
+</li>
+<li class="level1"><div class="li"> Définir la structure <code>rectangle_s</code> représentant un rectangle par deux informations, sa demie largeur et sa demie hauteur.</div>
+</li>
+<li class="level1"><div class="li"> Définir la structure <code>line_s</code> représentant une ligne droite par une unique information, sa demie longueur.</div>
+</li>
+<li class="level1"><div class="li"> Déterminer les tailles prises en mémoire par ces trois structures ; justifier ces valeurs dans votre programme.</div>
+</li>
+<li class="level1"><div class="li"> Définir le type <code>figure_t</code> représentant une figure générique caractérisée par :</div>
+<ul>
+<li class="level2"><div class="li"> sa couleur, représentée par un <code>char</code> (on pourra utiliser un alias de type <code>color_t</code> pour plus de clarté)</div>
+</li>
+<li class="level2"><div class="li"> son centre de gravité (c'est-à-dire un point 2D)</div>
+</li>
+<li class="level2"><div class="li"> son angle de rotation, représenté par un <code>double</code></div>
+</li>
+<li class="level2"><div class="li"> son type de figure</div>
+</li>
+<li class="level2"><div class="li"> les caractéristiques de la figure (une <code>union</code> est à utiliser)</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Déterminer la taille prise en mémoire par les objets de type <code>figure_t</code> ; justifier cette valeur dans votre programme.</div>
+</li>
+<li class="level1"><div class="li"> Définir les constructeurs de figure suivants (pour chaque constructeur, la figure est par défaut à la position <img src="TP%205%20%5BSpicher%5D_files/fetch_015.png" class="latex_inline" alt="$(0,0)$" title="Math">, avec un angle de rotation nul et de couleur par défaut '+') :</div>
+<ul>
+<li class="level2"><div class="li"> <code>figure_t circle(double radius)</code></div>
+</li>
+<li class="level2"><div class="li"> <code>figure_t rectangle(double width, double height)</code></div>
+</li>
+<li class="level2"><div class="li"> <code>figure_t line(double length)</code></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>figure_t color(figure_t f, color_t c)</code> qui retourne la figure <code>f</code> avec la couleur <code>c</code>.</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>figure_t translate(figure_t f, double dx, double dy)</code> qui translate le centre de la figure <code>f</code> du vecteur <code>(dx,dy)</code>.</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>figure_t rotate(figure_t f, double dt)</code> qui ajoute <code>dt</code> à l'angle de rotation de la figure <code>f</code>.</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>color_t intersect(coord_t p, figure_t f, double grain)</code> qui retourne <code>0</code> si le point <code>p</code> est en dehors de la figure <code>f</code>, la couleur de <code>f</code> sinon. L'intersection se calcule en deux étapes :</div>
+<ol>
+<li class="level2"><div class="li"> le point <code>p</code> est tout d'abord replacé dans le repère relatif à la figure <code>f</code></div>
+<ol>
+<li class="level3"><div class="li"> en faisant le translation inverse de <code>p</code> par rapport au centre de la figure, <strong>puis</strong></div>
+</li>
+<li class="level3"><div class="li"> en faisant la rotation inverse par rapport à l'angle de la figure ;</div>
+</li>
+</ol>
+</li>
+<li class="level2"><div class="li"> une fois dans le bon repère, l'intersection dépend de la nature de la figure, en supposant que <img src="TP%205%20%5BSpicher%5D_files/fetch_019.png" class="latex_inline" alt="$(p_x,p_y)$" title="Math"> sont les coordonnées relative de <code>p</code> dans <code>f</code> :</div>
+<ul>
+<li class="level3"><div class="li"> cercle : <img src="TP%205%20%5BSpicher%5D_files/fetch_007.png" class="latex_inline" alt="$p_x^2 + p_y^2 \le r^2$" title="Math">, où <img src="TP%205%20%5BSpicher%5D_files/fetch_021.png" class="latex_inline" alt="$r^2$" title="Math"> est le carré du rayon du cercle</div>
+</li>
+<li class="level3"><div class="li"> rectangle : <img src="TP%205%20%5BSpicher%5D_files/fetch_003.png" class="latex_inline" alt="$|p_x| \le w/2$" title="Math"> et <img src="TP%205%20%5BSpicher%5D_files/fetch_004.png" class="latex_inline" alt="$|p_y| \le h/2$" title="Math">, où <img src="TP%205%20%5BSpicher%5D_files/fetch.png" class="latex_inline" alt="$w/2$" title="Math"> et <img src="TP%205%20%5BSpicher%5D_files/fetch_011.png" class="latex_inline" alt="$h/2$" title="Math"> sont respectivement la demie largeur et la demie hauteur du rectangle</div>
+</li>
+<li class="level3"><div class="li"> ligne : <img src="TP%205%20%5BSpicher%5D_files/fetch_020.png" class="latex_inline" alt="$|p_x| \le l/2$" title="Math"> et <img src="TP%205%20%5BSpicher%5D_files/fetch_018.png" class="latex_inline" alt="$|p_y| \le$" title="Math"> <code>grain</code>, où <img src="TP%205%20%5BSpicher%5D_files/fetch_016.png" class="latex_inline" alt="$l/2$" title="Math"> la demie longueur de la ligne.</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+
+<p>
+
+Voilà un programme principal permettant de tester vos fonctions :
+
+</p>
+<pre class="code c"><span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  figure_t f<span class="sy0">;</span>
+  color_t c<span class="sy0">;</span>
+&nbsp;
+  f <span class="sy0">=</span> rectangle<span class="br0">(</span>10<span class="sy0">,</span>7<span class="br0">)</span><span class="sy0">;</span>
+  f <span class="sy0">=</span> translate<span class="br0">(</span>f<span class="sy0">,</span> 10<span class="sy0">,</span> 8<span class="br0">)</span><span class="sy0">;</span>
+  f <span class="sy0">=</span> rotate<span class="br0">(</span>f<span class="sy0">,</span> 45 <span class="sy0">*</span> M_PI <span class="sy0">/</span> 180<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  c <span class="sy0">=</span> intersect<span class="br0">(</span>coordinate<span class="br0">(</span>5<span class="sy0">,</span>5<span class="br0">)</span><span class="sy0">,</span>f<span class="sy0">,</span>1<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>c<span class="br0">)</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Intersection with color %c<span class="es1">\n</span>"</span><span class="sy0">,</span>c<span class="br0">)</span><span class="sy0">;</span> <span class="kw1">else</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"No intersection<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+  c <span class="sy0">=</span> intersect<span class="br0">(</span>coordinate<span class="br0">(</span>10<span class="sy0">,</span>10<span class="br0">)</span><span class="sy0">,</span>f<span class="sy0">,</span>1<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>c<span class="br0">)</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Intersection with color %c<span class="es1">\n</span>"</span><span class="sy0">,</span>c<span class="br0">)</span><span class="sy0">;</span> <span class="kw1">else</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"No intersection<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+  c <span class="sy0">=</span> intersect<span class="br0">(</span>coordinate<span class="br0">(</span>18<span class="sy0">,</span>18<span class="br0">)</span><span class="sy0">,</span>f<span class="sy0">,</span>1<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>c<span class="br0">)</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Intersection with color %c<span class="es1">\n</span>"</span><span class="sy0">,</span>c<span class="br0">)</span><span class="sy0">;</span> <span class="kw1">else</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"No intersection<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  f <span class="sy0">=</span> circle<span class="br0">(</span>12<span class="br0">)</span><span class="sy0">;</span>
+  f <span class="sy0">=</span> translate<span class="br0">(</span>f<span class="sy0">,</span> 20<span class="sy0">,</span> 13<span class="br0">)</span><span class="sy0">;</span>
+  f <span class="sy0">=</span> color<span class="br0">(</span>f<span class="sy0">,</span> <span class="st0">'O'</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  c <span class="sy0">=</span> intersect<span class="br0">(</span>coordinate<span class="br0">(</span>5<span class="sy0">,</span>5<span class="br0">)</span><span class="sy0">,</span>f<span class="sy0">,</span>1<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>c<span class="br0">)</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Intersection with color %c<span class="es1">\n</span>"</span><span class="sy0">,</span>c<span class="br0">)</span><span class="sy0">;</span> <span class="kw1">else</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"No intersection<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+  c <span class="sy0">=</span> intersect<span class="br0">(</span>coordinate<span class="br0">(</span>10<span class="sy0">,</span>10<span class="br0">)</span><span class="sy0">,</span>f<span class="sy0">,</span>1<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>c<span class="br0">)</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Intersection with color %c<span class="es1">\n</span>"</span><span class="sy0">,</span>c<span class="br0">)</span><span class="sy0">;</span> <span class="kw1">else</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"No intersection<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+  c <span class="sy0">=</span> intersect<span class="br0">(</span>coordinate<span class="br0">(</span>18<span class="sy0">,</span>18<span class="br0">)</span><span class="sy0">,</span>f<span class="sy0">,</span>1<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>c<span class="br0">)</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Intersection with color %c<span class="es1">\n</span>"</span><span class="sy0">,</span>c<span class="br0">)</span><span class="sy0">;</span> <span class="kw1">else</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"No intersection<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  f <span class="sy0">=</span> line<span class="br0">(</span>20<span class="br0">)</span><span class="sy0">;</span>
+  f <span class="sy0">=</span> translate<span class="br0">(</span>f<span class="sy0">,</span> 18<span class="sy0">,</span> 18<span class="br0">)</span><span class="sy0">;</span>
+  f <span class="sy0">=</span> rotate<span class="br0">(</span>f<span class="sy0">,</span> <span class="sy0">-</span>60 <span class="sy0">*</span> M_PI <span class="sy0">/</span> 180<span class="br0">)</span><span class="sy0">;</span>
+  f <span class="sy0">=</span> color<span class="br0">(</span>f<span class="sy0">,</span> <span class="st0">'*'</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  c <span class="sy0">=</span> intersect<span class="br0">(</span>coordinate<span class="br0">(</span>5<span class="sy0">,</span>5<span class="br0">)</span><span class="sy0">,</span>f<span class="sy0">,</span>1<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>c<span class="br0">)</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Intersection with color %c<span class="es1">\n</span>"</span><span class="sy0">,</span>c<span class="br0">)</span><span class="sy0">;</span> <span class="kw1">else</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"No intersection<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+  c <span class="sy0">=</span> intersect<span class="br0">(</span>coordinate<span class="br0">(</span>10<span class="sy0">,</span>10<span class="br0">)</span><span class="sy0">,</span>f<span class="sy0">,</span>1<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>c<span class="br0">)</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Intersection with color %c<span class="es1">\n</span>"</span><span class="sy0">,</span>c<span class="br0">)</span><span class="sy0">;</span> <span class="kw1">else</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"No intersection<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+  c <span class="sy0">=</span> intersect<span class="br0">(</span>coordinate<span class="br0">(</span>18<span class="sy0">,</span>18<span class="br0">)</span><span class="sy0">,</span>f<span class="sy0">,</span>1<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>c<span class="br0">)</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Intersection with color %c<span class="es1">\n</span>"</span><span class="sy0">,</span>c<span class="br0">)</span><span class="sy0">;</span> <span class="kw1">else</span> <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"No intersection<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+<p>
+
+et la sortie attendue :
+
+</p>
+<pre class="code">No intersection
+Intersection with color +
+No intersection
+No intersection
+Intersection with color O
+Intersection with color O
+No intersection
+No intersection
+Intersection with color *
+</pre>
+
+</div>
+
+<h2><a name="images" id="images">Images</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Définir le type <code>image_t</code> représentant une figure générique caractérisée par :</div>
+<ul>
+<li class="level2"><div class="li"> sa largeur en nombre de caractères (entier non-signé)</div>
+</li>
+<li class="level2"><div class="li"> sa hauteur en nombre de caractères (entier non-signé)</div>
+</li>
+<li class="level2"><div class="li"> sa granularité pour le calcul de l'intersection</div>
+</li>
+<li class="level2"><div class="li"> un tableau de 10 figures maximum</div>
+</li>
+<li class="level2"><div class="li"> le nombre de figures enregistrée</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Déterminer la taille prise en mémoire par les objets de type <code>image_t</code> ; justifier cette valeur dans votre programme.</div>
+</li>
+<li class="level1"><div class="li"> Définir le constructeur d'image <code>image_t image(unsigned int width, unsigned int height, double grain)</code> ; initialement, aucune figure n'est enregistrée.</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>image_t append(image_t img, figure_t f)</code> qui, à partir d'une image <code>img</code>, retourne la même image où la figure <code>f</code> a été ajoutée dans le tableau ; si l'image contient déjà 10 figures, une erreur sera affichée suivie d'un arrêt <strong>propre</strong> du programme.</div>
+</li>
+<li class="level1"><div class="li"> [Optionnel] Définir la fonction <code>image_t prepend(image_t img, figure_t f)</code> qui, à partir d'une image <code>img</code>, retourne la même image où la figure <code>f</code> a été ajoutée dans le tableau mais au début ; si l'image contient déjà 10 figures, une erreur sera affichée suivie d'un arrêt <strong>propre</strong> du programme.</div>
+</li>
+<li class="level1"><div class="li"> Définir la fonction <code>void paint(image_t img)</code> qui affiche à l'écran l'image. L'algorithme de tracé est simple, pour chaque caractère <img src="TP%205%20%5BSpicher%5D_files/fetch_002.png" class="latex_inline" alt="$(i,j)$" title="Math"> (<img src="TP%205%20%5BSpicher%5D_files/fetch_010.png" class="latex_inline" alt="$i$" title="Math">ème ligne, <img src="TP%205%20%5BSpicher%5D_files/fetch_013.png" class="latex_inline" alt="$j$" title="Math">ième
+ colonne) de l'image, on teste l'intersection du point correspondant 
+avec chaque figure de l'image ; on affiche alors le caractère 
+correspondant à la première figure en intersection rencontrée dans le 
+tableau des figures de l'image (l'ordre des figures joue donc un rôle 
+dans l'affichage) ; si aucune image n'est trouvée, une espace est 
+affichée.</div>
+</li>
+</ul>
+
+<p>
+
+Voilà un programme principal permettant de tester vos fonctions : 
+
+</p>
+<pre class="code c"><span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  figure_t f<span class="sy0">;</span>
+  image_t img <span class="sy0">=</span> image<span class="br0">(</span>130<span class="sy0">,</span>52<span class="sy0">,</span>0.25<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  f <span class="sy0">=</span> line<span class="br0">(</span>20<span class="br0">)</span><span class="sy0">;</span>
+  f <span class="sy0">=</span> translate<span class="br0">(</span>f<span class="sy0">,</span> 18<span class="sy0">,</span> 18<span class="br0">)</span><span class="sy0">;</span>
+  f <span class="sy0">=</span> rotate<span class="br0">(</span>f<span class="sy0">,</span> <span class="sy0">-</span>60 <span class="sy0">*</span> M_PI <span class="sy0">/</span> 180<span class="br0">)</span><span class="sy0">;</span>
+  f <span class="sy0">=</span> color<span class="br0">(</span>f<span class="sy0">,</span> <span class="st0">'*'</span><span class="br0">)</span><span class="sy0">;</span>
+  img <span class="sy0">=</span> append<span class="br0">(</span>img<span class="sy0">,</span>f<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  f <span class="sy0">=</span> rectangle<span class="br0">(</span>10<span class="sy0">,</span>7<span class="br0">)</span><span class="sy0">;</span>
+  f <span class="sy0">=</span> translate<span class="br0">(</span>f<span class="sy0">,</span> 10<span class="sy0">,</span> 8<span class="br0">)</span><span class="sy0">;</span>
+  f <span class="sy0">=</span> rotate<span class="br0">(</span>f<span class="sy0">,</span> 45 <span class="sy0">*</span> M_PI <span class="sy0">/</span> 180<span class="br0">)</span><span class="sy0">;</span>
+  img <span class="sy0">=</span> append<span class="br0">(</span>img<span class="sy0">,</span>f<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  f <span class="sy0">=</span> circle<span class="br0">(</span>12<span class="br0">)</span><span class="sy0">;</span>
+  f <span class="sy0">=</span> translate<span class="br0">(</span>f<span class="sy0">,</span> 20<span class="sy0">,</span> 13<span class="br0">)</span><span class="sy0">;</span>
+  f <span class="sy0">=</span> color<span class="br0">(</span>f<span class="sy0">,</span> <span class="st0">'O'</span><span class="br0">)</span><span class="sy0">;</span>
+  img <span class="sy0">=</span> append<span class="br0">(</span>img<span class="sy0">,</span>f<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  paint<span class="br0">(</span>img<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+<p>
+
+et la sortie associée :
+
+</p>
+<pre class="code">
+
+                                                                          OOOOOOOOOOOOO
+                                                                 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                   ++                       OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                 ++++++                 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                               ++++++++++           OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                             +++++++++++++++     OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                           +++++++++++++++++++ OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                        ++++++++++++++++++++++++OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                      ++++++++++++++++++++++++++++OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                    ++++++++++++++++++++++++++++++++OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                  +++++++++++++++++++++++++++++++++++++OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                 ++++++++++++++++++++++++++++++++++++++++OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                    +++++++++++++++++++++++++++++++++++++++OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                      +++++++++++++++++++++++++++++++++++++++OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                        +++++++++++++++++++++++++++++++++++++++OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                          +++++++++++++++++++++++++++++++++++++OOOOOOOOOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                            +++++++++++++++++++++++++++++++++OOOOOOOOOOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                               ++++++++++++++++++++++++++++OOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                 ++++++++++++++++++++++++OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                 OO++++++++++++++++++++OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO***OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                 OOOO+++++++++++++++OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                 OOOOOO+++++++++++OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                 OOOOOOOOO++++++OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO***OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                 OOOOOOOOOOO++OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO***OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                  OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                   OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                   OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                    OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO***OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                     OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                      OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                        OOOOOOOOOOOOOOOOOOOOOOOOOOOO***OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                         OOOOOOOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                           OOOOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                            OOOOOOOOOOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                              OOOOOOOOOOOOOOOOO***OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                                 OOOOOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                                   OOOOOOOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                                       OOOOO**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                                          ***OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                                         **    OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                                                        **             OOOOOOOOOOOOOOOOOOO
+                                                      ***
+                                                     ***
+                                                    **
+
+
+</pre>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+        Connecté en tant que : L2 Informatique (l2info)      </div>
+      <div class="doc">
+        l2info/progc/tp5note.txt · Dernière modification: 2015/10/08 23:44 par aspicher      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+                              </div>
+      <div class="bar-right" id="bar__bottomright">
+                                        <form class="button btn_logout" method="get" action="/~aspicher/Wiki/l2info/progc/tp5note"><div class="no"><input name="do" value="logout" type="hidden"><input name="sectok" value="82424b0788480fc2ae883d95f50cf65a" type="hidden"><input value="Déconnexion" class="button" title="Déconnexion" type="submit"></div></form>                <a class="nolink" href="#dokuwiki__top"><input class="button" value="Haut de page" onclick="window.scrollTo(0, 0)" title="Haut de page" type="button"></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+  <div class="license">Sauf mention contraire, le contenu de ce wiki est placé sous la licence suivante:<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></div>
+</div>
+
+<div class="footerinc">
+
+  <a href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php" title="Recent changes RSS feed"><img src="TP%205%20%5BSpicher%5D_files/button-rss.png" alt="Recent changes RSS feed" height="15" width="80"></a>
+
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="CC Attribution-Noncommercial-Share Alike 3.0 Unported"><img src="TP%205%20%5BSpicher%5D_files/cc-by-nc-sa.png" alt="" height="15" width="80"></a>
+  
+  <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="TP%205%20%5BSpicher%5D_files/button-donate.gif" alt="Donate" height="15" width="80"></a>
+
+  <a href="http://www.php.net/" title="Powered by PHP"><img src="TP%205%20%5BSpicher%5D_files/button-php.gif" alt="Powered by PHP" height="15" width="80"></a>
+
+  <a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="TP%205%20%5BSpicher%5D_files/button-xhtml.png" alt="Valid XHTML 1.0" height="15" width="80"></a>
+
+  <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="TP%205%20%5BSpicher%5D_files/button-css.png" alt="Valid CSS" height="15" width="80"></a>
+
+  <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="TP%205%20%5BSpicher%5D_files/button-dw.png" alt="Driven by DokuWiki" height="15" width="80"></a>
+
+
+
+</div>
+
+<div class="no"><img src="TP%205%20%5BSpicher%5D_files/indexer.gif" alt="" height="1" width="1"></div>
+
+
+</body></html>

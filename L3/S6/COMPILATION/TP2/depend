@@ -1,0 +1,9 @@
+ast.cmi :
+ast.cmo : ast.cmi
+ast.cmx : ast.cmi
+parser.cmo : ast.cmi
+parser.cmx : ast.cmx
+lexer.cmo : parser.cmo
+lexer.cmx : parser.cmx
+main.cmo : parser.cmo lexer.cmo ast.cmi
+main.cmx : parser.cmx lexer.cmx ast.cmx

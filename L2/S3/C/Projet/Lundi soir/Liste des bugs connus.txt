@@ -1,0 +1,34 @@
+		----------------------------------------------------------------------------
+
+	Général:
+
+Liste des fonctions instables:
+	-Pivot 90° G 	Ces fonctions sont dites instables car elles contiennent des allocations
+	-Pivot 90° G	dynamiques de mémoire, parfois mal gérées.  Elles échouent dans certains 
+	-Resize			certains cas. Elles font également  échouer d'autres actions, précisées 
+	-Crop			plus bas.
+
+Sauvegarde d'une image qui échoue, si l'image en question a subit une des actions suivantes:
+	-Retournement vertical
+	-fonctions instables
+
+Les pivots ne peuvent etre fait que deux fois Maximum.
+Les fonctions Resize et Crop ne peuvent etre faites qu'une seule fois Maximum.
+On ne peut charger une nouvelle image après avoir effectué un pivotement.
+
+
+		----------------------------------------------------------------------------
+
+
+Commentaires sur des fonctions particulières :
+
+	Resize:
+		
+La fonction Resize est très variable:
+	Sur les images que nous avions pour la tester, l'agrandissement x2 sur la largeur et sur la hauteur fonctionne séparemment. Par exemple prenons une image (22x5) :
+		-les dimensions (44x5) (22x10) fonctionnent.
+		-Les dimensiosn (44x10) fonctionne sur les premières lignes de pixels, puis l'image courante "disparait" et la suite est variable. Généralement les trois premières lignes de pixels sont bien redimensionnées.
+		-Lorsque l'on veut agrandir de 3x fois un coté, généralement les deux premières lignes sont bien redimensionnées.
+	Suite à ces erreurs, nous n'avons pas développé le rétrécicement.
+
+		----------------------------------------------------------------------------

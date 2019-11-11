@@ -1,0 +1,554 @@
+   0  $accept : %entry% $end
+
+   1  ansyn : TERM ansyn
+   2        | expr TERM
+   3        | cond TERM
+
+   4  cond : TRUE
+   5       | FALSE
+   6       | NOT cond
+   7       | cond AND cond
+   8       | cond OR cond
+   9       | expr EQUAL expr
+  10       | expr DIF expr
+  11       | expr INF expr
+  12       | expr INFOREQ expr
+
+  13  expr : INT
+  14       | LPAR expr RPAR
+  15       | expr PLUS expr
+  16       | expr MINUS expr
+  17       | expr TIMES expr
+  18       | expr DIV expr
+  19       | expr MOD expr
+  20       | MINUS expr
+
+  21  %entry% : '\001' ansyn
+
+state 0
+	$accept : . %entry% $end  (0)
+
+	'\001'  shift 1
+	.  error
+
+	%entry%  goto 2
+
+
+state 1
+	%entry% : '\001' . ansyn  (21)
+
+	INT  shift 3
+	TRUE  shift 4
+	FALSE  shift 5
+	NOT  shift 6
+	MINUS  shift 7
+	LPAR  shift 8
+	TERM  shift 9
+	.  error
+
+	ansyn  goto 10
+	expr  goto 11
+	cond  goto 12
+
+
+state 2
+	$accept : %entry% . $end  (0)
+
+	$end  accept
+
+
+state 3
+	expr : INT .  (13)
+
+	.  reduce 13
+
+
+state 4
+	cond : TRUE .  (4)
+
+	.  reduce 4
+
+
+state 5
+	cond : FALSE .  (5)
+
+	.  reduce 5
+
+
+state 6
+	cond : NOT . cond  (6)
+
+	INT  shift 3
+	TRUE  shift 4
+	FALSE  shift 5
+	NOT  shift 6
+	MINUS  shift 7
+	LPAR  shift 8
+	.  error
+
+	expr  goto 13
+	cond  goto 14
+
+
+state 7
+	expr : MINUS . expr  (20)
+
+	INT  shift 3
+	MINUS  shift 7
+	LPAR  shift 8
+	.  error
+
+	expr  goto 15
+
+
+state 8
+	expr : LPAR . expr RPAR  (14)
+
+	INT  shift 3
+	MINUS  shift 7
+	LPAR  shift 8
+	.  error
+
+	expr  goto 16
+
+
+state 9
+	ansyn : TERM . ansyn  (1)
+
+	INT  shift 3
+	TRUE  shift 4
+	FALSE  shift 5
+	NOT  shift 6
+	MINUS  shift 7
+	LPAR  shift 8
+	TERM  shift 9
+	.  error
+
+	ansyn  goto 17
+	expr  goto 11
+	cond  goto 12
+
+
+state 10
+	%entry% : '\001' ansyn .  (21)
+
+	.  reduce 21
+
+
+state 11
+	ansyn : expr . TERM  (2)
+	cond : expr . EQUAL expr  (9)
+	cond : expr . DIF expr  (10)
+	cond : expr . INF expr  (11)
+	cond : expr . INFOREQ expr  (12)
+	expr : expr . PLUS expr  (15)
+	expr : expr . MINUS expr  (16)
+	expr : expr . TIMES expr  (17)
+	expr : expr . DIV expr  (18)
+	expr : expr . MOD expr  (19)
+
+	EQUAL  shift 18
+	DIF  shift 19
+	INF  shift 20
+	INFOREQ  shift 21
+	PLUS  shift 22
+	MINUS  shift 23
+	TIMES  shift 24
+	DIV  shift 25
+	MOD  shift 26
+	TERM  shift 27
+	.  error
+
+
+state 12
+	ansyn : cond . TERM  (3)
+	cond : cond . AND cond  (7)
+	cond : cond . OR cond  (8)
+
+	AND  shift 28
+	OR  shift 29
+	TERM  shift 30
+	.  error
+
+
+state 13
+	cond : expr . EQUAL expr  (9)
+	cond : expr . DIF expr  (10)
+	cond : expr . INF expr  (11)
+	cond : expr . INFOREQ expr  (12)
+	expr : expr . PLUS expr  (15)
+	expr : expr . MINUS expr  (16)
+	expr : expr . TIMES expr  (17)
+	expr : expr . DIV expr  (18)
+	expr : expr . MOD expr  (19)
+
+	EQUAL  shift 18
+	DIF  shift 19
+	INF  shift 20
+	INFOREQ  shift 21
+	PLUS  shift 22
+	MINUS  shift 23
+	TIMES  shift 24
+	DIV  shift 25
+	MOD  shift 26
+	.  error
+
+
+state 14
+	cond : NOT cond .  (6)
+	cond : cond . AND cond  (7)
+	cond : cond . OR cond  (8)
+
+	.  reduce 6
+
+
+state 15
+	expr : expr . PLUS expr  (15)
+	expr : expr . MINUS expr  (16)
+	expr : expr . TIMES expr  (17)
+	expr : expr . DIV expr  (18)
+	expr : expr . MOD expr  (19)
+	expr : MINUS expr .  (20)
+
+	.  reduce 20
+
+
+state 16
+	expr : LPAR expr . RPAR  (14)
+	expr : expr . PLUS expr  (15)
+	expr : expr . MINUS expr  (16)
+	expr : expr . TIMES expr  (17)
+	expr : expr . DIV expr  (18)
+	expr : expr . MOD expr  (19)
+
+	PLUS  shift 22
+	MINUS  shift 23
+	TIMES  shift 24
+	DIV  shift 25
+	MOD  shift 26
+	RPAR  shift 31
+	.  error
+
+
+state 17
+	ansyn : TERM ansyn .  (1)
+
+	.  reduce 1
+
+
+state 18
+	cond : expr EQUAL . expr  (9)
+
+	INT  shift 3
+	MINUS  shift 7
+	LPAR  shift 8
+	.  error
+
+	expr  goto 32
+
+
+state 19
+	cond : expr DIF . expr  (10)
+
+	INT  shift 3
+	MINUS  shift 7
+	LPAR  shift 8
+	.  error
+
+	expr  goto 33
+
+
+state 20
+	cond : expr INF . expr  (11)
+
+	INT  shift 3
+	MINUS  shift 7
+	LPAR  shift 8
+	.  error
+
+	expr  goto 34
+
+
+state 21
+	cond : expr INFOREQ . expr  (12)
+
+	INT  shift 3
+	MINUS  shift 7
+	LPAR  shift 8
+	.  error
+
+	expr  goto 35
+
+
+state 22
+	expr : expr PLUS . expr  (15)
+
+	INT  shift 3
+	MINUS  shift 7
+	LPAR  shift 8
+	.  error
+
+	expr  goto 36
+
+
+state 23
+	expr : expr MINUS . expr  (16)
+
+	INT  shift 3
+	MINUS  shift 7
+	LPAR  shift 8
+	.  error
+
+	expr  goto 37
+
+
+state 24
+	expr : expr TIMES . expr  (17)
+
+	INT  shift 3
+	MINUS  shift 7
+	LPAR  shift 8
+	.  error
+
+	expr  goto 38
+
+
+state 25
+	expr : expr DIV . expr  (18)
+
+	INT  shift 3
+	MINUS  shift 7
+	LPAR  shift 8
+	.  error
+
+	expr  goto 39
+
+
+state 26
+	expr : expr MOD . expr  (19)
+
+	INT  shift 3
+	MINUS  shift 7
+	LPAR  shift 8
+	.  error
+
+	expr  goto 40
+
+
+state 27
+	ansyn : expr TERM .  (2)
+
+	.  reduce 2
+
+
+state 28
+	cond : cond AND . cond  (7)
+
+	INT  shift 3
+	TRUE  shift 4
+	FALSE  shift 5
+	NOT  shift 6
+	MINUS  shift 7
+	LPAR  shift 8
+	.  error
+
+	expr  goto 13
+	cond  goto 41
+
+
+state 29
+	cond : cond OR . cond  (8)
+
+	INT  shift 3
+	TRUE  shift 4
+	FALSE  shift 5
+	NOT  shift 6
+	MINUS  shift 7
+	LPAR  shift 8
+	.  error
+
+	expr  goto 13
+	cond  goto 42
+
+
+state 30
+	ansyn : cond TERM .  (3)
+
+	.  reduce 3
+
+
+state 31
+	expr : LPAR expr RPAR .  (14)
+
+	.  reduce 14
+
+
+state 32
+	cond : expr EQUAL expr .  (9)
+	expr : expr . PLUS expr  (15)
+	expr : expr . MINUS expr  (16)
+	expr : expr . TIMES expr  (17)
+	expr : expr . DIV expr  (18)
+	expr : expr . MOD expr  (19)
+
+	PLUS  shift 22
+	MINUS  shift 23
+	TIMES  shift 24
+	DIV  shift 25
+	MOD  shift 26
+	AND  reduce 9
+	OR  reduce 9
+	TERM  reduce 9
+
+
+state 33
+	cond : expr DIF expr .  (10)
+	expr : expr . PLUS expr  (15)
+	expr : expr . MINUS expr  (16)
+	expr : expr . TIMES expr  (17)
+	expr : expr . DIV expr  (18)
+	expr : expr . MOD expr  (19)
+
+	PLUS  shift 22
+	MINUS  shift 23
+	TIMES  shift 24
+	DIV  shift 25
+	MOD  shift 26
+	AND  reduce 10
+	OR  reduce 10
+	TERM  reduce 10
+
+
+state 34
+	cond : expr INF expr .  (11)
+	expr : expr . PLUS expr  (15)
+	expr : expr . MINUS expr  (16)
+	expr : expr . TIMES expr  (17)
+	expr : expr . DIV expr  (18)
+	expr : expr . MOD expr  (19)
+
+	PLUS  shift 22
+	MINUS  shift 23
+	TIMES  shift 24
+	DIV  shift 25
+	MOD  shift 26
+	AND  reduce 11
+	OR  reduce 11
+	TERM  reduce 11
+
+
+state 35
+	cond : expr INFOREQ expr .  (12)
+	expr : expr . PLUS expr  (15)
+	expr : expr . MINUS expr  (16)
+	expr : expr . TIMES expr  (17)
+	expr : expr . DIV expr  (18)
+	expr : expr . MOD expr  (19)
+
+	PLUS  shift 22
+	MINUS  shift 23
+	TIMES  shift 24
+	DIV  shift 25
+	MOD  shift 26
+	AND  reduce 12
+	OR  reduce 12
+	TERM  reduce 12
+
+
+state 36
+	expr : expr . PLUS expr  (15)
+	expr : expr PLUS expr .  (15)
+	expr : expr . MINUS expr  (16)
+	expr : expr . TIMES expr  (17)
+	expr : expr . DIV expr  (18)
+	expr : expr . MOD expr  (19)
+
+	TIMES  shift 24
+	DIV  shift 25
+	MOD  shift 26
+	EQUAL  reduce 15
+	DIF  reduce 15
+	INF  reduce 15
+	INFOREQ  reduce 15
+	AND  reduce 15
+	OR  reduce 15
+	PLUS  reduce 15
+	MINUS  reduce 15
+	RPAR  reduce 15
+	TERM  reduce 15
+
+
+state 37
+	expr : expr . PLUS expr  (15)
+	expr : expr . MINUS expr  (16)
+	expr : expr MINUS expr .  (16)
+	expr : expr . TIMES expr  (17)
+	expr : expr . DIV expr  (18)
+	expr : expr . MOD expr  (19)
+
+	TIMES  shift 24
+	DIV  shift 25
+	MOD  shift 26
+	EQUAL  reduce 16
+	DIF  reduce 16
+	INF  reduce 16
+	INFOREQ  reduce 16
+	AND  reduce 16
+	OR  reduce 16
+	PLUS  reduce 16
+	MINUS  reduce 16
+	RPAR  reduce 16
+	TERM  reduce 16
+
+
+state 38
+	expr : expr . PLUS expr  (15)
+	expr : expr . MINUS expr  (16)
+	expr : expr . TIMES expr  (17)
+	expr : expr TIMES expr .  (17)
+	expr : expr . DIV expr  (18)
+	expr : expr . MOD expr  (19)
+
+	.  reduce 17
+
+
+state 39
+	expr : expr . PLUS expr  (15)
+	expr : expr . MINUS expr  (16)
+	expr : expr . TIMES expr  (17)
+	expr : expr . DIV expr  (18)
+	expr : expr DIV expr .  (18)
+	expr : expr . MOD expr  (19)
+
+	.  reduce 18
+
+
+state 40
+	expr : expr . PLUS expr  (15)
+	expr : expr . MINUS expr  (16)
+	expr : expr . TIMES expr  (17)
+	expr : expr . DIV expr  (18)
+	expr : expr . MOD expr  (19)
+	expr : expr MOD expr .  (19)
+
+	.  reduce 19
+
+
+state 41
+	cond : cond . AND cond  (7)
+	cond : cond AND cond .  (7)
+	cond : cond . OR cond  (8)
+
+	.  reduce 7
+
+
+state 42
+	cond : cond . AND cond  (7)
+	cond : cond . OR cond  (8)
+	cond : cond OR cond .  (8)
+
+	.  reduce 8
+
+
+22 terminals, 5 nonterminals
+22 grammar rules, 43 states

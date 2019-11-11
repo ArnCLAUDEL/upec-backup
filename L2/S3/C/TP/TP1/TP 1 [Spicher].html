@@ -1,0 +1,751 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    TP 1    [Spicher]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-09-10T20:41:52+0200">
+<meta name="keywords" content="l2info,progc,tp1">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/exe/opensearch.php" title="Spicher">
+<link rel="start" href="http://www.lacl.fr/%7Easpicher/Wiki/">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php?mode=list&amp;ns=l2info:progc">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.lacl.fr/%7Easpicher/Wiki/_export/xhtml/l2info/progc/tp1">
+<link rel="canonical" href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp1">
+<link rel="stylesheet" media="all" type="text/css" href="TP%201%20%5BSpicher%5D_files/css_003.css">
+<link rel="stylesheet" media="screen" type="text/css" href="TP%201%20%5BSpicher%5D_files/css.css">
+<link rel="stylesheet" media="print" type="text/css" href="TP%201%20%5BSpicher%5D_files/css_002.css">
+<script type="text/javascript" charset="utf-8"><!--//--><![CDATA[//><!--
+var NS='l2info:progc';var SIG=' --- //[[antoine.spicher@u-pec.fr|L2 Informatique]] 2015/11/29 18:35//';var JSINFO = {"id":"l2info:progc:tp1","namespace":"l2info:progc"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="TP%201%20%5BSpicher%5D_files/js.php"></script>
+
+  <link rel="shortcut icon" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/tpl/default/images/favicon.ico">
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp1?do=backlink" title="Liens vers cette page">TP 1</a>]]
+      </div>
+      <div class="logo">
+        <a href="http://www.lacl.fr/%7Easpicher/Wiki/" name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]">Spicher</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                      </div>
+
+      <div class="bar-right" id="bar__topright">
+                &nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+        <div class="breadcrumbs">
+      <span class="bchead">Piste:</span> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/start" class="breadcrumbs" title="start">Accueil</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/start" class="breadcrumbs" title="l2info:progc:start">Programmation en C (avancé)</a> <span class="bcsep">»</span> <span class="curid"><a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp1" class="breadcrumbs" title="l2info:progc:tp1">TP 1</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div style="cursor: pointer;" class="tocheader toctoggle" id="toc__header"><span class="toc_close" style="cursor: pointer;" id="toc__toggle"><span>−</span></span>Table des matières</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#tp_1" class="toc">TP 1</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#presentation_du_compilateur_gcc_pour_la_realisation_des_tps" class="toc">Présentation du compilateur GCC pour la réalisation des TPs</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="#mise_en_place_du_repertoire_de_travail" class="toc">Mise en place du répertoire de travail</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#edition_des_programmes" class="toc">Edition des programmes</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#compilation_des_programmes" class="toc">Compilation des programmes</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#execution_de_l_executable" class="toc">Exécution de l'exécutable</a></span></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><span class="li"><a href="#quelques_exercices_de_decrassage" class="toc">Quelques exercices de décrassage</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="#comparaison_avec_java_s_cool" class="toc">Comparaison avec Java's Cool</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#puissance_4" class="toc">Puissance 4</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#automate_cellulaire" class="toc">Automate cellulaire</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#organisation_de_conference" class="toc">Organisation de conférence</a></span></div></li></ul>
+</li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="tp_1" id="tp_1">TP 1</a></h1>
+<div class="level1">
+
+</div>
+
+<h2><a name="presentation_du_compilateur_gcc_pour_la_realisation_des_tps" id="presentation_du_compilateur_gcc_pour_la_realisation_des_tps">Présentation du compilateur GCC pour la réalisation des TPs</a></h2>
+<div class="level2">
+
+<p>
+
+Les TPs s'effectuent sous Linux. Ouvrez un terminal pour pouvoir travailler (généralement dans le menu <code>Application &gt; Système &gt; Terminal</code>).
+</p>
+
+</div>
+
+<h3><a name="mise_en_place_du_repertoire_de_travail" id="mise_en_place_du_repertoire_de_travail">Mise en place du répertoire de travail</a></h3>
+<div class="level3">
+
+<p>
+
+Pour travailler correctement, il est conseillé de créer si ce n'est déjà
+ fait un répertoire dédié aux TPs. Les quelques commandes suivantes :
+
+</p>
+<pre class="code bash"><span class="kw2">mkdir</span> ProgC
+<span class="kw3">cd</span> ProgC
+<span class="kw2">mkdir</span> TP1
+<span class="kw3">cd</span> TP1</pre>
+
+<p>
+
+vous permettent de créer à la racine de votre compte un répertoire <code>ProgC</code> avec un sous-répertoire <code>TP1</code>.
+</p>
+
+</div>
+
+<h3><a name="edition_des_programmes" id="edition_des_programmes">Edition des programmes</a></h3>
+<div class="level3">
+
+<p>
+
+Choisissez un éditeur de texte, par exemple <code>kate</code>, avec lequel travailler et lancez le depuis le terminal :
+
+</p>
+<pre class="code bash">kate <span class="sy0">&amp;</span></pre>
+
+<p>
+
+Le répertoire de travail de l'éditeur sera alors <code>~/ProgC/TP1/</code>.
+ Vous pouvez éditer (créer, ouvrir, modifier et sauvegarder) des 
+fichiers contenant vos programmes C. Prenez garde à utiliser l'extension
+ <code>.c</code> pour les noms de fichiers afin de profiter de la coloration syntaxique de l'éditeur.
+</p>
+
+</div>
+
+<h3><a name="compilation_des_programmes" id="compilation_des_programmes">Compilation des programmes</a></h3>
+<div class="level3">
+
+<p>
+
+Le compilateur <code>gcc</code> a pour fonction de générer un fichier exécutable à partir d'un programme écrit en C. 
+</p>
+
+<p>
+Nous allons illustrer l'étape de compilation avec le programme suivant :
+
+</p>
+<dl class="code">
+<dt><a href="http://www.lacl.fr/%7Easpicher/Wiki/_export/code/l2info/progc/tp1?codeblock=2" title="Télécharger un extrait" class="mediafile mf_c">helloworld.c</a></dt>
+<dd><pre class="code c"><span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"HelloWorld<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+</dd></dl>
+
+<p>
+
+Il s'agit du fameux programme présent dans tout tutoriel de 
+programmation qui se respecte permettant d'afficher la chaîne de 
+caractères <code>Helloworld</code> à l'écran.
+</p>
+
+<p>
+Après avoir copier/coller le code dans l'éditeur de texte, enregistrez le fichier sous le nom <code>helloworld.c</code>. Notez l'usage de l'extension de fichier <code>.c</code>.
+</p>
+
+<p>
+Une fois enregistré, la compilation du fichier par <code>gcc</code> s'effectue en ligne de commande par :
+
+</p>
+<pre class="code bash"><span class="kw2">gcc</span> <span class="re5">-Wall</span> <span class="re5">-o</span> helloworld.exe helloworld.c</pre>
+
+<p>
+
+Dans cette commande, on demande à lancer le compilateur <code>gcc</code> avec les arguments suivants :
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>-Wall</code> : il s'agit d'un argument optionnel demandant à gcc d'afficher suite à la compilation tous les défauts qu'il a reconnu ;</div>
+</li>
+<li class="level1"><div class="li"> <code>-o helloworld.exe</code> : demande à <code>gcc</code> de générer l'exécutable sous le nom <code>helloworld.exe</code> (<code>-o</code> signifie <em>output</em>) ; bien sûr vous pouvez choisir le nom que vous souhaitez ; si vous omettez cette option, le nom de fichier par défaut est <code>a.out</code> ;</div>
+</li>
+<li class="level1"><div class="li"> <code>helloworld.c</code> : il s'agit de l'argument principal passé à <code>gcc</code>, c'est-à-dire le nom du fichier à compiler.</div>
+</li>
+</ul>
+
+<p>
+
+Normalement, la compilation échoue avec le message suivant (ou un autre message équivalent) :
+
+</p>
+<pre class="code">prog.c: Dans la fonction ‘main’:
+prog.c:2:3: attention : implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+   printf("HelloWorld\n");
+   ^
+prog.c:2:3: attention : incompatible implicit declaration of built-in function ‘printf’
+prog.c:2:3: note: include ‘&lt;stdio.h&gt;’ or provide a declaration of ‘printf’
+prog.c:3:10: erreur: ‘EXIT_SUCCESS’ undeclared (first use in this function)
+   return EXIT_SUCCESS;
+          ^
+prog.c:3:10: note: each undeclared identifier is reported only once for each function it appears in
+</pre>
+
+<p>
+
+Comprendre les erreurs produites par le compilateur est l'un des enjeux 
+de cet enseignement. Ici, deux erreurs ont été rencontrées :
+</p>
+<ol>
+<li class="level1"><div class="li"> La fonction <code>printf</code> est utilisée sans avoir été déclarée. <code>gcc</code>
+ connaît cette fonction (grand classique de la programmation en C) et 
+nous indique d'inclure sa spécification ou alors de donner la 
+déclaration que nous souhaitons. </div>
+</li>
+<li class="level1"><div class="li"> L'identifiant (<em>i.e.</em>, le nom) <code>EXIT_SUCCESS</code> n'est pas connu. <code>gcc</code> ne sait pas quoi lui associer et échoue. </div>
+</li>
+</ol>
+
+<p>
+Ces deux erreurs sont facilement corrigées en indiquant à <code>gcc</code> où trouver les déclarations et définitions manquantes :
+
+</p>
+<dl class="code">
+<dt><a href="http://www.lacl.fr/%7Easpicher/Wiki/_export/code/l2info/progc/tp1?codeblock=5" title="Télécharger un extrait" class="mediafile mf_c">helloworld.c</a></dt>
+<dd><pre class="code c"><span class="co2">#include &lt;stdlib.h&gt;</span>
+<span class="co2">#include &lt;stdio.h&gt;</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"HelloWorld<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+</dd></dl>
+
+<p>
+
+Cette fois-ci, aucune erreur n'est retournée : le programme a été compilé avec succès.
+</p>
+
+</div>
+
+<h3><a name="execution_de_l_executable" id="execution_de_l_executable">Exécution de l'exécutable</a></h3>
+<div class="level3">
+
+<p>
+
+Une simple vérification en ligne de commande montre que le fichier <code>helloword.exe</code> a bien été créé :
+
+</p>
+<pre class="code bash"><span class="kw2">ls</span> <span class="re5">-l</span> <span class="sy0">*</span></pre>
+
+<p>
+
+affichant la liste des fichiers du répertoire courant :
+
+</p>
+<pre class="code">-rw-r--r-- 1 aspicher users   65 10 sept. 14:31 helloword.c
+-rwxr-xr-x 1 aspicher users 4980 10 sept. 13:52 helloword.exe
+</pre>
+
+<p>
+
+Remarquez les droits d'accès aux fichiers :
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>rw-r–r–</code> pour <code>helloword.c</code> : ce fichier est accessible en lecture (<code>r</code> pour <em>read</em>) et en écriture (<code>w</code> pour <em>write</em>)</div>
+</li>
+<li class="level1"><div class="li"> <code>rwxr-xr-x</code> pour <code>helloword.exe</code> : ce fichier est accessible en lecture et en écriture mais également exécutable (<code>x</code>)</div>
+</li>
+</ul>
+
+<p>
+Pour exécuter notre programme, il suffit alors de l'appeler (comme nous l'avons déjà fait pour <code>kate</code> et pour <code>gcc</code>) :
+
+</p>
+<pre class="code bash">.<span class="sy0">/</span>helloworld.exe</pre>
+
+<p>
+
+Le programme affiche à l'écran la chaîne <code>HelloWorld</code> comme spécifié dans le programme. La mention <code>./</code> précédent le nom du fichier exécutable indique à la console que le fichier se trouve dans le répertoire courant dont le nom <code>.</code> (le répertoire parent étant <code>..</code>).
+</p>
+
+<p>
+A l'avenir, pour simplifier cette procédure on pourra lancer la commande
+ suivante permettant de compiler puis de lancer l'exécutable lorsque la 
+compilation s'est bien passée :
+
+</p>
+<pre class="code bash"><span class="kw2">gcc</span> <span class="re5">-Wall</span> <span class="re5">-o</span> helloworld.exe helloworld.c <span class="sy0">&amp;&amp;</span> .<span class="sy0">/</span>helloworld.exe</pre>
+
+</div>
+
+<h2><a name="quelques_exercices_de_decrassage" id="quelques_exercices_de_decrassage">Quelques exercices de décrassage</a></h2>
+<div class="level2">
+
+</div>
+
+<h3><a name="comparaison_avec_java_s_cool" id="comparaison_avec_java_s_cool">Comparaison avec Java's Cool</a></h3>
+<div class="level3">
+
+<p>
+
+Syntaxiquement, le langage vu l'année dernière est très proche du 
+langage de programmation C. Il existe néanmoins quelques éléments à 
+préciser et à rappeler. Compilez et exécutez chacun des codes suivants.
+</p>
+
+</div>
+
+<h4><a name="boucles_et_conditionnelles" id="boucles_et_conditionnelles">Boucles et conditionnelles</a></h4>
+<div class="level4">
+
+<p>
+
+La structure syntaxique est la même que pour <code>Java's Cool</code>. Voici par exemple un algorithme calculant le PGCD de deux nombres :
+
+</p>
+<pre class="code c"><span class="co2">#include &lt;stdio.h&gt;</span>
+<span class="co2">#include &lt;stdlib.h&gt;</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw4">int</span> a <span class="sy0">=</span> <span class="nu0">54348</span><span class="sy0">;</span>
+  <span class="kw4">int</span> b <span class="sy0">=</span> <span class="nu0">3255</span><span class="sy0">;</span>
+&nbsp;
+  <span class="kw1">while</span> <span class="br0">(</span>a <span class="sy0">!=</span> b<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">if</span> <span class="br0">(</span>a <span class="sy0">&gt;</span> b<span class="br0">)</span>
+      a <span class="sy0">=</span> a <span class="sy0">-</span> b<span class="sy0">;</span>
+    <span class="kw1">else</span>
+      b <span class="sy0">=</span> b <span class="sy0">-</span> a<span class="sy0">;</span>
+  <span class="br0">}</span>
+&nbsp;
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"PGCD = %d<span class="es1">\n</span>"</span><span class="sy0">,</span> a<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+</div>
+
+<h4><a name="affichage_a_l_ecran" id="affichage_a_l_ecran">Affichage à l'écran</a></h4>
+<div class="level4">
+
+<p>
+
+L'affichage se fait à l'aide de la fonction <code>printf</code>. 
+Celle-ci attend un nombre arbitraire d'arguments dont le premier 
+spécifie la chaîne à afficher. Elle contient également les informations 
+nécessaires pour l'affichage de valeurs numériques ou de chaîne de 
+caractères :
+
+</p>
+<pre class="code c"><span class="co2">#include &lt;stdio.h&gt;</span>
+<span class="co2">#include &lt;stdlib.h&gt;</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw4">int</span>    prod_num <span class="sy0">=</span> <span class="nu0">23</span><span class="sy0">;</span>
+  <span class="kw4">char</span><span class="sy0">*</span>  prod_name <span class="sy0">=</span> <span class="st0">"muffins"</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Il reste %d %s en stock.<span class="es1">\n</span>"</span><span class="sy0">,</span> prod_num<span class="sy0">,</span> prod_name<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+</div>
+
+<h4><a name="recuperations_d_information_au_clavier" id="recuperations_d_information_au_clavier">Récupérations d'information au clavier</a></h4>
+<div class="level4">
+
+<p>
+
+La récupération au clavier se fait à l'aide de la fonction <code>scanf</code> qui fonctionne sur le même principe que <code>printf</code> :
+
+</p>
+<pre class="code c"><span class="co2">#include &lt;stdlib.h&gt;</span>
+<span class="co2">#include &lt;stdio.h&gt;</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw4">int</span>    prod_num<span class="br0">[</span>3<span class="br0">]</span> <span class="sy0">=</span> <span class="br0">{</span> 23<span class="sy0">,</span> 42<span class="sy0">,</span> 0 <span class="br0">}</span><span class="sy0">;</span>
+  <span class="kw4">char</span><span class="sy0">*</span>  prod_name<span class="br0">[</span><span class="nu0">3</span><span class="br0">]</span> <span class="sy0">=</span> <span class="br0">{</span> <span class="st0">"muffins"</span><span class="sy0">,</span> <span class="st0">"cookies"</span><span class="sy0">,</span> <span class="st0">"croissant"</span> <span class="br0">}</span><span class="sy0">;</span>
+  <span class="kw4">int</span>    id <span class="sy0">=</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Entrez un identifiant de produit : "</span><span class="br0">)</span><span class="sy0">;</span>
+  scanf<span class="br0">(</span><span class="st0">"%d"</span><span class="sy0">,</span> <span class="sy0">&amp;</span>id<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>id <span class="sy0">&gt;=</span> 3<span class="br0">)</span> <span class="br0">{</span>
+    <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Cet identifiant n'existe pas.<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">return</span> EXIT_FAILURE<span class="sy0">;</span>
+  <span class="br0">}</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Il reste %d %s en stock.<span class="es1">\n</span>"</span><span class="sy0">,</span> prod_num<span class="br0">[</span>id<span class="br0">]</span><span class="sy0">,</span> prod_name<span class="br0">[</span>id<span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+<p>
+
+Nous expliquerons la présence du caractère <code>&amp;</code> dans <code>&amp;id</code> plus tard en cours.
+</p>
+
+</div>
+
+<h4><a name="chaines_de_caracteres" id="chaines_de_caracteres">Chaînes de caractères</a></h4>
+<div class="level4">
+
+<p>
+
+Les chaînes de caractères s'écrivent entre guillemets comme en <code>Java's Cool</code>. Cependant, il n'existe pas de type <code>String</code>. Le type correspondant en C est noté <code>char*</code>. Nous décortiquerons cette syntaxe plus tard en cours.
+</p>
+
+</div>
+
+<h4><a name="tableau" id="tableau">Tableau</a></h4>
+<div class="level4">
+
+<p>
+
+La syntaxe et l'utilisation des tableaux diffèrent de celles de <code>Java's Cool</code> pour la déclaration mais est identique pour l'accès et l'affectation.
+
+</p>
+<pre class="code c"><span class="co2">#include &lt;stdio.h&gt;</span>
+<span class="co2">#include &lt;stdlib.h&gt;</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw4">int</span>    prod_num<span class="br0">[</span>3<span class="br0">]</span> <span class="sy0">=</span> <span class="br0">{</span> 23<span class="sy0">,</span> 42<span class="sy0">,</span> 0 <span class="br0">}</span><span class="sy0">;</span>
+  <span class="kw4">char</span><span class="sy0">*</span>  prod_name<span class="br0">[</span><span class="nu0">3</span><span class="br0">]</span> <span class="sy0">=</span> <span class="br0">{</span> <span class="st0">"muffins"</span><span class="sy0">,</span> <span class="st0">"cookies"</span><span class="sy0">,</span> <span class="st0">"croissant"</span> <span class="br0">}</span><span class="sy0">;</span>
+  <span class="kw4">int</span>    id <span class="sy0">=</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">;</span>
+  <span class="kw4">int</span>    n<span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Entrez un identifiant de produit : "</span><span class="br0">)</span><span class="sy0">;</span>
+  scanf<span class="br0">(</span><span class="st0">"%d"</span><span class="sy0">,</span> <span class="sy0">&amp;</span>id<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>id <span class="sy0">&gt;=</span> 3<span class="br0">)</span> <span class="br0">{</span>
+    <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Cet identifiant n'existe pas.<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">return</span> EXIT_FAILURE<span class="sy0">;</span>
+  <span class="br0">}</span>
+&nbsp;
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Entrez le nouveau nombre de %s : "</span><span class="sy0">,</span> prod_name<span class="br0">[</span>id<span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span>
+  scanf<span class="br0">(</span><span class="st0">"%d"</span><span class="sy0">,</span> <span class="sy0">&amp;</span>n<span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Avant, il restait %d %s en stock.<span class="es1">\n</span>"</span><span class="sy0">,</span> prod_num<span class="br0">[</span>id<span class="br0">]</span><span class="sy0">,</span> prod_name<span class="br0">[</span>id<span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span>
+  prod_num<span class="br0">[</span>id<span class="br0">]</span> <span class="sy0">=</span> n<span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Maintenant, il y a %d %s en stock.<span class="es1">\n</span>"</span><span class="sy0">,</span> prod_num<span class="br0">[</span>id<span class="br0">]</span><span class="sy0">,</span> prod_name<span class="br0">[</span>id<span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+</div>
+
+<h4><a name="structures" id="structures">Structures</a></h4>
+<div class="level4">
+
+<p>
+
+Tout comme <code>Java's Cool</code>, C permet de manipuler des données structurées. Voilà l'exemple précédent utilisant une <code>struct</code> C :
+
+</p>
+<pre class="code c"><span class="co2">#include &lt;stdio.h&gt;</span>
+<span class="co2">#include &lt;stdlib.h&gt;</span>
+&nbsp;
+<span class="kw4">typedef</span> <span class="kw4">struct</span> <span class="br0">{</span>
+  <span class="kw4">int</span>   num<span class="sy0">;</span>
+  <span class="kw4">char</span><span class="sy0">*</span> name<span class="sy0">;</span>
+<span class="br0">}</span> produit<span class="sy0">;</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  produit stock<span class="br0">[</span>3<span class="br0">]</span><span class="sy0">;</span>
+  stock<span class="br0">[</span>0<span class="br0">]</span>.<span class="me1">num</span> <span class="sy0">=</span> <span class="nu0">23</span><span class="sy0">;</span>  stock<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>.<span class="me1">name</span> <span class="sy0">=</span> <span class="st0">"muffins"</span><span class="sy0">;</span>
+  stock<span class="br0">[</span>1<span class="br0">]</span>.<span class="me1">num</span> <span class="sy0">=</span> <span class="nu0">42</span><span class="sy0">;</span>  stock<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span>.<span class="me1">name</span> <span class="sy0">=</span> <span class="st0">"cookies"</span><span class="sy0">;</span>
+  stock<span class="br0">[</span>2<span class="br0">]</span>.<span class="me1">num</span> <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>   stock<span class="br0">[</span><span class="nu0">2</span><span class="br0">]</span>.<span class="me1">name</span> <span class="sy0">=</span> <span class="st0">"croissants"</span><span class="sy0">;</span>
+&nbsp;
+  <span class="kw4">int</span> id <span class="sy0">=</span> <span class="sy0">-</span><span class="nu0">1</span><span class="sy0">;</span>
+  <span class="kw4">int</span> n<span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Entrez un identifiant de produit : "</span><span class="br0">)</span><span class="sy0">;</span>
+  scanf<span class="br0">(</span><span class="st0">"%d"</span><span class="sy0">,</span> <span class="sy0">&amp;</span>id<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>id <span class="sy0">&gt;=</span> 3<span class="br0">)</span> <span class="br0">{</span>
+    <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Cet identifiant n'existe pas.<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">return</span> EXIT_FAILURE<span class="sy0">;</span>
+  <span class="br0">}</span>
+&nbsp;
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Entrez le nouveau nombre de %s : "</span><span class="sy0">,</span> stock<span class="br0">[</span>id<span class="br0">]</span>.<span class="me1">name</span><span class="br0">)</span><span class="sy0">;</span>
+  scanf<span class="br0">(</span><span class="st0">"%d"</span><span class="sy0">,</span> <span class="sy0">&amp;</span>n<span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Avant, il restait %d %s en stock.<span class="es1">\n</span>"</span><span class="sy0">,</span> stock<span class="br0">[</span>id<span class="br0">]</span>.<span class="me1">num</span><span class="sy0">,</span> stock<span class="br0">[</span>id<span class="br0">]</span>.<span class="me1">name</span><span class="br0">)</span><span class="sy0">;</span>
+  stock<span class="br0">[</span>id<span class="br0">]</span>.<span class="me1">num</span> <span class="sy0">=</span> n<span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Maintenant, il y a %d %s en stock.<span class="es1">\n</span>"</span><span class="sy0">,</span> stock<span class="br0">[</span>id<span class="br0">]</span>.<span class="me1">num</span><span class="sy0">,</span> stock<span class="br0">[</span>id<span class="br0">]</span>.<span class="me1">name</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+</div>
+
+<h3><a name="puissance_4" id="puissance_4">Puissance 4</a></h3>
+<div class="level3">
+
+<p>
+
+Il s'agit du TP 2 de l'UE <em>Programmation impérative 1</em> (2014-15).
+</p>
+
+<p>
+Le but de l'exercice est de mettre en pratique les tableaux à plusieurs 
+dimensions en réalisant un programme permettant à deux utilisateurs de 
+jouer à Puissance 4. Pour réaliser cela, il faut choisir comment seront 
+représentés les différents éléments du jeu. Ici, on choisit de 
+représenter la plateau de jeu par un tableau à deux dimensions :
+</p>
+<ul>
+<li class="level1"><div class="li"> le premier indice indique la colonne (numérotées de gauche à droite),</div>
+</li>
+<li class="level1"><div class="li"> le deuxième indice indique la ligne (numérotées de bas en haut),</div>
+</li>
+<li class="level1"><div class="li"> la valeur 0 représente une case vide, la valeur 1 une pièce du joueur 1, et 2 le joueur 2.</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="questions" id="questions">Questions</a></h4>
+<div class="level4">
+<ol>
+<li class="level1"><div class="li"> Recherche dans un tableau et chute 
+libre : faites un programme qui demande à l'utilisateur de rentrer 10 
+valeurs, qui les mémorisent dans un tableau et qui affiche l'indice de 
+la première case du tableau contenant la valeur 0. Si l'utilisateur 
+entre les valeurs 3, 4, 4, 0, 1, 1, 0, 0, 2, et 1, le programme devra 
+répondre 3.</div>
+</li>
+<li class="level1"><div class="li"> Recherche de motif dans un tableau à
+ deux dimensions : faites un programme qui commence par déclarer le 
+tableau à deux dimensions ci-dessous, et qui affiche les positions où se
+ trouvent trois nombres identiques alignés en diagonale. Vous afficherez
+ la position du nombre central par exemple, la position 2×3 doit 
+s'afficher car il y a trois 5 alignés en diagonal à cette position. <pre class="code c"><span class="kw4">int</span> grille<span class="br0">[</span>5<span class="br0">]</span><span class="br0">[</span>5<span class="br0">]</span> <span class="sy0">=</span> <span class="br0">{</span> <span class="br0">{</span> 3<span class="sy0">,</span> 1<span class="sy0">,</span> 1<span class="sy0">,</span> 0<span class="sy0">,</span> 1 <span class="br0">}</span><span class="sy0">,</span>
+                     <span class="br0">{</span> 2<span class="sy0">,</span> 1<span class="sy0">,</span> 5<span class="sy0">,</span> 4<span class="sy0">,</span> 2 <span class="br0">}</span><span class="sy0">,</span>
+                     <span class="br0">{</span> 1<span class="sy0">,</span> 2<span class="sy0">,</span> 4<span class="sy0">,</span> 5<span class="sy0">,</span> 3 <span class="br0">}</span><span class="sy0">,</span>
+                     <span class="br0">{</span> 3<span class="sy0">,</span> 4<span class="sy0">,</span> 2<span class="sy0">,</span> 3<span class="sy0">,</span> 5 <span class="br0">}</span><span class="sy0">,</span>
+                     <span class="br0">{</span> 0<span class="sy0">,</span> 6<span class="sy0">,</span> 3<span class="sy0">,</span> 3<span class="sy0">,</span> 7 <span class="br0">}</span> <span class="br0">}</span><span class="sy0">;</span></pre>
+</div>
+</li>
+<li class="level1"><div class="li"> Puissance 4 : avec les solutions 
+précédentes en main, vous avez tous les ingrédients pour réaliser le 
+jeu. Il vous faut faire, pour les joueurs 1 et 2 en alternance les 
+actions suivantes :</div>
+<ol>
+<li class="level2"><div class="li"> lui demander de saisir un numéro de colonne ;</div>
+</li>
+<li class="level2"><div class="li"> chercher la première ligne vide (un peu comme dans la question 1) ;</div>
+</li>
+<li class="level2"><div class="li"> vérifier si le joueur gagne avec ce coup ( un peu comme dans la question 2) ;</div>
+</li>
+<li class="level2"><div class="li"> afficher le plateau et éventuellement la victoire ;</div>
+</li>
+<li class="level2"><div class="li"> si le jeu n'est pas terminé, changer de joueur et reprendre le tout.</div>
+</li>
+</ol>
+</li>
+</ol>
+
+</div>
+
+<h3><a name="automate_cellulaire" id="automate_cellulaire">Automate cellulaire</a></h3>
+<div class="level3">
+
+<p>
+
+Il s'agit du TP 3 de l'UE <em>Programmation impérative 1</em> (2014-15).
+</p>
+
+<p>
+Sur une planète carré composée de 225 personnes, chaque habitant occupe 
+un territoire. Les habitants sont partagés entre trois courants 
+politiques, le parti rouge, le parti bleu et le parti jaune. Au début, 
+les opinions politiques sont réparties au hasard sur la planète.
+</p>
+
+</div>
+
+<h4><a name="questions1" id="questions1">Questions</a></h4>
+<div class="level4">
+<ol>
+<li class="level1"><div class="li"> Carte géopolitique : faites un programme qui commence par générer un tableau de <img src="TP%201%20%5BSpicher%5D_files/fetch.png" class="latex_inline" alt="$n$" title="Math"> lignes et <img src="TP%201%20%5BSpicher%5D_files/fetch.png" class="latex_inline" alt="$n$" title="Math"> colonnes (utilisez la fonction <code>int rand()</code>
+ qui retourne un entier choisi au hasard), rempli au hasard d’une 
+manière homogène avec des 0 (rouges), 1 (bleus) et des 2 (jaunes). Puis,
+ affiche la carte géopolitique générée.</div>
+</li>
+<li class="level1"><div class="li"> Recherche dans un tableau à deux 
+dimensions : faites un programme qui calcule le nombre de partisans pour
+ chaque parti et qui affiche le parti qui a le plus de partisans.</div>
+</li>
+<li class="level1"><div class="li"> Partition des opinions politiques 
+homogène : afin de garantir l'homogénéité de la partition des opinions 
+politiques, faites un programme qui change l'opinion politique de chaque
+ habitant. En effet, chaque habitant doit avoir une opinion politique 
+différente de celle d'origine et de celle de son voisin de droite (s'il a
+ un voisin à droite).</div>
+</li>
+<li class="level1"><div class="li"> Évolution des opinions politiques : 
+une particularité des habitants de cette planète est qu'ils sont très 
+influençables. Ainsi, chaque jour, chaque habitant va se rallier aux 
+convictions politiques de ses voisins. Il choisit à chaque fois le parti
+ majoritaire. Faites un programme qui affiche l’évolution des opinions 
+politiques durant 60 jours. Enregistrez l’évolution des opinions 
+politiques dans une matrice telle que chaque ligne représente un parti 
+et chaque colonne représente un jour.</div>
+</li>
+</ol>
+
+</div>
+
+<h3><a name="organisation_de_conference" id="organisation_de_conference">Organisation de conférence</a></h3>
+<div class="level3">
+
+<p>
+
+Il s'agit du TP 5 de l'UE <em>Programmation impérative 1</em> (2014-15).
+</p>
+
+<p>
+On souhaite gérer une base de données d'inscriptions pour 
+l'organisation d'une conférence qui dure une journée. Les 
+organisateurs proposent aux participants de s'inscrire pour des repas, 
+ainsi que pour l'hébergement en hôtel.
+</p>
+
+<p>
+Un participant peut s'inscrire indépendamment aux 2 repas proposés : 
+déjeuner (15 euros) et/ou dîner (35 euros) ou aucun. Il n'est pas 
+obligé de prendre un hôtel. S'il en prend un, il peut choisir parmi 2 
+types d'hôtels différents : 2 étoiles (75 euros) ou 3 étoiles (100 
+euros).
+</p>
+
+<p>
+Un participant peut venir accompagné de son conjoint. Dans ce cas, la 
+réservation d'hôtel est identique mais lorsqu'un repas est 
+sélectionné alors il faut en compter 2.
+</p>
+
+<p>
+Ci-dessous un exemple de base de données où :
+</p>
+<ul>
+<li class="level1"><div class="li"> Déjeuner prend 0 pour non et 1 pour oui,</div>
+</li>
+<li class="level1"><div class="li"> Dîner prend 0 pour non et 1 pour oui,</div>
+</li>
+<li class="level1"><div class="li"> Hôtel prend 1 pour pas d'hôtel, 2 pour 2 étoiles et 3 pour 3 étoiles,</div>
+</li>
+<li class="level1"><div class="li"> Conjoint prend 0 pour seul et 1 pour accompagné.</div>
+</li>
+</ul>
+<table class="inline">
+	<tbody><tr class="row0">
+		<th class="col0 centeralign">  Nom  </th><th class="col1 centeralign">  Prénom  </th><th class="col2 centeralign">  Déjeuner  </th><th class="col3 centeralign">  Dîner  </th><th class="col4 centeralign">  Hôtel  </th><th class="col5 centeralign">  Conjoint  </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0 centeralign">  Dupont  </td><td class="col1 centeralign">  Jean  </td><td class="col2 centeralign">  0  </td><td class="col3 centeralign">  1  </td><td class="col4 centeralign">  2  </td><td class="col5 centeralign">  0  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 centeralign">  Binnet  </td><td class="col1 centeralign">  Guy  </td><td class="col2 centeralign">  0  </td><td class="col3 centeralign">  0  </td><td class="col4 centeralign">  1  </td><td class="col5 centeralign">  0  </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 centeralign">  Cohben  </td><td class="col1 centeralign">  Orianne  </td><td class="col2 centeralign">  1  </td><td class="col3 centeralign">  1  </td><td class="col4 centeralign">  3  </td><td class="col5 centeralign">  1  </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 centeralign">  Fauchet  </td><td class="col1 centeralign">  Marion  </td><td class="col2 centeralign">  1  </td><td class="col3 centeralign">  1  </td><td class="col4 centeralign">  2  </td><td class="col5 centeralign">  1  </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0 centeralign">  Bach  </td><td class="col1 centeralign">  Théo  </td><td class="col2 centeralign">  0  </td><td class="col3 centeralign">  0  </td><td class="col4 centeralign">  1  </td><td class="col5 centeralign">  0  </td>
+	</tr>
+</tbody></table>
+
+</div>
+
+<h4><a name="questions2" id="questions2">Questions</a></h4>
+<div class="level4">
+<ol>
+<li class="level1"><div class="li"> Créer une nouvelle structure <code>participant</code> (cf. l'exemple du type <code>produit</code>
+ défini plus haut) qui inclut son nom, son prénom ainsi que toutes les 
+autres informations nécessaires à son inscription selon les critères 
+définis ci-dessus.</div>
+</li>
+<li class="level1"><div class="li"> Créer un tableau de <code>participant</code> contenant la base ci-dessus.</div>
+</li>
+<li class="level1"><div class="li"> Écrire un programme qui affiche le nom et le prénom des personnes qui ont choisi de réserver un hôtel 2 étoiles.</div>
+</li>
+<li class="level1"><div class="li"> Écrire un programme qui retourne le nombre de déjeuners à prévoir.</div>
+</li>
+<li class="level1"><div class="li"> Écrire un programme qui calcule pour chaque participant le montant de sa facture.</div>
+</li>
+</ol>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+        Connecté en tant que : L2 Informatique (l2info)      </div>
+      <div class="doc">
+        l2info/progc/tp1.txt · Dernière modification: 2015/09/10 20:41 par aspicher      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+                              </div>
+      <div class="bar-right" id="bar__bottomright">
+                                        <form class="button btn_logout" method="get" action="/~aspicher/Wiki/l2info/progc/tp1"><div class="no"><input name="do" value="logout" type="hidden"><input name="sectok" value="82424b0788480fc2ae883d95f50cf65a" type="hidden"><input value="Déconnexion" class="button" title="Déconnexion" type="submit"></div></form>                <a class="nolink" href="#dokuwiki__top"><input class="button" value="Haut de page" onclick="window.scrollTo(0, 0)" title="Haut de page" type="button"></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+  <div class="license">Sauf mention contraire, le contenu de ce wiki est placé sous la licence suivante:<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></div>
+</div>
+
+<div class="footerinc">
+
+  <a href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php" title="Recent changes RSS feed"><img src="TP%201%20%5BSpicher%5D_files/button-rss.png" alt="Recent changes RSS feed" height="15" width="80"></a>
+
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="CC Attribution-Noncommercial-Share Alike 3.0 Unported"><img src="TP%201%20%5BSpicher%5D_files/cc-by-nc-sa.png" alt="" height="15" width="80"></a>
+  
+  <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="TP%201%20%5BSpicher%5D_files/button-donate.gif" alt="Donate" height="15" width="80"></a>
+
+  <a href="http://www.php.net/" title="Powered by PHP"><img src="TP%201%20%5BSpicher%5D_files/button-php.gif" alt="Powered by PHP" height="15" width="80"></a>
+
+  <a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="TP%201%20%5BSpicher%5D_files/button-xhtml.png" alt="Valid XHTML 1.0" height="15" width="80"></a>
+
+  <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="TP%201%20%5BSpicher%5D_files/button-css.png" alt="Valid CSS" height="15" width="80"></a>
+
+  <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="TP%201%20%5BSpicher%5D_files/button-dw.png" alt="Driven by DokuWiki" height="15" width="80"></a>
+
+
+
+</div>
+
+<div class="no"><img src="TP%201%20%5BSpicher%5D_files/indexer.gif" alt="" height="1" width="1"></div>
+
+
+</body></html>

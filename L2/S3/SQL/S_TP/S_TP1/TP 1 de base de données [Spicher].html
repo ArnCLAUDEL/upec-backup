@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    TP 1 de base de données    [Spicher]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-02-18T13:44:42+0100">
+<meta name="keywords" content="l3info,bd,tp1,sqlite">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/exe/opensearch.php" title="Spicher">
+<link rel="start" href="http://www.lacl.fr/%7Easpicher/Wiki/">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php?mode=list&amp;ns=l3info:bd:tp1">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.lacl.fr/%7Easpicher/Wiki/_export/xhtml/l3info/bd/tp1/sqlite">
+<link rel="canonical" href="http://www.lacl.fr/%7Easpicher/Wiki/l3info/bd/tp1/sqlite">
+<link rel="stylesheet" media="all" type="text/css" href="TP%201%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/css.css">
+<link rel="stylesheet" media="screen" type="text/css" href="TP%201%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/css_003.css">
+<link rel="stylesheet" media="print" type="text/css" href="TP%201%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/css_002.css">
+<script type="text/javascript" charset="utf-8"><!--//--><![CDATA[//><!--
+var NS='l3info:bd:tp1';var SIG=' --- //[[antoine.spicher@u-pec.fr|L2 Informatique]] 2015/11/29 18:45//';var JSINFO = {"id":"l3info:bd:tp1:sqlite","namespace":"l3info:bd:tp1"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="TP%201%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/js.php"></script>
+
+  <link rel="shortcut icon" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/tpl/default/images/favicon.ico">
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="http://www.lacl.fr/%7Easpicher/Wiki/l3info/bd/tp1/sqlite?do=backlink" title="Liens vers cette page">TP 1 de base de données</a>]]
+      </div>
+      <div class="logo">
+        <a href="http://www.lacl.fr/%7Easpicher/Wiki/" name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]">Spicher</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                      </div>
+
+      <div class="bar-right" id="bar__topright">
+                &nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+        <div class="breadcrumbs">
+      <span class="bchead">Piste:</span> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp6" class="breadcrumbs" title="l2info:progc:tp6">TP 6</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp7" class="breadcrumbs" title="l2info:progc:tp7">TP 7</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp8" class="breadcrumbs" title="l2info:progc:tp8">TP 8</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp9" class="breadcrumbs" title="l2info:progc:tp9">TP 9/10</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp11" class="breadcrumbs" title="l2info:progc:tp11">TP 11</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progfct/start" class="breadcrumbs" title="l2info:progfct:start">Programmation fonctionnelle</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progimp2/start" class="breadcrumbs" title="l2info:progimp2:start">Programmation impérative 2</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/start" class="breadcrumbs" title="start">Accueil</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l3info/bd/start" class="breadcrumbs" title="l3info:bd:start">Base de données</a> <span class="bcsep">»</span> <span class="curid"><a href="http://www.lacl.fr/%7Easpicher/Wiki/l3info/bd/tp1/sqlite" class="breadcrumbs" title="l3info:bd:tp1:sqlite">TP 1 de base de données</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div style="cursor: pointer;" class="tocheader toctoggle" id="toc__header"><span class="toc_close" style="cursor: pointer;" id="toc__toggle"><span>−</span></span>Table des matières</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#tp_1_de_base_de_donnees" class="toc">TP 1 de base de données</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#quelques_mots_a_propos_de_sqlite" class="toc">Quelques mots à propos de SQLite</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#preparation_de_la_base_pour_le_tp_1" class="toc">Préparation de la base pour le TP 1</a></span></div></li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="tp_1_de_base_de_donnees" id="tp_1_de_base_de_donnees">TP 1 de base de données</a></h1>
+<div class="level1">
+
+</div>
+
+<h2><a name="quelques_mots_a_propos_de_sqlite" id="quelques_mots_a_propos_de_sqlite">Quelques mots à propos de SQLite</a></h2>
+<div class="level2">
+
+<p>
+
+<em>SQLite</em> est une libraire qui implémente un SGBD <em><acronym title="Structured Query Language">SQL</acronym></em>. Cette <acronym title="Application Programming Interface">API</acronym> est notamment utilisée pour manipuler des bases de données en local pour des applications légères. Par exemple, <em>firefox</em> utilise <em>SQLite</em> pour la gestion des données comptes utilisateurs (par exemple, l'enregistrement des mots de passe).
+</p>
+
+<p>
+Le programme <code>sqlite3</code> permet d'interroger une base de données <em>SQLite</em> en ligne de commande. Son utilisation est extèmement simple. En supposant que le fichier <code>db.sqlite</code> contient une base de données, la ligne de commande suivante permet de lancer la boucle interactive :
+</p>
+<pre class="code bash">sqlite3 <span class="re5">-column</span> <span class="re5">-header</span> <span class="re5">-nullvalue</span> NULL db.sqlite</pre>
+
+<p>
+Les différentes options utilisées sont :
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>-column</code> : afficher les résultats sous forme de tableau</div>
+</li>
+<li class="level1"><div class="li"> <code>-header</code> : afficher les noms des colonnes dans les résultats</div>
+</li>
+<li class="level1"><div class="li"> <code>-nullvalue NULL</code> : afficher <code>NULL</code> dans les cases vides</div>
+</li>
+</ul>
+
+<p>
+
+Le programme ainsi lancé propose un prompt <code>sqlite&gt;</code> attendant une requête <em><acronym title="Structured Query Language">SQL</acronym></em>.
+</p>
+
+<p>
+Pour quitter le programme, on peut soit utiliser la commande <code>.quit</code> soit utiliser le raccourci clavier <code>CTL+D</code>.
+</p>
+
+<p>
+Etant donné qu'il est plus pratique d'utiliser un fichier pour travailler, en supposant que votre fichier de requêtes <em><acronym title="Structured Query Language">SQL</acronym></em> se nomme <code>requete.sql</code>, la ligne de commande suivante permet l'évaluation du fichier :
+</p>
+<pre class="code bash">sqlite3 <span class="re5">-header</span> <span class="re5">-column</span> <span class="re5">-nullvalue</span> NULL db.sqlite <span class="st_h">'.read requete.sql'</span></pre>
+
+</div>
+
+<h2><a name="preparation_de_la_base_pour_le_tp_1" id="preparation_de_la_base_pour_le_tp_1">Préparation de la base pour le TP 1</a></h2>
+<div class="level2">
+
+<p>
+
+Pour pouvoir travailler il faut avant tout créer une base de données (<em>i.e.</em>, le fichier <code>db.sqlite</code>). Le fichier <code>base.sql</code> décrit ci-dessous contient les requêtes <em><acronym title="Structured Query Language">SQL</acronym></em> permettant de créer les tables utilisées dans les TD 1 et 2, et dans le TP 1.
+</p>
+
+<p>
+Après avoir créé un répertoire de travail et enregistré le fichier <code>base.sql</code> dans ce répertoire, executez en ligne de commande :
+</p>
+<pre class="code bash">sqlite3 <span class="re5">-init</span> base.sql</pre>
+
+<p>
+Le fichier est <code>db.sqlite</code> est alors créé.
+</p>
+<dl class="code">
+<dt><a href="http://www.lacl.fr/%7Easpicher/Wiki/_export/code/l3info/bd/tp1/sqlite?codeblock=3" title="Télécharger un extrait" class="mediafile mf_sql">base.sql</a></dt>
+<dd><pre class="code sql"><span class="kw1">DROP</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> PC;
+<span class="kw1">DROP</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> Portables;
+<span class="kw1">DROP</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> Imprimantes;
+<span class="kw1">DROP</span> <span class="kw1">TABLE</span> <span class="kw1">IF</span> <span class="kw1">EXISTS</span> Produit;
+&nbsp;
+<span class="kw1">CREATE</span> <span class="kw1">TABLE</span> Produit
+<span class="br0">(</span>fabricant varchar<span class="br0">(</span>2<span class="br0">)</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ modele    int <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ type      varchar<span class="br0">(</span>11<span class="br0">)</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">(</span>fabricant<span class="sy0">,</span>modele<span class="br0">)</span>
+<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">CREATE</span> <span class="kw1">TABLE</span> PC
+<span class="br0">(</span>modele     int <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ processeur varchar<span class="br0">(</span>2<span class="br0">)</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ RAM        int <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ DD         int <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ DVDBR      varchar<span class="br0">(</span>8<span class="br0">)</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ prix       int <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">(</span>modele<span class="br0">)</span>
+<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">CREATE</span> <span class="kw1">TABLE</span> Portables
+<span class="br0">(</span>modele     int <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ processeur varchar<span class="br0">(</span>2<span class="br0">)</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ RAM        int <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ DD         int <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ ecran      int <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ prix       int <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">(</span>modele<span class="br0">)</span>
+<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">CREATE</span> <span class="kw1">TABLE</span> Imprimantes
+<span class="br0">(</span>modele     int <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ type       varchar<span class="br0">(</span>15<span class="br0">)</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ couleur    varchar<span class="br0">(</span>3<span class="br0">)</span> <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ prix       int <span class="kw1">NOT</span> <span class="kw1">NULL</span><span class="sy0">,</span>
+ <span class="kw1">PRIMARY</span> <span class="kw1">KEY</span> <span class="br0">(</span>modele<span class="br0">)</span>
+<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">DELETE</span> <span class="kw1">FROM</span> PC;
+<span class="kw1">DELETE</span> <span class="kw1">FROM</span> Portables;
+<span class="kw1">DELETE</span> <span class="kw1">FROM</span> Imprimantes;
+<span class="kw1">DELETE</span> <span class="kw1">FROM</span> Produit;
+&nbsp;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'A'</span><span class="sy0">,</span> <span class="nu0">1003</span><span class="sy0">,</span> <span class="st0">'pc'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'A'</span><span class="sy0">,</span> <span class="nu0">1002</span><span class="sy0">,</span> <span class="st0">'pc'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'A'</span><span class="sy0">,</span> <span class="nu0">1010</span><span class="sy0">,</span> <span class="st0">'pc'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'A'</span><span class="sy0">,</span> <span class="nu0">2004</span><span class="sy0">,</span> <span class="st0">'portable'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'A'</span><span class="sy0">,</span> <span class="nu0">2005</span><span class="sy0">,</span> <span class="st0">'portable'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'A'</span><span class="sy0">,</span> <span class="nu0">2009</span><span class="sy0">,</span> <span class="st0">'portable'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'B'</span><span class="sy0">,</span> <span class="nu0">1001</span><span class="sy0">,</span> <span class="st0">'pc'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'B'</span><span class="sy0">,</span> <span class="nu0">1003</span><span class="sy0">,</span> <span class="st0">'pc'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'B'</span><span class="sy0">,</span> <span class="nu0">3001</span><span class="sy0">,</span> <span class="st0">'imprimante'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'B'</span><span class="sy0">,</span> <span class="nu0">3002</span><span class="sy0">,</span> <span class="st0">'imprimante'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'B'</span><span class="sy0">,</span> <span class="nu0">3004</span><span class="sy0">,</span> <span class="st0">'imprimante'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'B'</span><span class="sy0">,</span> <span class="nu0">1009</span><span class="sy0">,</span> <span class="st0">'pc'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'C'</span><span class="sy0">,</span> <span class="nu0">1001</span><span class="sy0">,</span> <span class="st0">'pc'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'C'</span><span class="sy0">,</span> <span class="nu0">2001</span><span class="sy0">,</span> <span class="st0">'portable'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'C'</span><span class="sy0">,</span> <span class="nu0">1010</span><span class="sy0">,</span> <span class="st0">'pc'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'C'</span><span class="sy0">,</span> <span class="nu0">2009</span><span class="sy0">,</span> <span class="st0">'portable'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'C'</span><span class="sy0">,</span> <span class="nu0">3001</span><span class="sy0">,</span> <span class="st0">'imprimante'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'D'</span><span class="sy0">,</span> <span class="nu0">1002</span><span class="sy0">,</span> <span class="st0">'pc'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'D'</span><span class="sy0">,</span> <span class="nu0">1010</span><span class="sy0">,</span> <span class="st0">'pc'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'D'</span><span class="sy0">,</span> <span class="nu0">2002</span><span class="sy0">,</span> <span class="st0">'portable'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'D'</span><span class="sy0">,</span> <span class="nu0">2005</span><span class="sy0">,</span> <span class="st0">'portable'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'E'</span><span class="sy0">,</span> <span class="nu0">2001</span><span class="sy0">,</span> <span class="st0">'portable'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'E'</span><span class="sy0">,</span> <span class="nu0">2009</span><span class="sy0">,</span> <span class="st0">'portable'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'E'</span><span class="sy0">,</span> <span class="nu0">3001</span><span class="sy0">,</span> <span class="st0">'imprimante'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'E'</span><span class="sy0">,</span> <span class="nu0">1002</span><span class="sy0">,</span> <span class="st0">'pc'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'E'</span><span class="sy0">,</span> <span class="nu0">1004</span><span class="sy0">,</span> <span class="st0">'pc'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'F'</span><span class="sy0">,</span> <span class="nu0">2002</span><span class="sy0">,</span> <span class="st0">'portable'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'F'</span><span class="sy0">,</span> <span class="nu0">3005</span><span class="sy0">,</span> <span class="st0">'imprimante'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'F'</span><span class="sy0">,</span> <span class="nu0">3006</span><span class="sy0">,</span> <span class="st0">'imprimante'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'F'</span><span class="sy0">,</span> <span class="nu0">3009</span><span class="sy0">,</span> <span class="st0">'imprimante'</span><span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Produit <span class="kw1">VALUES</span> <span class="br0">(</span><span class="st0">'F'</span><span class="sy0">,</span> <span class="nu0">2009</span><span class="sy0">,</span> <span class="st0">'portable'</span><span class="br0">)</span>;
+&nbsp;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> PC <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">1001</span><span class="sy0">,</span> <span class="st0">'i3'</span><span class="sy0">,</span>  <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">400</span><span class="sy0">,</span> <span class="st0">'8xDVD'</span><span class="sy0">,</span>  400<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> PC <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">1002</span><span class="sy0">,</span> <span class="st0">'i3'</span><span class="sy0">,</span>  <span class="nu0">4</span><span class="sy0">,</span> <span class="nu0">450</span><span class="sy0">,</span> <span class="st0">'16xDVD'</span><span class="sy0">,</span> 500<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> PC <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">1003</span><span class="sy0">,</span> <span class="st0">'i5'</span><span class="sy0">,</span>  <span class="nu0">4</span><span class="sy0">,</span> <span class="nu0">500</span><span class="sy0">,</span> <span class="st0">'8xBR'</span><span class="sy0">,</span>   450<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> PC <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">1004</span><span class="sy0">,</span> <span class="st0">'i5'</span><span class="sy0">,</span>  <span class="nu0">8</span><span class="sy0">,</span> <span class="nu0">400</span><span class="sy0">,</span> <span class="st0">'16xDVD'</span><span class="sy0">,</span> 600<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> PC <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">1005</span><span class="sy0">,</span> <span class="st0">'i7'</span><span class="sy0">,</span>  <span class="nu0">8</span><span class="sy0">,</span> <span class="nu0">600</span><span class="sy0">,</span> <span class="st0">'6xBR'</span><span class="sy0">,</span>   650<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> PC <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">1006</span><span class="sy0">,</span> <span class="st0">'i7'</span><span class="sy0">,</span> <span class="nu0">16</span><span class="sy0">,</span> <span class="nu0">800</span><span class="sy0">,</span> <span class="st0">'8xDVD'</span><span class="sy0">,</span>  700<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> PC <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">1007</span><span class="sy0">,</span> <span class="st0">'a4'</span><span class="sy0">,</span>  <span class="nu0">4</span><span class="sy0">,</span> <span class="nu0">500</span><span class="sy0">,</span> <span class="st0">'16xDVD'</span><span class="sy0">,</span> 350<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> PC <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">1008</span><span class="sy0">,</span> <span class="st0">'a4'</span><span class="sy0">,</span>  <span class="nu0">8</span><span class="sy0">,</span> <span class="nu0">800</span><span class="sy0">,</span> <span class="st0">'6xBR'</span><span class="sy0">,</span>   450<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> PC <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">1009</span><span class="sy0">,</span> <span class="st0">'a6'</span><span class="sy0">,</span>  <span class="nu0">8</span><span class="sy0">,</span> <span class="nu0">600</span><span class="sy0">,</span> <span class="st0">'7xBR'</span><span class="sy0">,</span>   500<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> PC <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">1010</span><span class="sy0">,</span> <span class="st0">'a8'</span><span class="sy0">,</span> <span class="nu0">16</span><span class="sy0">,</span> <span class="nu0">800</span><span class="sy0">,</span> <span class="st0">'12xBR'</span><span class="sy0">,</span>  700<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Portables <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">2001</span><span class="sy0">,</span> <span class="st0">'a4'</span><span class="sy0">,</span>  4<span class="sy0">,</span> 200<span class="sy0">,</span> 14<span class="sy0">,</span> 600<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Portables <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">2002</span><span class="sy0">,</span> <span class="st0">'a6'</span><span class="sy0">,</span>  4<span class="sy0">,</span> 250<span class="sy0">,</span> 13<span class="sy0">,</span> 700<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Portables <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">2003</span><span class="sy0">,</span> <span class="st0">'a6'</span><span class="sy0">,</span>  6<span class="sy0">,</span> 300<span class="sy0">,</span> 14<span class="sy0">,</span> 750<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Portables <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">2004</span><span class="sy0">,</span> <span class="st0">'a8'</span><span class="sy0">,</span>  4<span class="sy0">,</span> 200<span class="sy0">,</span> 15<span class="sy0">,</span> 700<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Portables <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">2005</span><span class="sy0">,</span> <span class="st0">'a8'</span><span class="sy0">,</span>  6<span class="sy0">,</span> 300<span class="sy0">,</span> 14<span class="sy0">,</span> 650<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Portables <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">2006</span><span class="sy0">,</span> <span class="st0">'i3'</span><span class="sy0">,</span> 16<span class="sy0">,</span> 200<span class="sy0">,</span> 11<span class="sy0">,</span> 700<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Portables <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">2007</span><span class="sy0">,</span> <span class="st0">'i3'</span><span class="sy0">,</span>  4<span class="sy0">,</span> 300<span class="sy0">,</span> 13<span class="sy0">,</span> 650<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Portables <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">2008</span><span class="sy0">,</span> <span class="st0">'i5'</span><span class="sy0">,</span>  8<span class="sy0">,</span> 200<span class="sy0">,</span> 15<span class="sy0">,</span> 850<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Portables <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">2009</span><span class="sy0">,</span> <span class="st0">'i5'</span><span class="sy0">,</span>  8<span class="sy0">,</span> 400<span class="sy0">,</span> 13<span class="sy0">,</span> 800<span class="br0">)</span>;
+&nbsp;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Imprimantes <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">3001</span><span class="sy0">,</span> <span class="st0">'laser'</span><span class="sy0">,</span> <span class="st0">'oui'</span><span class="sy0">,</span> 250<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Imprimantes <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">3002</span><span class="sy0">,</span> <span class="st0">'jetde'</span><span class="sy0">,</span> <span class="st0">'oui'</span><span class="sy0">,</span> 150<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Imprimantes <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">3003</span><span class="sy0">,</span> <span class="st0">'laser'</span><span class="sy0">,</span> <span class="st0">'non'</span><span class="sy0">,</span> 100<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Imprimantes <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">3004</span><span class="sy0">,</span> <span class="st0">'laser'</span><span class="sy0">,</span> <span class="st0">'non'</span><span class="sy0">,</span>  90<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Imprimantes <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">3005</span><span class="sy0">,</span> <span class="st0">'multi'</span><span class="sy0">,</span> <span class="st0">'non'</span><span class="sy0">,</span> 350<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Imprimantes <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">3006</span><span class="sy0">,</span> <span class="st0">'jetde'</span><span class="sy0">,</span> <span class="st0">'oui'</span><span class="sy0">,</span> 120<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Imprimantes <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">3007</span><span class="sy0">,</span> <span class="st0">'laser'</span><span class="sy0">,</span> <span class="st0">'oui'</span><span class="sy0">,</span> 230<span class="br0">)</span>;
+<span class="kw1">INSERT</span> <span class="kw1">INTO</span> Imprimantes <span class="kw1">VALUES</span> <span class="br0">(</span><span class="nu0">3008</span><span class="sy0">,</span> <span class="st0">'multi'</span><span class="sy0">,</span> <span class="st0">'oui'</span><span class="sy0">,</span> 450<span class="br0">)</span>;
+&nbsp;
+<span class="sy0">.</span>backup db<span class="sy0">.</span>sqlite</pre>
+</dd></dl>
+
+<p>
+Une fois le fichier <code>db.sqlite</code> créer, il est possible d'évaluer des requêtes contenues dans un fichier <code>tp1.sql</code> de la façon suivante :
+</p>
+<dl class="code">
+<dt><a href="http://www.lacl.fr/%7Easpicher/Wiki/_export/code/l3info/bd/tp1/sqlite?codeblock=4" title="Télécharger un extrait" class="mediafile mf_sql">tp1.sql</a></dt>
+<dd><pre class="code sql"><span class="kw1">SELECT</span> <span class="sy0">*</span> <span class="kw1">FROM</span> PC;
+<span class="kw1">SELECT</span> <span class="sy0">*</span> <span class="kw1">FROM</span> Produit;
+<span class="kw1">SELECT</span> <span class="sy0">*</span> <span class="kw1">FROM</span> Portables;
+<span class="kw1">SELECT</span> <span class="sy0">*</span> <span class="kw1">FROM</span> Imprimantes;</pre>
+</dd></dl>
+<pre class="code bash">sqlite3 <span class="re5">-header</span> <span class="re5">-column</span> <span class="re5">-nullvalue</span> NULL db.sqlite <span class="st_h">'.read tp1.sql'</span></pre>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+        Connecté en tant que : L2 Informatique (l2info)      </div>
+      <div class="doc">
+        l3info/bd/tp1/sqlite.txt · Dernière modification: 2015/02/18 13:44 par aspicher      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+                              </div>
+      <div class="bar-right" id="bar__bottomright">
+                                        <form class="button btn_logout" method="get" action="/~aspicher/Wiki/l3info/bd/tp1/sqlite"><div class="no"><input name="do" value="logout" type="hidden"><input name="sectok" value="82424b0788480fc2ae883d95f50cf65a" type="hidden"><input value="Déconnexion" class="button" title="Déconnexion" type="submit"></div></form>                <a class="nolink" href="#dokuwiki__top"><input class="button" value="Haut de page" onclick="window.scrollTo(0, 0)" title="Haut de page" type="button"></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+  <div class="license">Sauf mention contraire, le contenu de ce wiki est placé sous la licence suivante:<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></div>
+</div>
+
+<div class="footerinc">
+
+  <a href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php" title="Recent changes RSS feed"><img src="TP%201%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/button-rss.png" alt="Recent changes RSS feed" height="15" width="80"></a>
+
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="CC Attribution-Noncommercial-Share Alike 3.0 Unported"><img src="TP%201%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/cc-by-nc-sa.png" alt="" height="15" width="80"></a>
+  
+  <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="TP%201%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/button-donate.gif" alt="Donate" height="15" width="80"></a>
+
+  <a href="http://www.php.net/" title="Powered by PHP"><img src="TP%201%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/button-php.gif" alt="Powered by PHP" height="15" width="80"></a>
+
+  <a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="TP%201%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/button-xhtml.png" alt="Valid XHTML 1.0" height="15" width="80"></a>
+
+  <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="TP%201%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/button-css.png" alt="Valid CSS" height="15" width="80"></a>
+
+  <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="TP%201%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/button-dw.png" alt="Driven by DokuWiki" height="15" width="80"></a>
+
+
+
+</div>
+
+<div class="no"><img src="TP%201%20de%20base%20de%20donn%C3%A9es%20%5BSpicher%5D_files/indexer.gif" alt="" height="1" width="1"></div>
+
+
+</body></html>

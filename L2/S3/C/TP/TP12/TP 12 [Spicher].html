@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    TP 12    [Spicher]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;">
+<meta name="robots" content="noindex,nofollow">
+<meta name="date" content="2015-12-03T08:55:20+0100">
+<meta name="keywords" content="l2info,progc,tp12">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/exe/opensearch.php" title="Spicher">
+<link rel="start" href="http://www.lacl.fr/%7Easpicher/Wiki/">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php?mode=list&amp;ns=l2info:progc">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.lacl.fr/%7Easpicher/Wiki/_export/xhtml/l2info/progc/tp12">
+<link rel="canonical" href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp12">
+<link rel="stylesheet" media="all" type="text/css" href="TP%2012%20%5BSpicher%5D_files/css.css">
+<link rel="stylesheet" media="screen" type="text/css" href="TP%2012%20%5BSpicher%5D_files/css_003.css">
+<link rel="stylesheet" media="print" type="text/css" href="TP%2012%20%5BSpicher%5D_files/css_002.css">
+<script type="text/javascript" charset="utf-8"><!--//--><![CDATA[//><!--
+var NS='l2info:progc';var SIG=' --- //[[antoine.spicher@u-pec.fr|L2 Informatique]] 2015/12/04 18:22//';var JSINFO = {"id":"l2info:progc:tp12","namespace":"l2info:progc"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="TP%2012%20%5BSpicher%5D_files/js.php"></script>
+
+  <link rel="shortcut icon" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/tpl/default/images/favicon.ico">
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp12?do=backlink" title="Liens vers cette page">TP 12</a>]]
+      </div>
+      <div class="logo">
+        <a href="http://www.lacl.fr/%7Easpicher/Wiki/" name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]">Spicher</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                      </div>
+
+      <div class="bar-right" id="bar__topright">
+                &nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+        <div class="breadcrumbs">
+      <span class="bchead">Piste:</span> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/start" class="breadcrumbs" title="start">Accueil</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/start" class="breadcrumbs" title="l2info:progc:start">Programmation en C (avancé)</a> <span class="bcsep">»</span> <span class="curid"><a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp12" class="breadcrumbs" title="l2info:progc:tp12">TP 12</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div style="cursor: pointer;" class="tocheader toctoggle" id="toc__header"><span class="toc_close" style="cursor: pointer;" id="toc__toggle"><span>−</span></span>Table des matières</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#tp_12" class="toc">TP 12</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#deboggage_avec_gdb" class="toc">Deboggage avec GDB</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#bibliotheque_de_manipulation_des_options" class="toc">Bibliothèque de manipulation des options</a></span></div></li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="tp_12" id="tp_12">TP 12</a></h1>
+<div class="level1">
+
+</div>
+
+<h2><a name="deboggage_avec_gdb" id="deboggage_avec_gdb">Deboggage avec GDB</a></h2>
+<div class="level2">
+
+<p>
+
+On considère le code suivant :
+</p>
+<div class="hiddenGlobal "><div class="hiddenOnHidden">
+<p>
+Code source du TP
+
+</p>
+</div><div class="hiddenOnVisible">
+<p>
+Code source du TP
+
+</p>
+</div><div class="hiddenElements"></div><div class="hiddenHead  hiddenActive hiddenSinceBeginning">
+<p>
+Code source du TP
+
+</p>
+</div><div style="display: none;" class="hiddenBody"><br>
+
+<pre class="code c"><span class="co2">#include &lt;stdio.h&gt;</span>
+<span class="co2">#include &lt;stdlib.h&gt;</span>
+<span class="co2">#include &lt;string.h&gt;</span>
+<span class="co2">#include &lt;stdbool.h&gt;</span>
+&nbsp;
+<span class="co2">#define EMPTY_STAFF ((staff)NULL)</span>
+&nbsp;
+<span class="kw4">typedef</span> <span class="kw4">struct</span> office_ <span class="br0">{</span>
+  <span class="kw4">int</span> num<span class="sy0">;</span>
+  <span class="kw4">char</span> post<span class="br0">[</span>4<span class="br0">]</span><span class="sy0">;</span>
+  <span class="kw4">unsigned</span> <span class="kw4">int</span> capacity<span class="sy0">;</span>
+  <span class="kw4">struct</span> person_<span class="sy0">**</span> mem<span class="sy0">;</span>
+<span class="br0">}</span> office<span class="sy0">;</span>
+&nbsp;
+<span class="kw4">typedef</span> <span class="kw4">struct</span> person_ <span class="br0">{</span>
+  <span class="kw4">char</span><span class="sy0">*</span> firstname<span class="sy0">;</span>
+  <span class="kw4">char</span><span class="sy0">*</span> lastname<span class="sy0">;</span>
+  office<span class="sy0">*</span> office<span class="sy0">;</span>
+  <span class="kw4">struct</span> person_ <span class="sy0">*</span>next<span class="sy0">;</span>
+  <span class="kw4">struct</span> person_ <span class="sy0">*</span>prev<span class="sy0">;</span>
+<span class="br0">}</span> person<span class="sy0">;</span>
+&nbsp;
+<span class="kw4">typedef</span> <span class="kw4">struct</span> person_<span class="sy0">*</span> staff<span class="sy0">;</span>
+&nbsp;
+<span class="kw4">typedef</span> <span class="kw4">struct</span> company_ <span class="br0">{</span>
+  <span class="kw4">unsigned</span> <span class="kw4">int</span> nb_offices<span class="sy0">;</span>
+  office<span class="sy0">*</span> offices<span class="sy0">;</span>
+  staff staff<span class="sy0">;</span>
+<span class="br0">}</span> company<span class="sy0">;</span>
+&nbsp;
+<span class="kw4">void</span> unset_office<span class="br0">(</span>office<span class="sy0">*</span> o<span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw1">if</span> <span class="br0">(</span>o <span class="sy0">==</span> NULL<span class="br0">)</span> <span class="kw1">return</span><span class="sy0">;</span>
+  free<span class="br0">(</span>o<span class="sy0">-&gt;</span>mem<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> set_office<span class="br0">(</span>office<span class="sy0">*</span> o<span class="sy0">,</span> <span class="kw4">int</span> num<span class="sy0">,</span> <span class="kw4">char</span> post<span class="br0">[</span>4<span class="br0">]</span><span class="sy0">,</span> <span class="kw4">unsigned</span> <span class="kw4">int</span> capacity<span class="br0">)</span> <span class="br0">{</span>
+  unset_office<span class="br0">(</span>o<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw4">unsigned</span> <span class="kw4">int</span> i<span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span>o <span class="sy0">==</span> NULL<span class="br0">)</span> <span class="kw1">return</span><span class="sy0">;</span>
+  o<span class="sy0">-&gt;</span>num <span class="sy0">=</span> num<span class="sy0">;</span>
+  memcpy<span class="br0">(</span>o<span class="sy0">-&gt;</span>post<span class="sy0">,</span> post<span class="sy0">,</span> 4<span class="br0">)</span><span class="sy0">;</span>
+  o<span class="sy0">-&gt;</span>capacity <span class="sy0">=</span> capacity<span class="sy0">;</span>
+  o<span class="sy0">-&gt;</span>mem <span class="sy0">=</span> <span class="br0">(</span>staff<span class="sy0">*</span><span class="br0">)</span> malloc<span class="br0">(</span>capacity <span class="sy0">*</span> <span class="kw4">sizeof</span><span class="br0">(</span>staff<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">for</span><span class="br0">(</span>i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> capacity<span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> o<span class="sy0">-&gt;</span>mem<span class="br0">[</span>i<span class="br0">]</span> <span class="sy0">=</span> NULL<span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+person<span class="sy0">*</span> new_person<span class="br0">(</span><span class="kw4">const</span> <span class="kw4">char</span><span class="sy0">*</span> fn<span class="sy0">,</span> <span class="kw4">const</span> <span class="kw4">char</span><span class="sy0">*</span> ln<span class="sy0">,</span> staff <span class="sy0">*</span>s<span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw1">if</span> <span class="br0">(</span>s <span class="sy0">==</span> NULL<span class="br0">)</span> <span class="kw1">return</span> NULL<span class="sy0">;</span>
+  person<span class="sy0">*</span> p <span class="sy0">=</span> <span class="br0">(</span>person<span class="sy0">*</span><span class="br0">)</span> malloc<span class="br0">(</span><span class="kw4">sizeof</span><span class="br0">(</span>person<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  p<span class="sy0">-&gt;</span>firstname <span class="sy0">=</span> malloc<span class="br0">(</span>strlen<span class="br0">(</span>fn<span class="br0">)</span> <span class="sy0">+</span> 1<span class="br0">)</span><span class="sy0">;</span> strcpy<span class="br0">(</span>p<span class="sy0">-&gt;</span>firstname<span class="sy0">,</span> fn<span class="br0">)</span><span class="sy0">;</span>
+  p<span class="sy0">-&gt;</span>lastname <span class="sy0">=</span> malloc<span class="br0">(</span>strlen<span class="br0">(</span>ln<span class="br0">)</span> <span class="sy0">+</span> 1<span class="br0">)</span><span class="sy0">;</span> strcpy<span class="br0">(</span>p<span class="sy0">-&gt;</span>lastname<span class="sy0">,</span> ln<span class="br0">)</span><span class="sy0">;</span>
+  p<span class="sy0">-&gt;</span>office <span class="sy0">=</span> NULL<span class="sy0">;</span>
+  p<span class="sy0">-&gt;</span>next <span class="sy0">=</span> <span class="sy0">*</span>s<span class="sy0">;</span>
+  <span class="kw1">if</span> <span class="br0">(</span><span class="sy0">*</span>s <span class="sy0">==</span> NULL<span class="br0">)</span>
+    p<span class="sy0">-&gt;</span>prev <span class="sy0">=</span> NULL<span class="sy0">;</span>
+  <span class="kw1">else</span> <span class="br0">{</span>
+    p<span class="sy0">-&gt;</span>prev <span class="sy0">=</span> <span class="br0">(</span><span class="sy0">*</span>s<span class="br0">)</span><span class="sy0">-&gt;</span>prev<span class="sy0">;</span>
+    <span class="br0">(</span><span class="sy0">*</span>s<span class="br0">)</span><span class="sy0">-&gt;</span>prev <span class="sy0">=</span> p<span class="sy0">;</span>
+  <span class="br0">}</span>
+  <span class="sy0">*</span>s <span class="sy0">=</span> p<span class="sy0">;</span>
+  <span class="kw1">return</span> p<span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> delete_staff<span class="br0">(</span>staff s<span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw1">while</span><span class="br0">(</span>s <span class="sy0">!=</span> EMPTY_STAFF<span class="br0">)</span> <span class="br0">{</span>
+    staff next <span class="sy0">=</span> s<span class="sy0">-&gt;</span>next<span class="sy0">;</span>
+    free<span class="br0">(</span>s<span class="sy0">-&gt;</span>firstname<span class="br0">)</span><span class="sy0">;</span>
+    free<span class="br0">(</span>s<span class="sy0">-&gt;</span>lastname<span class="br0">)</span><span class="sy0">;</span>
+    free<span class="br0">(</span>s<span class="br0">)</span><span class="sy0">;</span>
+    s <span class="sy0">=</span> next<span class="sy0">;</span>
+  <span class="br0">}</span>
+<span class="br0">}</span>
+&nbsp;
+company<span class="sy0">*</span> new_company<span class="br0">(</span><span class="kw4">unsigned</span> <span class="kw4">int</span> nb_offices<span class="br0">)</span> <span class="br0">{</span>
+  company<span class="sy0">*</span> c <span class="sy0">=</span> <span class="br0">(</span>company<span class="sy0">*</span><span class="br0">)</span> malloc<span class="br0">(</span><span class="kw4">sizeof</span><span class="br0">(</span>company<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  c<span class="sy0">-&gt;</span>nb_offices <span class="sy0">=</span> nb_offices<span class="sy0">;</span>
+  c<span class="sy0">-&gt;</span>offices <span class="sy0">=</span> <span class="br0">(</span>office<span class="sy0">*</span><span class="br0">)</span> calloc<span class="br0">(</span>nb_offices<span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span>office<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  c<span class="sy0">-&gt;</span>staff <span class="sy0">=</span> EMPTY_STAFF<span class="sy0">;</span>
+  <span class="kw1">return</span> c<span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> delete_company<span class="br0">(</span>company<span class="sy0">*</span> c<span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw1">if</span> <span class="br0">(</span>c <span class="sy0">==</span> NULL<span class="br0">)</span> <span class="kw1">return</span><span class="sy0">;</span>
+  <span class="kw4">unsigned</span> <span class="kw4">int</span> i<span class="sy0">;</span>
+  <span class="kw1">for</span><span class="br0">(</span>i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> c<span class="sy0">-&gt;</span>nb_offices<span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span> unset_office<span class="br0">(</span>c<span class="sy0">-&gt;</span>offices<span class="sy0">+</span>i<span class="br0">)</span><span class="sy0">;</span>
+  free<span class="br0">(</span>c<span class="sy0">-&gt;</span>offices<span class="br0">)</span><span class="sy0">;</span>
+  delete_staff<span class="br0">(</span>c<span class="sy0">-&gt;</span>staff<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> print_person<span class="br0">(</span>person<span class="sy0">*</span> p<span class="br0">)</span> <span class="br0">{</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"%s %s"</span><span class="sy0">,</span> p<span class="sy0">-&gt;</span>firstname<span class="sy0">,</span> p<span class="sy0">-&gt;</span>lastname<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> print_office<span class="br0">(</span>office<span class="sy0">*</span> o<span class="br0">)</span> <span class="br0">{</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"%d (post %c%c%c%c)"</span><span class="sy0">,</span> o<span class="sy0">-&gt;</span>num<span class="sy0">,</span> o<span class="sy0">-&gt;</span>post<span class="br0">[</span>0<span class="br0">]</span><span class="sy0">,</span> o<span class="sy0">-&gt;</span>post<span class="br0">[</span>1<span class="br0">]</span><span class="sy0">,</span> o<span class="sy0">-&gt;</span>post<span class="br0">[</span>2<span class="br0">]</span><span class="sy0">,</span> o<span class="sy0">-&gt;</span>post<span class="br0">[</span>3<span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> print<span class="br0">(</span>company<span class="sy0">*</span> c<span class="br0">)</span> <span class="br0">{</span>
+  staff s <span class="sy0">=</span> c<span class="sy0">-&gt;</span>staff<span class="sy0">;</span>
+  <span class="kw1">while</span><span class="br0">(</span>s <span class="sy0">!=</span> EMPTY_STAFF<span class="br0">)</span> <span class="br0">{</span>
+    print_person<span class="br0">(</span>s<span class="br0">)</span><span class="sy0">;</span>
+    <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">": "</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">if</span> <span class="br0">(</span>s<span class="sy0">-&gt;</span>office <span class="sy0">==</span> NULL<span class="br0">)</span>
+      <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"No office"</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">else</span>
+      print_office<span class="br0">(</span>s<span class="sy0">-&gt;</span>office<span class="br0">)</span><span class="sy0">;</span>
+    <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+    s <span class="sy0">=</span> s<span class="sy0">-&gt;</span>next<span class="sy0">;</span>
+  <span class="br0">}</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> print_reverse<span class="br0">(</span>company<span class="sy0">*</span> c<span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw4">unsigned</span> <span class="kw4">int</span> i<span class="sy0">,</span> j<span class="sy0">;</span>
+  <span class="kw1">for</span><span class="br0">(</span>i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> c<span class="sy0">-&gt;</span>nb_offices<span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span>
+    <span class="kw1">if</span> <span class="br0">(</span>c<span class="sy0">-&gt;</span>offices<span class="br0">[</span>i<span class="br0">]</span>.<span class="me1">mem</span> <span class="sy0">!=</span> NULL<span class="br0">)</span> <span class="br0">{</span>
+      print_office<span class="br0">(</span>c<span class="sy0">-&gt;</span>offices<span class="sy0">+</span>i<span class="br0">)</span><span class="sy0">;</span>
+      <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">":<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="kw1">for</span><span class="br0">(</span>j <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> j <span class="sy0">&lt;</span> c<span class="sy0">-&gt;</span>offices<span class="br0">[</span>i<span class="br0">]</span>.<span class="me1">capacity</span><span class="sy0">;</span> j<span class="sy0">++</span><span class="br0">)</span> <span class="br0">{</span>
+        <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"<span class="es1">\t</span> - place %d: "</span><span class="sy0">,</span> j<span class="br0">)</span><span class="sy0">;</span>
+        print_person<span class="br0">(</span>c<span class="sy0">-&gt;</span>offices<span class="br0">[</span>i<span class="br0">]</span>.<span class="me1">mem</span><span class="br0">[</span>j<span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span>
+        <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+    <span class="br0">}</span>
+<span class="br0">}</span>
+&nbsp;
+bool assign<span class="br0">(</span>person<span class="sy0">*</span> p<span class="sy0">,</span> office<span class="sy0">*</span> o<span class="br0">)</span> <span class="br0">{</span>
+  <span class="co1">// To be implemented</span>
+  <span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+bool unassign<span class="br0">(</span>person<span class="sy0">*</span> p<span class="br0">)</span> <span class="br0">{</span>
+  <span class="co1">// To be implemented</span>
+  <span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+&nbsp;
+  company<span class="sy0">*</span> c <span class="sy0">=</span> new_company<span class="br0">(</span>5<span class="br0">)</span><span class="sy0">;</span>
+  person<span class="sy0">*</span> p1 <span class="sy0">=</span> new_person<span class="br0">(</span><span class="st0">"Toto"</span><span class="sy0">,</span><span class="st0">"Aaa"</span><span class="sy0">,&amp;</span><span class="br0">(</span>c<span class="sy0">-&gt;</span>staff<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  person<span class="sy0">*</span> p2 <span class="sy0">=</span> new_person<span class="br0">(</span><span class="st0">"Tata"</span><span class="sy0">,</span><span class="st0">"Bbb"</span><span class="sy0">,&amp;</span><span class="br0">(</span>c<span class="sy0">-&gt;</span>staff<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  person<span class="sy0">*</span> p3 <span class="sy0">=</span> new_person<span class="br0">(</span><span class="st0">"Tete"</span><span class="sy0">,</span><span class="st0">"Ccc"</span><span class="sy0">,&amp;</span><span class="br0">(</span>c<span class="sy0">-&gt;</span>staff<span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  set_office<span class="br0">(</span>c<span class="sy0">-&gt;</span>offices <span class="sy0">+</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">101</span><span class="sy0">,</span> <span class="st0">"1234"</span><span class="sy0">,</span> 3<span class="br0">)</span><span class="sy0">;</span>
+  set_office<span class="br0">(</span>c<span class="sy0">-&gt;</span>offices <span class="sy0">+</span> <span class="nu0">2</span><span class="sy0">,</span> <span class="nu0">103</span><span class="sy0">,</span> <span class="st0">"1236"</span><span class="sy0">,</span> 1<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  print<span class="br0">(</span>c<span class="br0">)</span> <span class="sy0">;</span>
+  print_reverse<span class="br0">(</span>c<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  assign<span class="br0">(</span>p1<span class="sy0">,</span> c<span class="sy0">-&gt;</span>offices <span class="sy0">+</span> 0<span class="br0">)</span><span class="sy0">;</span>
+  assign<span class="br0">(</span>p2<span class="sy0">,</span> c<span class="sy0">-&gt;</span>offices <span class="sy0">+</span> 2<span class="br0">)</span><span class="sy0">;</span>
+  assign<span class="br0">(</span>p3<span class="sy0">,</span> c<span class="sy0">-&gt;</span>offices <span class="sy0">+</span> 0<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  print<span class="br0">(</span>c<span class="br0">)</span> <span class="sy0">;</span>
+  print_reverse<span class="br0">(</span>c<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  unassign<span class="br0">(</span>p2<span class="br0">)</span><span class="sy0">;</span>
+  assign<span class="br0">(</span>p2<span class="sy0">,</span> c<span class="sy0">-&gt;</span>offices <span class="sy0">+</span> 0<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  print<span class="br0">(</span>c<span class="br0">)</span> <span class="sy0">;</span>
+  print_reverse<span class="br0">(</span>c<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  unassign<span class="br0">(</span>p3<span class="br0">)</span><span class="sy0">;</span>
+  assign<span class="br0">(</span>p3<span class="sy0">,</span> c<span class="sy0">-&gt;</span>offices <span class="sy0">+</span> 2<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  print<span class="br0">(</span>c<span class="br0">)</span> <span class="sy0">;</span>
+  print_reverse<span class="br0">(</span>c<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  unassign<span class="br0">(</span>p1<span class="br0">)</span><span class="sy0">;</span>
+  assign<span class="br0">(</span>p1<span class="sy0">,</span> c<span class="sy0">-&gt;</span>offices <span class="sy0">+</span> 2<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  print<span class="br0">(</span>c<span class="br0">)</span> <span class="sy0">;</span>
+  print_reverse<span class="br0">(</span>c<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  delete_company<span class="br0">(</span>c<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+</div></div><ol>
+<li class="level1"><div class="li"> Expliquer par un graphique l'évolution de la mémoire de ce programme</div>
+</li>
+<li class="level1"><div class="li"> Lancer ce programme à l'aide de l'outil <code>GDB</code> afin de déterminer la source de l'erreur de ségmentation</div>
+</li>
+<li class="level1"><div class="li"> Écrire les fonctions de prototypes respectifs <code>bool assign(person* p, office* o)</code> et <code>bool unassign(person* p)</code>
+ qui permettent d'affecter et de retirer une personne d'un bureau ; les 
+fonctions retournent si l'opération a été effectuée avec succès</div>
+</li>
+<li class="level1"><div class="li"> Séparer le programme en 3 modules : <code>staff</code>, <code>office</code> et <code>company</code> ; on prendra soin de ne pas partager les définitions des types de données</div>
+</li>
+<li class="level1"><div class="li"> [OPTIONNEL] Implanter les fonctions d'entrées/sorties <code>save_company</code> et <code>load_company</code> à la façon vue en cours</div>
+</li>
+</ol>
+
+</div>
+
+<h2><a name="bibliotheque_de_manipulation_des_options" id="bibliotheque_de_manipulation_des_options">Bibliothèque de manipulation des options</a></h2>
+<div class="level2">
+
+<p>
+
+On rappelle qu'il est possible de récupérer les arguments passées en ligne de commande à programme C par les paramètres <code>argc</code> et <code>argv</code> de la fonction <code>main</code> comme dans l'exemple suivant :
+
+</p>
+<pre class="code c"><span class="co2">#include &lt;stdlib.h&gt;</span>
+<span class="co2">#include &lt;stdio.h&gt;</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="kw4">int</span> argc<span class="sy0">,</span> <span class="kw4">char</span><span class="sy0">**</span> argv<span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw4">int</span> i<span class="sy0">;</span>
+&nbsp;
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Programme '%s' lancé avec %d option(s) :<span class="es1">\n</span>"</span><span class="sy0">,</span> argv<span class="br0">[</span>0<span class="br0">]</span><span class="sy0">,</span> argc<span class="sy0">-</span>1<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">for</span><span class="br0">(</span>i <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> argc<span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span>
+    <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Option %d : %s<span class="es1">\n</span>"</span><span class="sy0">,</span> i<span class="sy0">,</span> argv<span class="br0">[</span>i<span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+<p>
+On vous demande de développer une bibliothèque afin d'automatiser le 
+traitement de ces arguments. Pour cela on suppose que l'utilisateur 
+entre des arguments sous la forme d'<em>options</em>. Une option est constituée d'un <em>mot-clé</em>, une chaîne de caractères commençant par un ”<code>-</code>”.
+ Suivant les cas, le mot-clé peut être suivi d'un paramètre qui sera 
+soit entier, soit un nombre flottant, soit une chaîne de caractères.
+</p>
+
+<p>
+En considérant l'appel suivant :
+
+</p>
+<pre class="code">appli -i toto -z 300 -v -r 3.1415 -o tutu
+</pre>
+
+<p>
+
+l'utilisateur a spécifié 5 options :
+</p>
+<ol>
+<li class="level1"><div class="li"> <code>-i</code> avec un paramètre de type chaîne de caractères <code>“toto”</code>,</div>
+</li>
+<li class="level1"><div class="li"> <code>-z</code> avec un paramètre entier <code>300</code>,</div>
+</li>
+<li class="level1"><div class="li"> <code>-v</code> sans paramètre),</div>
+</li>
+<li class="level1"><div class="li"> <code>-r</code> avec un paramètre flottant <code>3.1415</code>, et</div>
+</li>
+<li class="level1"><div class="li"> <code>-o</code> avec un paramètre de type chaîne de caractères <code>“tutu”</code>.</div>
+</li>
+</ol>
+
+<p>
+
+Pour parser une telle ligne de commande, on propose de reposer sur le type suivant :
+
+</p>
+<pre class="code c"><span class="kw4">typedef</span> <span class="kw4">struct</span> option_s <span class="br0">{</span>
+  <span class="kw4">const</span> <span class="kw4">char</span><span class="sy0">*</span> keyword<span class="sy0">;</span>
+  <span class="kw2">enum</span> <span class="br0">{</span> OptVoid<span class="sy0">,</span> OptInt<span class="sy0">,</span> OptString<span class="sy0">,</span> OptFloat <span class="br0">}</span> spec<span class="sy0">;</span>
+  <span class="kw4">union</span> <span class="br0">{</span>
+    <span class="kw4">void</span> <span class="br0">(</span><span class="sy0">*</span>opt_void<span class="br0">)</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw4">void</span> <span class="br0">(</span><span class="sy0">*</span>opt_int<span class="br0">)</span><span class="br0">(</span><span class="kw4">int</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw4">void</span> <span class="br0">(</span><span class="sy0">*</span>opt_str<span class="br0">)</span><span class="br0">(</span><span class="kw4">const</span> <span class="kw4">char</span><span class="sy0">*</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw4">void</span> <span class="br0">(</span><span class="sy0">*</span>opt_float<span class="br0">)</span><span class="br0">(</span><span class="kw4">float</span><span class="br0">)</span><span class="sy0">;</span>
+  <span class="br0">}</span> fct<span class="sy0">;</span>
+  <span class="kw4">struct</span> option_s<span class="sy0">*</span> next<span class="sy0">;</span>
+<span class="br0">}</span> option_t<span class="sy0">;</span></pre>
+
+<p>
+
+encodant une liste chaînée de spécification d'options. Chaque élément de la liste associe à un mot-clé (champ <code>keyword</code>) une fonction (champ <code>fct</code>) à appliquer pour réaliser l'option. Le champ <code>fct</code>
+ correspond donc à un pointeur de fonction. Cependant, suivant le type 
+de paramètre de l'option (aucun, entier, flottant ou chaîne de 
+caractères), spécifié par le champ <code><acronym title="specification">spec</acronym></code>, le type de la fonction diffère (d'où l'utilisation d'une <code>union</code>). 
+</p>
+
+<p>
+On vous demande de programmer les éléments suivants :
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>NOOPTION</code> : une constante de type <code>option_t*</code> correspondant à une liste vide d'option</div>
+</li>
+<li class="level1"><div class="li"> <code>option_t* opt_void(option_t* l, const char* kw, void (*f)())</code> : ajoute à la liste d'options <code>l</code> une nouvelle option de mot-clé <code>kw</code> sans paramètre associé à la fonctionnalité <code>f</code></div>
+</li>
+<li class="level1"><div class="li"> <code>option_t* opt_int(option_t* l, const char* kw, void (*f)(int))</code> : ajoute à la liste d'options <code>l</code> une nouvelle option de mot-clé <code>kw</code> avec paramètre entier associé à la fonctionnalité <code>f</code></div>
+</li>
+<li class="level1"><div class="li"> <code>option_t* opt_float(option_t* l, const char* kw, void (*f)(float))</code> : ajoute à la liste d'options <code>l</code> une nouvelle option de mot-clé <code>kw</code> avec paramètre flottant associé à la fonctionnalité <code>f</code></div>
+</li>
+<li class="level1"><div class="li"> <code>option_t* opt_string(option_t* l, const char* kw, void (*f)(const char*))</code> : ajoute à la liste d'options <code>l</code> une nouvelle option de mot-clé <code>kw</code> avec paramètre de type chaîne de caractères associé à la fonctionnalité <code>f</code></div>
+</li>
+<li class="level1"><div class="li"> <code>void process_arguments(option_t* l, int argc, char* *argv)</code> : applique les options de la liste <code>l</code> (càd lance les fonctions associées aux mots-clés) à partir des arguments passés en ligne de commande</div>
+</li>
+</ul>
+
+<p>
+
+Le bout de code suivant permettra de tester vos fonctions :
+
+</p>
+<pre class="code c"><span class="kw4">void</span> f1<span class="br0">(</span><span class="kw4">const</span> <span class="kw4">char</span><span class="sy0">*</span> str<span class="br0">)</span> <span class="br0">{</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"F1: %s<span class="es1">\n</span>"</span><span class="sy0">,</span> str<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> f2<span class="br0">(</span><span class="kw4">int</span> i<span class="br0">)</span> <span class="br0">{</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"F2: %d<span class="es1">\n</span>"</span><span class="sy0">,</span> i<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> f3<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"F3: no param<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">void</span> f4<span class="br0">(</span><span class="kw4">float</span> f<span class="br0">)</span> <span class="br0">{</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"F4: %f<span class="es1">\n</span>"</span><span class="sy0">,</span> f<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="kw4">int</span> argc<span class="sy0">,</span> <span class="kw4">char</span><span class="sy0">**</span> argv<span class="br0">)</span> <span class="br0">{</span>
+  option_t<span class="sy0">*</span> opt <span class="sy0">=</span> NOOPTION<span class="sy0">;</span>
+  opt <span class="sy0">=</span> opt_str<span class="br0">(</span>opt<span class="sy0">,</span> <span class="st0">"-a"</span><span class="sy0">,</span> f1<span class="br0">)</span><span class="sy0">;</span>
+  opt <span class="sy0">=</span> opt_int<span class="br0">(</span>opt<span class="sy0">,</span> <span class="st0">"-b"</span><span class="sy0">,</span> f2<span class="br0">)</span><span class="sy0">;</span>
+  opt <span class="sy0">=</span> opt_void<span class="br0">(</span>opt<span class="sy0">,</span> <span class="st0">"-c"</span><span class="sy0">,</span> f3<span class="br0">)</span><span class="sy0">;</span>
+  opt <span class="sy0">=</span> opt_float<span class="br0">(</span>opt<span class="sy0">,</span> <span class="st0">"-d"</span><span class="sy0">,</span> f4<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  process_options<span class="br0">(</span>opt<span class="sy0">,</span> argc<span class="sy0">,</span> argv<span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+<p>
+Voici un exemple d'appel et le résultat attendu :
+
+</p>
+<pre class="code sh">./tp12.exe -a toto -a tata -c -b 123 -b 321 -a -d -d 123.321
+F1: toto
+F1: tata
+F3: no param
+F2: 123
+F2: 321
+F1: -d
+F4: 123.320999</pre>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+        Connecté en tant que : L2 Informatique (l2info)      </div>
+      <div class="doc">
+        l2info/progc/tp12.txt · Dernière modification: 2015/12/03 08:55 par aspicher      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+                              </div>
+      <div class="bar-right" id="bar__bottomright">
+                                        <form class="button btn_logout" method="get" action="/~aspicher/Wiki/l2info/progc/tp12"><div class="no"><input name="do" value="logout" type="hidden"><input name="sectok" value="1ed1f3a47c963d7ef11c893f362ff3c4" type="hidden"><input value="Déconnexion" class="button" title="Déconnexion" type="submit"></div></form>                <a class="nolink" href="#dokuwiki__top"><input class="button" value="Haut de page" onclick="window.scrollTo(0, 0)" title="Haut de page" type="button"></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+  <div class="license">Sauf mention contraire, le contenu de ce wiki est placé sous la licence suivante:<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></div>
+</div>
+
+<div class="footerinc">
+
+  <a href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php" title="Recent changes RSS feed"><img src="TP%2012%20%5BSpicher%5D_files/button-rss.png" alt="Recent changes RSS feed" height="15" width="80"></a>
+
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="CC Attribution-Noncommercial-Share Alike 3.0 Unported"><img src="TP%2012%20%5BSpicher%5D_files/cc-by-nc-sa.png" alt="" height="15" width="80"></a>
+  
+  <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="TP%2012%20%5BSpicher%5D_files/button-donate.gif" alt="Donate" height="15" width="80"></a>
+
+  <a href="http://www.php.net/" title="Powered by PHP"><img src="TP%2012%20%5BSpicher%5D_files/button-php.gif" alt="Powered by PHP" height="15" width="80"></a>
+
+  <a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="TP%2012%20%5BSpicher%5D_files/button-xhtml.png" alt="Valid XHTML 1.0" height="15" width="80"></a>
+
+  <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="TP%2012%20%5BSpicher%5D_files/button-css.png" alt="Valid CSS" height="15" width="80"></a>
+
+  <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="TP%2012%20%5BSpicher%5D_files/button-dw.png" alt="Driven by DokuWiki" height="15" width="80"></a>
+
+
+
+</div>
+
+<div class="no"><img src="TP%2012%20%5BSpicher%5D_files/indexer.gif" alt="" height="1" width="1"></div>
+
+
+</body></html>

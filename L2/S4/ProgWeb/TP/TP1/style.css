@@ -1,0 +1,44 @@
+table {
+border-collapse: collapse;
+}
+
+td, th, tr {
+border: 1px solid black;
+}
+
+h1 {
+	text-align: center;
+	text-decoration: underline; font-weight: bold;
+	border: solid 1px white;
+	border-radius: 10px 5px 50px 50px;
+
+
+}
+
+p {
+	width: 50%;
+	height: 50%;
+	max-width: 50px;
+}
+
+a:hover {
+	color: white;
+	font-style: oblique; 
+	background: url("firefox.png") fixed center;
+}
+
+body {
+	background-color: black;
+	color: white;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.flottant {
+	float: left;
+}
+
+.StopFlottant {
+	clear: both;
+}

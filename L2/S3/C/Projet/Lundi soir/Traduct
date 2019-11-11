@@ -1,0 +1,43 @@
+MenuSave
+Souhaitez vous modifier le nom de l'image avant de Sauvegarder ?
+Veuillez entrer le nouveau nom
+
+MenuLoad
+Entrez le nom du fichier a ouvrir:
+
+All
+Erreur dans le chargement de l'image, pensez à vérifier l'ortographe.
+Aucune image chargée, opération impossible. Veuillez charger une image.
+
+MenuCrop/Resize
+Entrez la valeur x du pixel: 
+Entrez la nouvelle largeur souhaitée: 
+Entrez la nouvelle hauteur souhaitée: 
+
+Pivot
+Image pivotée avec succès !
+
+NoirEtBlanc
+Souhaitez vous utiliser le seuil par défaut ?    //seuil dans le sens une valeur seuil
+Veuillez entrer le nouveau seuil: 
+
+PrintDataimg
+Affichage de l'image: 
+
+Crop
+Veuillez rentrer les coordonnées d'un pixel qui est dans l'image.
+Les nouvelles dimensions sont incohérentes avec les dimensions initiales de l'image.
+Les nouvelles dimensions de l'image sont incohérentes avec le pixel donné.
+
+Menu
+Choix incorrect, retour au menu principal. Pour accéder au wiki, tapez help				
+Vous etes déjà au menu principal.
+
+wiki
+Pour accèder à un champs particulier, veuillez entrer le caractère indiqué	//champs dans le sens un champs dans un formulaire à remplir
+  à gauche de l'option décrite
+>: Cette flèche signifie que le champs en question est un sous menu.
+X: Cette croix apparaitra à coté de chaque action, tant qu'aucune image ne sera chargée.
+   Dans ce cas, toute action sera sans conséquence.
+A tout moment vous pouvez entrer Quit,quit,quitter,exit etc. pour QUITTER l'application,
+  et Help pour revenir sur cette aide.

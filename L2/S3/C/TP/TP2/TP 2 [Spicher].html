@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    TP 2    [Spicher]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-09-24T11:44:03+0200">
+<meta name="keywords" content="l2info,progc,tp2">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/exe/opensearch.php" title="Spicher">
+<link rel="start" href="http://www.lacl.fr/%7Easpicher/Wiki/">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php?mode=list&amp;ns=l2info:progc">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://www.lacl.fr/%7Easpicher/Wiki/_export/xhtml/l2info/progc/tp2">
+<link rel="canonical" href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp2">
+<link rel="stylesheet" media="all" type="text/css" href="TP%202%20%5BSpicher%5D_files/css.css">
+<link rel="stylesheet" media="screen" type="text/css" href="TP%202%20%5BSpicher%5D_files/css_003.css">
+<link rel="stylesheet" media="print" type="text/css" href="TP%202%20%5BSpicher%5D_files/css_002.css">
+<script type="text/javascript" charset="utf-8"><!--//--><![CDATA[//><!--
+var NS='l2info:progc';var SIG=' --- //[[antoine.spicher@u-pec.fr|L2 Informatique]] 2015/11/29 18:35//';var JSINFO = {"id":"l2info:progc:tp2","namespace":"l2info:progc"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="TP%202%20%5BSpicher%5D_files/js.php"></script>
+
+  <link rel="shortcut icon" href="http://www.lacl.fr/%7Easpicher/Wiki/lib/tpl/default/images/favicon.ico">
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp2?do=backlink" title="Liens vers cette page">TP 2</a>]]
+      </div>
+      <div class="logo">
+        <a href="http://www.lacl.fr/%7Easpicher/Wiki/" name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]">Spicher</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                      </div>
+
+      <div class="bar-right" id="bar__topright">
+                &nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+        <div class="breadcrumbs">
+      <span class="bchead">Piste:</span> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/start" class="breadcrumbs" title="start">Accueil</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/start" class="breadcrumbs" title="l2info:progc:start">Programmation en C (avancé)</a> <span class="bcsep">»</span> <a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp1" class="breadcrumbs" title="l2info:progc:tp1">TP 1</a> <span class="bcsep">»</span> <span class="curid"><a href="http://www.lacl.fr/%7Easpicher/Wiki/l2info/progc/tp2" class="breadcrumbs" title="l2info:progc:tp2">TP 2</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div style="cursor: pointer;" class="tocheader toctoggle" id="toc__header"><span class="toc_close" style="cursor: pointer;" id="toc__toggle"><span>−</span></span>Table des matières</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="#tp_2" class="toc">TP 2</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#tailles_des_differentes_representations_entieres" class="toc">Tailles des différentes représentations entières</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#afficher_des_entiers" class="toc">Afficher des entiers</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#conversion_d_un_entier_non-signe_en_binaire" class="toc">Conversion d'un entier non-signé en binaire</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#decalage_et_masques" class="toc">Décalage et masques</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="#formatage_des_dates_et_des_heures" class="toc">Formatage des dates et des heures</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="#nombre_de_secondes_ecoulees_depuis" class="toc">Nombre de secondes écoulées depuis ...</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#plus_de_formats" class="toc">Plus de formats</a></span></div></li></ul>
+</li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="tp_2" id="tp_2">TP 2</a></h1>
+<div class="level1">
+
+<p>
+
+Ce TP a pour objectif de comprendre la représentation binaire des entiers en C.
+</p>
+
+
+
+</div>
+
+<h2><a name="tailles_des_differentes_representations_entieres" id="tailles_des_differentes_representations_entieres">Tailles des différentes représentations entières</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Compilez, exécutez et comprenez le code suivant : <pre class="code c"><span class="co2">#include &lt;limits.h&gt;</span>
+<span class="co2">#include &lt;stdio.h&gt;</span>
+<span class="co2">#include &lt;stdlib.h&gt;</span>
+&nbsp;
+<span class="kw4">int</span> main <span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Size of char: %lu<span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span><span class="kw4">char</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Signed char min/max: %hhd/%hhd<span class="es1">\n</span>"</span><span class="sy0">,</span> CHAR_MIN<span class="sy0">,</span> CHAR_MAX <span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Unsigned char min/max: %hhu/%hhu<span class="es1">\n</span>"</span><span class="sy0">,</span> 0<span class="sy0">,</span> UCHAR_MAX <span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Size of short: %lu<span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span><span class="kw4">short</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Signed short min/max: %hd/%hd<span class="es1">\n</span>"</span><span class="sy0">,</span> SHRT_MIN<span class="sy0">,</span> SHRT_MAX <span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Unsigned short min/max: %hu/%hu<span class="es1">\n</span>"</span><span class="sy0">,</span> 0<span class="sy0">,</span> USHRT_MAX <span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Size of int: %lu<span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span><span class="kw4">int</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Signed int min/max: %d/%d<span class="es1">\n</span>"</span><span class="sy0">,</span> INT_MIN<span class="sy0">,</span> INT_MAX <span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Unsigned int min/max: %u/%u<span class="es1">\n</span>"</span><span class="sy0">,</span> 0<span class="sy0">,</span> UINT_MAX <span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Size of long: %lu<span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span><span class="kw4">long</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Signed long min/max: %ld/%ld<span class="es1">\n</span>"</span><span class="sy0">,</span> LONG_MIN<span class="sy0">,</span> LONG_MAX <span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Unsigned long min/max: %lu/%lu<span class="es1">\n</span>"</span><span class="sy0">,</span> 0L<span class="sy0">,</span> ULONG_MAX <span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Size of llong: %lu<span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="kw4">sizeof</span><span class="br0">(</span><span class="kw4">long</span> <span class="kw4">long</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span> 
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Signed llong min/max: %lld/%lld<span class="es1">\n</span>"</span><span class="sy0">,</span> LLONG_MIN<span class="sy0">,</span> LLONG_MAX <span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Unsigned llong min/max: %llu/%llu<span class="es1">\n</span>"</span><span class="sy0">,</span> 0LL<span class="sy0">,</span> ULLONG_MAX <span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="afficher_des_entiers" id="afficher_des_entiers">Afficher des entiers</a></h2>
+<div class="level2">
+
+<p>
+
+La fonction <code>printf</code> propose différents formats d'affichage d'entiers. Par exemple, <code>%d</code> (ou de façon équivalente <code>%i</code>) permet l'affichage d'un entier sous sa forme décimale.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Affichez les entiers du tableau suivant : <pre class="code c"><span class="kw4">int</span> entiers<span class="br0">[</span>10<span class="br0">]</span> <span class="sy0">=</span> <span class="br0">{</span> 0<span class="sy0">,</span> <span class="sy0">-</span>0<span class="sy0">,</span> <span class="sy0">-</span>1<span class="sy0">,</span> 11<span class="sy0">,</span> 96<span class="sy0">,</span> 4567<span class="sy0">,</span> <span class="sy0">-</span>255<span class="sy0">,</span> 582<span class="sy0">,</span> 2147483700<span class="sy0">,</span> 4294967416 <span class="br0">}</span><span class="sy0">;</span></pre>
+
+<p>
+ en utilisant les formats <code>%d</code>, <code>%u</code>, <code>%o</code>, <code>%x</code>, <code>%X</code> et <code>%c</code>
+ et commentez pour chaque cas le warning le cas échéant et le résultat 
+affiché. Faites valider vos commentaires par le chargé de TP.
+</p>
+</div>
+</li>
+<li class="level1"><div class="li"> Modifiez les formats utilisés dans le code de l'exercice précédent pour afficher les nombres limites en hexadécimal.</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="conversion_d_un_entier_non-signe_en_binaire" id="conversion_d_un_entier_non-signe_en_binaire">Conversion d'un entier non-signé en binaire</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Calculez sur une feuille la représentation binaire de l'entier <img src="TP%202%20%5BSpicher%5D_files/fetch.png" class="latex_inline" alt="$1234$" title="Math">.
+ On rappelle que la décomposition binaire d'un entier s'obtient par les 
+restes successifs de la division par 2. Faites valider votre résultat 
+par le chargé de TP.</div>
+</li>
+<li class="level1"><div class="li"> Ecrivez une fonction C <code>void printbin(unsigned int n)</code> qui, étant donné un entier non-signé <code>n</code>,
+ affiche à l'écran sa décomposition binaire en utilisant la méthode de 
+la division par 2. Les bits seront affichés dans l'ordre du calcul (du 
+poids le plus faible au poids le plus fort). Testez votre fonction en 
+l'appelant dans une fonction 'main' demandant la saisie d'un entier au 
+clavier (fonction 'scanf').</div>
+</li>
+<li class="level1"><div class="li"> Proposez une autre solution pour afficher les bits dans le bon ordre (du poids le fort au plus faible). Testez votre fonction.</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="decalage_et_masques" id="decalage_et_masques">Décalage et masques</a></h2>
+<div class="level2">
+
+<p>
+
+Dans cet exercice, les entiers seront affichés dans leurs représentations décimale, hexadécimale et binaire.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Pour <code>i</code> allant de <img src="TP%202%20%5BSpicher%5D_files/fetch_005.png" class="latex_inline" alt="$-2$" title="Math"> à <img src="TP%202%20%5BSpicher%5D_files/fetch_010.png" class="latex_inline" alt="$5$" title="Math">, calculez et affichez des décalages de <code>i</code> vers la droite et vers la gauche de <img src="TP%202%20%5BSpicher%5D_files/fetch_012.png" class="latex_inline" alt="$1$" title="Math">, <img src="TP%202%20%5BSpicher%5D_files/fetch_014.png" class="latex_inline" alt="$2$" title="Math">, <img src="TP%202%20%5BSpicher%5D_files/fetch_011.png" class="latex_inline" alt="$15$" title="Math"> et <img src="TP%202%20%5BSpicher%5D_files/fetch_008.png" class="latex_inline" alt="$44$" title="Math">
+ bits. Commenter les résultats obtenus dans le cas des valeurs 
+négatives. Spécifiez l'action des opérateurs de décalage et comment ils 
+peuvent être utilisés.</div>
+</li>
+<li class="level1"><div class="li"> Compilez, exécutez et commentez le résultat du code suivant<pre class="code c"><span class="kw4">unsigned</span> <span class="kw4">int</span> i1 <span class="sy0">=</span> ~<span class="nu0">0</span><span class="sy0">;</span>
+<span class="kw4">int</span> i2 <span class="sy0">=</span> ~<span class="nu0">0</span><span class="sy0">;</span>
+printbin<span class="br0">(</span>i1 <span class="sy0">&gt;&gt;</span> 4<span class="br0">)</span><span class="sy0">;</span>
+<a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+printbin<span class="br0">(</span>i2 <span class="sy0">&gt;&gt;</span> 4<span class="br0">)</span><span class="sy0">;</span>
+<a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"<span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>
+ où <code>printbin</code> est la fonction demandée précédemment.
+</p>
+</div>
+</li>
+<li class="level1"><div class="li"> Utilisez l’opérateur de décalage pour déclarer des constantes littérales <code>M</code><img src="TP%202%20%5BSpicher%5D_files/fetch_002.png" class="latex_inline" alt="$_i = 2^i$" title="Math">, pour <img src="TP%202%20%5BSpicher%5D_files/fetch_013.png" class="latex_inline" alt="$i = 0\dots 7$" title="Math">. Utilisez ces constantes et les opérateurs logiques binaires <code>&amp;</code>, <code>|</code> et <code>^</code> pour :</div>
+<ul>
+<li class="level2"><div class="li"> déterminer la parité d'un entier (2 propositions)</div>
+</li>
+<li class="level2"><div class="li"> déterminer si le bit de position <img src="TP%202%20%5BSpicher%5D_files/fetch_004.png" class="latex_inline" alt="$3$" title="Math"> est égal à <img src="TP%202%20%5BSpicher%5D_files/fetch_006.png" class="latex_inline" alt="$0$" title="Math"></div>
+</li>
+<li class="level2"><div class="li"> déterminer si l’octet de poids faible est égal à <img src="TP%202%20%5BSpicher%5D_files/fetch_007.png" class="latex_inline" alt="$7$" title="Math"></div>
+</li>
+<li class="level2"><div class="li"> mettre à <img src="TP%202%20%5BSpicher%5D_files/fetch_012.png" class="latex_inline" alt="$1$" title="Math"> le bit de position <img src="TP%202%20%5BSpicher%5D_files/fetch_006.png" class="latex_inline" alt="$0$" title="Math"></div>
+</li>
+<li class="level2"><div class="li"> mettre à <img src="TP%202%20%5BSpicher%5D_files/fetch_012.png" class="latex_inline" alt="$1$" title="Math"> les bits aux positions <img src="TP%202%20%5BSpicher%5D_files/fetch_012.png" class="latex_inline" alt="$1$" title="Math"> et <img src="TP%202%20%5BSpicher%5D_files/fetch_009.png" class="latex_inline" alt="$4$" title="Math"></div>
+</li>
+<li class="level2"><div class="li"> mettre à <img src="TP%202%20%5BSpicher%5D_files/fetch_006.png" class="latex_inline" alt="$0$" title="Math"> les bits entre les positions <img src="TP%202%20%5BSpicher%5D_files/fetch_014.png" class="latex_inline" alt="$2$" title="Math"> et <img src="TP%202%20%5BSpicher%5D_files/fetch_003.png" class="latex_inline" alt="$6$" title="Math"></div>
+</li>
+<li class="level2"><div class="li"> afficher l'octet de poids faible</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Reprogrammez l'affichage de la décomposition en binaire à l'aide de ces opérateurs</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="formatage_des_dates_et_des_heures" id="formatage_des_dates_et_des_heures">Formatage des dates et des heures</a></h2>
+<div class="level2">
+
+<p>
+
+On souhaite créer une nouvelle représentation d'informations temporelles
+ (dates et heures) formattées utilisant les 64 bits d'un entier de type <code>long long</code>.
+ La représentation doit permettre de stocker à la fois l'information 
+temporelle mais également la façon dont celle-ci doit être affichée. 
+</p>
+
+</div>
+
+<h3><a name="nombre_de_secondes_ecoulees_depuis" id="nombre_de_secondes_ecoulees_depuis">Nombre de secondes écoulées depuis ...</a></h3>
+<div class="level3">
+
+<p>
+
+Il est d'usage de représenter une date par le nombre de secondes qui se 
+sont écoulées depuis une date fixe donnée. Ce référenciel est appelé <em>epoch</em>. Sous les systèmes UNIX, l'epoch est placée au 01/01/1970 à 00:00:00.
+</p>
+
+<p>
+Cependant, l'epoch diffère selon les systèmes d'exploitation et l'on 
+souhaite conserver cette information dans notre représentation. Dans la 
+suite, nous considérons les 8 epochs présentés sur cette page <a href="https://fr.wikipedia.org/wiki/Epoch" class="urlextern" title="https://fr.wikipedia.org/wiki/Epoch" rel="nofollow">Wikipedia</a> :
+</p>
+<ol>
+<li class="level1"><div class="li"> <code>UNIX</code> : le 1er janvier 1970 (soit 0s depuis le 1er janvier 1970)</div>
+</li>
+<li class="level1"><div class="li"> <code>MACOS</code> : le 1er janvier 1904 (soit -2082844800s depuis le 1er janvier 1970)</div>
+</li>
+<li class="level1"><div class="li"> <code>MACOSX UNIX</code> : le 1er janvier 1970 (soit 0s depuis le 1er janvier 1970)</div>
+</li>
+<li class="level1"><div class="li"> <code>MACOSX COCOA</code> : le 1er janvier 2001 (soit 978307200s depuis le 1er janvier 1970)</div>
+</li>
+<li class="level1"><div class="li"> <code>VMS</code> : le 17 novembre 1858 (soit -3506716800s depuis le 1er janvier 1970)</div>
+</li>
+<li class="level1"><div class="li"> <code>MVS</code> : le 1er janvier 1900 (soit -2208988800s depuis le 1er janvier 1970)</div>
+</li>
+<li class="level1"><div class="li"> <code>WINDOWS</code> : le 1er janvier 1601 (soit -11644473600s depuis le 1er janvier 1970)</div>
+</li>
+<li class="level1"><div class="li"> <code>PICK</code> : le 1er janvier 1968 (soit -63158400s depuis le 1er janvier 1970)</div>
+</li>
+</ol>
+
+<p>
+
+L'objectif est de stocker dans les 64 bits d'un <code>long long</code>, à la fois le nombre de seconde écoulée et le système d'exploitation (<em>i.e.</em>, l'epoch) correspondant :
+</p>
+
+<p>
+<a href="http://www.lacl.fr/%7Easpicher/Wiki/_detail/l2info/progc/epoch.png?id=l2info%3Aprogc%3Atp2" class="media" title="l2info:progc:epoch.png"><img src="TP%202%20%5BSpicher%5D_files/epoch.png" class="mediacenter" alt="" width="800"></a>
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Donnez le nombre de bits nécessaires
+ pour représenter les epochs considérés. En fonction du nombre de bits 
+restant pour stocker les secondes écoulées, précisez les bornes 
+représentables (c'est-à-dire la plus ancienne date dans le passé et la 
+plus lointaine dans l'avenir) en secondes, puis en années (on estime une
+ année à 31556926s, soit 365.24 jours).</div>
+</li>
+<li class="level1"><div class="li"> Définissez les constantes suivantes :</div>
+<ul>
+<li class="level2"><div class="li"> un masque (<code>EPOCH_MASK</code>) permettant d'annuler dans un <code>long long</code> tous les bits codant les secondes écoulées et ne conservant que ceux de l'epoch,</div>
+</li>
+<li class="level2"><div class="li"> le decalage (<code>EPOCH_SHIFT</code>) à effectuer sur un <code>long long</code> représentant des secondes pour pouvoir stocker l'epoch,</div>
+</li>
+<li class="level2"><div class="li"> les epochs (<code>EPOCH_UNIX</code>, <code>EPOCH_MACOS</code>, etc.) des systèmes d'exploitation considérés.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Définissez la fonction <code>long long get_seconds(long long d)</code> qui, étant donnée une date <code>d</code>, retourne le nombre de secondes écoulées.</div>
+</li>
+<li class="level1"><div class="li"> Définissez la fonction <code>unsigned char get_epoch(long long d)</code> qui, étant donnée une date <code>d</code>, retourne l'epoch utilisé.</div>
+</li>
+<li class="level1"><div class="li"> Définissez la fonction <code>long long make_date(unsigned char e, long long sec)</code>
+ qui construit une date à partir d'un nombre de secondes écoulées et de 
+l'epoch choisi. Votre fonction devra échouer proprement (<code>exit(EXIT_FAILURE)</code> avec un message d'erreur) pour indiquer si le nombre de secondes donné ne peut pas être représenté.</div>
+</li>
+<li class="level1"><div class="li"> Définissez la fonction <code>long long make_current_date(unsigned char e)</code>
+ qui construit la date courrante dans l'epoch choisi. On récupérera le 
+nombre de secondes écoulées depuis le 01/01/1970 (donc dans l'epoch du 
+système <code>UNIX</code>) en utilisant la fonction <code>time</code> présente dans <code>time.h</code>. Voici un exemple d'utilisation : <pre class="code c"><span class="co2">#include &lt;stdlib.h&gt;</span>
+<span class="co2">#include &lt;stdio.h&gt;</span>
+<span class="co2">#include &lt;time.h&gt;</span>
+&nbsp;
+<span class="kw4">int</span> main<span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  time_t t<span class="sy0">;</span>
+  time<span class="br0">(</span><span class="sy0">&amp;</span>t<span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"Le nombre de secondes ecoulees depuis le 01/01/1970 est %d.<span class="es1">\n</span>"</span><span class="sy0">,</span> t<span class="br0">)</span><span class="sy0">;</span>
+  <span class="kw1">return</span> EXIT_SUCCESS<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+</div>
+</li>
+<li class="level1"><div class="li"> Définissez la fonction <code>void print_date(long long d)</code> qui affiche une date au format <code>jj/mm/aaaa hh:mm:ss</code>. Vous pouvez vous inspirer de la fonction suivante <pre class="code c"><span class="kw4">void</span> print_unix_time_t<span class="br0">(</span>time_t t<span class="br0">)</span> <span class="br0">{</span>
+  <span class="kw4">struct</span> tm tm <span class="sy0">=</span> <span class="sy0">*</span>gmtime<span class="br0">(</span><span class="sy0">&amp;</span>t<span class="br0">)</span><span class="sy0">;</span>
+  <a href="http://www.opengroup.org/onlinepubs/009695399/functions/printf.html"><span class="kw3">printf</span></a><span class="br0">(</span><span class="st0">"%0.2d/%0.2d/%d %0.2d:%0.2d:%0.2d<span class="es1">\n</span>"</span><span class="sy0">,</span> tm.<span class="me1">tm_mday</span><span class="sy0">,</span> tm.<span class="me1">tm_mon</span> <span class="sy0">+</span> 1<span class="sy0">,</span> 1900 <span class="sy0">+</span> tm.<span class="me1">tm_year</span><span class="sy0">,</span> tm.<span class="me1">tm_hour</span><span class="sy0">,</span> tm.<span class="me1">tm_min</span><span class="sy0">,</span> tm.<span class="me1">tm_sec</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+<p>
+qui affiche au format demandé un nombre de secondes écoulés. Attention, le <code>time_t</code> utilisé par les fonctions de <code>time.h</code> n'est pas forcément de la même taille que les <code>long long</code> ; prenez cette différence en considération dans votre code pour qu'il échoue proprement le cas échéant.
+</p>
+</div>
+</li>
+</ul>
+
+</div>
+
+<h3><a name="plus_de_formats" id="plus_de_formats">Plus de formats</a></h3>
+<div class="level3">
+
+<p>
+
+On souhaite prendre en compte dans le format les éléments suivants :
+</p>
+<ul>
+<li class="level1"><div class="li"> les créneaux horaires : les dates étaient considérées jusqu'ici en UTC (voir <a href="https://fr.wikipedia.org/wiki/Temps_universel_coordonn%C3%A9" class="urlextern" title="https://fr.wikipedia.org/wiki/Temps_universel_coordonn%C3%A9" rel="nofollow">Wikipedia</a>) ; on souhaite maintenant stocker la tranche horaire correspondante (allant d'heure en heure de UTC-12 à UTC+12).</div>
+</li>
+<li class="level1"><div class="li"> le format jour/mois/année : suivant 
+le standard ou le pays concerné, l'information jour/mois/années est 
+parfois mal-menée (voir <a href="https://fr.wikipedia.org/wiki/Date" class="urlextern" title="https://fr.wikipedia.org/wiki/Date" rel="nofollow">Wikipedia</a>) ; on considérera les formats suivants :</div>
+<ul>
+<li class="level2"><div class="li"> <code>DMY</code> : jour/mois/année (France, Grande-bretagne, …)</div>
+</li>
+<li class="level2"><div class="li"> <code>YMD</code> : année/mois/jour (Chine, Corée, Japon, …, et <acronym title="International Organization for Standardization">ISO</acronym> 8601)</div>
+</li>
+<li class="level2"><div class="li"> <code>YDM</code> : année/jour/mois (Kazakstan)</div>
+</li>
+<li class="level2"><div class="li"> <code>MDY</code> : mois/jour/année (Etats-unis)</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> le système horaire (voir <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_horaire" class="urlextern" title="https://fr.wikipedia.org/wiki/Syst%C3%A8me_horaire" rel="nofollow">Wikipedia</a>) : l'heure peut être affichée de 0h à 23h ou de 1h à 12h am/pm.</div>
+</li>
+</ul>
+
+<p>
+
+Notre représentation s'étend pour dévenir :
+</p>
+
+<p>
+<a href="http://www.lacl.fr/%7Easpicher/Wiki/_detail/l2info/progc/xdate.png?id=l2info%3Aprogc%3Atp2" class="media" title="l2info:progc:xdate.png"><img src="TP%202%20%5BSpicher%5D_files/xdate.png" class="mediacenter" alt="" width="800"></a>
+
+</p>
+<ul>
+<li class="level1"><div class="li"> Reprenez toutes les questions précédentes et complétez les fonctions pour prendre en compte ces nouveaux éléments.</div>
+</li>
+</ul>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+        Connecté en tant que : L2 Informatique (l2info)      </div>
+      <div class="doc">
+        l2info/progc/tp2.txt · Dernière modification: 2015/09/24 11:44 par aspicher      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+                              </div>
+      <div class="bar-right" id="bar__bottomright">
+                                        <form class="button btn_logout" method="get" action="/~aspicher/Wiki/l2info/progc/tp2"><div class="no"><input name="do" value="logout" type="hidden"><input name="sectok" value="82424b0788480fc2ae883d95f50cf65a" type="hidden"><input value="Déconnexion" class="button" title="Déconnexion" type="submit"></div></form>                <a class="nolink" href="#dokuwiki__top"><input class="button" value="Haut de page" onclick="window.scrollTo(0, 0)" title="Haut de page" type="button"></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+  <div class="license">Sauf mention contraire, le contenu de ce wiki est placé sous la licence suivante:<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></div>
+</div>
+
+<div class="footerinc">
+
+  <a href="http://www.lacl.fr/%7Easpicher/Wiki/feed.php" title="Recent changes RSS feed"><img src="TP%202%20%5BSpicher%5D_files/button-rss.png" alt="Recent changes RSS feed" height="15" width="80"></a>
+
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="CC Attribution-Noncommercial-Share Alike 3.0 Unported"><img src="TP%202%20%5BSpicher%5D_files/cc-by-nc-sa.png" alt="" height="15" width="80"></a>
+  
+  <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="TP%202%20%5BSpicher%5D_files/button-donate.gif" alt="Donate" height="15" width="80"></a>
+
+  <a href="http://www.php.net/" title="Powered by PHP"><img src="TP%202%20%5BSpicher%5D_files/button-php.gif" alt="Powered by PHP" height="15" width="80"></a>
+
+  <a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="TP%202%20%5BSpicher%5D_files/button-xhtml.png" alt="Valid XHTML 1.0" height="15" width="80"></a>
+
+  <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="TP%202%20%5BSpicher%5D_files/button-css.png" alt="Valid CSS" height="15" width="80"></a>
+
+  <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="TP%202%20%5BSpicher%5D_files/button-dw.png" alt="Driven by DokuWiki" height="15" width="80"></a>
+
+
+
+</div>
+
+<div class="no"><img src="TP%202%20%5BSpicher%5D_files/indexer.gif" alt="" height="1" width="1"></div>
+
+
+</body></html>
